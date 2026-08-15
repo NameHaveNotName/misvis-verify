@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="720" viewBox="0 0 1200 720">
+<rect x="0.0" y="0.0" width="1200.0" height="720.0" fill="#ffffff" rx="0"/>
+<text x="600.0" y="58" font-family="Inter, PingFang SC, Microsoft YaHei, Arial, sans-serif" font-size="30" fill="#10202b" text-anchor="middle" font-weight="bold">某市犯罪率（2013–2023）</text>
+<line x1="90.0" y1="553.6" x2="1150.0" y2="553.6" stroke="#eef0ef" stroke-width="1"/>
+<line x1="90.0" y1="553.6" x2="84.0" y2="553.6" stroke="#d9ddd8" stroke-width="2"/>
+<text x="78" y="561.6363636363637" font-family="Inter, PingFang SC, Microsoft YaHei, Arial, sans-serif" font-size="20" fill="#63717d" text-anchor="end" font-weight="normal">30</text>
+<line x1="90.0" y1="447.6" x2="1150.0" y2="447.6" stroke="#eef0ef" stroke-width="1"/>
+<line x1="90.0" y1="447.6" x2="84.0" y2="447.6" stroke="#d9ddd8" stroke-width="2"/>
+<text x="78" y="455.5757575757576" font-family="Inter, PingFang SC, Microsoft YaHei, Arial, sans-serif" font-size="20" fill="#63717d" text-anchor="end" font-weight="normal">35</text>
+<line x1="90.0" y1="341.5" x2="1150.0" y2="341.5" stroke="#eef0ef" stroke-width="1"/>
+<line x1="90.0" y1="341.5" x2="84.0" y2="341.5" stroke="#d9ddd8" stroke-width="2"/>
+<text x="78" y="349.5151515151516" font-family="Inter, PingFang SC, Microsoft YaHei, Arial, sans-serif" font-size="20" fill="#63717d" text-anchor="end" font-weight="normal">40</text>
+<line x1="90.0" y1="235.5" x2="1150.0" y2="235.5" stroke="#eef0ef" stroke-width="1"/>
+<line x1="90.0" y1="235.5" x2="84.0" y2="235.5" stroke="#d9ddd8" stroke-width="2"/>
+<text x="78" y="243.4545454545456" font-family="Inter, PingFang SC, Microsoft YaHei, Arial, sans-serif" font-size="20" fill="#63717d" text-anchor="end" font-weight="normal">45</text>
+<line x1="90.0" y1="630.0" x2="1150.0" y2="630.0" stroke="#10202b" stroke-width="2"/>
+<line x1="90.0" y1="140.0" x2="90.0" y2="630.0" stroke="#10202b" stroke-width="2"/>
+<text x="90.0" y="674" font-family="Inter, PingFang SC, Microsoft YaHei, Arial, sans-serif" font-size="22" fill="#10202b" text-anchor="middle" font-weight="normal">2013</text>
+<text x="196.0" y="674" font-family="Inter, PingFang SC, Microsoft YaHei, Arial, sans-serif" font-size="22" fill="#10202b" text-anchor="middle" font-weight="normal">2014</text>
+<text x="302.0" y="674" font-family="Inter, PingFang SC, Microsoft YaHei, Arial, sans-serif" font-size="22" fill="#10202b" text-anchor="middle" font-weight="normal">2015</text>
+<text x="408.0" y="674" font-family="Inter, PingFang SC, Microsoft YaHei, Arial, sans-serif" font-size="22" fill="#10202b" text-anchor="middle" font-weight="normal">2016</text>
+<text x="514.0" y="674" font-family="Inter, PingFang SC, Microsoft YaHei, Arial, sans-serif" font-size="22" fill="#10202b" text-anchor="middle" font-weight="normal">2017</text>
+<text x="620.0" y="674" font-family="Inter, PingFang SC, Microsoft YaHei, Arial, sans-serif" font-size="22" fill="#10202b" text-anchor="middle" font-weight="normal">2018</text>
+<text x="726.0" y="674" font-family="Inter, PingFang SC, Microsoft YaHei, Arial, sans-serif" font-size="22" fill="#10202b" text-anchor="middle" font-weight="normal">2019</text>
+<text x="832.0" y="674" font-family="Inter, PingFang SC, Microsoft YaHei, Arial, sans-serif" font-size="22" fill="#10202b" text-anchor="middle" font-weight="normal">2020</text>
+<text x="938.0" y="674" font-family="Inter, PingFang SC, Microsoft YaHei, Arial, sans-serif" font-size="22" fill="#10202b" text-anchor="middle" font-weight="normal">2021</text>
+<text x="1044.0" y="674" font-family="Inter, PingFang SC, Microsoft YaHei, Arial, sans-serif" font-size="22" fill="#10202b" text-anchor="middle" font-weight="normal">2022</text>
+<text x="1150.0" y="674" font-family="Inter, PingFang SC, Microsoft YaHei, Arial, sans-serif" font-size="22" fill="#10202b" text-anchor="middle" font-weight="normal">2023</text>
+<text x="70" y="120" font-family="Inter, PingFang SC, Microsoft YaHei, Arial, sans-serif" font-size="20" fill="#63717d" text-anchor="start" font-weight="normal">每万人案件数</text>
+<polyline points="90.0,235.5 196.0,299.1 302.0,341.5 408.0,383.9 514.0,426.4 620.0,468.8 726.0,490.0 832.0,447.6 938.0,383.9 1044.0,299.1 1150.0,235.5" fill="none" stroke="#4f7899" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/>
+<circle cx="90.0" cy="235.5" r="5.0" fill="#4f7899"/>
+<circle cx="196.0" cy="299.1" r="5.0" fill="#4f7899"/>
+<circle cx="302.0" cy="341.5" r="5.0" fill="#4f7899"/>
+<circle cx="408.0" cy="383.9" r="5.0" fill="#4f7899"/>
+<circle cx="514.0" cy="426.4" r="5.0" fill="#4f7899"/>
+<circle cx="620.0" cy="468.8" r="5.0" fill="#4f7899"/>
+<circle cx="726.0" cy="490.0" r="5.0" fill="#4f7899"/>
+<circle cx="832.0" cy="447.6" r="5.0" fill="#4f7899"/>
+<circle cx="938.0" cy="383.9" r="5.0" fill="#4f7899"/>
+<circle cx="1044.0" cy="299.1" r="5.0" fill="#4f7899"/>
+<circle cx="1150.0" cy="235.5" r="5.0" fill="#4f7899"/>
+</svg>

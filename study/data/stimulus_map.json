@@ -1,0 +1,122 @@
+{
+  "S001.svg": {
+    "pair_id": "TA-01",
+    "mechanism": "truncated-axis",
+    "integrity": "accurate"
+  },
+  "S002.svg": {
+    "pair_id": "TA-01",
+    "mechanism": "truncated-axis",
+    "integrity": "misleading"
+  },
+  "S003.svg": {
+    "pair_id": "TA-02",
+    "mechanism": "truncated-axis",
+    "integrity": "accurate"
+  },
+  "S004.svg": {
+    "pair_id": "TA-02",
+    "mechanism": "truncated-axis",
+    "integrity": "misleading"
+  },
+  "S005.svg": {
+    "pair_id": "CP-01",
+    "mechanism": "cherry-picked-time",
+    "integrity": "accurate"
+  },
+  "S006.svg": {
+    "pair_id": "CP-01",
+    "mechanism": "cherry-picked-time",
+    "integrity": "misleading"
+  },
+  "S007.svg": {
+    "pair_id": "CP-02",
+    "mechanism": "cherry-picked-time",
+    "integrity": "accurate"
+  },
+  "S008.svg": {
+    "pair_id": "CP-02",
+    "mechanism": "cherry-picked-time",
+    "integrity": "misleading"
+  },
+  "S009.svg": {
+    "pair_id": "HU-01",
+    "mechanism": "hidden-uncertainty",
+    "integrity": "accurate"
+  },
+  "S010.svg": {
+    "pair_id": "HU-01",
+    "mechanism": "hidden-uncertainty",
+    "integrity": "misleading"
+  },
+  "S011.svg": {
+    "pair_id": "HU-02",
+    "mechanism": "hidden-uncertainty",
+    "integrity": "accurate"
+  },
+  "S012.svg": {
+    "pair_id": "HU-02",
+    "mechanism": "hidden-uncertainty",
+    "integrity": "misleading"
+  },
+  "S013.svg": {
+    "pair_id": "AD-01",
+    "mechanism": "area-distortion",
+    "integrity": "accurate"
+  },
+  "S014.svg": {
+    "pair_id": "AD-01",
+    "mechanism": "area-distortion",
+    "integrity": "misleading"
+  },
+  "S015.svg": {
+    "pair_id": "AD-02",
+    "mechanism": "area-distortion",
+    "integrity": "accurate"
+  },
+  "S016.svg": {
+    "pair_id": "AD-02",
+    "mechanism": "area-distortion",
+    "integrity": "misleading"
+  },
+  "S017.svg": {
+    "pair_id": "CE-01",
+    "mechanism": "color-emphasis",
+    "integrity": "accurate"
+  },
+  "S018.svg": {
+    "pair_id": "CE-01",
+    "mechanism": "color-emphasis",
+    "integrity": "misleading"
+  },
+  "S019.svg": {
+    "pair_id": "CE-02",
+    "mechanism": "color-emphasis",
+    "integrity": "accurate"
+  },
+  "S020.svg": {
+    "pair_id": "CE-02",
+    "mechanism": "color-emphasis",
+    "integrity": "misleading"
+  },
+  "S021.svg": {
+    "pair_id": "MT-01",
+    "mechanism": "misleading-title",
+    "integrity": "accurate"
+  },
+  "S022.svg": {
+    "pair_id": "MT-01",
+    "mechanism": "misleading-title",
+    "integrity": "misleading"
+  },
+  "S023.svg": {
+    "pair_id": "MT-02",
+    "mechanism": "misleading-title",
+    "integrity": "accurate"
+  },
+  "S024.svg": {
+    "pair_id": "MT-02",
+    "mechanism": "misleading-title",
+    "integrity": "misleading"
+  }
+}

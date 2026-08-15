@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="720" viewBox="0 0 1200 720">
+<rect x="0.0" y="0.0" width="1200.0" height="720.0" fill="#ffffff" rx="0"/>
+<text x="600.0" y="58" font-family="Inter, PingFang SC, Microsoft YaHei, Arial, sans-serif" font-size="30" fill="#10202b" text-anchor="middle" font-weight="bold">两所中学高考一本率</text>
+<line x1="90.0" y1="630.0" x2="1150.0" y2="630.0" stroke="#eef0ef" stroke-width="1"/>
+<line x1="90.0" y1="630.0" x2="84.0" y2="630.0" stroke="#d9ddd8" stroke-width="2"/>
+<text x="78" y="638.0" font-family="Inter, PingFang SC, Microsoft YaHei, Arial, sans-serif" font-size="20" fill="#63717d" text-anchor="end" font-weight="normal">0</text>
+<line x1="90.0" y1="532.0" x2="1150.0" y2="532.0" stroke="#eef0ef" stroke-width="1"/>
+<line x1="90.0" y1="532.0" x2="84.0" y2="532.0" stroke="#d9ddd8" stroke-width="2"/>
+<text x="78" y="540.0" font-family="Inter, PingFang SC, Microsoft YaHei, Arial, sans-serif" font-size="20" fill="#63717d" text-anchor="end" font-weight="normal">20</text>
+<line x1="90.0" y1="434.0" x2="1150.0" y2="434.0" stroke="#eef0ef" stroke-width="1"/>
+<line x1="90.0" y1="434.0" x2="84.0" y2="434.0" stroke="#d9ddd8" stroke-width="2"/>
+<text x="78" y="442.0" font-family="Inter, PingFang SC, Microsoft YaHei, Arial, sans-serif" font-size="20" fill="#63717d" text-anchor="end" font-weight="normal">40</text>
+<line x1="90.0" y1="336.0" x2="1150.0" y2="336.0" stroke="#eef0ef" stroke-width="1"/>
+<line x1="90.0" y1="336.0" x2="84.0" y2="336.0" stroke="#d9ddd8" stroke-width="2"/>
+<text x="78" y="344.0" font-family="Inter, PingFang SC, Microsoft YaHei, Arial, sans-serif" font-size="20" fill="#63717d" text-anchor="end" font-weight="normal">60</text>
+<line x1="90.0" y1="238.0" x2="1150.0" y2="238.0" stroke="#eef0ef" stroke-width="1"/>
+<line x1="90.0" y1="238.0" x2="84.0" y2="238.0" stroke="#d9ddd8" stroke-width="2"/>
+<text x="78" y="246.0" font-family="Inter, PingFang SC, Microsoft YaHei, Arial, sans-serif" font-size="20" fill="#63717d" text-anchor="end" font-weight="normal">80</text>
+<line x1="90.0" y1="140.0" x2="1150.0" y2="140.0" stroke="#eef0ef" stroke-width="1"/>
+<line x1="90.0" y1="140.0" x2="84.0" y2="140.0" stroke="#d9ddd8" stroke-width="2"/>
+<text x="78" y="148.0" font-family="Inter, PingFang SC, Microsoft YaHei, Arial, sans-serif" font-size="20" fill="#63717d" text-anchor="end" font-weight="normal">100</text>
+<line x1="90.0" y1="630.0" x2="1150.0" y2="630.0" stroke="#10202b" stroke-width="2"/>
+<line x1="90.0" y1="140.0" x2="90.0" y2="630.0" stroke="#10202b" stroke-width="2"/>
+<text x="355.0" y="674" font-family="Inter, PingFang SC, Microsoft YaHei, Arial, sans-serif" font-size="22" fill="#10202b" text-anchor="middle" font-weight="normal">甲校</text>
+<text x="885.0" y="674" font-family="Inter, PingFang SC, Microsoft YaHei, Arial, sans-serif" font-size="22" fill="#10202b" text-anchor="middle" font-weight="normal">乙校</text>
+<text x="70" y="120" font-family="Inter, PingFang SC, Microsoft YaHei, Arial, sans-serif" font-size="20" fill="#63717d" text-anchor="start" font-weight="normal">一本率（%）</text>
+<rect x="222.5" y="159.6" width="265.0" height="470.4" fill="#4f7899" rx="8"/>
+<text x="355.0" y="145.60000000000002" font-family="Inter, PingFang SC, Microsoft YaHei, Arial, sans-serif" font-size="24" fill="#10202b" text-anchor="middle" font-weight="bold">96</text>
+<rect x="752.5" y="184.1" width="265.0" height="445.9" fill="#4f7899" rx="8"/>
+<text x="885.0" y="170.09999999999997" font-family="Inter, PingFang SC, Microsoft YaHei, Arial, sans-serif" font-size="24" fill="#10202b" text-anchor="middle" font-weight="bold">91</text>
+</svg>

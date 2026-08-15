@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>MisVis Verify｜刺激画廊</title>
+  <style>
+    :root {
+      --ink: #10202b; --muted: #63717d; --paper: #f7f7f2;
+      --line: #d9ddd8; --accent: #ef6a55;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0; background: var(--paper); color: var(--ink);
+      font-family: "Inter", "PingFang SC", "Microsoft YaHei", Arial, sans-serif;
+      line-height: 1.6;
+    }
+    .banner { background: #10202b; color: #fff; text-align: center; padding: 14px; font-size: 14px; font-weight: 700; }
+    main { max-width: 1240px; margin: 0 auto; padding: 32px 24px; }
+    h1 { font-size: 30px; margin: 0 0 8px; }
+    .lede { color: var(--muted); margin: 0 0 32px; }
+    .pair { background: #fff; border: 1px solid var(--line); border-radius: 20px; padding: 24px; margin-bottom: 32px; }
+    .pair-head { display: flex; justify-content: space-between; align-items: baseline; flex-wrap: wrap; gap: 12px; margin-bottom: 16px; }
+    .pair-head h2 { margin: 0; font-size: 20px; }
+    .pair-head .mech { font-size: 12px; color: var(--accent); font-weight: 800; letter-spacing: .05em; }
+    .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+    .side { border: 1px solid var(--line); border-radius: 14px; overflow: hidden; }
+    .side-head { padding: 10px 14px; font-size: 13px; font-weight: 800; display: flex; justify-content: space-between; }
+    .side-head.accurate { background: #eef4f0; color: #2f6740; }
+    .side-head.misleading { background: #fff0ed; color: #8a3e32; }
+    .side img { width: 100%; display: block; }
+    .egvv { margin-top: 16px; background: #f8f9f7; border-radius: 12px; padding: 16px; }
+    .egvv h3 { margin: 0 0 8px; font-size: 14px; color: var(--accent); }
+    .egvv dl { margin: 0; }
+    .egvv dt { font-weight: 700; font-size: 13px; margin-top: 8px; }
+    .egvv dd { margin: 0; color: var(--muted); font-size: 13px; }
+    @media (max-width: 900px) { .grid { grid-template-columns: 1fr; } }
+  </style>
+</head>
+<body>
+  <div class="banner">刺激画廊 — 内部审查用，不用于实验呈现</div>
+  <main>
+    <h1>MisVis Verify 刺激画廊</h1>
+    <p class="lede">12 个 matched pairs × 2 版本 = 24 张 SVG。请审查 accurate / misleading 之间除目标操纵外是否一致。</p>
+    <div id="gallery"></div>
+  </main>
+
+  <script src="study/data/stimuli-data.js"></script>
+  <script>
+    (function() {
+      const pairs = window.MISVIS_VERIFY_STIMULI.pairs;
+      const gallery = document.getElementById('gallery');
+
+      function esc(s) {
+        return String(s).replace(/[&<>"']/g, c => ({
+          '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#039;'
+        }[c]));
+      }
+
+      pairs.forEach(p => {
+        const egvv = p.egvv || {};
+        const mechNames = {
+          'truncated-axis': '截断纵轴',
+          'cherry-picked-time': '截取时间区间',
+          'hidden-uncertainty': '隐藏不确定性',
+          'area-distortion': '面积编码失真',
+          'color-emphasis': '任意颜色强调',
+          'misleading-title': '误导性标题'
+        };
+        const el = document.createElement('section');
+        el.className = 'pair';
+        el.innerHTML = `
+          <div class="pair-head">
+            <h2>${esc(p.pairId)} — ${esc(mechNames[p.mechanism] || p.mechanism)}</h2>
+            <span class="mech">${esc(p.context)}</span>
+          </div>
+          <div class="grid">
+            <div class="side">
+              <div class="side-head accurate"><span>ACCURATE</span><span>${esc(p.accurate.image)}</span></div>
+              <img src="study/assets/stimuli/${esc(p.accurate.image)}" alt="${esc(p.accurate.title)}">
+            </div>
+            <div class="side">
+              <div class="side-head misleading"><span>MISLEADING</span><span>${esc(p.misleading.image)}</span></div>
+              <img src="study/assets/stimuli/${esc(p.misleading.image)}" alt="${esc(p.misleading.title)}">
+            </div>
+          </div>
+          <div class="egvv">
+            <h3>EGVV 内容</h3>
+            <dl>
+              <dt>Locate</dt><dd>${esc(egvv.locate || '')}</dd>
+              <dt>Explain</dt><dd>${esc(egvv.explain || '')}</dd>
+              <dt>Verify</dt><dd>${esc(egvv.verify || '')}</dd>
+              <dt>Compare (accurate)</dt><dd>${esc(egvv.compareAccurate || '')}</dd>
+              <dt>Compare (misleading)</dt><dd>${esc(egvv.compareMisleading || '')}</dd>
+            </dl>
+          </div>
+        `;
+        gallery.appendChild(el);
+      });
+    })();
+  </script>
+</body>
+</html>
