@@ -1,0 +1,199 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>MisVis Verify｜问卷与界面预览</title>
+  <link rel="stylesheet" href="study/css/study.css">
+  <style>
+    .preview-banner {
+      background: #10202b; color: #fff; text-align: center;
+      padding: 14px; font-size: 14px; font-weight: 700;
+    }
+    .preview-section { margin-bottom: 60px; }
+    .preview-label {
+      display: inline-block; background: var(--accent); color: #fff;
+      font-size: 12px; font-weight: 800; letter-spacing: .1em;
+      padding: 6px 12px; border-radius: 999px; margin-bottom: 16px;
+    }
+    .preview-grid {
+      display: grid; grid-template-columns: 1fr 1fr; gap: 32px;
+    }
+    @media (max-width: 900px) { .preview-grid { grid-template-columns: 1fr; } }
+  </style>
+</head>
+<body>
+  <div class="preview-banner">本页面仅用于预览问卷与界面样式，不记录任何数据</div>
+
+  <header class="study-header">
+    <div class="brand">
+      <span><strong>MisVis</strong><small>Verify 研究原型</small></span>
+    </div>
+    <div class="mode-badge">Preview</div>
+  </header>
+
+  <main class="study-main">
+
+    <section class="preview-section">
+      <span class="preview-label">01 知情同意页</span>
+      <div class="card">
+        <p class="eyebrow">INFORMED CONSENT</p>
+        <h1>MisVis Verify 研究知情同意</h1>
+        <div class="consent-body">
+          <p><strong>研究目的：</strong> 本研究探索人工智能来源提示与基于证据的视觉验证如何影响人们对数据图表的信任判断。</p>
+          <p><strong>参与方式：</strong> 您将浏览若干数据图表，并对每张图的可信度、是否可能误导以及判断信心进行评分。部分参与者会额外看到结构化的验证步骤。</p>
+          <p><strong>时间与风险：</strong> 实验约需 15–20 分钟。没有已知身体或心理风险。您可以随时退出。</p>
+          <p><strong>隐私保护：</strong> 我们不采集姓名、学号、邮箱、IP 或设备指纹。系统会自动生成随机编号（如 MV-XXXXXXXX）用于数据对应。</p>
+          <p><strong>数据使用：</strong> 当前为内部 Pilot，数据仅保存在您的浏览器本地。结束后您可以选择下载并交由研究者处理。</p>
+          <p><strong>伦理审批：</strong> 待补充（正式研究前将填写完整伦理审批编号与联系人）。</p>
+          <p><strong>联系人：</strong> 研究负责人 待补充。</p>
+        </div>
+        <label class="checkbox-row">
+          <input type="checkbox" checked disabled>
+          <span>我已阅读并同意参与本研究。</span>
+        </label>
+        <div class="actions">
+          <button class="button primary" disabled>开始实验</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="preview-section">
+      <span class="preview-label">02 参与者编号页</span>
+      <div class="card narrow">
+        <p class="eyebrow">PARTICIPANT SETUP</p>
+        <h1>准备开始</h1>
+        <p>您的随机编号为：</p>
+        <div class="participant-id">MV-a1b2c3d4</div>
+        <ul class="setup-list">
+          <li>请使用电脑浏览器，建议分辨率不低于 1280 × 720。</li>
+          <li>实验过程中请勿使用浏览器的“返回”按钮。</li>
+          <li>如果刷新页面，可以从当前题目继续。</li>
+        </ul>
+        <div class="actions">
+          <button class="button primary" disabled>进入练习</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="preview-section">
+      <span class="preview-label">03 单次试次界面</span>
+      <div class="trial-layout">
+        <div class="trial-meta">
+          <span>Main</span>
+          <span>1 / 12</span>
+        </div>
+        <div class="provenance-bar has-label">
+          <span>AI-assisted visualization</span>
+        </div>
+        <div class="stimulus-area">
+          <img src="study/assets/stimuli/placeholder.svg" alt="实验图表预览">
+        </div>
+        <div class="judgment-panel">
+          <h2>您的判断</h2>
+          <div class="slider-group">
+            <label>您认为这张图表有多可信？</label>
+            <input type="range" min="0" max="100" value="50">
+            <div class="slider-anchors"><span>0 完全不可信</span><span>50 不确定</span><span>100 完全可信</span></div>
+          </div>
+          <fieldset class="radio-group">
+            <legend>您认为这张图是否包含可能造成误导的设计或信息表达？</legend>
+            <label><input type="radio" name="misleading-preview" value="yes"> 是</label>
+            <label><input type="radio" name="misleading-preview" value="no"> 否</label>
+            <label><input type="radio" name="misleading-preview" value="unsure"> 不确定</label>
+          </fieldset>
+          <div class="slider-group">
+            <label>您对自己的判断有多大信心？</label>
+            <input type="range" min="0" max="100" value="50">
+            <div class="slider-anchors"><span>0 完全没有把握</span><span>100 非常有把握</span></div>
+          </div>
+          <div class="actions">
+            <button class="button primary" disabled>继续</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="preview-section">
+      <span class="preview-label">04 EGVV 验证步骤（示例）</span>
+      <div class="egvv-card">
+        <div class="egvv-step">Step 1 / 4</div>
+        <h2>Locate</h2>
+        <p>请检查纵轴的起始位置。</p>
+        <div class="actions">
+          <button class="button secondary" disabled>上一步</button>
+          <button class="button primary" disabled>继续</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="preview-section">
+      <span class="preview-label">05 实验后问卷</span>
+      <div class="card">
+        <p class="eyebrow">POST-STUDY QUESTIONNAIRE</p>
+        <h1>实验后问卷</h1>
+        <form>
+          <fieldset class="form-block">
+            <legend>1. 您在判断图表时通常检查哪些内容？（可多选）</legend>
+            <label><input type="checkbox" checked disabled> 数据来源</label>
+            <label><input type="checkbox" checked disabled> 坐标轴</label>
+            <label><input type="checkbox" disabled> 标题</label>
+            <label><input type="checkbox" disabled> 颜色</label>
+            <label><input type="checkbox" disabled> 图表类型</label>
+            <label><input type="checkbox" checked disabled> AI 来源</label>
+            <label><input type="checkbox" disabled> 数值标签</label>
+            <label><input type="checkbox" disabled> 不确定性</label>
+            <label><input type="checkbox" disabled> 其他</label>
+          </fieldset>
+
+          <div class="form-block">
+            <label>2. AI 来源信息在多大程度上影响了您的判断？</label>
+            <input type="range" min="0" max="100" value="50" disabled>
+            <div class="slider-anchors"><span>0 完全无影响</span><span>100 极大影响</span></div>
+          </div>
+
+          <div class="form-block">
+            <label>3. 验证步骤是否帮助您理解图表？</label>
+            <input type="range" min="0" max="100" value="50" disabled>
+            <div class="slider-anchors"><span>0 没有帮助</span><span>100 非常有帮助</span></div>
+          </div>
+
+          <div class="form-block">
+            <label>4. 您认为步骤是否过多？</label>
+            <input type="range" min="0" max="100" value="50" disabled>
+            <div class="slider-anchors"><span>0 恰到好处</span><span>100 明显过多</span></div>
+          </div>
+
+          <div class="form-block">
+            <label>5. 您在实验过程中形成了哪些检查图表的方法？（选填）</label>
+            <textarea rows="4" maxlength="500" disabled placeholder="请用一两句话描述..."></textarea>
+          </div>
+        </form>
+        <div class="actions">
+          <button class="button primary" disabled>完成并导出数据</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="preview-section">
+      <span class="preview-label">06 完成页</span>
+      <div class="card narrow">
+        <p class="eyebrow">COMPLETION</p>
+        <h1>实验完成</h1>
+        <p>感谢您参与 MisVis Verify。</p>
+        <div class="pilot-note">
+          <strong>当前为内部 Pilot，不是正式研究数据收集。</strong>
+        </div>
+        <div class="actions">
+          <button class="button primary" disabled>下载实验数据 (JSON)</button>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="study-footer">
+    <span>MisVis Verify｜问卷与界面预览</span>
+  </footer>
+</body>
+</html>
