@@ -1,0 +1,67 @@
+variable_name,level,description,data_type,source,notes
+participant_id,,Random participant identifier,string,session,Format MV-8hex
+session_id,,Unique session identifier,string,session,Timestamp-based
+condition,control,Between-subjects intervention group,string,session,
+condition,egvv,Evidence-grounded visual verification group,string,session,
+counterbalance_list,A,Counterbalance list A,string,session,
+counterbalance_list,B,Counterbalance list B,string,session,
+counterbalance_list,C,Counterbalance list C,string,session,
+counterbalance_list,D,Counterbalance list D,string,session,
+phase,baseline,Initial measurement phase,string,trial,4 trials no provenance/intervention
+phase,main,Core experimental phase,string,trial,12 trials with provenance and intervention
+phase,transfer,Transfer test phase,string,trial,6 trials no provenance/intervention
+trial_index,,0-based index within phase,integer,trial,
+trial_index_global,,0-based index across entire experiment,integer,trial,
+pair_id,,Matched pair identifier e.g. TA-01,string,trial,
+stimulus_id,,Neutral stimulus ID shown to participant,string,trial,Format S###
+mechanism,truncated-axis,Truncated vertical axis,string,trial,
+mechanism,cherry-picked-time,Cherry-picked time range,string,trial,
+mechanism,hidden-uncertainty,Hidden prediction uncertainty,string,trial,
+mechanism,area-distortion,Area encoding distortion (radius vs area),string,trial,
+mechanism,color-emphasis,Arbitrary color emphasis,string,trial,
+mechanism,misleading-title,Misleading chart title,string,trial,
+integrity,accurate,Faithful visualization,string,trial,
+integrity,misleading,Deceptive visualization,string,trial,
+provenance_condition,ai-assisted,AI-assisted visualization label shown,string,trial,Null in baseline/transfer
+provenance_condition,none,No provenance label shown,string,trial,Null in baseline/transfer
+trust_pre,,Trust rating before intervention,integer,trial,0-100 scale
+misleading_pre,yes,Chart judged misleading before intervention,string,trial,
+misleading_pre,no,Chart judged accurate before intervention,string,trial,
+misleading_pre,unsure,Uncertain judgment before intervention,string,trial,Main analysis: incorrect
+confidence_pre,,Confidence in pre-intervention judgment,integer,trial,0-100 scale
+trust_post,,Trust rating after intervention,integer,trial,0-100 scale; null in baseline/transfer
+misleading_post,yes,Chart judged misleading after intervention,string,trial,Null in baseline/transfer
+misleading_post,no,Chart judged accurate after intervention,string,trial,Null in baseline/transfer
+misleading_post,unsure,Uncertain judgment after intervention,string,trial,Null in baseline/transfer
+confidence_post,,Confidence in post-intervention judgment,integer,trial,0-100 scale; null in baseline/transfer
+initial_response_time_ms,,Time from stimulus to initial judgment,integer,trial,Milliseconds
+intervention_time_ms,,Total time in intervention step,integer,trial,Null in baseline/transfer
+locate_time_ms,,Time on EGVV locate step,integer,trial,Null if not EGVV
+explain_time_ms,,Time on EGVV explain step,integer,trial,Null if not EGVV
+verify_time_ms,,Time on EGVV verify step,integer,trial,Null if not EGVV
+compare_time_ms,,Time on EGVV compare step,integer,trial,Null if not EGVV
+trial_total_time_ms,,Total time for trial,integer,trial,Milliseconds
+timestamp_start,,Trial start ISO timestamp,string,trial,
+timestamp_end,,Trial end ISO timestamp,string,trial,
+checks,data-source,Participant checks data sources,array,questionnaire,Multi-select
+ checks,axis,Participant checks axes,array,questionnaire,
+checks,title,Participant checks titles,array,questionnaire,
+checks,color,Participant checks colors,array,questionnaire,
+checks,chart-type,Participant checks chart types,array,questionnaire,
+checks,ai-source,Participant checks AI source labels,array,questionnaire,
+checks,values,Participant checks value labels,array,questionnaire,
+checks,uncertainty,Participant checks uncertainty,array,questionnaire,
+checks,other,Participant checks other aspects,array,questionnaire,
+ai_influence,,AI source influence on judgment,integer,questionnaire,0-100 scale
+egvv_help,,EGVV steps helped understanding,integer,questionnaire,0-100 scale; EGVV only
+egvv_burden,,EGVV steps felt excessive,integer,questionnaire,0-100 scale; EGVV only
+strategy,,Self-reported checking strategy,string,questionnaire,Open text
+pilot_feedback,,Pilot bug/confusion feedback,string,session,Pilot mode only
+viewport_width,,Browser viewport width,integer,session,
+viewport_height,,Browser viewport height,integer,session,
+user_agent,,Browser user agent,string,session,QA only
+detection_correct,,Whether misleading judgment matches ground truth,boolean,derived,Main analysis: unsure=false
+false_positive,,Accurate chart judged misleading,boolean,derived,
+false_negative,,Misleading chart judged not misleading,boolean,derived,
+belief_revision,,trust_post - trust_pre,number,derived,Positive=trust increased
+trust_discernment_p,,Participant-level mean trust accurate minus misleading,number,derived,Per participant

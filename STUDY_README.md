@@ -57,9 +57,23 @@ misvis-study-MVXXXXXXXX.json
 
 The JSON contains `session` and `trials` arrays.
 
+See `study/data/schema.md` for the full data schema and `analysis/DATA_ANALYSIS_PLAN.md` for the analysis plan.
+
 ---
 
-## 6. What is intentionally not implemented in V1?
+## 6. Data analysis workflow
+
+1. Collect JSON files from participants into a directory.
+2. Run `analysis/prepare_data.py` to generate:
+   - `trials.csv` — long-format trial data
+   - `participants.csv` — session-level data
+   - `validation_report.txt` — data quality flags
+3. Run `analysis/analysis.R` to fit mixed-effects models and produce figures.
+4. See `analysis/codebook.csv` for variable definitions.
+
+---
+
+## 7. What is intentionally not implemented in V1?
 
 - Remote data collection (Supabase, Firebase, etc.).
 - Real controlled SVG stimuli (currently placeholders).
@@ -69,7 +83,7 @@ The JSON contains `session` and `trials` arrays.
 
 ---
 
-## 7. Planned next phases
+## 8. Planned next phases
 
 1. Stimulus generator (`scripts/build_stimuli.py`).
 2. 24 main SVGs + baseline/transfer stimuli.
