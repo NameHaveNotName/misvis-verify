@@ -1,0 +1,594 @@
+{
+  "ai_disclosure_transparency": [
+    {
+      "title": "In AI we trust? Perceptions about automated decision-making by artificial intelligence",
+      "year": 2020,
+      "authors": "Theo Araujo, Natali Helberger, Sanne Kruikemeier",
+      "doi": "https://doi.org/10.1007/s00146-019-00931-w",
+      "openalex_id": "https://openalex.org/W2997468044",
+      "cited_by": 1005,
+      "abstract": ""
+    },
+    {
+      "title": "Transparency and accountability in AI systems: safeguarding wellbeing in the age of algorithmic decision-making",
+      "year": 2024,
+      "authors": "Ben Chester Cheong",
+      "doi": "https://doi.org/10.3389/fhumd.2024.1421273",
+      "openalex_id": "https://openalex.org/W4400303336",
+      "cited_by": 330,
+      "abstract": "The rapid integration of artificial intelligence (AI) systems into various domains has raised concerns about their impact on individual and societal wellbeing, particularly due to the lack transparency accountability in decision-making processes. This review aims provide an overview key legal ethical challenges associated with implementing AI systems. identifies four main thematic areas: technical approaches, regulatory frameworks, considerations, interdisciplinary multi-stakeholder approaches. By synthesizing current state research proposing strategies for policymakers, this contributes ongoing discourse responsible governance lays foundation future critical area. Ultimately, goal is promote wellbeing by ensuring that are developed deployed a transparent, accountable, manner."
+    },
+    {
+      "title": "AI4People—An Ethical Framework for a Good AI Society: Opportunities, Risks, Principles, and Recommendations",
+      "year": 2018,
+      "authors": "Luciano Floridi, Josh Cowls, Monica Beltrametti",
+      "doi": "https://doi.org/10.1007/s11023-018-9482-5",
+      "openalex_id": "https://openalex.org/W2902634493",
+      "cited_by": 3886,
+      "abstract": "This article reports the findings of AI4People, an Atomium-EISMD initiative designed to lay foundations for a \"Good AI Society\". We introduce core opportunities and risks society; present synthesis five ethical principles that should undergird its development adoption; offer 20 concrete recommendations-to assess, develop, incentivise, support good AI-which in some cases may be undertaken directly by national or supranational policy makers, while others led other stakeholders. If adopted, these recommendations would serve as firm foundation establishment Good Society."
+    },
+    {
+      "title": "Why a Right to Explanation of Automated Decision-Making Does Not Exist in the General Data Protection Regulation",
+      "year": 2017,
+      "authors": "Sandra Wachter, Brent Mittelstadt, Luciano Floridi",
+      "doi": "https://doi.org/10.1093/idpl/ipx005",
+      "openalex_id": "https://openalex.org/W3124443940",
+      "cited_by": 1193,
+      "abstract": "In recent months, researchers,1 government bodies,2 and the media3 have claimed that a ‘right to explanation’ of decisions made by automated artificially intelligent algorithmic systems is legally mandated forthcoming European Union General Data Protection Regulation4 2016/679 (GDPR). The right explanation viewed as promising mechanism in broader pursuit industry for accountability transparency algorithms, artificial intelligence, robotics, other systems.5 Automated can many unintended unexpected effects.6 Public assessment extent source these problems often difficult,7 owing use complex opaque mechanisms.8 alleged would require data controllers explain how such mechanisms reach decisions. Significant hype has been mounting over empowering effects enforceable subjects, disruption intensive industries,"
+    },
+    {
+      "title": "AI-Assisted Decision-making in Healthcare",
+      "year": 2019,
+      "authors": "Tamra Lysaght, Hannah Y. Lim, Vicki Xafis",
+      "doi": "https://doi.org/10.1007/s41649-019-00096-0",
+      "openalex_id": "https://openalex.org/W2973190536",
+      "cited_by": 328,
+      "abstract": "Abstract Artificial intelligence (AI) is set to transform healthcare. Key ethical issues emerge with this transformation encompass the accountability and transparency of decisions made by AI-based systems, potential for group harms arising from algorithmic bias professional roles integrity clinicians. These concerns must be balanced against imperatives generating public benefit more efficient healthcare systems vastly higher accurate computational power AI. In weighing up these issues, paper applies deliberative balancing approach Ethics Framework Big Data in Health Research (Xafis et al. 2019). The analysis relevant values identified framework demonstrate how decision-makers can draw on them develop implement AI-assisted support into clinical practice"
+    },
+    {
+      "title": "Transparency you can trust: Transparency requirements for artificial intelligence between legal norms and contextual concerns",
+      "year": 2019,
+      "authors": "Heike Felzmann, Eduard Fosch‐Villaronga, Christoph Lutz",
+      "doi": "https://doi.org/10.1177/2053951719860542",
+      "openalex_id": "https://openalex.org/W2954197146",
+      "cited_by": 430,
+      "abstract": "Transparency is now a fundamental principle for data processing under the General Data Protection Regulation. We explore what this requirement entails artificial intelligence and automated decision-making systems. address topic of transparency in by integrating legal, social, ethical aspects. first investigate ratio legis Regulation its underpinnings, showing focus on provision information explanation. then discuss pitfalls with respect to focusing significance contextual performative factors implementation transparency. show that human–computer interaction human-robot literature do not provide clear results benefits users technologies due impact wide range factors, including conclude information- explanation-based approach critical approach, proposing as required itself may be insufficient achieve positive goals"
+    },
+    {
+      "title": "TRIPOD+AI statement: updated guidance for reporting clinical prediction models that use regression or machine learning methods",
+      "year": 2024,
+      "authors": "Professor Gary S. Collins, Karel G.M. Moons, Paula Dhiman",
+      "doi": "https://doi.org/10.1136/bmj-2023-078378",
+      "openalex_id": "https://openalex.org/W4394857110",
+      "cited_by": 2806,
+      "abstract": "The TRIPOD (Transparent Reporting of a multivariable prediction model for Individual Prognosis Or Diagnosis) statement was published in 2015 to provide the minimum reporting recommendations studies developing or evaluating performance model. Methodological advances field have since included widespread use artificial intelligence (AI) powered by machine learning methods develop models. An update is thus needed. TRIPOD+AI provides harmonised guidance studies, irrespective whether regression modelling been used. new checklist supersedes checklist, which should no longer be This article describes development and presents expanded 27 item with more detailed explanation each recommendation, Abstracts checklist. aims promote complete, accurate, transparent that evaluate its performance."
+    },
+    {
+      "title": "Towards Transparency by Design for Artificial Intelligence",
+      "year": 2020,
+      "authors": "Heike Felzmann, Eduard Fosch‐Villaronga, Christoph Lutz",
+      "doi": "https://doi.org/10.1007/s11948-020-00276-4",
+      "openalex_id": "https://openalex.org/W3103319283",
+      "cited_by": 544,
+      "abstract": "In this article, we develop the concept of Transparency by Design that serves as practical guidance in helping promote beneficial functions transparency while mitigating its challenges automated-decision making (ADM) environments. With rise artificial intelligence (AI) and ability AI systems to make automated self-learned decisions, a call for how such reach decisions has echoed within academic policy circles. The term transparency, however, relates multiple concepts, fulfills many functions, holds different promises struggle be realized concrete applications. Indeed, complexity ADM shows tension between normative ideal translation application. To address tension, first conduct review analyzing limitations concerning decision-making practices. We then look at"
+    }
+  ],
+  "truth_discernment": [
+    {
+      "title": "Fighting COVID-19 Misinformation on Social Media: Experimental Evidence for a Scalable Accuracy-Nudge Intervention",
+      "year": 2020,
+      "authors": "Gordon Pennycook, Jonathon McPhetres, Yunhao Zhang",
+      "doi": "https://doi.org/10.1177/0956797620939054",
+      "openalex_id": "https://openalex.org/W3013473577",
+      "cited_by": 1771,
+      "abstract": "Across two studies with more than 1,700 U.S. adults recruited online, we present evidence that people share false claims about COVID-19 partly because they simply fail to think sufficiently whether or not the content is accurate when deciding what share. In Study 1, participants were far worse at discerning between true and would on social media relative asked directly accuracy. Furthermore, greater cognitive reflection science knowledge associated stronger discernment. 2, found a simple accuracy reminder beginning of study (i.e., judging non-COVID-19-related headline) nearly tripled level truth discernment in participants' subsequent sharing intentions. Our results, which mirror those previously for political"
+    },
+    {
+      "title": "Beyond misinformation: Understanding and coping with the “post-truth” era.",
+      "year": 2017,
+      "authors": "Stephan Lewandowsky, Ullrich K. H. Ecker, John Cook",
+      "doi": "https://doi.org/10.1016/j.jarmac.2017.07.008",
+      "openalex_id": "https://openalex.org/W2760944227",
+      "cited_by": 1977,
+      "abstract": "The terms “post-truth” and “fake news” have become increasingly prevalent in public discourse over the last year. This article explores growing abundance of misinformation, how it influences people, to counter it. We examine ways which misinformation can an adverse impact on society. summarize people respond corrections what kinds are most effective. argue that be effective, scientific research into must considered within a larger political, technological, societal context. post-truth world emerged as result mega-trends such decline social capital, economic inequality, increased polarization, declining trust science, fractionated media landscape. suggest responses this malaise involve technological solutions incorporating psychological principles, interdisciplinary approach we"
+    },
+    {
+      "title": "The Psychology of Fake News",
+      "year": 2021,
+      "authors": "Gordon Pennycook, David G. Rand",
+      "doi": "https://doi.org/10.1016/j.tics.2021.02.007",
+      "openalex_id": "https://openalex.org/W3137986835",
+      "cited_by": 1245,
+      "abstract": "We synthesize a burgeoning literature investigating why people believe and share false or highly misleading news online. Contrary to common narrative whereby politics drives susceptibility fake news, are 'better' at discerning truth from falsehood (despite greater overall belief) when evaluating politically concordant news. Instead, poor discernment is associated with lack of careful reasoning relevant knowledge, the use heuristics such as familiarity. Furthermore, there substantial disconnect between what they on social media. This dissociation largely driven by inattention, more so than purposeful sharing misinformation. Thus, interventions can successfully nudge media users focus accuracy. Crowdsourced veracity ratings also be leveraged improve ranking"
+    },
+    {
+      "title": "Shifting attention to accuracy can reduce misinformation online",
+      "year": 2021,
+      "authors": "Gordon Pennycook, Ziv Epstein, Mohsen Mosleh",
+      "doi": "https://doi.org/10.1038/s41586-021-03344-2",
+      "openalex_id": "https://openalex.org/W3124726575",
+      "cited_by": 1127,
+      "abstract": ""
+    },
+    {
+      "title": "Fighting COVID-19 misinformation on social media: Experimental evidence for a scalable accuracy nudge intervention",
+      "year": 2020,
+      "authors": "Gordon Pennycook, Jonathon McPhetres, Yunhao Zhang",
+      "doi": "https://doi.org/10.31234/osf.io/uhbk9",
+      "openalex_id": "https://openalex.org/W4232317699",
+      "cited_by": 403,
+      "abstract": "Across two studies with over 1,600 U.S. adults recruited online, we present evidence that people share false claims about COVID-19 partly because they simply fail to think sufficiently whether or not content is accurate when deciding what share. In Study 1, participants were far worse at discerning between true and would on social media relative are asked directly accuracy. Furthermore, cognitive reflection science knowledge associated stronger discernment. 2, found a simple accuracy reminder the beginning of study – i.e., judging non-COVID-19-related headline more than doubled level truth discernment in participants’ sharing intentions. Our results, which mirror those previously for political"
+    },
+    {
+      "title": "The psychological drivers of misinformation belief and its resistance to correction",
+      "year": 2022,
+      "authors": "Ullrich K. H. Ecker, Stephan Lewandowsky, John Cook",
+      "doi": "https://doi.org/10.1038/s44159-021-00006-y",
+      "openalex_id": "https://openalex.org/W4206236567",
+      "cited_by": 1324,
+      "abstract": ""
+    },
+    {
+      "title": "Misinformation: susceptibility, spread, and interventions to immunize the public",
+      "year": 2022,
+      "authors": "Sander van der Linden",
+      "doi": "https://doi.org/10.1038/s41591-022-01713-6",
+      "openalex_id": "https://openalex.org/W4220844191",
+      "cited_by": 565,
+      "abstract": ""
+    },
+    {
+      "title": "Accuracy prompts are a replicable and generalizable approach for reducing the spread of misinformation",
+      "year": 2022,
+      "authors": "Gordon Pennycook, David G. Rand",
+      "doi": "https://doi.org/10.1038/s41467-022-30073-5",
+      "openalex_id": "https://openalex.org/W4225127529",
+      "cited_by": 255,
+      "abstract": "Interventions that shift users attention toward the concept of accuracy represent a promising approach for reducing misinformation sharing online. We assess replicability and generalizability this prompt effect by meta-analyzing 20 experiments (with total N = 26,863) completed our group between 2017 2020. This internal meta-analysis includes all relevant studies regardless outcome uses identical analyses across studies. Overall, prompts increased quality news people share (sharing discernment) relative to control, primarily intentions false headlines 10% control in these The magnitude did not significantly differ content (politics compared with COVID-19 related news) decay over successive trials. was robustly moderated gender, race, political ideology,"
+    }
+  ],
+  "visual_inoculation": [
+    {
+      "title": "A systematic review of communication interventions for countering vaccine misinformation",
+      "year": 2023,
+      "authors": "Hannah Whitehead, Clare E. French, Deborah M Caldwell",
+      "doi": "https://doi.org/10.1016/j.vaccine.2022.12.059",
+      "openalex_id": "https://openalex.org/W4313854366",
+      "cited_by": 136,
+      "abstract": "BACKGROUND: Misinformation and disinformation around vaccines has grown in recent years, exacerbated during the Covid-19 pandemic. Effective strategies for countering vaccine misinformation are crucial tackling hesitancy. We conducted a systematic review to identify describe communications-based used prevent ameliorate effect of mis- dis-information on people's attitudes behaviours surrounding vaccination (objective 1) examined their effectiveness 2). METHODS: searched CINAHL, Web Science, Scopus, MEDLINE, Embase, PsycInfo MedRxiv March 2021. The search strategy was built three themes(1) communications media; (2) misinformation; (3) vaccines. For trials addressing objective 2, risk bias assessed using Cochrane randomized tool (RoB2). RESULTS: Of 2000 identified records, 34 eligible studies"
+    },
+    {
+      "title": "Evaluation of a template for countering misinformation—Real-world Autism treatment myth debunking",
+      "year": 2019,
+      "authors": "Jessica Paynter, Sarah Luskin-Saxby, Deb Keen",
+      "doi": "https://doi.org/10.1371/journal.pone.0210746",
+      "openalex_id": "https://openalex.org/W2914796184",
+      "cited_by": 129,
+      "abstract": "Misinformation poses significant challenges to evidence-based practice. In the public health domain specifically, treatment misinformation can lead opportunity costs or direct harm. Alas, attempts debunk have proven sub-optimal, and even been shown \"backfire\", including increasing misperceptions. Thus, optimized debunking strategies developed more effectively combat misinformation. The aim of this study was test these in a real-world setting, targeting about autism interventions. context professional development training, we randomly assigned participants an \"optimized-debunking\" \"treatment-as-usual\" training condition compared support for non-empirically-supported treatments before, after, six weeks following completion online training. Results demonstrated greater benefits immediately after training; thus, implemented serve as general flexible"
+    },
+    {
+      "title": "Charting the Information and Misinformation Landscape to Characterize Misinfodemics on Social Media: COVID-19 Infodemiology Study at a Planetary Scale",
+      "year": 2021,
+      "authors": "Emily Chen, Julie Jiang, Ho-Chun Herbert Chang",
+      "doi": "https://doi.org/10.2196/32378",
+      "openalex_id": "https://openalex.org/W4205276384",
+      "cited_by": 40,
+      "abstract": "BACKGROUND: The novel coronavirus, also known as SARS-CoV-2, has come to define much of our lives since the beginning 2020. During this time, countries around world imposed lockdowns and social distancing measures. physical movements people ground a halt, while their online interactions increased they turned engaging with each other virtually. As means communication shifted online, information consumption online. Governing authorities health agencies have intentionally focus use media platforms spread factual timely information. However, opened gate for misinformation, contributing accelerating phenomenon misinfodemics. OBJECTIVE: We carried out an analysis Twitter discourse on over 1 billion tweets related COVID-19 year identify investigate prevalent"
+    },
+    {
+      "title": "Folk Models of Misinformation on Social Media",
+      "year": 2023,
+      "authors": "Filipo Sharevski, Amy Devine, Emma Pieroni",
+      "doi": "https://doi.org/10.14722/ndss.2023.24293",
+      "openalex_id": "https://openalex.org/W4324007209",
+      "cited_by": 10,
+      "abstract": "In this paper we investigate what folk models of misinformation exist on social media with a sample 235 users. Work does not how ordinary users deal it; rather, the focus is mostly anxiety, tensions, or divisions creates. Studying only structural aspects also overlooks internalized by and thus quick to prescribe \"inoculation\" strategies for presumed lack immunity misinformation. How grapple content develop \"natural immunity\" as precursor resilience, however, remains an open question."
+    },
+    {
+      "title": "Debunking strategies for misleading bar charts",
+      "year": 2022,
+      "authors": "Winnifred Wijnker, Ionica Smeets, J.P. Burger",
+      "doi": "https://doi.org/10.22323/2.21070207",
+      "openalex_id": "https://openalex.org/W4313410926",
+      "cited_by": 12,
+      "abstract": "Graphs are useful to communicate concisely about complex issues. Although they facilitate intuitive reading of data, trends, and predictions, hasty readers may still come the wrong conclusions, especially if graphs misleading due violated design conventions. To provide evidence how prevent misinformation from spreading by graphs, this two-survey experimental study investigates effectiveness four correction methods as debunking strategies correct bar charts with manipulated vertical axes. All showed positive effects. The most effective one is aimed at correcting initial image presenting an accurate alternative graph. A reduced effect remained visible after week."
+    },
+    {
+      "title": "Debunking health myths on the internet: the persuasive effect of (visual) online communication",
+      "year": 2022,
+      "authors": "Sabrina Heike Kessler, Eva Bachmann",
+      "doi": "https://doi.org/10.1007/s10389-022-01694-3",
+      "openalex_id": "https://openalex.org/W4205805506",
+      "cited_by": 28,
+      "abstract": "Aim: Developing evidence-based recommendations on how to debunk health-related misinformation and more specific health myths in (online) communication is important for individual the society. The present study investigated effects of debunking/correction texts created according latest research findings with regard four different recipients' belief, behaviour feelings regarding myths. Further, visualisations (machine-technical image, diagram, image an expert, message without image) debunking texts. Subject methods: = 700) participated anonymous online survey experiment a 4 (myths) × (picture) mixed design. Results: results show that receiving news article refutes widespread myth or use can significantly change attitudes recipients toward this myth. most influential variable was"
+    },
+    {
+      "title": "The effectiveness of using audio-visual based media intervention for promoting social media literacy skills to curtail fake news on social media: A quasi-experimental investigation",
+      "year": 2023,
+      "authors": "Hongxuan Zhao, Jing Xu, Timothy Onosahwo Iyendo",
+      "doi": "https://doi.org/10.1177/02666669231217236",
+      "openalex_id": "https://openalex.org/W4390080513",
+      "cited_by": 12,
+      "abstract": "This study experimented the effectiveness of using audio-visual-based media intervention for promoting social literacy skills to curb fake news. We carried out a quasi-experiment in one public university’s faculty communication and studies. randomly divided participants into three groups, including control group ( N = 235), audio-visual media-based 118) non-audio-visual (N 117). The experimental groups were exposed 8 weeks training improve their fight showed that through reported better knowledge, demonstrated ability spot news, inclination share accurate news from list compared based group. Overall, found be impactful fighting recommend relevant authorities organisations intensify efforts public's help halt spread misleading information. Audio-visual-based should"
+    },
+    {
+      "title": "Debunking strategies for misleading bar charts",
+      "year": 2022,
+      "authors": "Winnifred Wijnker, Ionica Smeets, J.P. Burger",
+      "doi": "https://doi.org/10.31235/osf.io/wm6te",
+      "openalex_id": "https://openalex.org/W4292616377",
+      "cited_by": 1,
+      "abstract": "Graphs are useful to communicate concisely about complex issues. Although they facilitate intuitive reading of data, trends, and predictions, hasty readers may still come the wrong conclusions, especially if graphs misleading due violated design conventions. To prevent misinformation from spreading by graphs, this two-survey experimental study investigates effectiveness four correction methods as debunking strategies correct bar charts with manipulated vertical axes. All showed positive effects. The most effective one is aimed at correcting initial image presenting an accurate alternative graph. A reduced effect remained visible after week."
+    }
+  ],
+  "pandey_deceptive_viz": [
+    {
+      "title": "Affective Visualization Design: Leveraging the Emotional Impact of Data",
+      "year": 2023,
+      "authors": "Xingyu Lan, Yanqiu Wu, Nan Cao",
+      "doi": "https://doi.org/10.48550/arxiv.2308.02831",
+      "openalex_id": "https://openalex.org/W4385681260",
+      "cited_by": 2,
+      "abstract": "In recent years, more and researchers have reflected on the undervaluation of emotion in data visualization highlighted importance considering human design. Meanwhile, an increasing number studies been conducted to explore emotion-related factors. However, so far, this research area is still its early stages faces a set challenges, such as unclear definition key concepts, insufficient justification why important design, lack characterization design space affective To address these first, we literature review identified three lines that examined both visualization. We clarified differences between kept 109 papers studied or discussed how communicates influences emotion. Then, coded terms they justified legitimacy (i.e., important) five"
+    },
+    {
+      "title": "Secant Optimization Algorithm for efficient global optimization",
+      "year": 2026,
+      "authors": "Mohammed Q. Ibrahim, Mohammed Qaraad, Nazar K. Hussein",
+      "doi": "https://doi.org/10.1038/s41598-026-36691-z",
+      "openalex_id": "https://openalex.org/W7126179296",
+      "cited_by": 10,
+      "abstract": "This paper presents the Secant Optimization Algorithm (SOA), a novel mathematics-inspired metaheuristic derived from Method. SOA enhances search efficiency by repeating vector updates using local information and derivative approximations in two steps: secant-based for enabling guided convergence stochastic sampling with an expansion factor global escaping optima. The algorithm’s performance was verified on set of benchmark functions, low- to high-dimensional nonlinear optimization problems, such as CEC2021 CEC2020 test suites. In addition, used solving real-world applications, convolutional neural network hyperparameter tuning four datasets: MNIST, MNIST-RD, Convex, Rectangle-I, parameter estimation photovoltaic (PV) systems. competitive SOA, form high rates higher solution accuracy, is confirmed"
+    },
+    {
+      "title": "Microgrid Optimization with Metaheuristic Algorithms—A Review of Technologies and Trends for Sustainable Energy Systems",
+      "year": 2026,
+      "authors": "Ghassan Zubi, Sofoklis S. Makridis",
+      "doi": "https://doi.org/10.3390/su18020647",
+      "openalex_id": "https://openalex.org/W7118377834",
+      "cited_by": 8,
+      "abstract": "Microgrids are evolving from simple hybrid systems into complex, multi-energy platforms with high-dimensional optimization challenges due to technological diversification, sector coupling, and increased data granularity. This review systematically examines the intersection of microgrid metaheuristic algorithms, focusing on period 2015 2025. We first trace evolution microgrids identify drivers complexity. then provide a structured overview algorithms—including evolutionary, swarm intelligence, physics-based, human-inspired approaches—and discuss their suitability for search spaces. Through comparative analysis case studies, we demonstrate that metaheuristics such as genetic particle optimization, gray wolf optimizer can reduce computation time under 10% required by an exhaustive while effectively handling multimodal, constrained objectives. The"
+    },
+    {
+      "title": "Navigating the social media market: AI and the challenge of fake news dissemination in the business environment",
+      "year": 2025,
+      "authors": "Monica Ioana Burcă-Voicu, Romana Emilia Cramarenco, Dan‐Cristian Dabija",
+      "doi": "https://doi.org/10.24136/oc.3386",
+      "openalex_id": "https://openalex.org/W4409807030",
+      "cited_by": 1,
+      "abstract": "Research background: Social media plays a crucial role today in enhancing or limiting how fake news is spread. Whether devised by man developed artificial intelligence, it has the power to rapidly change consumers’ minds, encouraging them adopt new behaviors, perceive situations differently, even act total opposition what might be expected. The dynamics of communication highlights need for an organizational response adapted AI technologies and dissemination within social networks. Purpose this article: This paper aims reveal, means bibliometric analysis systematic literature review, generative capabilities intelligence creation spread business environment, acknowledging previous research predicting accurately constant developments contemporary society. Methods: based on"
+    },
+    {
+      "title": "Do Large Language Models Reason About Uncertainty Like Humans? A Benchmark on Hurricane Forecast Visualization Comprehension",
+      "year": 2026,
+      "authors": "Le Liu, Yuhao Wang, Bohan Shen",
+      "doi": "https://doi.org/10.1609/aaai.v40i21.38812",
+      "openalex_id": "https://openalex.org/W7138385664",
+      "cited_by": 0,
+      "abstract": "Uncertainty visualizations, such as hurricane cones and ensemble tracks, are essential for risk communication but often misinterpreted, leading to harmful decisions. As AI assistants like large language models (LLMs) increasingly support understanding of graphics decision-making, they offer a promising pathway enhance the interpretation complex visualizations new opportunity examine improve uncertainty. We introduce UnReason, first benchmark that systematically compares how humans LLMs reason about forecast uncertainty visualizations. UnReason spans two escalating phases, seven representative visualization formats, six real cases, three agent types (humans, with context, without context), including 880 117,600 structured question–answer pairs under matched evaluation conditions. Phase 1 evaluates reasoning"
+    },
+    {
+      "title": "Blackcap Optimization Algorithm (BCOA): A Novel Metaheuristic Algorithm for Global and Engineering Optimization Problems",
+      "year": 2026,
+      "authors": "Ali Asghari, Mohammadhossein Mohammadi",
+      "doi": "https://doi.org/10.3390/biomimetics11060419",
+      "openalex_id": "https://openalex.org/W7164861342",
+      "cited_by": 1,
+      "abstract": "Metaheuristic algorithms are widely used to find optimal or near-optimal solutions for complex problems by taking inspiration from natural behaviors and processes. Although many different methods have been developed, a common problem in of them is maintaining good balance between exploration exploitation avoiding local optima. To deal with this issue, paper proposes new method called the Blackcap Optimization Algorithm (BCOA), which inspired navigation migration behavior birds. Instead using complicated distance calculations, proposed based on angular movement vectors. The each search agent controlled an angle-based mathematical model that combines global best angle, successful neighboring adaptive exponential disturbance factor. In addition, algorithm"
+    },
+    {
+      "title": "Secant Optimization Algorithm for Global Optimization Effectively",
+      "year": 2025,
+      "authors": "Mohamed F. Ibrahim, Mohammed Qaraad, Nazar K. Hussein",
+      "doi": "https://doi.org/10.21203/rs.3.rs-6281266/v1",
+      "openalex_id": "https://openalex.org/W4414402067",
+      "cited_by": 1,
+      "abstract": ""
+    },
+    {
+      "title": "IT risks associated with information theft in the financial system - a systematic review",
+      "year": 2024,
+      "authors": "Frank Cabanillas-Allca, Sebastian Chaquila-Muñoz, Orlando Iparraguirre-Villanueva",
+      "doi": "https://doi.org/10.11591/ijeecs.v37.i2.pp1339-1351",
+      "openalex_id": "https://openalex.org/W4404850814",
+      "cited_by": 0,
+      "abstract": "This research paper systematically reviews the financial system’s computer security risks associated with information theft. The objective is to explore and their implications concerning theft in economic system. Three questions were formulated identify these risks, nature, potential consequences achieve this objective. Fifty-five articles obtained from reliable databases linked both study variables analyzed using PRISMA methodology. To ensure validity reliability of information, various filters applied, such as year, keywords, elimination duplicate articles. In addition, an exhaustive reading content each article was carried out, organizing all through a systematization matrix. After thorough review articles, mostly written English representing 34.55% total 2023, sector"
+    }
+  ],
+  "correll_blackhat_viz": [
+    {
+      "title": "Do You See What I See? A Qualitative Study Eliciting High-Level Visualization Comprehension",
+      "year": 2024,
+      "authors": "Ghulam Jilani Quadri, Arran Zeyu Wang, Zhehao Wang",
+      "doi": "https://doi.org/10.1145/3613904.3642813",
+      "openalex_id": "https://openalex.org/W4392223457",
+      "cited_by": 34,
+      "abstract": "Designers often create visualizations to achieve specific high-level analytical or communication goals. These goals require people naturally extract complex, contextualized, and interconnected patterns in data. While limited prior work has studied general interpretation, prevailing perceptual studies of visualization effectiveness primarily focus on isolated, predefined, low-level tasks, such as estimating statistical quantities. This study more holistically explores interpretation examine the alignment between designers’ communicative what their audience sees a visualization, which we refer comprehension. We found that statistics effectively estimate from classical graphical perception may differ intuitively comprehend visualization. conducted qualitative three types visualizations—line graphs, bar scatterplots—to investigate draw Participants described"
+    },
+    {
+      "title": "Annotating Line Charts for Addressing Deception",
+      "year": 2022,
+      "authors": "Arlen Fan, Yuxin Ma, Michelle V. Mancenido",
+      "doi": "https://doi.org/10.1145/3491102.3502138",
+      "openalex_id": "https://openalex.org/W4225099728",
+      "cited_by": 44,
+      "abstract": "Deceptive visualizations are that, whether intentionally or not, lead the reader to an understanding of data which varies from actual data. Examples deceptive can be found in every digital platform, and, despite their widespread use wild, there have been limited efforts alert laypersons common visualization practices. In this paper, we present a tool for annotating line charts wild that reads chart images and outputs text visual annotations assess distortions help guide towards honest We demonstrate usefulness our through series case studies on real-world charts. Finally, perform crowdsourced experiment evaluate ability proposed educate readers about potentially"
+    },
+    {
+      "title": "Perceptual Pat: A Virtual Human Visual System for Iterative Visualization Design",
+      "year": 2023,
+      "authors": "Sungbok Shin, Sanghyun Hong, Niklas Elmqvist",
+      "doi": "https://doi.org/10.1145/3544548.3580974",
+      "openalex_id": "https://openalex.org/W4366547383",
+      "cited_by": 10,
+      "abstract": "Designing a visualization is often process of iterative refinement where the designer improves chart over time by adding features, improving encodings, and fixing mistakes. However, effective design requires external critique evaluation. Unfortunately, such not always available on short notice evaluation can be costly. To address this need, we present Perceptual Pat, an extensible suite AI computer vision techniques that forms virtual human visual system for supporting design. The analyzes snapshots using set filters—including gaze maps, text recognition, color analysis, etc—and generates report summarizing findings. web-based Pat Design Lab provides version tracking enables to track improvements time. We validate longitudinal qualitative"
+    },
+    {
+      "title": "Scoping the Future of Visualization Literacy: A Review",
+      "year": 2022,
+      "authors": "Mara Solen",
+      "doi": "https://doi.org/10.31219/osf.io/eypgm",
+      "openalex_id": "https://openalex.org/W4293247395",
+      "cited_by": 5,
+      "abstract": "Access to information is increasing rapidly, and data visualizations are becoming increasingly common as a way communicate summaries of large datasets, especially in media designed for the general public. Accompanying this rise visualization need literacy. In work we survey current body research on literacy find themes guide future work. We found three literacy: interpretation, construction, believability. Construction believability not traditionally discussed research. analyzed participant pools user studies them be lacking diversity gender sex, age, education level, recruitment country."
+    },
+    {
+      "title": "CALVI: Critical Thinking Assessment for Literacy in Visualizations",
+      "year": 2023,
+      "authors": "Lily W. Ge, Cui Yuan, Matthew Kay",
+      "doi": "https://doi.org/10.31219/osf.io/32mg7",
+      "openalex_id": "https://openalex.org/W4320922889",
+      "cited_by": 3,
+      "abstract": "Visualization misinformation is a prevalent problem, and combating it requires understanding people’s ability to read, interpret, reason about erroneous or potentially misleading visualizations, which lacks reliable measurement: existing visualization literacy tests focus on well-formed visualizations. We systematically develop an assessment for this by: (1) developing precise definition of misleaders (decisions made in the construction visualizations that can lead conclusions not supported by data), (2) constructing initial test items using design space chart types, (3) trying out provisional 497 participants, (4) analyzing tryout results refining Item Response Theory, qualitative analysis, wrong-due-to-misleader score, content validity index. Our final bank 45 shows high"
+    },
+    {
+      "title": "Communicative Visualizations as a Learning Problem",
+      "year": 2020,
+      "authors": "Eytan Adar, Elsie Lee-Robbins",
+      "doi": "https://doi.org/10.1109/tvcg.2020.3030375",
+      "openalex_id": "https://openalex.org/W3086983493",
+      "cited_by": 2,
+      "abstract": "Significant research has provided robust task and evaluation languages for the analysis of exploratory visualizations. Unfortunately, these taxonomies fail when applied to communicative Instead, designers often resort evaluating visualizations from cognitive efficiency perspective: \"can recipient accurately decode my message/insight?\" However, are unlikely be satisfied if message went 'in one ear out other.' The consequence this inconsistency is that it difficult design or select between competing options in a principled way. problem we address fundamental mismatch how want describe their intent, language they have. We argue visualization can limitation through learning lens: student designer teacher. By using objectives, better define, assess,"
+    },
+    {
+      "title": "Adversarial attacks on machine learning-aided visualizations",
+      "year": 2024,
+      "authors": "Takanori Fujiwara, Kostiantyn Kucher, Junpeng Wang",
+      "doi": "https://doi.org/10.1007/s12650-024-01029-2",
+      "openalex_id": "https://openalex.org/W4402710057",
+      "cited_by": 2,
+      "abstract": "Abstract Research in ML4VIS investigates how to use machine learning (ML) techniques generate visualizations, and the field is rapidly growing with high societal impact. However, as any computational pipeline that employs ML processes, approaches are susceptible a range of ML-specific adversarial attacks. These attacks can manipulate visualization generations, causing analysts be tricked their judgments impaired. Due lack synthesis from both perspectives, this security aspect largely overlooked by current literature. To bridge gap, we investigate potential vulnerabilities ML-aided visualizations using holistic lens perspectives. We first identify attack surface (i.e., entry points) unique visualizations. then exemplify five different examples highlight possible when"
+    },
+    {
+      "title": "Designing Narrative-Focused Role-Playing Games for Visualization Literacy in Young Children",
+      "year": 2020,
+      "authors": "Elaine Huynh, Angela Nyhout, Patricia A. Ganea",
+      "doi": "https://doi.org/10.1109/tvcg.2020.3030464",
+      "openalex_id": "https://openalex.org/W3081678230",
+      "cited_by": 3,
+      "abstract": "Building on game design and education research, this paper introduces narrative-focused role-playing games as a way to promote visualization literacy in young children. Visualization skills are vital understanding the world around us constructing meaningful visualizations, yet, how better develop these at an early age remains largely overlooked understudied. Only recently has community started fill gap, resulting preliminary studies development of educational tools for use education. We add efforts through exploration gamification support learning, identify opportunity apply game-based designs by leveraging presence narratives data-related problems involving visualizations. study effects including narrative elements learning technology probe, grounded set considerations stemming from visualization,"
+    }
+  ],
+  "cleveland_mcgill": [
+    {
+      "title": "Automating the design of graphical presentations of relational information",
+      "year": 1986,
+      "authors": "Jock D. Mackinlay",
+      "doi": "https://doi.org/10.1145/22949.22950",
+      "openalex_id": "https://openalex.org/W2132881639",
+      "cited_by": 1633,
+      "abstract": "The goal of the research described in this paper is to develop an application-independent presentation tool that automatically designs effective graphical presentations (such as bar charts, scatter plots, and connected graphs) relational information. Two problems are raised by goal: codification graphic design criteria a form can be used tool, generation wide variety so accommodate approach based on view sentences languages. issues codified expressiveness effectiveness for Expressiveness determine whether language express desired Effectiveness exploits capabilities output medium human visual system. A systematically generated using composition algebra composes small set primitive Artificial intelligence techniques implement prototype called APT (A Presentation Tool), which"
+    },
+    {
+      "title": "Four Experiments on the Perception of Bar Charts",
+      "year": 2014,
+      "authors": "Justin Talbot, Vidya Setlur, Anushka Anand",
+      "doi": "https://doi.org/10.1109/tvcg.2014.2346320",
+      "openalex_id": "https://openalex.org/W2070664725",
+      "cited_by": 133,
+      "abstract": "Bar charts are one of the most common visualization types. In a classic graphical perception paper, Cleveland & McGill studied how different bar chart designs impact accuracy with which viewers can complete simple perceptual tasks. They found that people perform substantially worse on stacked than aligned charts, and comparisons between adjacent bars more accurate widely separated bars. However, study did not explore why these differences occur. this we describe series follow-up experiments to further explain their results. While our results generally confirm McGill's ranking various configurations, provide additional insight into reading task sources participants' errors. We use propose new hypotheses"
+    },
+    {
+      "title": "Efficiency of graphical perception",
+      "year": 1989,
+      "authors": "Gordon E. Legge, Yuanchao Gu, Andrew Luebker",
+      "doi": "https://doi.org/10.3758/bf03204990",
+      "openalex_id": "https://openalex.org/W1994790922",
+      "cited_by": 77,
+      "abstract": ""
+    },
+    {
+      "title": "An experimental program investigating color-enhanced and graphical information presentation: an integration of the findings",
+      "year": 1986,
+      "authors": "Izak Benbasat, Albert S. Dexter, Peter Todd",
+      "doi": "https://doi.org/10.1145/7538.7545",
+      "openalex_id": "https://openalex.org/W2036113824",
+      "cited_by": 208,
+      "abstract": "A series of three laboratory experiments were conducted to assess the influence graphical and color-enhanced information presentation modes on decision quality, making time, use information, user perceptions. The experimental design allowed for unconfounded study line graphs color using a variety designs same task. Based findings these studies, propositions about impact graphics individual makers are presented. mode human performance perceived value is related how well it supports solution approach particular benefits limited reducing time but only when report has been designed directly assist in solving Multicolor reports aid making, specific circumstances, that is, their not pervasive. It appears more advantageous associated"
+    },
+    {
+      "title": "The Effects of Representation and Juxtaposition on Graphical Perception of Matrix Visualization",
+      "year": 2015,
+      "authors": "Xiaotong Liu, Han‐Wei Shen",
+      "doi": "https://doi.org/10.1145/2702123.2702217",
+      "openalex_id": "https://openalex.org/W1999976769",
+      "cited_by": 21,
+      "abstract": "Analyzing multiple networks at once is a common yet difficult task in many domains. Using adjacency matrices for this purpose, however, can be effective because of its superior ability to accommodate dense small area. We evaluate various representations and juxtaposition designs visualizing through series controlled experiments. investigate the effect using square triangular on speed accuracy performing graphical-perception tasks. Based human symmetric perception, we propose two alternative conventional side-by-side juxtaposition, study how users perform visual search comparison tasks regarding different types. Our results show that matrix have similar performance, types differently. With design guidelines derived from our studies, present compact visualization"
+    },
+    {
+      "title": "The nature of correlation perception in scatterplots",
+      "year": 2016,
+      "authors": "Ronald A. Rensink",
+      "doi": "https://doi.org/10.3758/s13423-016-1174-7",
+      "openalex_id": "https://openalex.org/W2546157540",
+      "cited_by": 71,
+      "abstract": "For scatterplots with gaussian distributions of dots, the perception Pearson correlation r can be described by two simple laws: a linear one for discrimination, and logarithmic perceived magnitude (Rensink & Baldridge, 2010). The underlying perceptual mechanisms, however, remain poorly understood. To cast light on these, four different datapoints were examined. first had 100 points equal variance in both dimensions. Consistent earlier results, just noticeable difference (JND) was function distance away from = 1, this quantity. In addition, these laws linked, intercept JND line being inverse bias magnitude. Three other conditions also examined: dot cloud 25 points, horizontal compression cloud, uniform"
+    },
+    {
+      "title": "A Review and Collation of Graphical Perception Knowledge for Visualization Recommendation",
+      "year": 2023,
+      "authors": "Zehua Zeng, Leilani Battle",
+      "doi": "https://doi.org/10.1145/3544548.3581349",
+      "openalex_id": "https://openalex.org/W4366583080",
+      "cited_by": 20,
+      "abstract": "Selecting appropriate visual encodings is critical to designing effective visualization recommendation systems, yet few findings from graphical perception are typically applied within these systems. We observe two significant limitations in translating knowledge into actionable rules/constraints: inconsistent reporting of and a lack shared data across studies. How can we translate the literature base for recommendation? present review 59 papers that study user performance ten analysis tasks. Through this study, contribute JSON dataset collates existing theoretical experimental summarizes key outcomes perception. illustrate how inform automated encoding decisions with three representative Based on our findings, highlight open challenges opportunities community collating range scenarios."
+    },
+    {
+      "title": "The perception of scatterplots",
+      "year": 2007,
+      "authors": "Michael E. Doherty, Richard B. Anderson, Andrea M. Angott",
+      "doi": "https://doi.org/10.3758/bf03193961",
+      "openalex_id": "https://openalex.org/W2021317246",
+      "cited_by": 39,
+      "abstract": ""
+    }
+  ],
+  "tufte": [
+    {
+      "title": "The Cognitive Science of Visual‐Spatial Displays: Implications for Design",
+      "year": 2011,
+      "authors": "Mary Hegarty",
+      "doi": "https://doi.org/10.1111/j.1756-8765.2011.01150.x",
+      "openalex_id": "https://openalex.org/W2147235552",
+      "cited_by": 385,
+      "abstract": "This paper reviews cognitive science perspectives on the design of visual-spatial displays and introduces other papers in this topic. It begins by classifying different types displays, followed a discussion ways which augment cognition an overview perceptual processes involved using displays. The then argues for importance methods to visual some main principles display that have emerged from these approaches date. Cognitive scientists had good success characterizing performance well-defined tasks with relatively simple but many challenges remain understanding use complex ill-defined tasks. Current research exemplified topic extends empirical new domains, informs development general graphic design, addresses current raised recent explosion availability data"
+    },
+    {
+      "title": "The Information Mural: a technique for displaying and navigating large information spaces",
+      "year": 1998,
+      "authors": "Dean Frederick Jerding, John Stasko",
+      "doi": "https://doi.org/10.1109/2945.722299",
+      "openalex_id": "https://openalex.org/W2013088214",
+      "cited_by": 165,
+      "abstract": "Information visualizations must allow users to browse information spaces and focus quickly on items of interest. Being able see some representation the entire space provides an initial gestalt overview gives context support browsing search tasks. However, limited number pixels screen constrain bandwidth make it difficult completely display large spaces. The Mural is a two-dimensional, reduced that fits entirely within window or screen. creates miniature version using visual attributes, such as gray-scale shading, intensity, color, pixel size, along with antialiased compression techniques. Murals can be used stand-alone in global navigational views. We have built several prototypes demonstrate use visualization applications; subject"
+    },
+    {
+      "title": "Fluid interaction for information visualization",
+      "year": 2011,
+      "authors": "Niklas Elmqvist, Andrew Vande Moere, Hans-Christian Jetter",
+      "doi": "https://doi.org/10.1177/1473871611413180",
+      "openalex_id": "https://openalex.org/W2144988340",
+      "cited_by": 258,
+      "abstract": "Despite typically receiving little emphasis in visualization research, interaction is the catalyst for user's dialogue with data, and, ultimately, actual understanding and insight into these data. There are many possible reasons this skewed balance between visual interactive aspects of a visualization. One reason that an intangible concept difficult to design, quantify, evaluate. Unlike there few examples show practitioners researchers how design new best manner. In article, we attempt address issue by collecting visualizations ‘best-in-class’ using them extract practical guidelines future designers researchers. We call fluid interaction, propose operational definition terms direct manipulation embodied paradigms, psychological ‘flow’, Norman's gulfs execution evaluation."
+    },
+    {
+      "title": "Hierarchical Aggregation for Information Visualization: Overview, Techniques, and Design Guidelines",
+      "year": 2009,
+      "authors": "Niklas Elmqvist, Jean‐Daniel Fekete",
+      "doi": "https://doi.org/10.1109/tvcg.2009.84",
+      "openalex_id": "https://openalex.org/W2121418890",
+      "cited_by": 390,
+      "abstract": "We present a model for building, visualizing, and interacting with multiscale representations of information visualization techniques using hierarchical aggregation. The motivation this work is to make visual more visually scalable less cluttered. allows augmenting existing functionality, as well designing new interaction that conform class representations. give some examples how use the standard such scatterplots, parallel coordinates, node-link diagrams, discuss are based on This yields set design guidelines aggregated visualizations. also basic vocabulary suitable navigating these"
+    },
+    {
+      "title": "Mixed Methods Analysis and Information Visualization: Graphical Display for Effective Communication of Research Results",
+      "year": 2015,
+      "authors": "Anthony J. Onwuegbuzie, Wendy B. Dickinson",
+      "doi": "https://doi.org/10.46743/2160-3715/2008.1595",
+      "openalex_id": "https://openalex.org/W2127523837",
+      "cited_by": 98,
+      "abstract": "In this paper, we introduce various graphical methods that can be used to represent data in mixed research. First, present a broad taxonomy of visual representation. Next, use provide an overview techniques for quantitative display and qualitative display. Then, propose what call “crossover” extensions summarize integrate both results within the same framework. We several examples crossover (mixed research) displays illustrate natural extension. so doing, contend enhances researchers’ understanding (i.e., increased Verstehen) social behavioral phenomena general meaning underlies these particular."
+    },
+    {
+      "title": "Surface-Based Display of Volume-Averaged Cerebellar Imaging Data",
+      "year": 2015,
+      "authors": "Jörn Diedrichsen, Ewa Zotow",
+      "doi": "https://doi.org/10.1371/journal.pone.0133402",
+      "openalex_id": "https://openalex.org/W935067513",
+      "cited_by": 321,
+      "abstract": "The paper presents a flat representation of the human cerebellum, useful for visualizing functional imaging data after volume-based normalization and averaging across subjects. Instead reconstructing individual cerebellar surfaces, method uses white- grey-matter surface defined on volume-averaged anatomical data. Functional can be projected along lines corresponding vertices two surfaces. is optimized to yield roughly proportional relationship between area 2D-representation volume underlying grey matter. map allows users visualize activation state complete matter in one concise view, equally revealing both anterior-posterior (lobular) medial-lateral organization. As examples, published resting-state networks task-related activity are presented flatmap. software maps freely available compatible with most major neuroimaging"
+    },
+    {
+      "title": "Business Information Visualization",
+      "year": 1999,
+      "authors": "David P. Tegarden",
+      "doi": "https://doi.org/10.17705/1cais.00104",
+      "openalex_id": "https://openalex.org/W2898681128",
+      "cited_by": 161,
+      "abstract": "With the flood of data produced by today's information systems, something must be done to allow business decision-makers extract contains. The recent advances in visualization technologies provide capability begin use human visual/spatial abilities solve abstract problems found business. If can visualized with an appropriate representation, then it may possible innate spatial/visual decision-maker separate \"wheat from chaff.\" This tutorial surveys issues related applying problem solving."
+    },
+    {
+      "title": "The visual display of information in an information retrieval environment",
+      "year": 1986,
+      "authors": "Donald B. Crouch",
+      "doi": "https://doi.org/10.1145/253168.253186",
+      "openalex_id": "https://openalex.org/W2038194872",
+      "cited_by": 21,
+      "abstract": "This paper gives an overview of the graphical techniques which have been used in representation information a document collection environment. An assessment applicability existing multivariate data to vector space model is presented."
+    }
+  ],
+  "chart_title_effect": [
+    {
+      "title": "Internet of Things (IoT): A vision, architectural elements, and future directions",
+      "year": 2013,
+      "authors": "Jayavardhana Gubbi, Rajkumar Buyya, Slaven Marusic",
+      "doi": "https://doi.org/10.1016/j.future.2013.01.010",
+      "openalex_id": "https://openalex.org/W2111619626",
+      "cited_by": 12127,
+      "abstract": ""
+    },
+    {
+      "title": "VisText: A Benchmark for Semantically Rich Chart Captioning",
+      "year": 2023,
+      "authors": "Benny J. Tang, Angie Boggust, Arvind Satyanarayan",
+      "doi": "https://doi.org/10.18653/v1/2023.acl-long.401",
+      "openalex_id": "https://openalex.org/W4385570745",
+      "cited_by": 50,
+      "abstract": "Captions that describe or explain charts help improve recall and comprehension of the depicted data provide a more accessible medium for people with visual disabilities. However, current approaches automatically generating such captions struggle to articulate perceptual cognitive features are hallmark (e.g., complex trends patterns). In response, we introduce VisText: dataset 12,441 pairs charts' construction, report key statistics, identify phenomena. VisText, chart is available as three representations: rasterized image, backing table, scene graph—a hierarchical representation chart's elements akin web page's Document Object Model (DOM). To evaluate impact fine-tune state-of-the-art language models on our captioning task apply prefix-tuning produce vary semantic content"
+    },
+    {
+      "title": "Automatic Caption Generation for News Images",
+      "year": 2012,
+      "authors": "Yansong Feng, Mirella Lapata",
+      "doi": "https://doi.org/10.1109/tpami.2012.118",
+      "openalex_id": "https://openalex.org/W2156830856",
+      "cited_by": 120,
+      "abstract": "This paper is concerned with the task of automatically generating captions for images, which important many image-related applications. Examples include video and image retrieval as well development tools that aid visually impaired individuals to access pictorial information. Our approach leverages vast resource pictures available on web fact them are captioned colocated thematically related documents. model learns create from a database news articles, embedded in them, their captions, consists two stages. Content selection identifies what accompanying article about, whereas surface realization determines how verbalize chosen content. We approximate content probabilistic annotation suggests keywords an image. The postulates images textual descriptions generated"
+    },
+    {
+      "title": "Storytelling and Visualization: An Extended Survey",
+      "year": 2018,
+      "authors": "Chao Tong, Richard Roberts, Rita Borgo",
+      "doi": "https://doi.org/10.3390/info9030065",
+      "openalex_id": "https://openalex.org/W2792416149",
+      "cited_by": 151,
+      "abstract": "Throughout history, storytelling has been an effective way of conveying information and knowledge. In the field visualization, is rapidly gaining momentum evolving cutting-edge techniques that enhance understanding. Many communities have commented on importance in data visualization. Storytellers tend to be integrating complex visualizations into their narratives growing numbers. this paper, we present a survey literature visualization overview common important elements We also describe challenges as well novel classification Our scheme highlights open unsolved problems more mature sub-fields. The benefits offer concise starting point research trend provide deeper understanding topic."
+    },
+    {
+      "title": "More Than Telling a Story: Transforming Data into Visually Shared Stories",
+      "year": 2015,
+      "authors": "Bongshin Lee, Nathalie Henry Riche, Petra Isenberg",
+      "doi": "https://doi.org/10.1109/mcg.2015.99",
+      "openalex_id": "https://openalex.org/W1633631835",
+      "cited_by": 290,
+      "abstract": "The authors take a closer look at how the visualization community has discussed visual storytelling and present data process, incorporating steps involved in finding insights (explore data), turning these into narrative (make story), communicating this to an audience (tell story). They also discuss opportunities for future research as medium light of broader process."
+    },
+    {
+      "title": "Data-driven materials research enabled by natural language processing and information extraction",
+      "year": 2020,
+      "authors": "Elsa Olivetti, Jacqueline M. Cole, Edward Kim",
+      "doi": "https://doi.org/10.1063/5.0021106",
+      "openalex_id": "https://openalex.org/W3115677442",
+      "cited_by": 306,
+      "abstract": "Given the emergence of data science and machine learning throughout all aspects society, but particularly in scientific domain, there is increased importance placed on obtaining data. Data materials are heterogeneous, based significant range classes that explored variety properties interest. This leads to many orders magnitude, these may manifest as numerical text or image-based information, which requires quantitative interpretation. The ability automatically consume codify literature across domains—enabled by techniques adapted from field natural language processing—therefore has immense potential unlock generate rich datasets necessary for learning. review focuses progress practices processing mining highlights opportunities extracting additional information beyond contained figures tables articles."
+    },
+    {
+      "title": "Annotating Line Charts for Addressing Deception",
+      "year": 2022,
+      "authors": "Arlen Fan, Yuxin Ma, Michelle V. Mancenido",
+      "doi": "https://doi.org/10.1145/3491102.3502138",
+      "openalex_id": "https://openalex.org/W4225099728",
+      "cited_by": 44,
+      "abstract": "Deceptive visualizations are that, whether intentionally or not, lead the reader to an understanding of data which varies from actual data. Examples deceptive can be found in every digital platform, and, despite their widespread use wild, there have been limited efforts alert laypersons common visualization practices. In this paper, we present a tool for annotating line charts wild that reads chart images and outputs text visual annotations assess distortions help guide towards honest We demonstrate usefulness our through series case studies on real-world charts. Finally, perform crowdsourced experiment evaluate ability proposed educate readers about potentially"
+    },
+    {
+      "title": "How Does Automation Shape the Process of Narrative Visualization: A Survey of Tools",
+      "year": 2023,
+      "authors": "Qing Chen, Shixiong Cao, Jiazhe Wang",
+      "doi": "https://doi.org/10.1109/tvcg.2023.3261320",
+      "openalex_id": "https://openalex.org/W4360995362",
+      "cited_by": 66,
+      "abstract": "In recent years, narrative visualization has gained much attention. Researchers have proposed different design spaces for various genres and scenarios to facilitate the creation process. As users' needs grow automation technologies advance, increasingly more tools been designed developed. this study, we summarized six of (annotated charts, infographics, timelines & storylines, data comics, scrollytelling slideshow, videos) based on previous research four types (design spaces, authoring tools, ML/AI-supported ML/AI-generator tools) intelligence level tools. We surveyed 105 papers study how can progressively engage in processes help users easily create visualizations. This aims provide an overview current development involvement discuss key problems each category"
+    }
+  ]
+}

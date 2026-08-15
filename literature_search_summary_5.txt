@@ -1,0 +1,135 @@
+
+=== ai_image_label_trust ===
+1. Explainable Artificial Intelligence (XAI): Concepts, taxonomies, opportunities and challenges toward responsible AI (2019)
+   Authors: Alejandro Barredo Arrieta, Natalia Díaz-Rodríguez, Javier Del Ser
+   DOI: https://doi.org/10.1016/j.inffus.2019.12.012
+   Cited by: 9521
+   Abstract: ...
+2. Explainable Artificial Intelligence (XAI): What we know and what is left to attain Trustworthy Artificial Intelligence (2023)
+   Authors: Sajid Ali, Tamer Abuhmed, Shaker El–Sappagh
+   DOI: https://doi.org/10.1016/j.inffus.2023.101805
+   Cited by: 1630
+   Abstract: Artificial intelligence (AI) is currently being utilized in a wide range of sophisticated applications, but the outcomes many AI models are challenging to comprehend and trust due their black-box nature. Usually, it essential understand reasoning behind an model’s decision-making. Thus, need for eXp...
+3. Connecting the dots in trustworthy Artificial Intelligence: From AI principles, ethics, and key requirements to responsible AI systems and regulation (2023)
+   Authors: Natalia Díaz-Rodríguez, Javier Del Ser, Mark Coeckelbergh
+   DOI: https://doi.org/10.1016/j.inffus.2023.101896
+   Cited by: 694
+   Abstract: Trustworthy Artificial Intelligence (AI) is based on seven technical requirements sustained over three main pillars that should be met throughout the system’s entire life cycle: it (1) lawful, (2) ethical, and (3) robust, both from a social perspective. However, attaining truly trustworthy AI concer...
+4. Opinion Paper: “So what if ChatGPT wrote it?” Multidisciplinary perspectives on opportunities, challenges and implications of generative conversational AI for research, practice and policy (2023)
+   Authors: Yogesh K. Dwivedi, Nir Kshetri, Laurie Hughes
+   DOI: https://doi.org/10.1016/j.ijinfomgt.2023.102642
+   Cited by: 4000
+   Abstract: Transformative artificially intelligent tools, such as ChatGPT, designed to generate sophisticated text indistinguishable from that produced by a human, are applicable across wide range of contexts. The technology presents opportunities well as, often ethical and legal, challenges, has the potential...
+5. The Ethics of AI Ethics: An Evaluation of Guidelines (2020)
+   Authors: Thilo Hagendorff
+   DOI: https://doi.org/10.1007/s11023-020-09517-8
+   Cited by: 1690
+   Abstract: Abstract Current advances in research, development and application of artificial intelligence (AI) systems have yielded a far-reaching discourse on AI ethics. In consequence, number ethics guidelines been released recent years. These comprise normative principles recommendations aimed to harness the...
+
+=== c2pa_trust ===
+1. Compliance-by-Design Micro-Licensing for AI-Generated Content in Social Commerce Using C2PA Content Credentials and W3C ODRL Policies (2025)
+   Authors: Xiongsheng Yi
+   DOI: https://doi.org/10.20944/preprints202509.1968.v1
+   Cited by: 12
+   Abstract: Considering the compliance management imperatives of AI-generated content within online social e-commerce arena, current manuscript recommends a micro-licensing agreement framework that fuses C2PA and W3C ODRL methods (C2PA-W3C) for tackling copyright verification, use restriction monitoring content...
+2. C2PA Provenance Labels Increase Trust in News Platforms Across Western Countries (2025)
+   Authors: Christoph Trattner, Svenja Lys Forstner, Alain D. Starke
+   DOI: https://doi.org/10.31219/osf.io/pdhaz_v1
+   Cited by: 4
+   Abstract: Misinformation and disinformation threaten global public trust in news media. Generative AI exacerbates mistrust by making it difficult to distinguish authentic images from AI-generated ones. This study examines whether accompanying with C2PA (Coalition for Content Provenance Authenticity) provenanc...
+3. Generative AI and deepfakes: a human rights approach to tackling harmful content (2024)
+   Authors: Felipe Romero Moreno
+   DOI: https://doi.org/10.1080/13600869.2024.2324540
+   Cited by: 99
+   Abstract: © 2024 The Author(s). Published by Informa UK Limited, trading as Taylor & Francis Group. This is an Open Access article distributed under the terms of Creative Commons Attribution License (http://creativecommons.org/ licenses/by/4.0/)....
+4. Examining the Impact of Provenance-Enabled Media on Trust and Accuracy Perceptions (2023)
+   Authors: K. J. Kevin Feng, Nick Ritchie, Pia Blumenthal
+   DOI: https://doi.org/10.1145/3610061
+   Cited by: 29
+   Abstract: In recent years, industry leaders and researchers have proposed to use technical provenance standards address visual misinformation spread through digitally altered media. By adding immutable secure information such as authorship edit date media metadata, social users could potentially better assess...
+5. Personhood credentials: Artificial intelligence and the value of privacy-preserving tools to distinguish who is real online (2024)
+   Authors: Steven Adler, Zoë Hitzig, Shrey Jain
+   DOI: https://doi.org/10.48550/arxiv.2408.07892
+   Cited by: 7
+   Abstract: Anonymity is an important principle online. However, malicious actors have long used misleading identities to conduct fraud, spread disinformation, and carry out other deceptive schemes. With the advent of increasingly capable AI, bad can amplify potential scale effectiveness their operations, inten...
+
+=== synthetic_image_label ===
+1. User Experience Design Professionals’ Perceptions of Generative Artificial Intelligence (2024)
+   Authors: Jie Li, Hancheng Cao, L. Lin
+   DOI: https://doi.org/10.1145/3613904.3642114
+   Cited by: 138
+   Abstract: Among creative professionals, Generative Artificial Intelligence (GenAI) has sparked excitement over its capabilities and fear unanticipated consequences. How does GenAI impact User Experience Design (UXD) practice, are fears warranted? We interviewed 20 UX Designers, with diverse experience across ...
+2. Medical image analysis using deep learning algorithms (2023)
+   Authors: Mengfang Li, Yuanyuan Jiang, Yanzhou Zhang
+   DOI: https://doi.org/10.3389/fpubh.2023.1273253
+   Cited by: 477
+   Abstract: In the field of medical image analysis within deep learning (DL), importance employing advanced DL techniques cannot be overstated. has achieved impressive results in various areas, making it particularly noteworthy for healthcare. The integration with enables real-time vast and intricate datasets, ...
+3. Material Perception (2017)
+   Authors: Roland W. Fleming
+   DOI: https://doi.org/10.1146/annurev-vision-102016-061429
+   Cited by: 126
+   Abstract: Under typical viewing conditions, human observers effortlessly recognize materials and infer their physical, functional, multisensory properties at a glance. Without touching materials, we can usually tell whether they would feel hard or soft, rough smooth, wet dry. We have vivid visual intuitions a...
+4. Ischemic stroke after use of the synthetic marijuana “spice” (2013)
+   Authors: Melissa Freeman, David Z. Rose, Martin Myers
+   DOI: https://doi.org/10.1212/01.wnl.0000437297.05570.a2
+   Cited by: 140
+   Abstract: OBJECTIVES: To report and associate acute cerebral infarctions in 2 young, previously healthy siblings with use of the street drug known as "spice" (a synthetic marijuana product, also "K2"), which they independently smoked before experiencing embolic-appearing ischemic strokes. METHODS: We present ...
+5. Advances and Open Problems in Federated Learning (2020)
+   Authors: Peter Kairouz, H. Brendan McMahan, Brendan Avent
+   DOI: https://doi.org/10.1561/2200000083
+   Cited by: 5165
+   Abstract: Federated learning (FL) is a machine setting where many clients (e.g., mobile devices or whole organizations) collaboratively train model under the orchestration of central server service provider), while keeping training data decentralized. FL embodies principles focused collection and minimization...
+
+=== viz_misinfo_edu ===
+1. The psychological drivers of misinformation belief and its resistance to correction (2022)
+   Authors: Ullrich K. H. Ecker, Stephan Lewandowsky, John Cook
+   DOI: https://doi.org/10.1038/s44159-021-00006-y
+   Cited by: 1324
+   Abstract: ...
+2. A systematic review of communication interventions for countering vaccine misinformation (2023)
+   Authors: Hannah Whitehead, Clare E. French, Deborah M Caldwell
+   DOI: https://doi.org/10.1016/j.vaccine.2022.12.059
+   Cited by: 136
+   Abstract: BACKGROUND: Misinformation and disinformation around vaccines has grown in recent years, exacerbated during the Covid-19 pandemic. Effective strategies for countering vaccine misinformation are crucial tackling hesitancy. We conducted a systematic review to identify describe communications-based use...
+3. Misinformation lingers in memory: Failure of three pro-vaccination strategies (2017)
+   Authors: Sara Pluviano, Caroline Watt, Sergio Della Sala
+   DOI: https://doi.org/10.1371/journal.pone.0181640
+   Cited by: 277
+   Abstract: People's inability to update their memories in light of corrective information may have important public health consequences, as the case vaccination choice. In present study, we compare three potentially effective strategies vaccine promotion: one contrasting myths vs. facts, employing fact and ico...
+4. TikTok as a Source of Health Information and Misinformation for Young Women in the United States: Survey Study (2024)
+   Authors: Ciera E. Kirkpatrick, LaRissa L. Lawrie
+   DOI: https://doi.org/10.2196/54663
+   Cited by: 144
+   Abstract: Background TikTok is one of the most-used and fastest-growing social media platforms in world, recent reports indicate that it has become an increasingly popular source news information United States. These trends have important implications for public health because abundance exists on platform. Wo...
+5. The Era of Artificial Intelligence Deception: Unraveling the Complexities of False Realities and Emerging Threats of Misinformation (2024)
+   Authors: S. Williamson, Victor R. Prybutok
+   DOI: https://doi.org/10.3390/info15060299
+   Cited by: 127
+   Abstract: This study delves into the dual nature of artificial intelligence (AI), illuminating its transformative potential that has power to revolutionize various aspects our lives. We delve critical issues such as AI hallucinations, misinformation, and unpredictable behavior, particularly in large language ...
+
+=== viz_skepticism_calibration ===
+1. Who Should I Trust: AI or Myself? Leveraging Human and AI Correctness Likelihood to Promote Appropriate Trust in AI-Assisted Decision-Making (2023)
+   Authors: Shuai Ma, Ying Lei, Xinru Wang
+   DOI: https://doi.org/10.1145/3544548.3581058
+   Cited by: 131
+   Abstract: In AI-assisted decision-making, it is critical for human decision-makers to know when trust AI and themselves. However, prior studies calibrated only based on confidence indicating AI’s correctness likelihood (CL) but ignored humans’ CL, hindering optimal team decision-making. To mitigate this gap, ...
+2. Ignore, Trust, or Negotiate: Understanding Clinician Acceptance of AI-Based Treatment Recommendations in Health Care (2023)
+   Authors: Venkatesh Sivaraman, Leigh A. Bukowski, Joel Levin
+   DOI: https://doi.org/10.1145/3544548.3581075
+   Cited by: 124
+   Abstract: Artificial intelligence (AI) in healthcare has the potential to improve patient outcomes, but clinician acceptance remains a critical barrier. We developed novel decision support interface that provides interpretable treatment recommendations for sepsis, life-threatening condition which decisional u...
+3. Trusting AI: does uncertainty visualization affect decision-making? (2025)
+   Authors: Jonatan Reyes, Anil Ufuk Batmaz, Marta Kersten‐Oertel
+   DOI: https://doi.org/10.3389/fcomp.2025.1464348
+   Cited by: 24
+   Abstract: Introduction Decision-making based on AI can be challenging, especially when considering the uncertainty associated with predictions. Visualizing in refers to techniques that use visual cues represent level of confidence or an model's outputs, such as predictions decisions. This study aims investiga...
+4. AI for Decision Support: Balancing Accuracy, Transparency, and Trust Across Sectors (2024)
+   Authors: Attila Kővári
+   DOI: https://doi.org/10.3390/info15110725
+   Cited by: 86
+   Abstract: This study seeks to understand the key success factors that underpin efficiency, transparency, and user trust in automated decision support systems (DSS) leverage AI technologies across industries. The aim of this is facilitate more accurate decision-making with such AI-based DSS, as well build thro...
+5. Artificial agents’ explainability to support trust: considerations on timing and context (2022)
+   Authors: Guglielmo Papagni, Jesse de Pagter, Setareh Zafari
+   DOI: https://doi.org/10.1007/s00146-022-01462-7
+   Cited by: 50
+   Abstract: Abstract Strategies for improving the explainability of artificial agents are a key approach to support understandability agents’ decision-making processes and their trustworthiness. However, since explanations not inclined standardization, finding solutions that fit algorithmic-based poses compelli...

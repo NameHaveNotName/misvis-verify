@@ -1,0 +1,216 @@
+
+=== ai_disclosure_transparency ===
+1. In AI we trust? Perceptions about automated decision-making by artificial intelligence (2020)
+   Authors: Theo Araujo, Natali Helberger, Sanne Kruikemeier
+   DOI: https://doi.org/10.1007/s00146-019-00931-w
+   Cited by: 1005
+   Abstract: ...
+2. Transparency and accountability in AI systems: safeguarding wellbeing in the age of algorithmic decision-making (2024)
+   Authors: Ben Chester Cheong
+   DOI: https://doi.org/10.3389/fhumd.2024.1421273
+   Cited by: 330
+   Abstract: The rapid integration of artificial intelligence (AI) systems into various domains has raised concerns about their impact on individual and societal wellbeing, particularly due to the lack transparency accountability in decision-making processes. This review aims provide an overview key legal ethica...
+3. AI4People—An Ethical Framework for a Good AI Society: Opportunities, Risks, Principles, and Recommendations (2018)
+   Authors: Luciano Floridi, Josh Cowls, Monica Beltrametti
+   DOI: https://doi.org/10.1007/s11023-018-9482-5
+   Cited by: 3886
+   Abstract: This article reports the findings of AI4People, an Atomium-EISMD initiative designed to lay foundations for a "Good AI Society". We introduce core opportunities and risks society; present synthesis five ethical principles that should undergird its development adoption; offer 20 concrete recommendati...
+4. Why a Right to Explanation of Automated Decision-Making Does Not Exist in the General Data Protection Regulation (2017)
+   Authors: Sandra Wachter, Brent Mittelstadt, Luciano Floridi
+   DOI: https://doi.org/10.1093/idpl/ipx005
+   Cited by: 1193
+   Abstract: In recent months, researchers,1 government bodies,2 and the media3 have claimed that a ‘right to explanation’ of decisions made by automated artificially intelligent algorithmic systems is legally mandated forthcoming European Union General Data Protection Regulation4 2016/679 (GDPR). The right expl...
+5. AI-Assisted Decision-making in Healthcare (2019)
+   Authors: Tamra Lysaght, Hannah Y. Lim, Vicki Xafis
+   DOI: https://doi.org/10.1007/s41649-019-00096-0
+   Cited by: 328
+   Abstract: Abstract Artificial intelligence (AI) is set to transform healthcare. Key ethical issues emerge with this transformation encompass the accountability and transparency of decisions made by AI-based systems, potential for group harms arising from algorithmic bias professional roles integrity clinician...
+
+=== truth_discernment ===
+1. Fighting COVID-19 Misinformation on Social Media: Experimental Evidence for a Scalable Accuracy-Nudge Intervention (2020)
+   Authors: Gordon Pennycook, Jonathon McPhetres, Yunhao Zhang
+   DOI: https://doi.org/10.1177/0956797620939054
+   Cited by: 1771
+   Abstract: Across two studies with more than 1,700 U.S. adults recruited online, we present evidence that people share false claims about COVID-19 partly because they simply fail to think sufficiently whether or not the content is accurate when deciding what share. In Study 1, participants were far worse at di...
+2. Beyond misinformation: Understanding and coping with the “post-truth” era. (2017)
+   Authors: Stephan Lewandowsky, Ullrich K. H. Ecker, John Cook
+   DOI: https://doi.org/10.1016/j.jarmac.2017.07.008
+   Cited by: 1977
+   Abstract: The terms “post-truth” and “fake news” have become increasingly prevalent in public discourse over the last year. This article explores growing abundance of misinformation, how it influences people, to counter it. We examine ways which misinformation can an adverse impact on society. summarize peopl...
+3. The Psychology of Fake News (2021)
+   Authors: Gordon Pennycook, David G. Rand
+   DOI: https://doi.org/10.1016/j.tics.2021.02.007
+   Cited by: 1245
+   Abstract: We synthesize a burgeoning literature investigating why people believe and share false or highly misleading news online. Contrary to common narrative whereby politics drives susceptibility fake news, are 'better' at discerning truth from falsehood (despite greater overall belief) when evaluating pol...
+4. Shifting attention to accuracy can reduce misinformation online (2021)
+   Authors: Gordon Pennycook, Ziv Epstein, Mohsen Mosleh
+   DOI: https://doi.org/10.1038/s41586-021-03344-2
+   Cited by: 1127
+   Abstract: ...
+5. Fighting COVID-19 misinformation on social media: Experimental evidence for a scalable accuracy nudge intervention (2020)
+   Authors: Gordon Pennycook, Jonathon McPhetres, Yunhao Zhang
+   DOI: https://doi.org/10.31234/osf.io/uhbk9
+   Cited by: 403
+   Abstract: Across two studies with over 1,600 U.S. adults recruited online, we present evidence that people share false claims about COVID-19 partly because they simply fail to think sufficiently whether or not content is accurate when deciding what share. In Study 1, participants were far worse at discerning ...
+
+=== visual_inoculation ===
+1. A systematic review of communication interventions for countering vaccine misinformation (2023)
+   Authors: Hannah Whitehead, Clare E. French, Deborah M Caldwell
+   DOI: https://doi.org/10.1016/j.vaccine.2022.12.059
+   Cited by: 136
+   Abstract: BACKGROUND: Misinformation and disinformation around vaccines has grown in recent years, exacerbated during the Covid-19 pandemic. Effective strategies for countering vaccine misinformation are crucial tackling hesitancy. We conducted a systematic review to identify describe communications-based use...
+2. Evaluation of a template for countering misinformation—Real-world Autism treatment myth debunking (2019)
+   Authors: Jessica Paynter, Sarah Luskin-Saxby, Deb Keen
+   DOI: https://doi.org/10.1371/journal.pone.0210746
+   Cited by: 129
+   Abstract: Misinformation poses significant challenges to evidence-based practice. In the public health domain specifically, treatment misinformation can lead opportunity costs or direct harm. Alas, attempts debunk have proven sub-optimal, and even been shown "backfire", including increasing misperceptions. Th...
+3. Charting the Information and Misinformation Landscape to Characterize Misinfodemics on Social Media: COVID-19 Infodemiology Study at a Planetary Scale (2021)
+   Authors: Emily Chen, Julie Jiang, Ho-Chun Herbert Chang
+   DOI: https://doi.org/10.2196/32378
+   Cited by: 40
+   Abstract: BACKGROUND: The novel coronavirus, also known as SARS-CoV-2, has come to define much of our lives since the beginning 2020. During this time, countries around world imposed lockdowns and social distancing measures. physical movements people ground a halt, while their online interactions increased th...
+4. Folk Models of Misinformation on Social Media (2023)
+   Authors: Filipo Sharevski, Amy Devine, Emma Pieroni
+   DOI: https://doi.org/10.14722/ndss.2023.24293
+   Cited by: 10
+   Abstract: In this paper we investigate what folk models of misinformation exist on social media with a sample 235 users. Work does not how ordinary users deal it; rather, the focus is mostly anxiety, tensions, or divisions creates. Studying only structural aspects also overlooks internalized by and thus quick...
+5. Debunking strategies for misleading bar charts (2022)
+   Authors: Winnifred Wijnker, Ionica Smeets, J.P. Burger
+   DOI: https://doi.org/10.22323/2.21070207
+   Cited by: 12
+   Abstract: Graphs are useful to communicate concisely about complex issues. Although they facilitate intuitive reading of data, trends, and predictions, hasty readers may still come the wrong conclusions, especially if graphs misleading due violated design conventions. To provide evidence how prevent misinform...
+
+=== pandey_deceptive_viz ===
+1. Affective Visualization Design: Leveraging the Emotional Impact of Data (2023)
+   Authors: Xingyu Lan, Yanqiu Wu, Nan Cao
+   DOI: https://doi.org/10.48550/arxiv.2308.02831
+   Cited by: 2
+   Abstract: In recent years, more and researchers have reflected on the undervaluation of emotion in data visualization highlighted importance considering human design. Meanwhile, an increasing number studies been conducted to explore emotion-related factors. However, so far, this research area is still its ear...
+2. Secant Optimization Algorithm for efficient global optimization (2026)
+   Authors: Mohammed Q. Ibrahim, Mohammed Qaraad, Nazar K. Hussein
+   DOI: https://doi.org/10.1038/s41598-026-36691-z
+   Cited by: 10
+   Abstract: This paper presents the Secant Optimization Algorithm (SOA), a novel mathematics-inspired metaheuristic derived from Method. SOA enhances search efficiency by repeating vector updates using local information and derivative approximations in two steps: secant-based for enabling guided convergence sto...
+3. Microgrid Optimization with Metaheuristic Algorithms—A Review of Technologies and Trends for Sustainable Energy Systems (2026)
+   Authors: Ghassan Zubi, Sofoklis S. Makridis
+   DOI: https://doi.org/10.3390/su18020647
+   Cited by: 8
+   Abstract: Microgrids are evolving from simple hybrid systems into complex, multi-energy platforms with high-dimensional optimization challenges due to technological diversification, sector coupling, and increased data granularity. This review systematically examines the intersection of microgrid metaheuristic...
+4. Navigating the social media market: AI and the challenge of fake news dissemination in the business environment (2025)
+   Authors: Monica Ioana Burcă-Voicu, Romana Emilia Cramarenco, Dan‐Cristian Dabija
+   DOI: https://doi.org/10.24136/oc.3386
+   Cited by: 1
+   Abstract: Research background: Social media plays a crucial role today in enhancing or limiting how fake news is spread. Whether devised by man developed artificial intelligence, it has the power to rapidly change consumers’ minds, encouraging them adopt new behaviors, perceive situations differently, even ac...
+5. Do Large Language Models Reason About Uncertainty Like Humans? A Benchmark on Hurricane Forecast Visualization Comprehension (2026)
+   Authors: Le Liu, Yuhao Wang, Bohan Shen
+   DOI: https://doi.org/10.1609/aaai.v40i21.38812
+   Cited by: 0
+   Abstract: Uncertainty visualizations, such as hurricane cones and ensemble tracks, are essential for risk communication but often misinterpreted, leading to harmful decisions. As AI assistants like large language models (LLMs) increasingly support understanding of graphics decision-making, they offer a promis...
+
+=== correll_blackhat_viz ===
+1. Do You See What I See? A Qualitative Study Eliciting High-Level Visualization Comprehension (2024)
+   Authors: Ghulam Jilani Quadri, Arran Zeyu Wang, Zhehao Wang
+   DOI: https://doi.org/10.1145/3613904.3642813
+   Cited by: 34
+   Abstract: Designers often create visualizations to achieve specific high-level analytical or communication goals. These goals require people naturally extract complex, contextualized, and interconnected patterns in data. While limited prior work has studied general interpretation, prevailing perceptual studie...
+2. Annotating Line Charts for Addressing Deception (2022)
+   Authors: Arlen Fan, Yuxin Ma, Michelle V. Mancenido
+   DOI: https://doi.org/10.1145/3491102.3502138
+   Cited by: 44
+   Abstract: Deceptive visualizations are that, whether intentionally or not, lead the reader to an understanding of data which varies from actual data. Examples deceptive can be found in every digital platform, and, despite their widespread use wild, there have been limited efforts alert laypersons common visua...
+3. Perceptual Pat: A Virtual Human Visual System for Iterative Visualization Design (2023)
+   Authors: Sungbok Shin, Sanghyun Hong, Niklas Elmqvist
+   DOI: https://doi.org/10.1145/3544548.3580974
+   Cited by: 10
+   Abstract: Designing a visualization is often process of iterative refinement where the designer improves chart over time by adding features, improving encodings, and fixing mistakes. However, effective design requires external critique evaluation. Unfortunately, such not always available on short notice evalu...
+4. Scoping the Future of Visualization Literacy: A Review (2022)
+   Authors: Mara Solen
+   DOI: https://doi.org/10.31219/osf.io/eypgm
+   Cited by: 5
+   Abstract: Access to information is increasing rapidly, and data visualizations are becoming increasingly common as a way communicate summaries of large datasets, especially in media designed for the general public. Accompanying this rise visualization need literacy. In work we survey current body research on ...
+5. CALVI: Critical Thinking Assessment for Literacy in Visualizations (2023)
+   Authors: Lily W. Ge, Cui Yuan, Matthew Kay
+   DOI: https://doi.org/10.31219/osf.io/32mg7
+   Cited by: 3
+   Abstract: Visualization misinformation is a prevalent problem, and combating it requires understanding people’s ability to read, interpret, reason about erroneous or potentially misleading visualizations, which lacks reliable measurement: existing visualization literacy tests focus on well-formed visualizatio...
+
+=== cleveland_mcgill ===
+1. Automating the design of graphical presentations of relational information (1986)
+   Authors: Jock D. Mackinlay
+   DOI: https://doi.org/10.1145/22949.22950
+   Cited by: 1633
+   Abstract: The goal of the research described in this paper is to develop an application-independent presentation tool that automatically designs effective graphical presentations (such as bar charts, scatter plots, and connected graphs) relational information. Two problems are raised by goal: codification gra...
+2. Four Experiments on the Perception of Bar Charts (2014)
+   Authors: Justin Talbot, Vidya Setlur, Anushka Anand
+   DOI: https://doi.org/10.1109/tvcg.2014.2346320
+   Cited by: 133
+   Abstract: Bar charts are one of the most common visualization types. In a classic graphical perception paper, Cleveland & McGill studied how different bar chart designs impact accuracy with which viewers can complete simple perceptual tasks. They found that people perform substantially worse on stacked than a...
+3. Efficiency of graphical perception (1989)
+   Authors: Gordon E. Legge, Yuanchao Gu, Andrew Luebker
+   DOI: https://doi.org/10.3758/bf03204990
+   Cited by: 77
+   Abstract: ...
+4. An experimental program investigating color-enhanced and graphical information presentation: an integration of the findings (1986)
+   Authors: Izak Benbasat, Albert S. Dexter, Peter Todd
+   DOI: https://doi.org/10.1145/7538.7545
+   Cited by: 208
+   Abstract: A series of three laboratory experiments were conducted to assess the influence graphical and color-enhanced information presentation modes on decision quality, making time, use information, user perceptions. The experimental design allowed for unconfounded study line graphs color using a variety de...
+5. The Effects of Representation and Juxtaposition on Graphical Perception of Matrix Visualization (2015)
+   Authors: Xiaotong Liu, Han‐Wei Shen
+   DOI: https://doi.org/10.1145/2702123.2702217
+   Cited by: 21
+   Abstract: Analyzing multiple networks at once is a common yet difficult task in many domains. Using adjacency matrices for this purpose, however, can be effective because of its superior ability to accommodate dense small area. We evaluate various representations and juxtaposition designs visualizing through ...
+
+=== tufte ===
+1. The Cognitive Science of Visual‐Spatial Displays: Implications for Design (2011)
+   Authors: Mary Hegarty
+   DOI: https://doi.org/10.1111/j.1756-8765.2011.01150.x
+   Cited by: 385
+   Abstract: This paper reviews cognitive science perspectives on the design of visual-spatial displays and introduces other papers in this topic. It begins by classifying different types displays, followed a discussion ways which augment cognition an overview perceptual processes involved using displays. The th...
+2. The Information Mural: a technique for displaying and navigating large information spaces (1998)
+   Authors: Dean Frederick Jerding, John Stasko
+   DOI: https://doi.org/10.1109/2945.722299
+   Cited by: 165
+   Abstract: Information visualizations must allow users to browse information spaces and focus quickly on items of interest. Being able see some representation the entire space provides an initial gestalt overview gives context support browsing search tasks. However, limited number pixels screen constrain bandw...
+3. Fluid interaction for information visualization (2011)
+   Authors: Niklas Elmqvist, Andrew Vande Moere, Hans-Christian Jetter
+   DOI: https://doi.org/10.1177/1473871611413180
+   Cited by: 258
+   Abstract: Despite typically receiving little emphasis in visualization research, interaction is the catalyst for user's dialogue with data, and, ultimately, actual understanding and insight into these data. There are many possible reasons this skewed balance between visual interactive aspects of a visualizati...
+4. Hierarchical Aggregation for Information Visualization: Overview, Techniques, and Design Guidelines (2009)
+   Authors: Niklas Elmqvist, Jean‐Daniel Fekete
+   DOI: https://doi.org/10.1109/tvcg.2009.84
+   Cited by: 390
+   Abstract: We present a model for building, visualizing, and interacting with multiscale representations of information visualization techniques using hierarchical aggregation. The motivation this work is to make visual more visually scalable less cluttered. allows augmenting existing functionality, as well de...
+5. Mixed Methods Analysis and Information Visualization: Graphical Display for Effective Communication of Research Results (2015)
+   Authors: Anthony J. Onwuegbuzie, Wendy B. Dickinson
+   DOI: https://doi.org/10.46743/2160-3715/2008.1595
+   Cited by: 98
+   Abstract: In this paper, we introduce various graphical methods that can be used to represent data in mixed research. First, present a broad taxonomy of visual representation. Next, use provide an overview techniques for quantitative display and qualitative display. Then, propose what call “crossover” extensi...
+
+=== chart_title_effect ===
+1. Internet of Things (IoT): A vision, architectural elements, and future directions (2013)
+   Authors: Jayavardhana Gubbi, Rajkumar Buyya, Slaven Marusic
+   DOI: https://doi.org/10.1016/j.future.2013.01.010
+   Cited by: 12127
+   Abstract: ...
+2. VisText: A Benchmark for Semantically Rich Chart Captioning (2023)
+   Authors: Benny J. Tang, Angie Boggust, Arvind Satyanarayan
+   DOI: https://doi.org/10.18653/v1/2023.acl-long.401
+   Cited by: 50
+   Abstract: Captions that describe or explain charts help improve recall and comprehension of the depicted data provide a more accessible medium for people with visual disabilities. However, current approaches automatically generating such captions struggle to articulate perceptual cognitive features are hallma...
+3. Automatic Caption Generation for News Images (2012)
+   Authors: Yansong Feng, Mirella Lapata
+   DOI: https://doi.org/10.1109/tpami.2012.118
+   Cited by: 120
+   Abstract: This paper is concerned with the task of automatically generating captions for images, which important many image-related applications. Examples include video and image retrieval as well development tools that aid visually impaired individuals to access pictorial information. Our approach leverages ...
+4. Storytelling and Visualization: An Extended Survey (2018)
+   Authors: Chao Tong, Richard Roberts, Rita Borgo
+   DOI: https://doi.org/10.3390/info9030065
+   Cited by: 151
+   Abstract: Throughout history, storytelling has been an effective way of conveying information and knowledge. In the field visualization, is rapidly gaining momentum evolving cutting-edge techniques that enhance understanding. Many communities have commented on importance in data visualization. Storytellers te...
+5. More Than Telling a Story: Transforming Data into Visually Shared Stories (2015)
+   Authors: Bongshin Lee, Nathalie Henry Riche, Petra Isenberg
+   DOI: https://doi.org/10.1109/mcg.2015.99
+   Cited by: 290
+   Abstract: The authors take a closer look at how the visualization community has discussed visual storytelling and present data process, incorporating steps involved in finding insights (explore data), turning these into narrative (make story), communicating this to an audience (tell story). They also discuss ...

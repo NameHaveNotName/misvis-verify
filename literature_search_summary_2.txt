@@ -1,0 +1,216 @@
+
+=== deceptive_viz ===
+1. Metaverse marketing: How the metaverse will shape the future of consumer research and practice (2022)
+   Authors: Yogesh K. Dwivedi, Laurie Hughes, Yichuan Wang
+   DOI: https://doi.org/10.1002/mar.21767
+   Cited by: 855
+   Abstract: Abstract The initial hype and fanfare from the Meta Platforms view of how metaverse could be brought to life has evolved into an ongoing discussion not only metaverse's impact on users organizations but also societal cultural implications widespread ...
+2. Deceptive XAI: Typology, Creation and Detection (2023)
+   Authors: Johannes Schneider, Christian Meske, Michail Vlachos
+   DOI: https://doi.org/10.1007/s42979-023-02401-z
+   Cited by: 15
+   Abstract: Abstract Providing rationales for decisions can enhance transparency and cultivate trust. Nevertheless, in light of economic incentives other factors that may encourage manipulation, the reliability such explanations comes into question. This manuscr...
+3. The impact of global warming on the niches and pollinator availability of sexually deceptive orchid with a single pollen vector (2021)
+   Authors: Marta Kolanowska, Ewa Michalska, Kamil Konowalik
+   DOI: https://doi.org/10.1016/j.scitotenv.2021.148850
+   Cited by: 25
+   Abstract: Orchidaceae are among the most endangered plants in world. Considering sensitive nature of pollinator-plant relationship vulnerable species which dependent on a single pollen vector. In this paper future distribution suitable niches Australian sexual...
+4. Misleading Beyond Visual Tricks: How People Actually Lie with Charts (2023)
+   Authors: Maxim Lisnic, Cole Polychronis, Alexander Lex
+   DOI: https://doi.org/10.1145/3544548.3580910
+   Cited by: 48
+   Abstract: Data visualizations can empower an audience to make informed decisions. At the same time, deceptive representations of data lead inaccurate interpretations while still providing illusion data-driven insights. Existing research on misleading primarily...
+5. Information Visualization Evaluation Using Crowdsourcing (2018)
+   Authors: Rita Borgo, Luana Micallef, Benjamin Bach
+   DOI: https://doi.org/10.1111/cgf.13444
+   Cited by: 87
+   Abstract: Abstract Visualization researchers have been increasingly leveraging crowdsourcing approaches to overcome a number of limitations controlled laboratory experiments, including small participant sample sizes and narrow demographic backgrounds study par...
+
+=== black_hat_viz ===
+1. Do You See What I See? A Qualitative Study Eliciting High-Level Visualization Comprehension (2024)
+   Authors: Ghulam Jilani Quadri, Arran Zeyu Wang, Zhehao Wang
+   DOI: https://doi.org/10.1145/3613904.3642813
+   Cited by: 34
+   Abstract: Designers often create visualizations to achieve specific high-level analytical or communication goals. These goals require people naturally extract complex, contextualized, and interconnected patterns in data. While limited prior work has studied ge...
+2. Annotating Line Charts for Addressing Deception (2022)
+   Authors: Arlen Fan, Yuxin Ma, Michelle V. Mancenido
+   DOI: https://doi.org/10.1145/3491102.3502138
+   Cited by: 44
+   Abstract: Deceptive visualizations are that, whether intentionally or not, lead the reader to an understanding of data which varies from actual data. Examples deceptive can be found in every digital platform, and, despite their widespread use wild, there have ...
+3. Perceptual Pat: A Virtual Human Visual System for Iterative Visualization Design (2023)
+   Authors: Sungbok Shin, Sanghyun Hong, Niklas Elmqvist
+   DOI: https://doi.org/10.1145/3544548.3580974
+   Cited by: 10
+   Abstract: Designing a visualization is often process of iterative refinement where the designer improves chart over time by adding features, improving encodings, and fixing mistakes. However, effective design requires external critique evaluation. Unfortunatel...
+4. Scoping the Future of Visualization Literacy: A Review (2022)
+   Authors: Mara Solen
+   DOI: https://doi.org/10.31219/osf.io/eypgm
+   Cited by: 5
+   Abstract: Access to information is increasing rapidly, and data visualizations are becoming increasingly common as a way communicate summaries of large datasets, especially in media designed for the general public. Accompanying this rise visualization need lit...
+5. CALVI: Critical Thinking Assessment for Literacy in Visualizations (2023)
+   Authors: Lily W. Ge, Cui Yuan, Matthew Kay
+   DOI: https://doi.org/10.31219/osf.io/32mg7
+   Cited by: 3
+   Abstract: Visualization misinformation is a prevalent problem, and combating it requires understanding people’s ability to read, interpret, reason about erroneous or potentially misleading visualizations, which lacks reliable measurement: existing visualizatio...
+
+=== viz_literacy_scale ===
+1. Conceptualizing AI literacy: An exploratory review (2021)
+   Authors: Davy Tsz Kit Ng, Jac Ka Lok Leung, Samuel Kai Wah Chu
+   DOI: https://doi.org/10.1016/j.caeai.2021.100041
+   Cited by: 1690
+   Abstract: Artificial Intelligence (AI) has spread across industries (e.g., business, science, art, education) to enhance user experience, improve work efficiency, and create many future job opportunities. However, public understanding of AI technologies how de...
+2. A Principled Way of Assessing Visualization Literacy (2014)
+   Authors: Jeremy Boy, Ronald A. Rensink, Enrico Bertini
+   DOI: https://doi.org/10.1109/tvcg.2014.2346984
+   Cited by: 290
+   Abstract: We describe a method for assessing the visualization literacy (VL) of user. Assessing how well people understand visualizations has great value research (e. g., to avoid confounds), design best determine capabilities an audience), teaching assess lev...
+3. IEA International Computer and Information Literacy Study 2018 Assessment Framework (2019)
+   Authors: Julian Fraillon, John Ainley, Wolfram Schulz
+   DOI: https://doi.org/10.1007/978-3-030-19389-8
+   Cited by: 357
+   Abstract: This open-access book presents the assessment framework for IEA’s International Computer an Information Literacy Study (ICILS) 2018, which is designed to assess how well students are prepared study, work and life in a digital world....
+4. AI literacy in K-12: a systematic literature review (2023)
+   Authors: Lorena Casal Otero, Alejandro Catalá, Carmen Fernández-Morante
+   DOI: https://doi.org/10.1186/s40594-023-00418-7
+   Cited by: 596
+   Abstract: Abstract The successful irruption of AI-based technology in our daily lives has led to a growing educational, social, and political interest training citizens AI. Education systems now need train students at the K-12 level live society where they mus...
+5. Against Financial Literacy Education (2008)
+   Authors: Lauren E. Willis
+   DOI: None
+   Cited by: 385
+   Abstract: The dominant model of regulation in the United States for consumer credit, insurance, and investment products is disclosure unfettered choice. As these have become increasingly complex, consumers’ inability to understand them has apparent, consequenc...
+
+=== prebunking_visual ===
+1. The psychological drivers of misinformation belief and its resistance to correction (2022)
+   Authors: Ullrich K. H. Ecker, Stephan Lewandowsky, John Cook
+   DOI: https://doi.org/10.1038/s44159-021-00006-y
+   Cited by: 1324
+   Abstract: ...
+2. Fake news, disinformation and misinformation in social media: a review (2023)
+   Authors: Esma Aı̈meur, Sabrine Amri, Gilles Brassard
+   DOI: https://doi.org/10.1007/s13278-023-01028-5
+   Cited by: 719
+   Abstract: ...
+3. Testing the Effectiveness of Correction Placement and Type on Instagram (2020)
+   Authors: Emily K. Vraga, Sojung Claire Kim, John Cook
+   DOI: https://doi.org/10.1177/1940161220919082
+   Cited by: 148
+   Abstract: Despite concerns about misinformation across social media platforms, little attention has been paid to how correct on visual platforms like Instagram. This study uses an experimental design a national sample test two features of user-based correction...
+4. The different forms of COVID-19 misinformation and their consequences (2020)
+   Authors: Adam Enders, Joseph E. Uscinski, Casey Klofstad
+   DOI: https://doi.org/10.37016/mr-2020-48
+   Cited by: 197
+   Abstract: As the COVID-19 pandemic progresses, an understanding of structure and organization beliefs in conspiracy theories misinformation becomes increasingly critical for addressing threat posed by these dubious ideas. In polling Americans about 11 such ide...
+5. Psychological Inoculation for Credibility Assessment, Sharing Intention, and Discernment of Misinformation: Systematic Review and Meta-Analysis (2023)
+   Authors: Chang Lu, Bo Hu, Qiang Li
+   DOI: https://doi.org/10.2196/49255
+   Cited by: 90
+   Abstract: BACKGROUND: The prevalence of misinformation poses a substantial threat to individuals' daily lives, necessitating the deployment effective remedial approaches. One promising strategy is psychological inoculation, which pre-emptively immunizes indivi...
+
+=== ai_image_label ===
+1. Explainable Artificial Intelligence (XAI): Concepts, taxonomies, opportunities and challenges toward responsible AI (2019)
+   Authors: Alejandro Barredo Arrieta, Natalia Díaz-Rodríguez, Javier Del Ser
+   DOI: https://doi.org/10.1016/j.inffus.2019.12.012
+   Cited by: 9521
+   Abstract: ...
+2. A foundation model for generalizable disease detection from retinal images (2023)
+   Authors: Yukun Zhou, Mark A. Chia, Siegfried K. Wagner
+   DOI: https://doi.org/10.1038/s41586-023-06555-x
+   Cited by: 912
+   Abstract: Abstract Medical artificial intelligence (AI) offers great potential for recognizing signs of health conditions in retinal images and expediting the diagnosis eye diseases systemic disorders 1 . However, development AI models requires substantial ann...
+3. Artificial Intelligence (AI): Multidisciplinary perspectives on emerging challenges, opportunities, and agenda for research, practice and policy (2019)
+   Authors: Yogesh K. Dwivedi, Laurie Hughes, Elvira Ismagilova
+   DOI: https://doi.org/10.1016/j.ijinfomgt.2019.08.002
+   Cited by: 4211
+   Abstract: As far back as the industrial revolution, significant development in technical innovation has succeeded transforming numerous manual tasks and processes that had been existence for decades where humans reached limits of physical capacity. Artificial ...
+4. Opinion Paper: “So what if ChatGPT wrote it?” Multidisciplinary perspectives on opportunities, challenges and implications of generative conversational AI for research, practice and policy (2023)
+   Authors: Yogesh K. Dwivedi, Nir Kshetri, Laurie Hughes
+   DOI: https://doi.org/10.1016/j.ijinfomgt.2023.102642
+   Cited by: 4000
+   Abstract: Transformative artificially intelligent tools, such as ChatGPT, designed to generate sophisticated text indistinguishable from that produced by a human, are applicable across wide range of contexts. The technology presents opportunities well as, ofte...
+5. Multimodal biomedical AI (2022)
+   Authors: Julián Acosta, Guido J. Falcone, Pranav Rajpurkar
+   DOI: https://doi.org/10.1038/s41591-022-01981-2
+   Cited by: 1224
+   Abstract: The increasing availability of biomedical data from large biobanks, electronic health records, medical imaging, wearable and ambient biosensors, the lower cost genome microbiome sequencing have set stage for development multimodal artificial intellig...
+
+=== elm_source ===
+1. Examining the influence of online reviews on consumers' decision-making: A heuristic–systematic model (2014)
+   Authors: Kem Z.K. Zhang, Sesia J. Zhao, Christy M.K. Cheung
+   DOI: https://doi.org/10.1016/j.dss.2014.08.005
+   Cited by: 762
+   Abstract: ...
+2. The effect of characteristics of source credibility on consumer behaviour: A meta-analysis (2019)
+   Authors: Elvira Ismagilova, Emma Slade, Nripendra P. Rana
+   DOI: https://doi.org/10.1016/j.jretconser.2019.01.005
+   Cited by: 493
+   Abstract: ...
+3. Systematic Literature Review on the Spread of Health-related Misinformation on Social Media (2019)
+   Authors: Yuxi Wang, Martin McKee, Aleksandra Torbica
+   DOI: https://doi.org/10.1016/j.socscimed.2019.112552
+   Cited by: 1856
+   Abstract: Contemporary commentators describe the current period as "an era of fake news" in which misinformation, generated intentionally or unintentionally, spreads rapidly. Although affecting all areas life, it poses particular problems health arena, where c...
+4. Guidance on Conducting and REporting DElphi Studies (CREDES) in palliative care: Recommendations based on a methodological systematic review (2017)
+   Authors: Saskia Jünger, Sheila Payne, Jenny Brine
+   DOI: https://doi.org/10.1177/0269216317690685
+   Cited by: 2195
+   Abstract: BACKGROUND: The Delphi technique is widely used for the development of guidance in palliative care, having impact on decisions with relevance patient care. AIM: To systematically examine application best practice guidelines DESIGN: A methodological s...
+5. A review of statistically-based landslide susceptibility models (2018)
+   Authors: Paola Reichenbach, Mauro Rossi, Bruce D. Malamud
+   DOI: https://doi.org/10.1016/j.earscirev.2018.03.001
+   Cited by: 2310
+   Abstract: In this paper, we do a critical review of statistical methods for landslide susceptibility modelling and associated terrain zonations. Landslide is the likelihood occurring in an area depending on local conditions, estimating “where” landslides are l...
+
+=== graph_perception ===
+1. An experimental program investigating color-enhanced and graphical information presentation: an integration of the findings (1986)
+   Authors: Izak Benbasat, Albert S. Dexter, Peter Todd
+   DOI: https://doi.org/10.1145/7538.7545
+   Cited by: 208
+   Abstract: A series of three laboratory experiments were conducted to assess the influence graphical and color-enhanced information presentation modes on decision quality, making time, use information, user perceptions. The experimental design allowed for uncon...
+2. Describing complex charts in natural language: a caption generation system (1998)
+   Authors: Vibhu O. Mittal, Giuseppe Carenini, Johanna D. Moore
+   DOI: None
+   Cited by: 92
+   Abstract: ... This paper presents a system to do so. It uses text planner determine the content and structure of captions based on: (1) representation graphical presentation its mapping data it depicts, (2) framework for identifying perceptual complexity eleme...
+3. Design Features of Graphs in Health Risk Communication: A Systematic Review (2006)
+   Authors: Jessica S. Ancker, Yalini Senathirajah, Rita Kukafka
+   DOI: https://doi.org/10.1197/jamia.m2115
+   Cited by: 567
+   Abstract: This review describes recent experimental and focus group research on graphics as a method of communication about quantitative health risks. Some the studies discussed in this assessed effect graphs reasoning, others effects behavior or behavioral in...
+4. Graphics and managerial decision making: research-based guidelines (1988)
+   Authors: Sirkka L. Järvenpää, Gary W. Dickson
+   DOI: https://doi.org/10.1145/62959.62971
+   Cited by: 256
+   Abstract: Graphical charts are generally thought to be a superior reporting technique compared more traditional tabular representations in organizational decision making. The experimental literature, however, demonstrates only partial support for this hypothes...
+5. Annotating Line Charts for Addressing Deception (2022)
+   Authors: Arlen Fan, Yuxin Ma, Michelle V. Mancenido
+   DOI: https://doi.org/10.1145/3491102.3502138
+   Cited by: 44
+   Abstract: Deceptive visualizations are that, whether intentionally or not, lead the reader to an understanding of data which varies from actual data. Examples deceptive can be found in every digital platform, and, despite their widespread use wild, there have ...
+
+=== misleading_intervention ===
+1. Interventions for preventing obesity in children (2019)
+   Authors: Tamara Brown, Theresa HM Moore, Lee Hooper
+   DOI: https://doi.org/10.1002/14651858.cd001871.pub4
+   Cited by: 3028
+   Abstract: EDITORIAL NOTE: See https://doi.org/10.1002/14651858.CD015328.pub2, https://doi.org/10.1002/14651858.CD015330.pub2 and https://doi.org/10.1002/14651858.CD015326.pub2 for more recent reviews that cover this topic. BACKGROUND: Prevention of childhood o...
+2. Microsoft Academic Graph: When experts are not enough (2020)
+   Authors: Kuansan Wang, Z. Shen, Chiyuan Huang
+   DOI: https://doi.org/10.1162/qss_a_00021
+   Cited by: 518
+   Abstract: An ongoing project explores the extent to which artificial intelligence (AI), specifically in areas of natural language processing and semantic reasoning, can be exploited facilitate studies science by deploying software agents equipped with understa...
+3. A Systematic Review of Automatic Question Generation for Educational Purposes (2019)
+   Authors: Ghader Kurdi, Jared Leo, Bijan Parsia
+   DOI: https://doi.org/10.1007/s40593-019-00186-y
+   Cited by: 489
+   Abstract: Abstract While exam-style questions are a fundamental educational tool serving variety of purposes, manual construction is complex process that requires training, experience, and resources. This, in turn, hinders slows down the use activities (e.g. p...
+4. Primary and Secondary Effects in Class Differentials in Educational Attainment (2007)
+   Authors: Michelle Jackson, Robert S. Erikson, John H. Goldthorpe
+   DOI: https://doi.org/10.1177/0001699307080926
+   Cited by: 358
+   Abstract: In this article we start from Boudon's important, but still surprisingly neglected, distinction between `primary' and `secondary' effects in the creation of class differentials educational attainment. Primary are all those, whether a genetic or socio...
+5. Annual Research Review: Educational neuroscience: progress and prospects (2018)
+   Authors: Michael S. C. Thomas, Daniel Ansari, Victoria C. P. Knowland
+   DOI: https://doi.org/10.1111/jcpp.12973
+   Cited by: 267
+   Abstract: Educational neuroscience is an interdisciplinary research field that seeks to translate findings on neural mechanisms of learning educational practice and policy understand the effects education brain. Neuroscience can interact directly, by virtue co...

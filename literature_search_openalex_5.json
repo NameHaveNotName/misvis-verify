@@ -1,0 +1,372 @@
+{
+  "ai_image_label_trust": [
+    {
+      "title": "Explainable Artificial Intelligence (XAI): Concepts, taxonomies, opportunities and challenges toward responsible AI",
+      "year": 2019,
+      "authors": "Alejandro Barredo Arrieta, Natalia Díaz-Rodríguez, Javier Del Ser",
+      "doi": "https://doi.org/10.1016/j.inffus.2019.12.012",
+      "openalex_id": "https://openalex.org/W2981731882",
+      "cited_by": 9521,
+      "abstract": ""
+    },
+    {
+      "title": "Explainable Artificial Intelligence (XAI): What we know and what is left to attain Trustworthy Artificial Intelligence",
+      "year": 2023,
+      "authors": "Sajid Ali, Tamer Abuhmed, Shaker El–Sappagh",
+      "doi": "https://doi.org/10.1016/j.inffus.2023.101805",
+      "openalex_id": "https://openalex.org/W4366262984",
+      "cited_by": 1630,
+      "abstract": "Artificial intelligence (AI) is currently being utilized in a wide range of sophisticated applications, but the outcomes many AI models are challenging to comprehend and trust due their black-box nature. Usually, it essential understand reasoning behind an model’s decision-making. Thus, need for eXplainable (XAI) methods improving has arisen. XAI become popular research subject within field recent years. Existing survey papers have tackled concepts XAI, its general terms, post-hoc explainability there not been any reviews that looked at assessment methods, available tools, datasets, other related aspects. Therefore, this comprehensive study, we provide readers with overview current trends rapidly emerging area case"
+    },
+    {
+      "title": "Connecting the dots in trustworthy Artificial Intelligence: From AI principles, ethics, and key requirements to responsible AI systems and regulation",
+      "year": 2023,
+      "authors": "Natalia Díaz-Rodríguez, Javier Del Ser, Mark Coeckelbergh",
+      "doi": "https://doi.org/10.1016/j.inffus.2023.101896",
+      "openalex_id": "https://openalex.org/W4381848566",
+      "cited_by": 694,
+      "abstract": "Trustworthy Artificial Intelligence (AI) is based on seven technical requirements sustained over three main pillars that should be met throughout the system’s entire life cycle: it (1) lawful, (2) ethical, and (3) robust, both from a social perspective. However, attaining truly trustworthy AI concerns wider vision comprises trustworthiness of all processes actors are part cycle, considers previous aspects different lenses. A more holistic contemplates four essential axes: global principles for ethical use development AI-based systems, philosophical take ethics, risk-based approach to regulation, mentioned requirements. The (human agency oversight; robustness safety; privacy data governance; transparency; diversity, non-discrimination fairness; societal environmental wellbeing;"
+    },
+    {
+      "title": "Opinion Paper: “So what if ChatGPT wrote it?” Multidisciplinary perspectives on opportunities, challenges and implications of generative conversational AI for research, practice and policy",
+      "year": 2023,
+      "authors": "Yogesh K. Dwivedi, Nir Kshetri, Laurie Hughes",
+      "doi": "https://doi.org/10.1016/j.ijinfomgt.2023.102642",
+      "openalex_id": "https://openalex.org/W4360620450",
+      "cited_by": 4000,
+      "abstract": "Transformative artificially intelligent tools, such as ChatGPT, designed to generate sophisticated text indistinguishable from that produced by a human, are applicable across wide range of contexts. The technology presents opportunities well as, often ethical and legal, challenges, has the potential for both positive negative impacts organisations, society, individuals. Offering multi-disciplinary insight into some these, this article brings together 43 contributions experts in fields computer science, marketing, information systems, education, policy, hospitality tourism, management, publishing, nursing. contributors acknowledge ChatGPT’s capabilities enhance productivity suggest it is likely offer significant gains banking, industries, business activities, management marketing. Nevertheless, they also consider its limitations,"
+    },
+    {
+      "title": "The Ethics of AI Ethics: An Evaluation of Guidelines",
+      "year": 2020,
+      "authors": "Thilo Hagendorff",
+      "doi": "https://doi.org/10.1007/s11023-020-09517-8",
+      "openalex_id": "https://openalex.org/W3003385079",
+      "cited_by": 1690,
+      "abstract": "Abstract Current advances in research, development and application of artificial intelligence (AI) systems have yielded a far-reaching discourse on AI ethics. In consequence, number ethics guidelines been released recent years. These comprise normative principles recommendations aimed to harness the “disruptive” potentials new technologies. Designed as semi-systematic evaluation, this paper analyzes compares 22 guidelines, highlighting overlaps but also omissions. As result, I give detailed overview field Finally, examine what extent respective ethical values are implemented practice systems—and how effectiveness demands can be improved."
+    },
+    {
+      "title": "Trustworthy artificial intelligence",
+      "year": 2020,
+      "authors": "Scott Thiebes, Sebastian Lins, Ali Sunyaev",
+      "doi": "https://doi.org/10.1007/s12525-020-00441-4",
+      "openalex_id": "https://openalex.org/W3090117266",
+      "cited_by": 567,
+      "abstract": "Abstract Artificial intelligence (AI) brings forth many opportunities to contribute the wellbeing of individuals and advancement economies societies, but also a variety novel ethical, legal, social, technological challenges. Trustworthy AI (TAI) bases on idea that trust builds foundation economies, sustainable development, individuals, organizations, societies will therefore only ever be able realize full potential AI, if can established in its deployment, use. With this article we aim introduce concept TAI five foundational principles (1) beneficence, (2) non-maleficence, (3) autonomy, (4) justice, (5) explicability. We further draw these develop data-driven research framework for demonstrate utility by delineating fruitful avenues future research, particularly"
+    },
+    {
+      "title": "FUTURE-AI: international consensus guideline for trustworthy and deployable artificial intelligence in healthcare",
+      "year": 2025,
+      "authors": "Karim Lekadir, Alejandro F. Frangi, Antonio R. Porras",
+      "doi": "https://doi.org/10.1136/bmj-2024-081554",
+      "openalex_id": "https://openalex.org/W4407173730",
+      "cited_by": 446,
+      "abstract": "Despite major advances in artificial intelligence (AI) research for healthcare, the deployment and adoption of AI technologies remain limited clinical practice. This paper describes FUTURE-AI framework, which provides guidance development trustworthy tools healthcare. The Consortium was founded 2021 comprises 117 interdisciplinary experts from 50 countries representing all continents, including scientists, researchers, biomedical ethicists, social scientists. Over a two year period, guideline established through consensus based on six guiding principles—fairness, universality, traceability, usability, robustness, explainability. To operationalise set 30 best practices were defined, addressing technical, clinical, socioethical, legal dimensions. recommendations cover entire lifecycle healthcare AI, design, development, validation to regulation, deployment,"
+    },
+    {
+      "title": "CIFAKE: Image Classification and Explainable Identification of AI-Generated Synthetic Images",
+      "year": 2024,
+      "authors": "Jordan J. Bird, Ahmad Lotfi",
+      "doi": "https://doi.org/10.1109/access.2024.3356122",
+      "openalex_id": "https://openalex.org/W4391019749",
+      "cited_by": 233,
+      "abstract": "Recent advances in synthetic data have enabled the generation of images with such high quality that human beings cannot tell difference between real-life photographs and Artificial Intelligence (AI) generated images. Given critical necessity reliability authentication, this article proposes to enhance our ability recognise AI-generated through computer vision. Initially, a dataset is mirrors ten classes already available CIFAR-10 latent diffusion, providing contrasting set for comparison real photographs. The model capable generating complex visual attributes, as photorealistic reflections water. two sets present binary classification problem regard whether photograph or by AI. This study then use Convolutional Neural Network (CNN) classify into categories;"
+    }
+  ],
+  "c2pa_trust": [
+    {
+      "title": "Compliance-by-Design Micro-Licensing for AI-Generated Content in Social Commerce Using C2PA Content Credentials and W3C ODRL Policies",
+      "year": 2025,
+      "authors": "Xiongsheng Yi",
+      "doi": "https://doi.org/10.20944/preprints202509.1968.v1",
+      "openalex_id": "https://openalex.org/W4414523314",
+      "cited_by": 12,
+      "abstract": "Considering the compliance management imperatives of AI-generated content within online social e-commerce arena, current manuscript recommends a micro-licensing agreement framework that fuses C2PA and W3C ODRL methods (C2PA-W3C) for tackling copyright verification, use restriction monitoring content. Based on existing credentials with policy model, we provide an original micro licensing stack integrates platform-side low latency APIs event streams by designing in verifiable source/edit chain signatures/manifests machine-readable policies. Specifically, may include upload signatures distribution settlement close loop violations, thus enhancing protection where mapping to DMCA §512 “Notify-Remove-Counter-Notify\" process. Experimental results reveal that, YFCC100M MS COCO (CC BY 4.0) datasets, model significantly enhances"
+    },
+    {
+      "title": "C2PA Provenance Labels Increase Trust in News Platforms Across Western Countries",
+      "year": 2025,
+      "authors": "Christoph Trattner, Svenja Lys Forstner, Alain D. Starke",
+      "doi": "https://doi.org/10.31219/osf.io/pdhaz_v1",
+      "openalex_id": "https://openalex.org/W4410025564",
+      "cited_by": 4,
+      "abstract": "Misinformation and disinformation threaten global public trust in news media. Generative AI exacerbates mistrust by making it difficult to distinguish authentic images from AI-generated ones. This study examines whether accompanying with C2PA (Coalition for Content Provenance Authenticity) provenance labels can restore trust. is an open standard that cryptographicallysecures describes a media file’s origin editing history. We conducted online experiment 6,114 participants, reflecting audiences of six major sources the US, UK, Norway. Each participant evaluated article previews images, either accompanied label (three levels detail) or not. metadata significantly improved participants’ perceptions image’s transparency credibility, increased source These results show verifiable makes"
+    },
+    {
+      "title": "Generative AI and deepfakes: a human rights approach to tackling harmful content",
+      "year": 2024,
+      "authors": "Felipe Romero Moreno",
+      "doi": "https://doi.org/10.1080/13600869.2024.2324540",
+      "openalex_id": "https://openalex.org/W4393308240",
+      "cited_by": 99,
+      "abstract": "© 2024 The Author(s). Published by Informa UK Limited, trading as Taylor & Francis Group. This is an Open Access article distributed under the terms of Creative Commons Attribution License (http://creativecommons.org/ licenses/by/4.0/)."
+    },
+    {
+      "title": "Examining the Impact of Provenance-Enabled Media on Trust and Accuracy Perceptions",
+      "year": 2023,
+      "authors": "K. J. Kevin Feng, Nick Ritchie, Pia Blumenthal",
+      "doi": "https://doi.org/10.1145/3610061",
+      "openalex_id": "https://openalex.org/W4387328591",
+      "cited_by": 29,
+      "abstract": "In recent years, industry leaders and researchers have proposed to use technical provenance standards address visual misinformation spread through digitally altered media. By adding immutable secure information such as authorship edit date media metadata, social users could potentially better assess the validity of they encounter. However, it is unclear how end would respond information, or best design indicators be understandable laypeople. We conducted an online experiment with 595 participants from US UK investigate users' accuracy perceptions trust in content shared on found that often lowered caused doubt deceptive media, particularly when revealed was composited. additionally tested conditions where itself shown"
+    },
+    {
+      "title": "Personhood credentials: Artificial intelligence and the value of privacy-preserving tools to distinguish who is real online",
+      "year": 2024,
+      "authors": "Steven Adler, Zoë Hitzig, Shrey Jain",
+      "doi": "https://doi.org/10.48550/arxiv.2408.07892",
+      "openalex_id": "https://openalex.org/W4402703524",
+      "cited_by": 7,
+      "abstract": "Anonymity is an important principle online. However, malicious actors have long used misleading identities to conduct fraud, spread disinformation, and carry out other deceptive schemes. With the advent of increasingly capable AI, bad can amplify potential scale effectiveness their operations, intensifying challenge balancing anonymity trustworthiness In this paper, we analyze value a new tool address challenge: \"personhood credentials\" (PHCs), digital credentials that empower users demonstrate they are real people -- not AIs online services, without disclosing any personal information. Such be issued by range trusted institutions governments or otherwise. A PHC system, according our definition, could local global, does need"
+    },
+    {
+      "title": "Trustworthy AI for Whom? GenAI Detection Techniques of Trust Through Decentralized Web3 Ecosystems",
+      "year": 2025,
+      "authors": "Igor Calzada, Géza Németh, Mohammed Salah Al-Radhi",
+      "doi": "https://doi.org/10.3390/bdcc9030062",
+      "openalex_id": "https://openalex.org/W4408186450",
+      "cited_by": 11,
+      "abstract": "As generative AI (GenAI) technologies proliferate, ensuring trust and transparency in digital ecosystems becomes increasingly critical, particularly within democratic frameworks. This article examines decentralized Web3 mechanisms—blockchain, autonomous organizations (DAOs), data cooperatives—as foundational tools for enhancing GenAI. These mechanisms are analyzed the framework of EU’s Act Draghi Report, focusing on their potential to support content authenticity, community-driven verification, sovereignty. Based a systematic policy analysis, this proposes multi-layered mitigate risks AI-generated misinformation. Specifically, as result it identifies evaluates seven detection techniques stemming from action research conducted Horizon Europe Lighthouse project called ENFIELD: (i) federated learning detection, (ii) blockchain-based provenance tracking, (iii) zero-knowledge"
+    },
+    {
+      "title": "Transparent AI Disclosure Obligations: Who, What, When, Where, Why, How",
+      "year": 2024,
+      "authors": "Abdallah El Ali, Karthikeya Puttur Venkatraj, Sophie Morosoli",
+      "doi": "https://doi.org/10.1145/3613905.3650750",
+      "openalex_id": "https://openalex.org/W4392737371",
+      "cited_by": 42,
+      "abstract": "Advances in Generative Artificial Intelligence (AI) are resulting AI-generated media output that is (nearly) indistinguishable from human-created content. This can drastically impact users and the sector, especially given global risks of misinformation. While currently discussed European AI Act aims at addressing these through Article 52’s transparency obligations, its interpretation implications remain unclear. In this early work, we adopt a participatory approach to derive key questions based on disclosure obligations. We ran two workshops with researchers, designers, engineers across disciplines (N=16), where participants deconstructed relevant clauses using 5W1H framework. contribute set 149 clustered into five themes 18 sub-themes. believe not only"
+    },
+    {
+      "title": "Towards Trustworthy Digital Media In The Aigc Era: An Introduction To The Upcoming IsoJpegTrust Standard",
+      "year": 2023,
+      "authors": "JIAYUN MO, Xin Kang, ZIYUAN Hu",
+      "doi": "https://doi.org/10.1109/mcomstd.2023.10353009",
+      "openalex_id": "https://openalex.org/W4389542148",
+      "cited_by": 13,
+      "abstract": "With the rapid development of Artificial Intelligence Generated Content comes need for more advanced technologies to distinguish fake medias from authentic ones. Current standards authenticating media assets are developed by Coalition Provenance and Authenticity International Press Telecommunications Council. The former focuses on providing complete provenance allow users backtrack history creation modification, while latter establishes a standard method asserting storing information related assets. JPEG Trust, other hand, is an evolving that aims provide way proving trustworthiness assets, thus directly addressing aforementioned issue. Through generation trust report, Trust allows view evaluation results make decisions accordingly. expected bring application values countries, platforms, individuals"
+    }
+  ],
+  "synthetic_image_label": [
+    {
+      "title": "User Experience Design Professionals’ Perceptions of Generative Artificial Intelligence",
+      "year": 2024,
+      "authors": "Jie Li, Hancheng Cao, L. Lin",
+      "doi": "https://doi.org/10.1145/3613904.3642114",
+      "openalex_id": "https://openalex.org/W4396827179",
+      "cited_by": 138,
+      "abstract": "Among creative professionals, Generative Artificial Intelligence (GenAI) has sparked excitement over its capabilities and fear unanticipated consequences. How does GenAI impact User Experience Design (UXD) practice, are fears warranted? We interviewed 20 UX Designers, with diverse experience across companies (startups to large enterprises). probed them characterize their practices, sample attitudes, concerns, expectations. found that experienced designers confident in originality, creativity, empathic skills, find GenAI’s role as assistive. They emphasized the unique human factors of “enjoyment” “agency”, where humans remain arbiters “AI alignment’’. However, skill degradation, job replacement, creativity exhaustion can adversely junior designers. discuss implications for human-GenAI collaboration, specifically copyright"
+    },
+    {
+      "title": "Medical image analysis using deep learning algorithms",
+      "year": 2023,
+      "authors": "Mengfang Li, Yuanyuan Jiang, Yanzhou Zhang",
+      "doi": "https://doi.org/10.3389/fpubh.2023.1273253",
+      "openalex_id": "https://openalex.org/W4388459526",
+      "cited_by": 477,
+      "abstract": "In the field of medical image analysis within deep learning (DL), importance employing advanced DL techniques cannot be overstated. has achieved impressive results in various areas, making it particularly noteworthy for healthcare. The integration with enables real-time vast and intricate datasets, yielding insights that significantly enhance healthcare outcomes operational efficiency industry. This extensive review existing literature conducts a thorough examination most recent (DL) approaches designed to address difficulties faced healthcare, focusing on use algorithms analysis. Falling all investigated papers into five different categories terms their techniques, we have assessed them according some critical parameters. Through systematic categorization state-of-the-art such as"
+    },
+    {
+      "title": "Material Perception",
+      "year": 2017,
+      "authors": "Roland W. Fleming",
+      "doi": "https://doi.org/10.1146/annurev-vision-102016-061429",
+      "openalex_id": "https://openalex.org/W4245197649",
+      "cited_by": 126,
+      "abstract": "Under typical viewing conditions, human observers effortlessly recognize materials and infer their physical, functional, multisensory properties at a glance. Without touching materials, we can usually tell whether they would feel hard or soft, rough smooth, wet dry. We have vivid visual intuitions about how deformable like liquids textiles respond to external forces surfaces chrome, wax, leather change appearance when formed into different shapes viewed under lighting. These achievements are impressive because the retinal image results from complex optical interactions between lighting, shape, material, which cannot easily be disentangled. Here I argue that of diversity, mutability, complexity pose enormous challenges vision"
+    },
+    {
+      "title": "Ischemic stroke after use of the synthetic marijuana “spice”",
+      "year": 2013,
+      "authors": "Melissa Freeman, David Z. Rose, Martin Myers",
+      "doi": "https://doi.org/10.1212/01.wnl.0000437297.05570.a2",
+      "openalex_id": "https://openalex.org/W2150574577",
+      "cited_by": 140,
+      "abstract": "OBJECTIVES: To report and associate acute cerebral infarctions in 2 young, previously healthy siblings with use of the street drug known as \"spice\" (a synthetic marijuana product, also \"K2\"), which they independently smoked before experiencing embolic-appearing ischemic strokes. METHODS: We present history, physical examination, laboratory data, cerebrovascular imaging, echocardiogram, ECG, hospital course these patients. RESULTS: found that both spice was obtained from same source. The to contain schedule I cannabinoid JWH-018. Full stroke workup unrevealing a etiology; urine screen positive for marijuana. CONCLUSIONS: our patients who had temporal association symptoms infarction. This may be confounded by contaminants product consumed (i.e.,"
+    },
+    {
+      "title": "Advances and Open Problems in Federated Learning",
+      "year": 2020,
+      "authors": "Peter Kairouz, H. Brendan McMahan, Brendan Avent",
+      "doi": "https://doi.org/10.1561/2200000083",
+      "openalex_id": "https://openalex.org/W2995022099",
+      "cited_by": 5165,
+      "abstract": "Federated learning (FL) is a machine setting where many clients (e.g., mobile devices or whole organizations) collaboratively train model under the orchestration of central server service provider), while keeping training data decentralized. FL embodies principles focused collection and minimization, can mitigate systemic privacy risks costs resulting from traditional, centralized science approaches. Motivated by explosive growth in research, this monograph discusses recent advances presents an extensive open problems challenges."
+    },
+    {
+      "title": "The nudging effect of AIGC labeling on users’ perceptions of automated news: evidence from EEG",
+      "year": 2023,
+      "authors": "Yuhan Liu, Shuining Wang, Guoming Yu",
+      "doi": "https://doi.org/10.3389/fpsyg.2023.1277829",
+      "openalex_id": "https://openalex.org/W4390111229",
+      "cited_by": 28,
+      "abstract": "Introduction: In the context of generative AI intervention in news production, this study primarily focuses on impact AI-generated content (AIGC) labeling cues users' perceptions automated based nudge theory. Methods: A 2 (authorship disclosure cues: with vs. without AIGC label) × (automated type: descriptive evaluative news) within-subject experiment was carried out. Thirty-two participants were recruited to read news, evaluate perceived trustworthiness, and record an EEG device. Results: The results demonstrated that significantly reduced trustworthiness perception both fact-based opinion-based news. EEG, delta PSD, theta alpha beta PSD higher than those labeling. Meanwhile, conditions, TAR Discussion: These suggested improves degree attention concentration reading"
+    },
+    {
+      "title": "Synthetic Data -- what, why and how?",
+      "year": 2022,
+      "authors": "J.B. Jordon, Łukasz Szpruch, Florimond Houssiau",
+      "doi": "https://doi.org/10.48550/arxiv.2205.03257",
+      "openalex_id": "https://openalex.org/W4229446766",
+      "cited_by": 108,
+      "abstract": "This explainer document aims to provide an overview of the current state rapidly expanding work on synthetic data technologies, with a particular focus privacy. The article is intended for non-technical audience, though some formal definitions have been given clarity specialists. enable reader quickly become familiar notion data, as well understand subtle intricacies that come it. We do believe very useful tool, and our hope this report highlights that, while drawing attention nuances can easily be overlooked in its deployment."
+    },
+    {
+      "title": "Generative Agents: Interactive Simulacra of Human Behavior",
+      "year": 2023,
+      "authors": "Joon Sung Park, Joseph O’Brien, Carrie J. Cai",
+      "doi": "https://doi.org/10.1145/3586183.3606763",
+      "openalex_id": "https://openalex.org/W4387835442",
+      "cited_by": 1685,
+      "abstract": "Believable proxies of human behavior can empower interactive applications ranging from immersive environments to rehearsal spaces for interpersonal communication prototyping tools. In this paper, we introduce generative agents: computational software agents that simulate believable behavior. Generative wake up, cook breakfast, and head work; artists paint, while authors write; they form opinions, notice each other, initiate conversations; remember reflect on days past as plan the next day. To enable agents, describe an architecture extends a large language model store complete record agent’s experiences using natural language, synthesize those memories over time into higher-level reflections, retrieve them dynamically We instantiate populate sandbox"
+    }
+  ],
+  "viz_misinfo_edu": [
+    {
+      "title": "The psychological drivers of misinformation belief and its resistance to correction",
+      "year": 2022,
+      "authors": "Ullrich K. H. Ecker, Stephan Lewandowsky, John Cook",
+      "doi": "https://doi.org/10.1038/s44159-021-00006-y",
+      "openalex_id": "https://openalex.org/W4206236567",
+      "cited_by": 1324,
+      "abstract": ""
+    },
+    {
+      "title": "A systematic review of communication interventions for countering vaccine misinformation",
+      "year": 2023,
+      "authors": "Hannah Whitehead, Clare E. French, Deborah M Caldwell",
+      "doi": "https://doi.org/10.1016/j.vaccine.2022.12.059",
+      "openalex_id": "https://openalex.org/W4313854366",
+      "cited_by": 136,
+      "abstract": "BACKGROUND: Misinformation and disinformation around vaccines has grown in recent years, exacerbated during the Covid-19 pandemic. Effective strategies for countering vaccine misinformation are crucial tackling hesitancy. We conducted a systematic review to identify describe communications-based used prevent ameliorate effect of mis- dis-information on people's attitudes behaviours surrounding vaccination (objective 1) examined their effectiveness 2). METHODS: searched CINAHL, Web Science, Scopus, MEDLINE, Embase, PsycInfo MedRxiv March 2021. The search strategy was built three themes(1) communications media; (2) misinformation; (3) vaccines. For trials addressing objective 2, risk bias assessed using Cochrane randomized tool (RoB2). RESULTS: Of 2000 identified records, 34 eligible studies"
+    },
+    {
+      "title": "Misinformation lingers in memory: Failure of three pro-vaccination strategies",
+      "year": 2017,
+      "authors": "Sara Pluviano, Caroline Watt, Sergio Della Sala",
+      "doi": "https://doi.org/10.1371/journal.pone.0181640",
+      "openalex_id": "https://openalex.org/W2736876412",
+      "cited_by": 277,
+      "abstract": "People's inability to update their memories in light of corrective information may have important public health consequences, as the case vaccination choice. In present study, we compare three potentially effective strategies vaccine promotion: one contrasting myths vs. facts, employing fact and icon boxes, showing images non-vaccinated sick children. Beliefs autism/vaccines link vaccines side effects, along with intention vaccinate a future child, were evaluated both immediately after correction intervention 7-day delay reveal possible backfire effects. Results show that existing correct misinformation are ineffective often backfire, resulting unintended opposite effect, reinforcing ill-founded beliefs about reducing intentions vaccinate. The implications for research on"
+    },
+    {
+      "title": "TikTok as a Source of Health Information and Misinformation for Young Women in the United States: Survey Study",
+      "year": 2024,
+      "authors": "Ciera E. Kirkpatrick, LaRissa L. Lawrie",
+      "doi": "https://doi.org/10.2196/54663",
+      "openalex_id": "https://openalex.org/W4395099370",
+      "cited_by": 144,
+      "abstract": "Background TikTok is one of the most-used and fastest-growing social media platforms in world, recent reports indicate that it has become an increasingly popular source news information United States. These trends have important implications for public health because abundance exists on platform. Women are among largest group users States may be especially affected by dissemination TikTok. Prior research shown women not only more likely to look internet but also their health-related behaviors perceptions involvement with media. Objective We conducted a survey young better understand use as well TikTok’s communication sources. Methods A web-based US aged 18 29 years (N=1172) was"
+    },
+    {
+      "title": "The Era of Artificial Intelligence Deception: Unraveling the Complexities of False Realities and Emerging Threats of Misinformation",
+      "year": 2024,
+      "authors": "S. Williamson, Victor R. Prybutok",
+      "doi": "https://doi.org/10.3390/info15060299",
+      "openalex_id": "https://openalex.org/W4398256042",
+      "cited_by": 127,
+      "abstract": "This study delves into the dual nature of artificial intelligence (AI), illuminating its transformative potential that has power to revolutionize various aspects our lives. We delve critical issues such as AI hallucinations, misinformation, and unpredictable behavior, particularly in large language models (LLMs) AI-powered chatbots. These technologies, while capable manipulating human decisions exploiting cognitive vulnerabilities, also hold key unlocking unprecedented opportunities for innovation progress. Our research underscores need robust, ethical development deployment frameworks, advocating a balance between technological advancement societal values. emphasize importance collaboration among researchers, developers, policymakers, end users steer toward maximizing benefits minimizing harms. highlights role responsible practices, including"
+    },
+    {
+      "title": "Disentangling Item and Testing Effects in Inoculation Research on Online Misinformation: Solomon Revisited",
+      "year": 2020,
+      "authors": "Jon Roozenbeek, Rakoen Maertens, William P. McClanahan",
+      "doi": "https://doi.org/10.1177/0013164420940378",
+      "openalex_id": "https://openalex.org/W4239239283",
+      "cited_by": 77,
+      "abstract": "Online misinformation is a pervasive global problem. In response, psychologists have recently explored the theory of psychological inoculation: If people are preemptively exposed to weakened version technique, they can build up cognitive resistance. This study addresses two unanswered methodological questions about widely adopted online “fake news” inoculation game, Bad News. First, research in this area has often looked at pre- and post-intervention difference scores for same items, which may imply that any observed effects specific survey items themselves (item effects). Second, it possible using pretest influences outcome variable interest, or interact with intervention (testing We investigate both item testing studies"
+    },
+    {
+      "title": "Improving Adolescent Sexual and Reproductive Health: A Systematic Review of Potential Interventions",
+      "year": 2016,
+      "authors": "Rehana A Salam, Anadil Faqqah, Nida Sajjad",
+      "doi": "https://doi.org/10.1016/j.jadohealth.2016.05.022",
+      "openalex_id": "https://openalex.org/W2522141813",
+      "cited_by": 328,
+      "abstract": "Adolescents have special sexual and reproductive health needs (whether or not they are sexually active married). This review assesses the impact of interventions to improve adolescent (including prevent female genital mutilation/cutting [FGM/C]) intimate violence. Our findings suggest that education, counseling, contraceptive provision effective in increasing knowledge, use, decreasing pregnancy. Among FGM/C, community mobilization empowerment strategies potential raise awareness adverse consequences FGM/C reduce its prevalence; however, there is a need conduct methodologically rigorous intervention evaluations. There was limited inconclusive evidence for effectiveness partner Further studies with designs, longer term follow-up, standardized validated measurement instruments required maximize comparability results. Future efforts should"
+    },
+    {
+      "title": "Psychological Underpinnings of Misinformation Countermeasures",
+      "year": 2024,
+      "authors": "Carolin‐Theresa Ziemer, Tobias Rothmund",
+      "doi": "https://doi.org/10.1027/1864-1105/a000407",
+      "openalex_id": "https://openalex.org/W4391137283",
+      "cited_by": 41,
+      "abstract": "Abstract: There has been substantial scholarly effort to (a) investigate the psychological underpinnings of why individuals believe in misinformation, and (b) develop interventions that hamper their acceptance spread. However, there is a lack systematic integration these two research lines. We conducted scoping review empirically tested (N = 176) counteract misinformation. developed an intervention map analyzed boosting, inoculation, identity management, nudging, fact-checking as well various subdimensions. further examined how are theoretically derived from most prominent accounts for misinformation susceptibility: classical motivated reasoning. find majority studies interventions, poorly linked basic theory not geared towards reducing Based on this, we outline future avenues"
+    }
+  ],
+  "viz_skepticism_calibration": [
+    {
+      "title": "Who Should I Trust: AI or Myself? Leveraging Human and AI Correctness Likelihood to Promote Appropriate Trust in AI-Assisted Decision-Making",
+      "year": 2023,
+      "authors": "Shuai Ma, Ying Lei, Xinru Wang",
+      "doi": "https://doi.org/10.1145/3544548.3581058",
+      "openalex_id": "https://openalex.org/W4366547597",
+      "cited_by": 131,
+      "abstract": "In AI-assisted decision-making, it is critical for human decision-makers to know when trust AI and themselves. However, prior studies calibrated only based on confidence indicating AI’s correctness likelihood (CL) but ignored humans’ CL, hindering optimal team decision-making. To mitigate this gap, we proposed promote appropriate the CL of both sides at a task-instance level. We first modeled by approximating their decision-making models computing potential performance in similar instances. demonstrated feasibility effectiveness our model via two preliminary studies. Then, three exploitation strategies calibrate users’ explicitly/implicitly process. Results from between-subjects experiment (N=293) showed that promoted more AI, compared with using confidence. further"
+    },
+    {
+      "title": "Ignore, Trust, or Negotiate: Understanding Clinician Acceptance of AI-Based Treatment Recommendations in Health Care",
+      "year": 2023,
+      "authors": "Venkatesh Sivaraman, Leigh A. Bukowski, Joel Levin",
+      "doi": "https://doi.org/10.1145/3544548.3581075",
+      "openalex_id": "https://openalex.org/W4366547677",
+      "cited_by": 124,
+      "abstract": "Artificial intelligence (AI) in healthcare has the potential to improve patient outcomes, but clinician acceptance remains a critical barrier. We developed novel decision support interface that provides interpretable treatment recommendations for sepsis, life-threatening condition which decisional uncertainty is common, practices vary widely, and poor outcomes can occur even with optimal decisions. This system formed basis of mixed-methods study 24 intensive care clinicians made AI-assisted decisions on real cases. found explanations generally increased confidence AI, concordance specific varied beyond binary or rejection described prior work. Although sometimes ignored trusted they also often prioritized aspects follow, reject, delay process we term “negotiation.”"
+    },
+    {
+      "title": "Trusting AI: does uncertainty visualization affect decision-making?",
+      "year": 2025,
+      "authors": "Jonatan Reyes, Anil Ufuk Batmaz, Marta Kersten‐Oertel",
+      "doi": "https://doi.org/10.3389/fcomp.2025.1464348",
+      "openalex_id": "https://openalex.org/W4407261951",
+      "cited_by": 24,
+      "abstract": "Introduction Decision-making based on AI can be challenging, especially when considering the uncertainty associated with predictions. Visualizing in refers to techniques that use visual cues represent level of confidence or an model's outputs, such as predictions decisions. This study aims investigate impact visualizing decision-making and trust AI. Methods We conducted a user 147 participants, utilizing static classic gaming scenarios proxy for human-AI collaboration decision-making. The measured changes decisions, AI, was visualized continuous format compared binary output model. Results Our findings indicate significantly enhances 58% participants negative attitudes toward Additionally, 31% these found visualization useful. size identified method had most participants'"
+    },
+    {
+      "title": "AI for Decision Support: Balancing Accuracy, Transparency, and Trust Across Sectors",
+      "year": 2024,
+      "authors": "Attila Kővári",
+      "doi": "https://doi.org/10.3390/info15110725",
+      "openalex_id": "https://openalex.org/W4404254054",
+      "cited_by": 86,
+      "abstract": "This study seeks to understand the key success factors that underpin efficiency, transparency, and user trust in automated decision support systems (DSS) leverage AI technologies across industries. The aim of this is facilitate more accurate decision-making with such AI-based DSS, as well build through need for visibility explainability by increasing acceptance. primarily examines nature DSS adoption challenges maintaining system transparency improving accuracy. results provide practical guidance professionals decision-makers develop AI-driven are not only effective but also trusted users. important gain insight into how artificial intelligence fits combines decision-making, which can be derived from research when thinking about embedding ethical standards."
+    },
+    {
+      "title": "Artificial agents’ explainability to support trust: considerations on timing and context",
+      "year": 2022,
+      "authors": "Guglielmo Papagni, Jesse de Pagter, Setareh Zafari",
+      "doi": "https://doi.org/10.1007/s00146-022-01462-7",
+      "openalex_id": "https://openalex.org/W4283588026",
+      "cited_by": 50,
+      "abstract": "Abstract Strategies for improving the explainability of artificial agents are a key approach to support understandability agents’ decision-making processes and their trustworthiness. However, since explanations not inclined standardization, finding solutions that fit algorithmic-based poses compelling challenge. This paper addresses concept trust in relation complementary aspects play role interpersonal human–agent relationships, such as users’ confidence perception reliability. Particularly, this focuses on non-expert perspectives, users with little technical knowledge likely benefit most from “post-hoc”, everyday explanations. Drawing upon explainable AI social sciences literature, investigates how agent’s interrelated at different stages an interaction. Specifically, possibility implementing building, maintenance restoration strategy is investigated. To"
+    },
+    {
+      "title": "Unveiling trust in AI: the interplay of antecedents, consequences, and cultural dynamics",
+      "year": 2025,
+      "authors": "Qinpu Dang, Guiquan Li",
+      "doi": "https://doi.org/10.1007/s00146-025-02477-6",
+      "openalex_id": "https://openalex.org/W4412416173",
+      "cited_by": 55,
+      "abstract": "Trust in artificial intelligence (AI) has become a central issue due to the opacity and unpredictability of AI decision-making processes. However, existing studies often produce inconsistent results fail provide unified understanding underlying factors, making comprehensive review necessary. To address this gap, we conducted systematic 562 empirical explore antecedents consequences human trust AI. The identified key trust, including capability, anthropomorphism, individual explainability, associated consequences, such as behavioral intention, attitude, acceptance. A cross-cultural analysis revealed significant differences how cultural contexts influence perception prioritization transparency, anthropomorphism. These findings emphasize need for multidimensional approach developing trustworthy systems, highlighting importance sensitivity design. also suggests several"
+    },
+    {
+      "title": "First impressions of a financial AI assistant: differences between high trust and low trust users",
+      "year": 2023,
+      "authors": "Simon Schreibelmayr, Laura Moradbakhti, Martina Mara",
+      "doi": "https://doi.org/10.3389/frai.2023.1241290",
+      "openalex_id": "https://openalex.org/W4387309098",
+      "cited_by": 21,
+      "abstract": "Calibrating appropriate trust of non-expert users in artificial intelligence (AI) systems is a challenging yet crucial task. To align subjective levels with the objective trustworthiness system, need information about its strengths and weaknesses. The specific explanations that help individuals avoid over- or under-trust may vary depending on their initial perceptions system. In an online study, 127 participants watched video financial AI assistant varying degrees decision agency. They generated 358 spontaneous text descriptions system completed standard questionnaires from Trust Automation Technology Acceptance literature (including perceived competence, understandability, human-likeness, uncanniness, intention developers, to use, trust). Comparisons between high low user group revealed"
+    },
+    {
+      "title": "Intelligent autonomous agents and trust in virtual reality",
+      "year": 2021,
+      "authors": "Ningyuan Sun, Jean Botev",
+      "doi": "https://doi.org/10.1016/j.chbr.2021.100146",
+      "openalex_id": "https://openalex.org/W3209581270",
+      "cited_by": 28,
+      "abstract": "Intelligent autonomous agents (IAA) are proliferating and rapidly evolving due to the exponential growth in computational power recent advances, for instance, artificial intelligence research. Ranging from chatbots, over personal virtual assistants medical decision-aiding systems, self-driving or self-piloting whether unbeknownst users not, IAA increasingly integrated into many aspects of daily life. Despite this technological development, people remain skeptical such agents. Conversely, others might have excessive confidence them. Therefore, establishing an appropriate level trust is crucial successful deployment everyday contexts. Virtual Reality (VR) another domain where play a significant role, yet its experiential immersive character particularly allows new ways interaction tackling trust-related"
+    }
+  ]
+}

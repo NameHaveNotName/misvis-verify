@@ -1,0 +1,521 @@
+{
+  "lisnic_lie_charts": [
+    {
+      "title": "ChartCheck: Explainable Fact-Checking over Real-World Chart Images",
+      "year": 2024,
+      "authors": "Mubashara Akhtar, Nikesh Subedi, Vivek Gupta",
+      "doi": "https://doi.org/10.18653/v1/2024.findings-acl.828",
+      "openalex_id": "https://openalex.org/W4402669758",
+      "cited_by": 9,
+      "abstract": ""
+    },
+    {
+      "title": "Situating Trust in Cartography: Why do People Trust Maps and What does Trust in Maps Mean?",
+      "year": 2025,
+      "authors": "Timothy Prestby",
+      "doi": "https://doi.org/10.14714/cp106.1903",
+      "openalex_id": "https://openalex.org/W4407246652",
+      "cited_by": 2,
+      "abstract": "A longstanding assertion among cartographers is that people place a great deal of trust in maps. Despite this claim and the growing importance understanding post-truth society, research on cartography scarce. It remains unclear why, how, if maps are inherently trustworthy. Moreover, existing fails to define trust, or uses inconsistent definitions muddy whether actually being studied not. This paper sets out situate by examining arguments as why may more than other kinds information exploring how has been defined. I propose five reasons be trustworthy, owing their authoritative, objective, realistic, ubiquitous, useful nature. buttress each these with psychological theory discuss variable-specific characteristics"
+    },
+    {
+      "title": "ChartCheck: Explainable Fact-Checking over Real-World Chart Images",
+      "year": 2023,
+      "authors": "Mubashara Akhtar, Nikesh Subedi, Vivek Gupta",
+      "doi": "https://doi.org/10.48550/arxiv.2311.07453",
+      "openalex_id": "https://openalex.org/W4388685689",
+      "cited_by": 1,
+      "abstract": "Whilst fact verification has attracted substantial interest in the natural language processing community, verifying misinforming statements against data visualizations such as charts so far been overlooked. Charts are commonly used real-world to summarize and communicate key information, but they can also be easily misused spread misinformation promote certain agendas. In this paper, we introduce ChartCheck, a novel, large-scale dataset for explainable fact-checking charts, consisting of 1.7k 10.5k human-written claims explanations. We systematically evaluate ChartCheck using vision-language chart-to-table models, propose baseline community. Finally, study chart reasoning types visual attributes that pose challenge these models"
+    },
+    {
+      "title": "Trust in maps: what we know and what we need to know",
+      "year": 2023,
+      "authors": "Timothy Prestby",
+      "doi": "https://doi.org/10.1080/15230406.2023.2281306",
+      "openalex_id": "https://openalex.org/W4389194669",
+      "cited_by": 22,
+      "abstract": "Maps have served as authoritative and trustworthy sources of geospatial information for years.However, maps are increasingly being wielded to spread misinformation due the democratization mapmaking, advances in AI, emergence post-truth politics.Trust plays a fundamental role misinformation, but our understanding trust context is limited.In this paper, I examine methodologies employed by empirical studies on synthesize major findings said studies.Most reviewed were experiments that utilized single-item self-reporting Likert-type measures capture trust.I organized into six themes including source, metadata, transparency, uncertainty, design, modality.Additionally, present research agenda based limitations existing works.This highlights methodological challenges studying proposes opportunities form questions."
+    },
+    {
+      "title": "Misleading Beyond Visual Tricks: How People Actually Lie with Charts",
+      "year": 2022,
+      "authors": "Maxim Lisnic, Cole Polychronis, Alexander Lex",
+      "doi": "https://doi.org/10.31219/osf.io/ky6th_v1",
+      "openalex_id": "https://openalex.org/W4409415933",
+      "cited_by": 0,
+      "abstract": "Data visualizations can empower an audience to make informed decisions. At the same time, deceptive representations of data lead inaccurate interpretations while still providing illusion data-driven insights. Existing research on misleading primarily focuses examples charts and techniques previously reported be deceptive. These approaches do not necessarily describe how mislead general population in practice. We instead present analysis found a real-world discourse significant global event---Twitter posts with related COVID-19 pandemic. Our work shows that, contrary conventional wisdom, violations visualization design guidelines are dominant way people charts. Specifically, they disproportionately reasoning errors posters' arguments. Through series examples, we common discuss even faithfully"
+    },
+    {
+      "title": "The Social Construction of Visualizations: Practitioner Challenges and Experiences of Visualizing Race and Gender",
+      "year": 2025,
+      "authors": "Priya Dhawka, Sayamindu Dasgupta",
+      "doi": "https://doi.org/10.1145/3706598.3713243",
+      "openalex_id": "https://openalex.org/W4407571772",
+      "cited_by": 3,
+      "abstract": "Data visualizations are increasingly seen as socially constructed, with several recent studies positing that perceptions and interpretations of visualization artifacts shaped through complex sets interactions between members a community. However, most these works have focused on audiences researchers, little is known about if how practitioners account for the constructed framing data visualization. In this paper, we study analyze understand influence their beliefs, values, biases in design processes challenges they experience. 17 semi-structured interviews designers working race gender demographic data, find mix factors interact to inform approach process, including personal experiences, understandings power, neutrality, politics. Based our findings, suggest series implications"
+    },
+    {
+      "title": "\"Yeah, this graph doesn’t show that\": Analysis of Online Engagement with Misleading Data Visualizations",
+      "year": 2023,
+      "authors": "Maxim Lisnic, Alexander Lex, Marina Kogan",
+      "doi": "https://doi.org/10.31219/osf.io/q6j3u",
+      "openalex_id": "https://openalex.org/W4386964698",
+      "cited_by": 2,
+      "abstract": "Attempting to make sense of a phenomenon or crisis, social media users often share data visualizations and interpretations that can be erroneous misleading. Prior work has studied how mislead, but do misleading reach broad audience? And if so, amplify challenge interpretations? To answer these questions, we conducted mixed-methods analysis the public's engagement with visualization posts about COVID-19 on Twitter. Compared accurate visual insights, our results show garner more replies in which audiences point out nuanced fallacies caveats interpretations. Based thematic engagement, identify discuss important opportunities limitations effectively leveraging crowdsourced assessments address data-driven misinformation."
+    },
+    {
+      "title": "Deception by obfuscation: Studnicki et al.’s retracted longitudinal cohort study of emergency room utilization following abortion",
+      "year": 2024,
+      "authors": "Ushma D. Upadhyay, Chris E. Adkins",
+      "doi": "https://doi.org/10.1016/j.contraception.2024.110417",
+      "openalex_id": "https://openalex.org/W4392882612",
+      "cited_by": 6,
+      "abstract": "OBJECTIVES: In November 2022, the anti-abortion advocacy group Alliance for Hippocratic Medicine filed a lawsuit against U.S. Food and Drug Administration challenging initial 2000 approval of mifepristone its subsequent approvals, which removed unnecessary restrictions on use, by disputing medication's safety record. Such challenges relied study examining incidence emergency room visits following medication abortion with procedural using Medicaid claims data from 1999-2015. February 2024 that was retracted publisher. this paper, we analyzed methods presentations used in study. STUDY DESIGN: We drew upon commonly accepted principles responsible epidemiologic scientific research to evaluate organized our findings into themes. RESULTS: found multiple instances methodological"
+    }
+  ],
+  "pandey_deceptive": [],
+  "correll_blackhat": [
+    {
+      "title": "Do You See What I See? A Qualitative Study Eliciting High-Level Visualization Comprehension",
+      "year": 2024,
+      "authors": "Ghulam Jilani Quadri, Arran Zeyu Wang, Zhehao Wang",
+      "doi": "https://doi.org/10.1145/3613904.3642813",
+      "openalex_id": "https://openalex.org/W4392223457",
+      "cited_by": 34,
+      "abstract": "Designers often create visualizations to achieve specific high-level analytical or communication goals. These goals require people naturally extract complex, contextualized, and interconnected patterns in data. While limited prior work has studied general interpretation, prevailing perceptual studies of visualization effectiveness primarily focus on isolated, predefined, low-level tasks, such as estimating statistical quantities. This study more holistically explores interpretation examine the alignment between designers’ communicative what their audience sees a visualization, which we refer comprehension. We found that statistics effectively estimate from classical graphical perception may differ intuitively comprehend visualization. conducted qualitative three types visualizations—line graphs, bar scatterplots—to investigate draw Participants described"
+    },
+    {
+      "title": "Annotating Line Charts for Addressing Deception",
+      "year": 2022,
+      "authors": "Arlen Fan, Yuxin Ma, Michelle V. Mancenido",
+      "doi": "https://doi.org/10.1145/3491102.3502138",
+      "openalex_id": "https://openalex.org/W4225099728",
+      "cited_by": 44,
+      "abstract": "Deceptive visualizations are that, whether intentionally or not, lead the reader to an understanding of data which varies from actual data. Examples deceptive can be found in every digital platform, and, despite their widespread use wild, there have been limited efforts alert laypersons common visualization practices. In this paper, we present a tool for annotating line charts wild that reads chart images and outputs text visual annotations assess distortions help guide towards honest We demonstrate usefulness our through series case studies on real-world charts. Finally, perform crowdsourced experiment evaluate ability proposed educate readers about potentially"
+    },
+    {
+      "title": "Perceptual Pat: A Virtual Human Visual System for Iterative Visualization Design",
+      "year": 2023,
+      "authors": "Sungbok Shin, Sanghyun Hong, Niklas Elmqvist",
+      "doi": "https://doi.org/10.1145/3544548.3580974",
+      "openalex_id": "https://openalex.org/W4366547383",
+      "cited_by": 10,
+      "abstract": "Designing a visualization is often process of iterative refinement where the designer improves chart over time by adding features, improving encodings, and fixing mistakes. However, effective design requires external critique evaluation. Unfortunately, such not always available on short notice evaluation can be costly. To address this need, we present Perceptual Pat, an extensible suite AI computer vision techniques that forms virtual human visual system for supporting design. The analyzes snapshots using set filters—including gaze maps, text recognition, color analysis, etc—and generates report summarizing findings. web-based Pat Design Lab provides version tracking enables to track improvements time. We validate longitudinal qualitative"
+    },
+    {
+      "title": "Scoping the Future of Visualization Literacy: A Review",
+      "year": 2022,
+      "authors": "Mara Solen",
+      "doi": "https://doi.org/10.31219/osf.io/eypgm",
+      "openalex_id": "https://openalex.org/W4293247395",
+      "cited_by": 5,
+      "abstract": "Access to information is increasing rapidly, and data visualizations are becoming increasingly common as a way communicate summaries of large datasets, especially in media designed for the general public. Accompanying this rise visualization need literacy. In work we survey current body research on literacy find themes guide future work. We found three literacy: interpretation, construction, believability. Construction believability not traditionally discussed research. analyzed participant pools user studies them be lacking diversity gender sex, age, education level, recruitment country."
+    },
+    {
+      "title": "CALVI: Critical Thinking Assessment for Literacy in Visualizations",
+      "year": 2023,
+      "authors": "Lily W. Ge, Cui Yuan, Matthew Kay",
+      "doi": "https://doi.org/10.31219/osf.io/32mg7",
+      "openalex_id": "https://openalex.org/W4320922889",
+      "cited_by": 3,
+      "abstract": "Visualization misinformation is a prevalent problem, and combating it requires understanding people’s ability to read, interpret, reason about erroneous or potentially misleading visualizations, which lacks reliable measurement: existing visualization literacy tests focus on well-formed visualizations. We systematically develop an assessment for this by: (1) developing precise definition of misleaders (decisions made in the construction visualizations that can lead conclusions not supported by data), (2) constructing initial test items using design space chart types, (3) trying out provisional 497 participants, (4) analyzing tryout results refining Item Response Theory, qualitative analysis, wrong-due-to-misleader score, content validity index. Our final bank 45 shows high"
+    },
+    {
+      "title": "Communicative Visualizations as a Learning Problem",
+      "year": 2020,
+      "authors": "Eytan Adar, Elsie Lee-Robbins",
+      "doi": "https://doi.org/10.1109/tvcg.2020.3030375",
+      "openalex_id": "https://openalex.org/W3086983493",
+      "cited_by": 2,
+      "abstract": "Significant research has provided robust task and evaluation languages for the analysis of exploratory visualizations. Unfortunately, these taxonomies fail when applied to communicative Instead, designers often resort evaluating visualizations from cognitive efficiency perspective: \"can recipient accurately decode my message/insight?\" However, are unlikely be satisfied if message went 'in one ear out other.' The consequence this inconsistency is that it difficult design or select between competing options in a principled way. problem we address fundamental mismatch how want describe their intent, language they have. We argue visualization can limitation through learning lens: student designer teacher. By using objectives, better define, assess,"
+    },
+    {
+      "title": "Adversarial attacks on machine learning-aided visualizations",
+      "year": 2024,
+      "authors": "Takanori Fujiwara, Kostiantyn Kucher, Junpeng Wang",
+      "doi": "https://doi.org/10.1007/s12650-024-01029-2",
+      "openalex_id": "https://openalex.org/W4402710057",
+      "cited_by": 2,
+      "abstract": "Abstract Research in ML4VIS investigates how to use machine learning (ML) techniques generate visualizations, and the field is rapidly growing with high societal impact. However, as any computational pipeline that employs ML processes, approaches are susceptible a range of ML-specific adversarial attacks. These attacks can manipulate visualization generations, causing analysts be tricked their judgments impaired. Due lack synthesis from both perspectives, this security aspect largely overlooked by current literature. To bridge gap, we investigate potential vulnerabilities ML-aided visualizations using holistic lens perspectives. We first identify attack surface (i.e., entry points) unique visualizations. then exemplify five different examples highlight possible when"
+    },
+    {
+      "title": "Designing Narrative-Focused Role-Playing Games for Visualization Literacy in Young Children",
+      "year": 2020,
+      "authors": "Elaine Huynh, Angela Nyhout, Patricia A. Ganea",
+      "doi": "https://doi.org/10.1109/tvcg.2020.3030464",
+      "openalex_id": "https://openalex.org/W3081678230",
+      "cited_by": 3,
+      "abstract": "Building on game design and education research, this paper introduces narrative-focused role-playing games as a way to promote visualization literacy in young children. Visualization skills are vital understanding the world around us constructing meaningful visualizations, yet, how better develop these at an early age remains largely overlooked understudied. Only recently has community started fill gap, resulting preliminary studies development of educational tools for use education. We add efforts through exploration gamification support learning, identify opportunity apply game-based designs by leveraging presence narratives data-related problems involving visualizations. study effects including narrative elements learning technology probe, grounded set considerations stemming from visualization,"
+    }
+  ],
+  "boy_vl": [
+    {
+      "title": "A Principled Way of Assessing Visualization Literacy",
+      "year": 2014,
+      "authors": "Jeremy Boy, Ronald A. Rensink, Enrico Bertini",
+      "doi": "https://doi.org/10.1109/tvcg.2014.2346984",
+      "openalex_id": "https://openalex.org/W2050674259",
+      "cited_by": 290,
+      "abstract": "We describe a method for assessing the visualization literacy (VL) of user. Assessing how well people understand visualizations has great value research (e. g., to avoid confounds), design best determine capabilities an audience), teaching assess level new students), and recruiting interviewees). This paper proposes VL based on Item Response Theory. It describes evaluation two tests line graphs, presents extension bar charts scatterplots. Finally, it discusses reimplementation these fast, effective, scalable web-based use."
+    },
+    {
+      "title": "The State of the Art in Enhancing Trust in Machine Learning Models with the Use of Visualizations",
+      "year": 2020,
+      "authors": "Angelos Chatzimparmpas, Rafael M. Martins, Ilir Jusufi",
+      "doi": "https://doi.org/10.1111/cgf.14034",
+      "openalex_id": "https://openalex.org/W3034069517",
+      "cited_by": 188,
+      "abstract": "Abstract Machine learning (ML) models are nowadays used in complex applications various domains, such as medicine, bioinformatics, and other sciences. Due to their black box nature, however, it may sometimes be hard understand trust the results they provide. This has increased demand for reliable visualization tools related enhancing ML models, which become a prominent topic of research community over past decades. To provide an overview present frontiers current on topic, we State‐of‐the‐Art Report (STAR) with use interactive visualization. We define describe background introduce categorization techniques that aim accomplish this goal, discuss insights opportunities future directions. Among our contributions is against"
+    },
+    {
+      "title": "Visual Information Literacy: Definition, Construct Modeling and Assessment",
+      "year": 2021,
+      "authors": "Angela Locoro, William Fisher, Luca Mari",
+      "doi": "https://doi.org/10.1109/access.2021.3078429",
+      "openalex_id": "https://openalex.org/W3160836261",
+      "cited_by": 26,
+      "abstract": "A major problem in education and visual information design is that, while tools to measure people's reading writing ability with texts numbers are ripe, the properly process from data graphics - an that can be called Visual Information Literacy still off radar, even less interest apparently devoted its evaluation. The purpose of this research presenting exploration methods towards measurement effectiveness efficiency, proposing a definition `Visual Literacy', together model characterizing it as developmental skills progression covers cognitive abilities activated when dealing graphics. final goal paper report first round results assessing validity designed, by bringing statistical evidence comprehension depends on matching users'"
+    },
+    {
+      "title": "Viral Visualizations: How Coronavirus Skeptics Use Orthodox Data Practices to Promote Unorthodox Science Online",
+      "year": 2021,
+      "authors": "Crystal Lee, Tanya Yang, Gabrielle D Inchoco",
+      "doi": "https://doi.org/10.1145/3411764.3445211",
+      "openalex_id": "https://openalex.org/W3123633262",
+      "cited_by": 136,
+      "abstract": "Controversial understandings of the coronavirus pandemic have turned data visualizations into a battleground. Defying public health officials, skeptics on US social media spent much 2020 creating showing that government’s response was excessive and crisis over. This paper investigates how circulated media, shows people who mistrust scientific establishment often deploy same rhetorics data-driven decision-making used by experts, but to advocate for radical policy changes. Using quantitative analysis spread Twitter an ethnographic approach analyzing conversations about COVID Facebook, we document epistemological gap leads pro- anti-mask groups draw drastically different inferences from similar data. Ultimately, argue deployment reflect deeper sociopolitical rift regarding place"
+    },
+    {
+      "title": "Challenges and Opportunities in Data Visualization Education: A Call to Action",
+      "year": 2023,
+      "authors": "Benjamin Bach, Mandy Keck, Fateme Rajabiyazdi",
+      "doi": "https://doi.org/10.1109/tvcg.2023.3327378",
+      "openalex_id": "https://openalex.org/W4388469749",
+      "cited_by": 56,
+      "abstract": "This paper is a call to action for research and discussion on data visualization education. As evolves spreads through our professional personal lives, we need understand how support empower broad diverse community of learners in visualization. Data Visualization dynamic discipline that combines knowledge from different fields, tailored suit audiences contexts, frequently incorporates tacit knowledge. complex nature leads series interrelated challenges Driven by lack consolidated knowledge, overview, orientation education, the 21 authors this paper-educators researchers visualization-identify describe 19 informed collective practical experience. We organize these around seven themes People, Goals & Assessment, Environment, Motivation, Methods, Materials, Change. Across themes, formulate 43"
+    },
+    {
+      "title": "Suggested Interactivity: Seeking Perceived Affordances for Information Visualization",
+      "year": 2015,
+      "authors": "Jeremy Boy, Louis Eveillard, Françoise Détienne",
+      "doi": "https://doi.org/10.1109/tvcg.2015.2467201",
+      "openalex_id": "https://openalex.org/W1935234898",
+      "cited_by": 70,
+      "abstract": "In this article, we investigate methods for suggesting the interactivity of online visualizations embedded with text. We first assess need such by conducting three initial experiments on Amazon's Mechanical Turk. then present a design space Suggested Interactivity (i. e., visual cues used as perceived affordances-SI), based survey 382 HTML5 and visualization websites. Finally, effectiveness SI designed bar charts Our results show that only one cue (SI3) was successful in inciting participants to interact visualizations, hypothesize is because particular provided feedforward."
+    },
+    {
+      "title": "Data Visualisation Literacy in Higher Education: An Exploratory Study of Understanding of a Learning Dashboard Tool",
+      "year": 2020,
+      "authors": "David Donohoe, Eamon Costello",
+      "doi": "https://doi.org/10.3991/ijet.v15i17.15041",
+      "openalex_id": "https://openalex.org/W3085184300",
+      "cited_by": 38,
+      "abstract": "The visualisation of data has become ubiquitous. Visualisations are used to represent in a way that is easy understand and useful our lives. Each needs be suitable extract the correct information complete task make an informed decision while minimising impact biases. To achieve this, ability create read visualisations as important write. Therefore, Information Visualisation community applying more attention literacy making vis-ualisations. Until recently, researchers lacked valid reliable test in-struments measure users or taxonomy detect biased judgement visualisations. A literature review showed there relatively little research on for different user levels authentic settings lack studies pro-vide evidence presence cognitive biases visualisa-tions."
+    },
+    {
+      "title": "Finding Gaps in Modern Visualization Literacy",
+      "year": 2024,
+      "authors": "Mackenzie Creamer, Lace Padilla, Michelle A. Borkin",
+      "doi": "https://doi.org/10.31219/osf.io/jy9v2",
+      "openalex_id": "https://openalex.org/W4394804646",
+      "cited_by": 6,
+      "abstract": "Visualization literacy is a term that, as commonly defined, focuses on an individual's ability to comprehend and understand images encoded with data visually communicate patterns in dataset. Based review of the current literature, this paper proposes that there are gaps definition, assessment, interviewed populations. Specifically, we recognize 1) definition visualization community different from involving written language, 2) assessments focus high-level tasks instead lower-level processes, 3) populations date not diverse enough provide holistic perspectives literacy. The treatment several measures at levels education, opposed one-dimensional spectrum (e.g., VLAT scaling 0 53), will be essential tailor graphical perception individual levels. As first step"
+    }
+  ],
+  "calvi": [
+    {
+      "title": "CALVI: Critical Thinking Assessment for Literacy in Visualizations",
+      "year": 2023,
+      "authors": "Lily W. Ge, Yuan Cui, Matthew Kay",
+      "doi": "https://doi.org/10.1145/3544548.3581406",
+      "openalex_id": "https://openalex.org/W4366550890",
+      "cited_by": 67,
+      "abstract": "Visualization misinformation is a prevalent problem, and combating it requires understanding people’s ability to read, interpret, reason about erroneous or potentially misleading visualizations, which lacks reliable measurement: existing visualization literacy tests focus on well-formed visualizations. We systematically develop an assessment for this by: (1) developing precise definition of misleaders (decisions made in the construction visualizations that can lead conclusions not supported by data), (2) constructing initial test items using design space chart types, (3) trying out provisional 497 participants, (4) analyzing tryout results refining Item Response Theory, qualitative analysis, wrong-due-to-misleader score, content validity index. Our final bank 45 shows high"
+    },
+    {
+      "title": "CALVI: Critical Thinking Assessment for Literacy in Visualizations",
+      "year": 2023,
+      "authors": "Lily W. Ge, Cui Yuan, Matthew Kay",
+      "doi": "https://doi.org/10.31219/osf.io/32mg7",
+      "openalex_id": "https://openalex.org/W4320922889",
+      "cited_by": 3,
+      "abstract": "Visualization misinformation is a prevalent problem, and combating it requires understanding people’s ability to read, interpret, reason about erroneous or potentially misleading visualizations, which lacks reliable measurement: existing visualization literacy tests focus on well-formed visualizations. We systematically develop an assessment for this by: (1) developing precise definition of misleaders (decisions made in the construction visualizations that can lead conclusions not supported by data), (2) constructing initial test items using design space chart types, (3) trying out provisional 497 participants, (4) analyzing tryout results refining Item Response Theory, qualitative analysis, wrong-due-to-misleader score, content validity index. Our final bank 45 shows high"
+    },
+    {
+      "title": "Benchmarking Visual Language Models on Standardized Visualization Literacy Tests",
+      "year": 2025,
+      "authors": "Saugat Pandey, Alvitta Ottley",
+      "doi": "https://doi.org/10.1111/cgf.70137",
+      "openalex_id": "https://openalex.org/W4410695867",
+      "cited_by": 7,
+      "abstract": "Abstract The increasing integration of Visual Language Models (VLMs) into visualization systems demands a comprehensive understanding their visual interpretation capabilities and constraints. While existing research has examined individual models, systematic comparisons VLMs' literacy remain unexplored. We bridge this gap through rigorous, first‐of‐its‐kind evaluation four leading VLMs (GPT‐4, Claude, Gemini, Llama) using standardized assessments: the Visualization Literacy Assessment Test (VLAT) Critical Thinking for in Visualizations (CALVI). Our methodology uniquely combines randomized trials with structured prompting techniques to control order effects response variability ‐ critical consideration overlooked many VLM evaluations. analysis reveals that while specific models demonstrate competence basic chart (Claude achieving"
+    },
+    {
+      "title": "Challenges and Opportunities in Data Visualization Education: A Call to Action",
+      "year": 2023,
+      "authors": "Benjamin Bach, Mandy Keck, Fateme Rajabiyazdi",
+      "doi": "https://doi.org/10.1109/tvcg.2023.3327378",
+      "openalex_id": "https://openalex.org/W4388469749",
+      "cited_by": 56,
+      "abstract": "This paper is a call to action for research and discussion on data visualization education. As evolves spreads through our professional personal lives, we need understand how support empower broad diverse community of learners in visualization. Data Visualization dynamic discipline that combines knowledge from different fields, tailored suit audiences contexts, frequently incorporates tacit knowledge. complex nature leads series interrelated challenges Driven by lack consolidated knowledge, overview, orientation education, the 21 authors this paper-educators researchers visualization-identify describe 19 informed collective practical experience. We organize these around seven themes People, Goals & Assessment, Environment, Motivation, Methods, Materials, Change. Across themes, formulate 43"
+    },
+    {
+      "title": "Finding Gaps in Modern Visualization Literacy",
+      "year": 2024,
+      "authors": "Mackenzie Creamer, Lace Padilla, Michelle A. Borkin",
+      "doi": "https://doi.org/10.31219/osf.io/jy9v2",
+      "openalex_id": "https://openalex.org/W4394804646",
+      "cited_by": 6,
+      "abstract": "Visualization literacy is a term that, as commonly defined, focuses on an individual's ability to comprehend and understand images encoded with data visually communicate patterns in dataset. Based review of the current literature, this paper proposes that there are gaps definition, assessment, interviewed populations. Specifically, we recognize 1) definition visualization community different from involving written language, 2) assessments focus high-level tasks instead lower-level processes, 3) populations date not diverse enough provide holistic perspectives literacy. The treatment several measures at levels education, opposed one-dimensional spectrum (e.g., VLAT scaling 0 53), will be essential tailor graphical perception individual levels. As first step"
+    },
+    {
+      "title": "Evaluating convergence between two data visualization literacy assessments",
+      "year": 2025,
+      "authors": "Erik Brockbank, Arnav Verma, H. E. D. Lloyd",
+      "doi": "https://doi.org/10.1186/s41235-025-00622-9",
+      "openalex_id": "https://openalex.org/W4409185640",
+      "cited_by": 3,
+      "abstract": "Data visualizations play a crucial role in communicating patterns quantitative data, making data visualization literacy key target of STEM education. However, it is currently unclear to what degree different assessments measure the same underlying constructs. Here, we administered two widely used graph comprehension (Galesic and Garcia-Retamero Med Dec Mak 31:444-457, 2011; Lee et al. IEEE Trans Vis Comput Graph 235:51-560, 2016) both university-based convenience sample demographically representative adult participants USA (N=1,113). Our analysis individual variability test performance suggests that overall scores are correlated between associated with amount prior coursework mathematics. further exploration error these probe somewhat distinct components literacy, do"
+    },
+    {
+      "title": "Evaluating the Recommendations of LLMs to Teach a Visualization Technique Using Bloom's Taxonomy",
+      "year": 2024,
+      "authors": "Alark Joshi, Chandana Srinivas, Elif E. Fırat",
+      "doi": "https://doi.org/10.2352/ei.2024.36.1.vda-360",
+      "openalex_id": "https://openalex.org/W4399588135",
+      "cited_by": 9,
+      "abstract": "Large Language Models (LLMs) have demonstrated a huge impact on education and literacy in recent years. We evaluated the recommendations provided by two popular LLMs (OpenAI's ChatGPT Google's Bard) to educate novices topic of Parallel Coordinate Plots (PCPs) using Bloom's taxonomy. present results human-expert evaluation both with experts from visualization field. Based analysis expert evaluation, we found that while some relevant practical recommendations, were either too difficult for or wrong cognitive process (according taxonomy). In cases, hallucinations led completely inapplicable literacy."
+    },
+    {
+      "title": "Mini-VLAT: A Short and Effective Measure of Visualization Literacy",
+      "year": 2023,
+      "authors": "Saugat Pandey, Alvitta Ottley",
+      "doi": "https://doi.org/10.48550/arxiv.2304.07905",
+      "openalex_id": "https://openalex.org/W4366399786",
+      "cited_by": 2,
+      "abstract": "The visualization community regards literacy as a necessary skill. Yet, despite the recent increase in research into by education and communities, we lack practical time-effective instruments for widespread measurements of people's comprehension interpretation visual designs. We present Mini-VLAT, brief but test. Mini-VLAT is 12-item short form 53-item Visualization Literacy Assessment Test (VLAT). reliable (coefficient omega = 0.72) strongly correlates with VLAT. Five experts validated items, yielding an average content validity ratio (CVR) 0.6. further validate demonstrating strong positive correlation between study participants' scores their aptitude learning unfamiliar using Parallel Coordinate Plot Overall, items showed similar pattern reliability results show that"
+    }
+  ],
+  "feng_provenance": [
+    {
+      "title": "Examining the Impact of Provenance-Enabled Media on Trust and Accuracy Perceptions",
+      "year": 2023,
+      "authors": "K. J. Kevin Feng, Nick Ritchie, Pia Blumenthal",
+      "doi": "https://doi.org/10.1145/3610061",
+      "openalex_id": "https://openalex.org/W4387328591",
+      "cited_by": 29,
+      "abstract": "In recent years, industry leaders and researchers have proposed to use technical provenance standards address visual misinformation spread through digitally altered media. By adding immutable secure information such as authorship edit date media metadata, social users could potentially better assess the validity of they encounter. However, it is unclear how end would respond information, or best design indicators be understandable laypeople. We conducted an online experiment with 595 participants from US UK investigate users' accuracy perceptions trust in content shared on found that often lowered caused doubt deceptive media, particularly when revealed was composited. additionally tested conditions where itself shown"
+    },
+    {
+      "title": "Blockchain for AI: Review and Open Research Challenges",
+      "year": 2019,
+      "authors": "Khaled Salah, Muhammad Habib ur Rehman, Nishara Nizamuddin",
+      "doi": "https://doi.org/10.1109/access.2018.2890507",
+      "openalex_id": "https://openalex.org/W2907683311",
+      "cited_by": 995,
+      "abstract": "Recently, artificial intelligence (AI) and blockchain have become two of the most trending disruptive technologies. Blockchain technology has ability to automate payment in cryptocurrency provide access a shared ledger data, transactions, logs decentralized, secure, trusted manner. Also with smart contracts, govern interactions among participants no intermediary or third party. AI, on other hand, offers decision-making capabilities for machines similar humans. In this paper, we present detailed survey applications AI. We review literature, tabulate, summarize emerging applications, platforms, protocols specifically targeting AI area. also identify discuss open research challenges utilizing technologies"
+    },
+    {
+      "title": "The State of the Art in Enhancing Trust in Machine Learning Models with the Use of Visualizations",
+      "year": 2020,
+      "authors": "Angelos Chatzimparmpas, Rafael M. Martins, Ilir Jusufi",
+      "doi": "https://doi.org/10.1111/cgf.14034",
+      "openalex_id": "https://openalex.org/W3034069517",
+      "cited_by": 188,
+      "abstract": "Abstract Machine learning (ML) models are nowadays used in complex applications various domains, such as medicine, bioinformatics, and other sciences. Due to their black box nature, however, it may sometimes be hard understand trust the results they provide. This has increased demand for reliable visualization tools related enhancing ML models, which become a prominent topic of research community over past decades. To provide an overview present frontiers current on topic, we State‐of‐the‐Art Report (STAR) with use interactive visualization. We define describe background introduce categorization techniques that aim accomplish this goal, discuss insights opportunities future directions. Among our contributions is against"
+    },
+    {
+      "title": "Metaverse in Healthcare Integrated with Explainable AI and Blockchain: Enabling Immersiveness, Ensuring Trust, and Providing Patient Data Security",
+      "year": 2023,
+      "authors": "Sikandar Ali, Abdullah, Tagne Poupi Theodore Armand",
+      "doi": "https://doi.org/10.3390/s23020565",
+      "openalex_id": "https://openalex.org/W4313585122",
+      "cited_by": 264,
+      "abstract": "Digitization and automation have always had an immense impact on healthcare. It embraces every new advanced technology. Recently the world has witnessed prominence of metaverse which is emerging technology in digital space. The huge potential to provide a plethora health services seamlessly patients medical professionals with immersive experience. This paper proposes amalgamation artificial intelligence blockchain better, faster, more secure healthcare facilities space realistic Our proposed architecture can be summarized as follows. consists three environments, namely doctor's environment, patient's environment. doctors interact environment assisted by ensures safety, security, privacy data. main part our architecture. doctors, patients, nurses enter this registering they"
+    },
+    {
+      "title": "A Survey on IoT Security: Application Areas, Security Threats, and Solution Architectures",
+      "year": 2019,
+      "authors": "Vikas Hassija, Vinay Chamola, Vikas Saxena",
+      "doi": "https://doi.org/10.1109/access.2019.2924045",
+      "openalex_id": "https://openalex.org/W2951694401",
+      "cited_by": 1388,
+      "abstract": "The Internet of Things (IoT) is the next era communication. Using IoT, physical objects can be empowered to create, receive, and exchange data in a seamless manner. Various IoT applications focus on automating different tasks are trying empower inanimate act without any human intervention. existing upcoming highly promising increase level comfort, efficiency, automation for users. To able implement such world an ever-growing fashion requires high security, privacy, authentication, recovery from attacks. In this regard, it imperative make required changes architecture achieving end-to-end secure environments. paper, detailed review security-related challenges sources threat presented. After discussing security issues, various emerging technologies focused"
+    },
+    {
+      "title": "Deepfake Media Forensics: Status and Future Challenges",
+      "year": 2025,
+      "authors": "Irene Amerini, Mauro Barni, Sebastiano Battiato",
+      "doi": "https://doi.org/10.3390/jimaging11030073",
+      "openalex_id": "https://openalex.org/W4408054937",
+      "cited_by": 87,
+      "abstract": "The rise of AI-generated synthetic media, or deepfakes, has introduced unprecedented opportunities and challenges across various fields, including entertainment, cybersecurity, digital communication. Using advanced frameworks such as Generative Adversarial Networks (GANs) Diffusion Models (DMs), deepfakes are capable producing highly realistic yet fabricated content, while these advancements enable creative innovative applications, they also pose severe ethical, social, security risks due to their potential misuse. proliferation triggered phenomena like \"Impostor Bias\", a growing skepticism toward the authenticity multimedia further complicating trust in interactions. This paper is mainly based on description research project called FF4ALL (FF4ALL-Detection Deep Fake Media Life-Long Authentication) for detection"
+    },
+    {
+      "title": "The impact of a blockchain platform on trust in established relationships: a case study of wine supply chains",
+      "year": 2022,
+      "authors": "Mike Brookbanks, Glenn Parry",
+      "doi": "https://doi.org/10.1108/scm-05-2021-0227",
+      "openalex_id": "https://openalex.org/W4220986603",
+      "cited_by": 125,
+      "abstract": "Purpose This paper examines the impact of a blockchain platform on role and importance trust in established buyer-supplier relationships. Design/methodology/approach A literature review provides insight into development supply chains. Research uses case study two wine chains: producers, importers, logistics companies UK Government agencies. Semi-structured interviews determine how trustworthiness develop relationships blockchain-based technology proof concept chain trust. Findings introduces common trusted data, reducing data duplication improving visibility. The supports building between parties but does not replace requirements for organisations to establish position Contrary claims trustless disintermediation, new intermediaries are introduced who need be trusted. limitations/implications presents challenges specific customs borders, research"
+    },
+    {
+      "title": "HoliTrust-A Holistic Cross-Domain Trust Management Mechanism for Service-Centric Internet of Things",
+      "year": 2019,
+      "authors": "Kamran Ahmad Awan, Ikram Ud Din, Mahdi Zareei",
+      "doi": "https://doi.org/10.1109/access.2019.2912469",
+      "openalex_id": "https://openalex.org/W2940914837",
+      "cited_by": 74,
+      "abstract": "Internet of Things (IoT) is proposed and used in diverse application domains. In IoT, nodes commonly have a low capacity to maintain security on their own expenses, which increases the vulnerability for several attacks. Many approaches been that are based privacy trust management reduce these vulnerabilities. Existing neglect aspects cross-domain node communications significance management. this paper, we propose Holistic Cross-domain model (HoliTrust) multilevel central authorities. To provide security, HoliTrust divides domains into communities basis similarities interests. Every community has its dedicated server calculate manage degree trust. addition, also servers specific domains, communicate with server, sustain among other domain servers. The"
+    }
+  ],
+  "ai_label_skepticism": [
+    {
+      "title": "Fake news, disinformation and misinformation in social media: a review",
+      "year": 2023,
+      "authors": "Esma Aı̈meur, Sabrine Amri, Gilles Brassard",
+      "doi": "https://doi.org/10.1007/s13278-023-01028-5",
+      "openalex_id": "https://openalex.org/W4319983294",
+      "cited_by": 719,
+      "abstract": ""
+    },
+    {
+      "title": "Social Media, Political Polarization, and Political Disinformation: A Review of the Scientific Literature",
+      "year": 2018,
+      "authors": "Joshua A. Tucker, Andrew M. Guess, Pablo Barberá",
+      "doi": "https://doi.org/10.2139/ssrn.3144139",
+      "openalex_id": "https://openalex.org/W2797202416",
+      "cited_by": 1214,
+      "abstract": ""
+    },
+    {
+      "title": "Social Data: Biases, Methodological Pitfalls, and Ethical Boundaries",
+      "year": 2019,
+      "authors": "Alexandra Olteanu, Carlos Castillo, Fernando Díaz",
+      "doi": "https://doi.org/10.3389/fdata.2019.00013",
+      "openalex_id": "https://openalex.org/W2563852449",
+      "cited_by": 745,
+      "abstract": "Social data in digital form, including user-generated content, expressed or implicit relations between people, and behavioral traces, are at the core of popular applications platforms, driving research agenda many researchers. The promises social many, understanding ``what world thinks'' about a issue, brand, celebrity, other entity, as well enabling better decision-making variety fields public policy, healthcare, economics. Many academics practitioners have warned against naive usage data. There biases inaccuracies occurring source data, but also introduced during processing. methodological limitations pitfalls, ethical boundaries unexpected consequences that often overlooked. This paper recognizes rigor with which these issues addressed by different researchers varies across"
+    },
+    {
+      "title": "Unlocking the value of artificial intelligence in human resource management through AI capability framework",
+      "year": 2022,
+      "authors": "Soumyadeb Chowdhury, Prasanta Kumar Dey, Sian Joel-Edgar",
+      "doi": "https://doi.org/10.1016/j.hrmr.2022.100899",
+      "openalex_id": "https://openalex.org/W4293229829",
+      "cited_by": 844,
+      "abstract": ""
+    },
+    {
+      "title": "Consumer Responses to AI-Generated Charitable Giving Ads",
+      "year": 2023,
+      "authors": "Luis Arango, Stephen Singaraju, Outi Niininen",
+      "doi": "https://doi.org/10.1080/00913367.2023.2183285",
+      "openalex_id": "https://openalex.org/W4323538281",
+      "cited_by": 206,
+      "abstract": ""
+    },
+    {
+      "title": "Effect of disclosing AI-generated content on prosocial advertising evaluation",
+      "year": 2024,
+      "authors": "Tae Hyun Baek, Jungkeun Kim, Jungkeun Kim",
+      "doi": "https://doi.org/10.1080/02650487.2024.2401319",
+      "openalex_id": "https://openalex.org/W4402439645",
+      "cited_by": 112,
+      "abstract": "With advancements in generative artificial intelligence (AI) technology, there is a growing concern about its ethical implications, transparency, and consumer reactions to AI-generated content. Building on the persuasion knowledge model algorithm aversion literature, this study explores effects of AI disclosure prosocial advertising attitudes donation intentions. The findings Study 1 indicate that initial content leads unfavourable towards ads, with perceived ad credibility serving as mediating factor. In 2, participants who more human-like rather than machine-like tended experience diminished negative impact disclosure. 3 also highlights crucial role influencing intentions following theoretical practical implications our for social marketers nonprofit organizations are discussed further."
+    },
+    {
+      "title": "Who Should I Trust: AI or Myself? Leveraging Human and AI Correctness Likelihood to Promote Appropriate Trust in AI-Assisted Decision-Making",
+      "year": 2023,
+      "authors": "Shuai Ma, Ying Lei, Xinru Wang",
+      "doi": "https://doi.org/10.1145/3544548.3581058",
+      "openalex_id": "https://openalex.org/W4366547597",
+      "cited_by": 131,
+      "abstract": "In AI-assisted decision-making, it is critical for human decision-makers to know when trust AI and themselves. However, prior studies calibrated only based on confidence indicating AI’s correctness likelihood (CL) but ignored humans’ CL, hindering optimal team decision-making. To mitigate this gap, we proposed promote appropriate the CL of both sides at a task-instance level. We first modeled by approximating their decision-making models computing potential performance in similar instances. demonstrated feasibility effectiveness our model via two preliminary studies. Then, three exploitation strategies calibrate users’ explicitly/implicitly process. Results from between-subjects experiment (N=293) showed that promoted more AI, compared with using confidence. further"
+    },
+    {
+      "title": "People are skeptical of headlines labeled as AI-generated, even if true or human-made, because they assume full AI automation",
+      "year": 2024,
+      "authors": "Sacha Altay, Fabrizio Gilardi",
+      "doi": "https://doi.org/10.1093/pnasnexus/pgae403",
+      "openalex_id": "https://openalex.org/W4403007807",
+      "cited_by": 88,
+      "abstract": "Abstract The rise of generative AI tools has sparked debates about the labeling AI-generated content. Yet, impact such labels remains uncertain. In two preregistered online experiments among US and UK participants (N = 4,976), we show that while did not equate “AI-generated” with “False,” headlines as lowered their perceived accuracy participants’ willingness to share them, regardless whether were true or false, created by humans AI. was three times smaller than them false. This aversion is due expectations labeled have been entirely written no human supervision. These findings suggest content should be approached cautiously avoid unintended negative effects on harmless even"
+    }
+  ],
+  "watermark_genai": [
+    {
+      "title": "Regulating ChatGPT and other Large Generative AI Models",
+      "year": 2023,
+      "authors": "Philipp Hacker, Andreas Engel, Marco Mauer",
+      "doi": "https://doi.org/10.1145/3593013.3594067",
+      "openalex_id": "https://openalex.org/W4380319827",
+      "cited_by": 418,
+      "abstract": "Large generative AI models (LGAIMs), such as ChatGPT, GPT-4 or Stable Diffusion, are rapidly transforming the way we communicate, illustrate, and create. However, regulation, in EU beyond, has primarily focused on conventional models, not LGAIMs. This paper will situate these new current debate trustworthy ask how law can be tailored to their capabilities. After laying technical foundations, legal part of proceeds four steps, covering (1) direct (2) data protection, (3) content moderation, (4) policy proposals. It suggests a novel terminology capture value chain LGAIM settings by differentiating between developers, deployers, professional non-professional users, well recipients output. We tailor regulatory duties"
+    },
+    {
+      "title": "Generative artificial intelligence",
+      "year": 2023,
+      "authors": "Leonardo Banh, Gero Strobel",
+      "doi": "https://doi.org/10.1007/s12525-023-00680-1",
+      "openalex_id": "https://openalex.org/W4389359039",
+      "cited_by": 513,
+      "abstract": "Abstract Recent developments in the field of artificial intelligence (AI) have enabled new paradigms machine processing, shifting from data-driven, discriminative AI tasks toward sophisticated, creative through generative AI. Leveraging deep models, is capable producing novel and realistic content across a broad spectrum (e.g., texts, images, or programming code) for various domains based on basic user prompts. In this article, we offer comprehensive overview fundamentals with its underpinning concepts prospects. We provide conceptual introduction to relevant terms techniques, outline inherent properties that constitute AI, elaborate potentials challenges. underline necessity researchers practitioners comprehend distinctive characteristics order harness potential while mitigating risks contribute"
+    },
+    {
+      "title": "Can Generative AI improve social science?",
+      "year": 2024,
+      "authors": "Christopher A. Bail",
+      "doi": "https://doi.org/10.1073/pnas.2314021121",
+      "openalex_id": "https://openalex.org/W4396781199",
+      "cited_by": 260,
+      "abstract": "Generative AI that can produce realistic text, images, and other human-like outputs is currently transforming many different industries. Yet it not yet known how such tools might influence social science research. I argue has the potential to improve survey research, online experiments, automated content analyses, agent-based models, techniques commonly used study human behavior. In second section of this article, discuss limitations Generative. examine bias in data train these negatively impact research-as well as a range challenges related ethics, replication, environmental impact, proliferation low-quality conclude by arguing scientists address creating open-source infrastructure for research on Such only necessary ensure broad access"
+    },
+    {
+      "title": "Ethical Challenges and Solutions of Generative AI: An Interdisciplinary Perspective",
+      "year": 2024,
+      "authors": "Mousa Al-kfairy, Dheya Mustafa, Nir Kshetri",
+      "doi": "https://doi.org/10.3390/informatics11030058",
+      "openalex_id": "https://openalex.org/W4401509761",
+      "cited_by": 264,
+      "abstract": "This paper conducts a systematic review and interdisciplinary analysis of the ethical challenges generative AI technologies (N = 37), highlighting significant concerns such as privacy, data protection, copyright infringement, misinformation, biases, societal inequalities. The ability to produce convincing deepfakes synthetic media, which threaten foundations truth, trust, democratic values, exacerbates these problems. combines perspectives from various disciplines, including education, healthcare, underscoring need for systems that promote equity do not perpetuate social It advocates proactive approach development AI, emphasizing necessity establishing policies, guidelines, frameworks prioritize human rights, fairness, transparency. calls multidisciplinary dialogue among policymakers, technologists, researchers ensure responsible conforms values standards. stresses"
+    },
+    {
+      "title": "Privacy and Security Concerns in Generative AI: A Comprehensive Survey",
+      "year": 2024,
+      "authors": "Abenezer Golda, Kidus Abebe Mekonen, Amit Pandey",
+      "doi": "https://doi.org/10.1109/access.2024.3381611",
+      "openalex_id": "https://openalex.org/W4393170828",
+      "cited_by": 244,
+      "abstract": "Generative Artificial Intelligence (GAI) has sparked a transformative wave across various domains, including machine learning, healthcare, business, and entertainment, owing to its remarkable ability generate lifelike data. This comprehensive survey offers meticulous examination of the privacy security challenges inherent GAI. It provides five pivotal perspectives essential for understanding these intricacies. The paper encompasses discussions on GAI architectures, diverse generative model types, practical applications, recent advancements within field. In addition, it highlights current strategies proposes sustainable solutions, emphasizing user, developer, institutional, policymaker involvement."
+    },
+    {
+      "title": "Governance of Generative AI",
+      "year": 2025,
+      "authors": "Araz Taeihagh",
+      "doi": "https://doi.org/10.1093/polsoc/puaf001",
+      "openalex_id": "https://openalex.org/W4407087968",
+      "cited_by": 143,
+      "abstract": "Abstract The rapid and widespread diffusion of generative artificial intelligence (AI) has unlocked new capabilities changed how content services are created, shared, consumed. This special issue builds on the 2021 Policy Society governance AI by focusing legal, organizational, political, regulatory, social challenges governing AI. introductory article lays foundation for understanding underscores its key risks, including hallucination, jailbreaking, data training validation issues, sensitive information leakage, opacity, control challenges, design implementation risks. It then examines AI, such as governance, intellectual property concerns, bias amplification, privacy violations, misinformation, fraud, societal impacts, power imbalances, limited public engagement, sector need international cooperation. highlights a comprehensive"
+    },
+    {
+      "title": "DeepFake Detection for Human Face Images and Videos: A Survey",
+      "year": 2022,
+      "authors": "Asad Malik, Minoru Kuribayashi, Sani M. Abdullahi",
+      "doi": "https://doi.org/10.1109/access.2022.3151186",
+      "openalex_id": "https://openalex.org/W4211008685",
+      "cited_by": 275,
+      "abstract": "Techniques for creating and manipulating multimedia information have progressed to the point where they can now ensure a high degree of realism. DeepFake is generative deep learning algorithm that creates or modifies face features in superrealistic form, which it difficult distinguish between real fake features. This technology has greatly advanced promotes wide range applications TV channels, video game industries, cinema, such as improving visual effects movies, well variety criminal activities, misinformation generation by mimicking famous people. To identify classify DeepFakes, research detection using neural networks (DNNs) attracted increased interest. Basically, regenerated media obtained injecting replacing some within DNN model. In"
+    },
+    {
+      "title": "A Survey on ChatGPT: AI–Generated Contents, Challenges, and Solutions",
+      "year": 2023,
+      "authors": "Yuntao Wang, Yanghe Pan, Miao Yan",
+      "doi": "https://doi.org/10.1109/ojcs.2023.3300321",
+      "openalex_id": "https://openalex.org/W4385469325",
+      "cited_by": 342,
+      "abstract": "With the widespread use of large artificial intelligence (AI) models such as ChatGPT, AI-generated content (AIGC) has garnered increasing attention and is leading a paradigm shift in creation knowledge representation. AIGC uses generative AI algorithms to assist or replace humans creating massive, high-quality, human-like at faster pace lower cost, based on user-provided prompts. Despite recent significant progress AIGC, security, privacy, ethical, legal challenges still need be addressed. This paper presents an in-depth survey working principles, security privacy threats, state-of-the-art solutions, future paradigm. Specifically, we first explore enabling technologies, general architecture discuss its modes key characteristics. Then, investigate taxonomy threats highlight"
+    }
+  ]
+}

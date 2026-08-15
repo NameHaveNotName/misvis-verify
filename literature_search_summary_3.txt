@@ -1,0 +1,191 @@
+
+=== lisnic_lie_charts ===
+1. ChartCheck: Explainable Fact-Checking over Real-World Chart Images (2024)
+   Authors: Mubashara Akhtar, Nikesh Subedi, Vivek Gupta
+   DOI: https://doi.org/10.18653/v1/2024.findings-acl.828
+   Cited by: 9
+   Abstract: ...
+2. Situating Trust in Cartography: Why do People Trust Maps and What does Trust in Maps Mean? (2025)
+   Authors: Timothy Prestby
+   DOI: https://doi.org/10.14714/cp106.1903
+   Cited by: 2
+   Abstract: A longstanding assertion among cartographers is that people place a great deal of trust in maps. Despite this claim and the growing importance understanding post-truth society, research on cartography scarce. It remains unclear why, how, if maps are inherently trustworthy. Moreover, existing fails t...
+3. ChartCheck: Explainable Fact-Checking over Real-World Chart Images (2023)
+   Authors: Mubashara Akhtar, Nikesh Subedi, Vivek Gupta
+   DOI: https://doi.org/10.48550/arxiv.2311.07453
+   Cited by: 1
+   Abstract: Whilst fact verification has attracted substantial interest in the natural language processing community, verifying misinforming statements against data visualizations such as charts so far been overlooked. Charts are commonly used real-world to summarize and communicate key information, but they ca...
+4. Trust in maps: what we know and what we need to know (2023)
+   Authors: Timothy Prestby
+   DOI: https://doi.org/10.1080/15230406.2023.2281306
+   Cited by: 22
+   Abstract: Maps have served as authoritative and trustworthy sources of geospatial information for years.However, maps are increasingly being wielded to spread misinformation due the democratization mapmaking, advances in AI, emergence post-truth politics.Trust plays a fundamental role misinformation, but our ...
+5. Misleading Beyond Visual Tricks: How People Actually Lie with Charts (2022)
+   Authors: Maxim Lisnic, Cole Polychronis, Alexander Lex
+   DOI: https://doi.org/10.31219/osf.io/ky6th_v1
+   Cited by: 0
+   Abstract: Data visualizations can empower an audience to make informed decisions. At the same time, deceptive representations of data lead inaccurate interpretations while still providing illusion data-driven insights. Existing research on misleading primarily focuses examples charts and techniques previously...
+
+=== pandey_deceptive ===
+
+=== correll_blackhat ===
+1. Do You See What I See? A Qualitative Study Eliciting High-Level Visualization Comprehension (2024)
+   Authors: Ghulam Jilani Quadri, Arran Zeyu Wang, Zhehao Wang
+   DOI: https://doi.org/10.1145/3613904.3642813
+   Cited by: 34
+   Abstract: Designers often create visualizations to achieve specific high-level analytical or communication goals. These goals require people naturally extract complex, contextualized, and interconnected patterns in data. While limited prior work has studied general interpretation, prevailing perceptual studie...
+2. Annotating Line Charts for Addressing Deception (2022)
+   Authors: Arlen Fan, Yuxin Ma, Michelle V. Mancenido
+   DOI: https://doi.org/10.1145/3491102.3502138
+   Cited by: 44
+   Abstract: Deceptive visualizations are that, whether intentionally or not, lead the reader to an understanding of data which varies from actual data. Examples deceptive can be found in every digital platform, and, despite their widespread use wild, there have been limited efforts alert laypersons common visua...
+3. Perceptual Pat: A Virtual Human Visual System for Iterative Visualization Design (2023)
+   Authors: Sungbok Shin, Sanghyun Hong, Niklas Elmqvist
+   DOI: https://doi.org/10.1145/3544548.3580974
+   Cited by: 10
+   Abstract: Designing a visualization is often process of iterative refinement where the designer improves chart over time by adding features, improving encodings, and fixing mistakes. However, effective design requires external critique evaluation. Unfortunately, such not always available on short notice evalu...
+4. Scoping the Future of Visualization Literacy: A Review (2022)
+   Authors: Mara Solen
+   DOI: https://doi.org/10.31219/osf.io/eypgm
+   Cited by: 5
+   Abstract: Access to information is increasing rapidly, and data visualizations are becoming increasingly common as a way communicate summaries of large datasets, especially in media designed for the general public. Accompanying this rise visualization need literacy. In work we survey current body research on ...
+5. CALVI: Critical Thinking Assessment for Literacy in Visualizations (2023)
+   Authors: Lily W. Ge, Cui Yuan, Matthew Kay
+   DOI: https://doi.org/10.31219/osf.io/32mg7
+   Cited by: 3
+   Abstract: Visualization misinformation is a prevalent problem, and combating it requires understanding people’s ability to read, interpret, reason about erroneous or potentially misleading visualizations, which lacks reliable measurement: existing visualization literacy tests focus on well-formed visualizatio...
+
+=== boy_vl ===
+1. A Principled Way of Assessing Visualization Literacy (2014)
+   Authors: Jeremy Boy, Ronald A. Rensink, Enrico Bertini
+   DOI: https://doi.org/10.1109/tvcg.2014.2346984
+   Cited by: 290
+   Abstract: We describe a method for assessing the visualization literacy (VL) of user. Assessing how well people understand visualizations has great value research (e. g., to avoid confounds), design best determine capabilities an audience), teaching assess level new students), and recruiting interviewees). Th...
+2. The State of the Art in Enhancing Trust in Machine Learning Models with the Use of Visualizations (2020)
+   Authors: Angelos Chatzimparmpas, Rafael M. Martins, Ilir Jusufi
+   DOI: https://doi.org/10.1111/cgf.14034
+   Cited by: 188
+   Abstract: Abstract Machine learning (ML) models are nowadays used in complex applications various domains, such as medicine, bioinformatics, and other sciences. Due to their black box nature, however, it may sometimes be hard understand trust the results they provide. This has increased demand for reliable vi...
+3. Visual Information Literacy: Definition, Construct Modeling and Assessment (2021)
+   Authors: Angela Locoro, William Fisher, Luca Mari
+   DOI: https://doi.org/10.1109/access.2021.3078429
+   Cited by: 26
+   Abstract: A major problem in education and visual information design is that, while tools to measure people's reading writing ability with texts numbers are ripe, the properly process from data graphics - an that can be called Visual Information Literacy still off radar, even less interest apparently devoted ...
+4. Viral Visualizations: How Coronavirus Skeptics Use Orthodox Data Practices to Promote Unorthodox Science Online (2021)
+   Authors: Crystal Lee, Tanya Yang, Gabrielle D Inchoco
+   DOI: https://doi.org/10.1145/3411764.3445211
+   Cited by: 136
+   Abstract: Controversial understandings of the coronavirus pandemic have turned data visualizations into a battleground. Defying public health officials, skeptics on US social media spent much 2020 creating showing that government’s response was excessive and crisis over. This paper investigates how circulated...
+5. Challenges and Opportunities in Data Visualization Education: A Call to Action (2023)
+   Authors: Benjamin Bach, Mandy Keck, Fateme Rajabiyazdi
+   DOI: https://doi.org/10.1109/tvcg.2023.3327378
+   Cited by: 56
+   Abstract: This paper is a call to action for research and discussion on data visualization education. As evolves spreads through our professional personal lives, we need understand how support empower broad diverse community of learners in visualization. Data Visualization dynamic discipline that combines kno...
+
+=== calvi ===
+1. CALVI: Critical Thinking Assessment for Literacy in Visualizations (2023)
+   Authors: Lily W. Ge, Yuan Cui, Matthew Kay
+   DOI: https://doi.org/10.1145/3544548.3581406
+   Cited by: 67
+   Abstract: Visualization misinformation is a prevalent problem, and combating it requires understanding people’s ability to read, interpret, reason about erroneous or potentially misleading visualizations, which lacks reliable measurement: existing visualization literacy tests focus on well-formed visualizatio...
+2. CALVI: Critical Thinking Assessment for Literacy in Visualizations (2023)
+   Authors: Lily W. Ge, Cui Yuan, Matthew Kay
+   DOI: https://doi.org/10.31219/osf.io/32mg7
+   Cited by: 3
+   Abstract: Visualization misinformation is a prevalent problem, and combating it requires understanding people’s ability to read, interpret, reason about erroneous or potentially misleading visualizations, which lacks reliable measurement: existing visualization literacy tests focus on well-formed visualizatio...
+3. Benchmarking Visual Language Models on Standardized Visualization Literacy Tests (2025)
+   Authors: Saugat Pandey, Alvitta Ottley
+   DOI: https://doi.org/10.1111/cgf.70137
+   Cited by: 7
+   Abstract: Abstract The increasing integration of Visual Language Models (VLMs) into visualization systems demands a comprehensive understanding their visual interpretation capabilities and constraints. While existing research has examined individual models, systematic comparisons VLMs' literacy remain unexplo...
+4. Challenges and Opportunities in Data Visualization Education: A Call to Action (2023)
+   Authors: Benjamin Bach, Mandy Keck, Fateme Rajabiyazdi
+   DOI: https://doi.org/10.1109/tvcg.2023.3327378
+   Cited by: 56
+   Abstract: This paper is a call to action for research and discussion on data visualization education. As evolves spreads through our professional personal lives, we need understand how support empower broad diverse community of learners in visualization. Data Visualization dynamic discipline that combines kno...
+5. Finding Gaps in Modern Visualization Literacy (2024)
+   Authors: Mackenzie Creamer, Lace Padilla, Michelle A. Borkin
+   DOI: https://doi.org/10.31219/osf.io/jy9v2
+   Cited by: 6
+   Abstract: Visualization literacy is a term that, as commonly defined, focuses on an individual's ability to comprehend and understand images encoded with data visually communicate patterns in dataset. Based review of the current literature, this paper proposes that there are gaps definition, assessment, inter...
+
+=== feng_provenance ===
+1. Examining the Impact of Provenance-Enabled Media on Trust and Accuracy Perceptions (2023)
+   Authors: K. J. Kevin Feng, Nick Ritchie, Pia Blumenthal
+   DOI: https://doi.org/10.1145/3610061
+   Cited by: 29
+   Abstract: In recent years, industry leaders and researchers have proposed to use technical provenance standards address visual misinformation spread through digitally altered media. By adding immutable secure information such as authorship edit date media metadata, social users could potentially better assess...
+2. Blockchain for AI: Review and Open Research Challenges (2019)
+   Authors: Khaled Salah, Muhammad Habib ur Rehman, Nishara Nizamuddin
+   DOI: https://doi.org/10.1109/access.2018.2890507
+   Cited by: 995
+   Abstract: Recently, artificial intelligence (AI) and blockchain have become two of the most trending disruptive technologies. Blockchain technology has ability to automate payment in cryptocurrency provide access a shared ledger data, transactions, logs decentralized, secure, trusted manner. Also with smart c...
+3. The State of the Art in Enhancing Trust in Machine Learning Models with the Use of Visualizations (2020)
+   Authors: Angelos Chatzimparmpas, Rafael M. Martins, Ilir Jusufi
+   DOI: https://doi.org/10.1111/cgf.14034
+   Cited by: 188
+   Abstract: Abstract Machine learning (ML) models are nowadays used in complex applications various domains, such as medicine, bioinformatics, and other sciences. Due to their black box nature, however, it may sometimes be hard understand trust the results they provide. This has increased demand for reliable vi...
+4. Metaverse in Healthcare Integrated with Explainable AI and Blockchain: Enabling Immersiveness, Ensuring Trust, and Providing Patient Data Security (2023)
+   Authors: Sikandar Ali, Abdullah, Tagne Poupi Theodore Armand
+   DOI: https://doi.org/10.3390/s23020565
+   Cited by: 264
+   Abstract: Digitization and automation have always had an immense impact on healthcare. It embraces every new advanced technology. Recently the world has witnessed prominence of metaverse which is emerging technology in digital space. The huge potential to provide a plethora health services seamlessly patients...
+5. A Survey on IoT Security: Application Areas, Security Threats, and Solution Architectures (2019)
+   Authors: Vikas Hassija, Vinay Chamola, Vikas Saxena
+   DOI: https://doi.org/10.1109/access.2019.2924045
+   Cited by: 1388
+   Abstract: The Internet of Things (IoT) is the next era communication. Using IoT, physical objects can be empowered to create, receive, and exchange data in a seamless manner. Various IoT applications focus on automating different tasks are trying empower inanimate act without any human intervention. existing ...
+
+=== ai_label_skepticism ===
+1. Fake news, disinformation and misinformation in social media: a review (2023)
+   Authors: Esma Aı̈meur, Sabrine Amri, Gilles Brassard
+   DOI: https://doi.org/10.1007/s13278-023-01028-5
+   Cited by: 719
+   Abstract: ...
+2. Social Media, Political Polarization, and Political Disinformation: A Review of the Scientific Literature (2018)
+   Authors: Joshua A. Tucker, Andrew M. Guess, Pablo Barberá
+   DOI: https://doi.org/10.2139/ssrn.3144139
+   Cited by: 1214
+   Abstract: ...
+3. Social Data: Biases, Methodological Pitfalls, and Ethical Boundaries (2019)
+   Authors: Alexandra Olteanu, Carlos Castillo, Fernando Díaz
+   DOI: https://doi.org/10.3389/fdata.2019.00013
+   Cited by: 745
+   Abstract: Social data in digital form, including user-generated content, expressed or implicit relations between people, and behavioral traces, are at the core of popular applications platforms, driving research agenda many researchers. The promises social many, understanding ``what world thinks'' about a iss...
+4. Unlocking the value of artificial intelligence in human resource management through AI capability framework (2022)
+   Authors: Soumyadeb Chowdhury, Prasanta Kumar Dey, Sian Joel-Edgar
+   DOI: https://doi.org/10.1016/j.hrmr.2022.100899
+   Cited by: 844
+   Abstract: ...
+5. Consumer Responses to AI-Generated Charitable Giving Ads (2023)
+   Authors: Luis Arango, Stephen Singaraju, Outi Niininen
+   DOI: https://doi.org/10.1080/00913367.2023.2183285
+   Cited by: 206
+   Abstract: ...
+
+=== watermark_genai ===
+1. Regulating ChatGPT and other Large Generative AI Models (2023)
+   Authors: Philipp Hacker, Andreas Engel, Marco Mauer
+   DOI: https://doi.org/10.1145/3593013.3594067
+   Cited by: 418
+   Abstract: Large generative AI models (LGAIMs), such as ChatGPT, GPT-4 or Stable Diffusion, are rapidly transforming the way we communicate, illustrate, and create. However, regulation, in EU beyond, has primarily focused on conventional models, not LGAIMs. This paper will situate these new current debate trus...
+2. Generative artificial intelligence (2023)
+   Authors: Leonardo Banh, Gero Strobel
+   DOI: https://doi.org/10.1007/s12525-023-00680-1
+   Cited by: 513
+   Abstract: Abstract Recent developments in the field of artificial intelligence (AI) have enabled new paradigms machine processing, shifting from data-driven, discriminative AI tasks toward sophisticated, creative through generative AI. Leveraging deep models, is capable producing novel and realistic content a...
+3. Can Generative AI improve social science? (2024)
+   Authors: Christopher A. Bail
+   DOI: https://doi.org/10.1073/pnas.2314021121
+   Cited by: 260
+   Abstract: Generative AI that can produce realistic text, images, and other human-like outputs is currently transforming many different industries. Yet it not yet known how such tools might influence social science research. I argue has the potential to improve survey research, online experiments, automated co...
+4. Ethical Challenges and Solutions of Generative AI: An Interdisciplinary Perspective (2024)
+   Authors: Mousa Al-kfairy, Dheya Mustafa, Nir Kshetri
+   DOI: https://doi.org/10.3390/informatics11030058
+   Cited by: 264
+   Abstract: This paper conducts a systematic review and interdisciplinary analysis of the ethical challenges generative AI technologies (N = 37), highlighting significant concerns such as privacy, data protection, copyright infringement, misinformation, biases, societal inequalities. The ability to produce conv...
+5. Privacy and Security Concerns in Generative AI: A Comprehensive Survey (2024)
+   Authors: Abenezer Golda, Kidus Abebe Mekonen, Amit Pandey
+   DOI: https://doi.org/10.1109/access.2024.3381611
+   Cited by: 244
+   Abstract: Generative Artificial Intelligence (GAI) has sparked a transformative wave across various domains, including machine learning, healthcare, business, and entertainment, owing to its remarkable ability generate lifelike data. This comprehensive survey offers meticulous examination of the privacy secur...
