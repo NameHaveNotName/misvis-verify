@@ -106,11 +106,14 @@
     <!-- State: EGVV -->
     <section id="state-egvv" class="study-state hidden" aria-labelledby="egvv-title">
       <div class="trial-layout">
+        <div class="stimulus-area">
+          <img id="egvv-stimulus-image" src="" alt="实验图表">
+        </div>
         <div class="egvv-card" id="egvv-card">
           <div class="egvv-step" id="egvv-step">Step 1 / 4</div>
           <h2 id="egvv-title">Locate</h2>
           <p id="egvv-text">提示文本</p>
-          <div class="egvv-compare" id="egvv-compare"></div>
+          <div class="egvv-compare" id="egvv-compare-note"></div>
           <div class="actions">
             <button class="button secondary" id="btn-egvv-prev" hidden>上一步</button>
             <button class="button primary" id="btn-egvv-next">继续</button>
@@ -121,12 +124,17 @@
 
     <!-- State: CONTROL re-inspection -->
     <section id="state-control" class="study-state hidden" aria-labelledby="control-title">
-      <div class="card narrow">
-        <p class="eyebrow">RE-INSPECTION</p>
-        <h1 id="control-title">请再次检查图表</h1>
-        <p>请再次查看图表中的数据、标题、坐标轴和视觉编码。停留至少 3 秒后再继续。</p>
-        <div class="actions">
-          <button class="button primary" id="btn-control" disabled>继续</button>
+      <div class="trial-layout">
+        <div class="stimulus-area">
+          <img id="control-stimulus-image" src="" alt="实验图表">
+        </div>
+        <div class="card narrow">
+          <p class="eyebrow">RE-INSPECTION</p>
+          <h1 id="control-title">请再次检查图表</h1>
+          <p>请再次查看图表中的数据、标题、坐标轴和视觉编码。停留至少 3 秒后再继续。</p>
+          <div class="actions">
+            <button class="button primary" id="btn-control" disabled>继续</button>
+          </div>
         </div>
       </div>
     </section>
@@ -204,8 +212,10 @@
     <span>MisVis Verify｜内部研究原型</span>
   </footer>
 
+  <script src="study/data/stimuli-data.js"></script>
   <script src="study/js/storage.js"></script>
   <script src="study/js/randomization.js"></script>
+  <script src="study/js/trials.js"></script>
   <script src="study/js/ui.js"></script>
   <script src="study/js/experiment.js"></script>
   <script src="study/js/app.js"></script>

@@ -48,24 +48,8 @@
     return r.trust !== null && r.confidence !== null && r.misleading !== null;
   }
 
-  function renderEgvv(step, content) {
-    $('#egvv-step').textContent = `Step ${step.index} / ${step.total}`;
-    $('#egvv-title').textContent = step.title;
-    $('#egvv-text').textContent = content.text;
-    const compare = $('#egvv-compare');
-    if (content.compareHtml) {
-      compare.innerHTML = content.compareHtml;
-      compare.classList.add('active');
-    } else {
-      compare.innerHTML = '';
-      compare.classList.remove('active');
-    }
-    $('#btn-egvv-prev').hidden = step.index === 1;
-    $('#btn-egvv-next').textContent = step.index === step.total ? '完成验证' : '继续';
-  }
-
   window.MisVisVerifyUI = {
     $, $$, showState, setProvenance, resetSliders,
-    getTrialResponses, validateTrialResponses, renderEgvv
+    getTrialResponses, validateTrialResponses
   };
 })();

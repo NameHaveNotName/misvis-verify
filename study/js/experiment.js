@@ -13,25 +13,45 @@
     COMPLETE: 'complete'
   };
 
+  const PHASE_ORDER = ['baseline', 'main', 'transfer'];
+  const MAIN_TOTAL = 12;
+  const BASE_TOTAL = 4;
+  const TRANS_TOTAL = 6;
+
   let session = null;
   let state = STATES.CONSENT;
-  let trialIndex = 0;
+  let currentTrial = null;      // the trial object currently displayed
+  let judgmentStart = 0;        // performance.now() at judgment display
+  let currentTrialTotalStart = 0; // performance.now() at trial start
+  let interventionStart = 0;
   let egvvStepIndex = 0;
-  let trialStartTime = 0;
+  let egvvStepStart = 0;
+  let egvvStepTimes = {};       // key -> accumulated ms
 
-  const egvvTemplate = {
-    locate: { title: 'Locate', text: '请检查纵轴的起始位置。' },
-    explain: { title: 'Explain', text: '柱状图主要依赖长度比较。改变共同基线可能放大视觉差异。' },
-    verify: { title: 'Verify', text: 'A = 92，B = 83。两者实际相差 9 个单位。' },
-    compare: { title: 'Compare', text: '下面是恢复从零开始的纵轴后的版本。请自行比较两张图的差异。', compareHtml: '<p>[此处将显示 faithful alternative 图表]</p>' }
-  };
+  function $(sel) { return document.querySelector(sel); }
+  function $$(sel) { return [...document.querySelectorAll(sel)]; }
+
+  function phaseLabel(state) {
+    if (state === STATES.BASELINE) return 'Baseline';
+    if (state === STATES.MAIN_PRE) return 'Main';
+    if (state === STATES.MAIN_POST) return 'Main (复核)';
+    if (state === STATES.TRANSFER) return 'Transfer';
+    return '';
+  }
+
+  function phaseProgress() {
+    const p = session.phaseIndex;
+    if (session.phase === 'baseline') return (p + 1) + ' / ' + BASE_TOTAL;
+    if (session.phase === 'main') return (p + 1) + ' / ' + MAIN_TOTAL;
+    if (session.phase === 'transfer') return (p + 1) + ' / ' + TRANS_TOTAL;
+    return '';
+  }
 
   function init() {
     const params = new URLSearchParams(location.search);
     const mode = params.get('mode') === 'study' ? 'study' : 'pilot';
 
     if (mode === 'study') {
-      // Formal study mode is disabled until ethics approval is in place.
       document.body.innerHTML = '<div style="padding:40px;text-align:center;"><h1>Formal study mode is not yet enabled.</h1><p>Please use <code>study.html?mode=pilot</code> for internal piloting.</p></div>';
       return;
     }
@@ -39,13 +59,11 @@
     $('#mode-badge').textContent = 'Pilot 模式';
     bindGlobal();
 
-    // Resume check
     const saved = MisVisVerifyStorage.getSession();
     if (saved && !saved.completed) {
       if (confirm('检测到未完成实验。是否继续？')) {
         session = saved;
         state = saved.state || STATES.CONSENT;
-        trialIndex = saved.trialIndex || 0;
         enterState(state);
         return;
       } else {
@@ -58,15 +76,16 @@
 
   function enterState(newState) {
     state = newState;
-    MisVisVerifyUI.showState(state.replace(/_/g, '-'));
 
-    if (state === STATES.CONSENT) setupConsent();
-    if (state === STATES.SETUP) setupSetup();
-    if (state === STATES.BASELINE || state === STATES.MAIN_PRE || state === STATES.TRANSFER) setupTrial();
-    if (state === STATES.MAIN_INTERVENTION) setupIntervention();
-    if (state === STATES.MAIN_POST) setupTrial(true);
-    if (state === STATES.QUESTIONNAIRE) setupQuestionnaire();
-    if (state === STATES.COMPLETE) setupComplete();
+    if (state === STATES.CONSENT) { MisVisVerifyUI.showState('consent'); setupConsent(); }
+    else if (state === STATES.SETUP) { MisVisVerifyUI.showState('setup'); setupSetup(); }
+    else if (state === STATES.BASELINE) { MisVisVerifyUI.showState('trial'); showJudgment('baseline', false); }
+    else if (state === STATES.MAIN_PRE) { MisVisVerifyUI.showState('trial'); showJudgment('main', false); }
+    else if (state === STATES.MAIN_INTERVENTION) { showIntervention(); }
+    else if (state === STATES.MAIN_POST) { MisVisVerifyUI.showState('trial'); showJudgment('main', true); }
+    else if (state === STATES.TRANSFER) { MisVisVerifyUI.showState('trial'); showJudgment('transfer', false); }
+    else if (state === STATES.QUESTIONNAIRE) { MisVisVerifyUI.showState('questionnaire'); setupQuestionnaire(); }
+    else if (state === STATES.COMPLETE) { MisVisVerifyUI.showState('complete'); setupComplete(); }
 
     saveProgress();
   }
@@ -78,46 +97,67 @@
     btn.disabled = true;
     check.onchange = () => { btn.disabled = !check.checked; };
     btn.onclick = () => {
+      const participantId = MisVisVerifyRandom.generateParticipantId();
       session = {
-        participant_id: MisVisVerifyRandom.generateParticipantId(),
+        participant_id: participantId,
         session_id: 'S-' + Date.now(),
-        condition: null,
-        counterbalance_list: null,
+        condition: MisVisVerifyRandom.assignCondition(participantId),
+        counterbalance_list: MisVisVerifyRandom.assignList(participantId),
         started_at: new Date().toISOString(),
         completed: false,
         version: 'study-v0.1',
+        stimulus_version: 'stimuli-v0.1',
+        schema_version: 'schema-v1',
         consent: true,
-        mode: 'pilot'
+        mode: 'pilot',
+        viewport_width: window.innerWidth,
+        viewport_height: window.innerHeight,
+        user_agent: navigator.userAgent,
+        phase: 'baseline',
+        phaseIndex: 0,
+        mainStage: 'pre',
+        trialPlan: MisVisVerifyTrials.build(participantId, session.counterbalance_list)
       };
-      session.condition = MisVisVerifyRandom.assignCondition(session.participant_id);
-      session.counterbalance_list = MisVisVerifyRandom.assignList(session.participant_id);
       enterState(STATES.SETUP);
     };
   }
 
   function setupSetup() {
     $('#participant-id').textContent = session.participant_id;
-    $('#btn-setup').onclick = () => enterState(STATES.BASELINE);
+    $('#btn-setup').onclick = () => {
+      session.phase = 'baseline';
+      session.phaseIndex = 0;
+      enterState(STATES.BASELINE);
+    };
   }
 
-  function setupTrial(isPost) {
-    const phase = state === STATES.BASELINE ? 'Baseline' : state === STATES.TRANSFER ? 'Transfer' : isPost ? 'Main (post)' : 'Main';
-    $('#trial-phase').textContent = phase;
-    $('#trial-progress').textContent = (trialIndex + 1) + ' / 12';
+  function currentTrialFor(phase) {
+    const list = session.trialPlan[phase];
+    return list[session.phaseIndex];
+  }
 
-    // Placeholder stimulus
-    $('#stimulus-image').src = 'study/assets/stimuli/placeholder.svg';
+  function showJudgment(phase, isPost) {
+    const t = currentTrialFor(phase);
+    currentTrial = t;
+    session.phase = phase;
 
-    // Provenance only in main trials
-    const hasProvenance = (state === STATES.MAIN_PRE || state === STATES.MAIN_POST) && trialIndex % 2 === 0;
+    $('#trial-phase').textContent = phaseLabel(state);
+    $('#trial-progress').textContent = phaseProgress();
+
+    const hasProvenance = phase === 'main' && t.provenance_condition === 'ai-assisted';
     MisVisVerifyUI.setProvenance(hasProvenance);
 
+    $('#stimulus-image').src = 'study/assets/stimuli/' + t.stimulus_id;
+
     MisVisVerifyUI.resetSliders();
-    $$('input[name="misleading"]').forEach(r => r.checked = false);
+    $$('input[name="misleading"]').forEach(r => { r.checked = false; });
 
     const btn = $('#btn-trial');
     btn.disabled = true;
-    trialStartTime = performance.now();
+    judgmentStart = performance.now();
+    if (phase !== 'main' || !isPost) {
+      currentTrialTotalStart = performance.now();
+    }
 
     function checkReady() {
       btn.disabled = !MisVisVerifyUI.validateTrialResponses();
@@ -125,99 +165,216 @@
 
     $('#trust-slider').oninput = function() { this.dataset.touched = 'true'; checkReady(); };
     $('#confidence-slider').oninput = function() { this.dataset.touched = 'true'; checkReady(); };
-    $$('input[name="misleading"]').forEach(r => r.onchange = checkReady);
+    $$('input[name="misleading"]').forEach(r => { r.onchange = checkReady; });
 
     btn.onclick = () => {
-      const responses = MisVisVerifyUI.getTrialResponses();
-      responses.rt_ms = Math.round(performance.now() - trialStartTime);
-      responses.trial_index = trialIndex;
-      responses.state = state;
-      responses.timestamp = new Date().toISOString();
-      MisVisVerifyStorage.saveTrial(responses);
-
-      if (state === STATES.MAIN_PRE) {
-        enterState(STATES.MAIN_INTERVENTION);
-      } else if (state === STATES.MAIN_POST) {
-        trialIndex++;
-        if (trialIndex >= 12) enterState(STATES.TRANSFER);
-        else enterState(STATES.MAIN_PRE);
-      } else if (state === STATES.BASELINE) {
-        trialIndex++;
-        if (trialIndex >= 4) {
-          trialIndex = 0;
-          enterState(STATES.MAIN_PRE);
-        } else {
-          enterState(STATES.BASELINE);
-        }
-      } else if (state === STATES.TRANSFER) {
-        trialIndex++;
-        if (trialIndex >= 6) enterState(STATES.QUESTIONNAIRE);
-        else enterState(STATES.TRANSFER);
-      }
+      const rt = Math.round(performance.now() - judgmentStart);
+      const resp = MisVisVerifyUI.getTrialResponses();
+      submitJudgment(phase, isPost, resp, rt);
     };
   }
 
-  function setupIntervention() {
-    egvvStepIndex = 0;
-    const steps = ['locate', 'explain', 'verify', 'compare'];
-    const isEgvv = session.condition === 'egvv';
+  function globalIndexOf(phase) {
+    if (phase === 'baseline') return session.phaseIndex;
+    if (phase === 'main') return BASE_TOTAL + session.phaseIndex;
+    return BASE_TOTAL + MAIN_TOTAL + session.phaseIndex;
+  }
 
-    if (!isEgvv) {
-      // Control: simple re-inspection with 3-second delay
+  function submitJudgment(phase, isPost, resp, rt) {
+    const t = currentTrial;
+
+    if (phase === 'main' && !isPost) {
+      // save pre, then go to intervention
+      const trial = {
+        participant_id: session.participant_id,
+        session_id: session.session_id,
+        phase: 'main',
+        trial_index: session.phaseIndex,
+        trial_index_global: globalIndexOf('main'),
+        pair_id: t.pair_id,
+        stimulus_id: t.stimulus_id,
+        mechanism: t.mechanism,
+        integrity: t.integrity,
+        provenance_condition: t.provenance_condition,
+        trust_pre: resp.trust,
+        misleading_pre: resp.misleading,
+        confidence_pre: resp.confidence,
+        trust_post: null, misleading_post: null, confidence_post: null,
+        initial_response_time_ms: rt,
+        intervention_time_ms: null,
+        locate_time_ms: null, explain_time_ms: null,
+        verify_time_ms: null, compare_time_ms: null,
+        trial_total_time_ms: null,
+        timestamp_start: new Date().toISOString(),
+        timestamp_end: null
+      };
+      MisVisVerifyStorage.saveTrial(trial);
+      session.mainStage = 'intervention';
+      enterState(STATES.MAIN_INTERVENTION);
+      return;
+    }
+
+    if (phase === 'main' && isPost) {
+      const trial = MisVisVerifyStorage.getTrialByGlobalIndex(globalIndexOf('main'));
+      trial.trust_post = resp.trust;
+      trial.misleading_post = resp.misleading;
+      trial.confidence_post = resp.confidence;
+      trial.trial_total_time_ms = Math.round(performance.now() - currentTrialTotalStart);
+      trial.timestamp_end = new Date().toISOString();
+      MisVisVerifyStorage.saveTrial(trial);
+
+      session.phaseIndex++;
+      if (session.phaseIndex >= MAIN_TOTAL) {
+        session.phase = 'transfer';
+        session.phaseIndex = 0;
+        enterState(STATES.TRANSFER);
+      } else {
+        session.mainStage = 'pre';
+        enterState(STATES.MAIN_PRE);
+      }
+      return;
+    }
+
+    // baseline / transfer: single judgment
+    const trial = {
+      participant_id: session.participant_id,
+      session_id: session.session_id,
+      phase: phase,
+      trial_index: session.phaseIndex,
+      trial_index_global: globalIndexOf(phase),
+      pair_id: t.pair_id,
+      stimulus_id: t.stimulus_id,
+      mechanism: t.mechanism,
+      integrity: t.integrity,
+      provenance_condition: null,
+      transfer_type: t.transfer_type || null,
+      trust_pre: resp.trust,
+      misleading_pre: resp.misleading,
+      confidence_pre: resp.confidence,
+      trust_post: null, misleading_post: null, confidence_post: null,
+      initial_response_time_ms: rt,
+      intervention_time_ms: null,
+      locate_time_ms: null, explain_time_ms: null,
+      verify_time_ms: null, compare_time_ms: null,
+      trial_total_time_ms: Math.round(performance.now() - currentTrialTotalStart),
+      timestamp_start: new Date().toISOString(),
+      timestamp_end: new Date().toISOString()
+    };
+    MisVisVerifyStorage.saveTrial(trial);
+
+    session.phaseIndex++;
+    if (phase === 'baseline' && session.phaseIndex >= BASE_TOTAL) {
+      session.phase = 'main';
+      session.phaseIndex = 0;
+      session.mainStage = 'pre';
+      enterState(STATES.MAIN_PRE);
+    } else if (phase === 'transfer' && session.phaseIndex >= TRANS_TOTAL) {
+      enterState(STATES.QUESTIONNAIRE);
+    } else {
+      enterState(state);
+    }
+  }
+
+  function showIntervention() {
+    const t = currentTrialFor('main');
+    currentTrial = t;
+    interventionStart = performance.now();
+
+    if (session.condition === 'control') {
+      $('#control-stimulus-image').src = 'study/assets/stimuli/' + t.stimulus_id;
       MisVisVerifyUI.showState('control');
       const btn = $('#btn-control');
       btn.disabled = true;
       setTimeout(() => { btn.disabled = false; }, 3000);
-      btn.onclick = () => enterState(STATES.MAIN_POST);
+      btn.onclick = () => finishIntervention();
       return;
     }
 
+    // EGVV
     MisVisVerifyUI.showState('egvv');
-    renderEgvvStep(steps);
+    egvvStepIndex = 0;
+    egvvStepTimes = { locate: 0, explain: 0, verify: 0, compare: 0 };
+    renderEgvvStep();
+  }
+
+  function egvvStepsFor(t) {
+    const e = t.egvv;
+    const compareText = t.integrity === 'misleading' ? e.compareMisleading : e.compareAccurate;
+    return [
+      { key: 'locate', title: 'Locate', text: e.locate, showCompare: false },
+      { key: 'explain', title: 'Explain', text: e.explain, showCompare: false },
+      { key: 'verify', title: 'Verify', text: e.verify, showCompare: false },
+      { key: 'compare', title: 'Compare', text: compareText, showCompare: true }
+    ];
+  }
+
+  function renderEgvvStep() {
+    const t = currentTrial;
+    const steps = egvvStepsFor(t);
+    const step = steps[egvvStepIndex];
+
+    const img = step.showCompare ? t.compare_image : t.stimulus_id;
+    $('#egvv-stimulus-image').src = 'study/assets/stimuli/' + img;
+    $('#egvv-compare-note').style.display = step.showCompare ? 'block' : 'none';
+    $('#egvv-compare-note').textContent = step.showCompare
+      ? '这是忠实还原的对照版本，请自行比较。' : '';
+
+    $('#egvv-step').textContent = 'Step ' + (egvvStepIndex + 1) + ' / ' + steps.length;
+    $('#egvv-title').textContent = step.title;
+    $('#egvv-text').textContent = step.text;
+    $('#btn-egvv-prev').hidden = egvvStepIndex === 0;
+    $('#btn-egvv-next').textContent = egvvStepIndex === steps.length - 1 ? '完成验证' : '继续';
+
+    egvvStepStart = performance.now();
 
     $('#btn-egvv-next').onclick = () => {
-      egvvStepIndex++;
-      if (egvvStepIndex >= steps.length) {
-        enterState(STATES.MAIN_POST);
+      egvvStepTimes[step.key] += Math.round(performance.now() - egvvStepStart);
+      if (egvvStepIndex >= steps.length - 1) {
+        finishIntervention();
       } else {
-        renderEgvvStep(steps);
+        egvvStepIndex++;
+        renderEgvvStep();
       }
     };
 
     $('#btn-egvv-prev').onclick = () => {
+      egvvStepTimes[step.key] += Math.round(performance.now() - egvvStepStart);
       if (egvvStepIndex > 0) {
         egvvStepIndex--;
-        renderEgvvStep(steps);
+        renderEgvvStep();
       }
     };
   }
 
-  function renderEgvvStep(steps) {
-    const key = steps[egvvStepIndex];
-    MisVisVerifyUI.renderEgvv(
-      { index: egvvStepIndex + 1, total: steps.length },
-      egvvTemplate[key]
-    );
+  function finishIntervention() {
+    const trial = MisVisVerifyStorage.getTrialByGlobalIndex(globalIndexOf('main'));
+    trial.intervention_time_ms = Math.round(performance.now() - interventionStart);
+    if (session.condition === 'egvv') {
+      trial.locate_time_ms = egvvStepTimes.locate;
+      trial.explain_time_ms = egvvStepTimes.explain;
+      trial.verify_time_ms = egvvStepTimes.verify;
+      trial.compare_time_ms = egvvStepTimes.compare;
+    }
+    MisVisVerifyStorage.saveTrial(trial);
+
+    session.mainStage = 'post';
+    currentTrialTotalStart = performance.now();
+    enterState(STATES.MAIN_POST);
   }
 
   function setupQuestionnaire() {
-    // Show/hide EGVV-only items
     $$('.egvv-only').forEach(el => {
       el.style.display = session.condition === 'egvv' ? 'block' : 'none';
     });
-
     $('#btn-questionnaire').onclick = () => {
-      const form = $('#post-form');
-      const data = new FormData(form);
-      const checks = data.getAll('checks');
-      const questionnaire = {
-        checks,
+      const data = new FormData($('#post-form'));
+      session.questionnaire = {
+        checks: data.getAll('checks'),
         ai_influence: parseInt(data.get('ai-influence') || '50', 10),
         egvv_help: session.condition === 'egvv' ? parseInt(data.get('egvv-help') || '50', 10) : null,
         egvv_burden: session.condition === 'egvv' ? parseInt(data.get('egvv-burden') || '50', 10) : null,
         strategy: data.get('strategy') || ''
       };
-      session.questionnaire = questionnaire;
       enterState(STATES.COMPLETE);
     };
   }
@@ -232,13 +389,12 @@
       const url = URL.createObjectURL(blob);
       const a = document.createElement('a');
       a.href = url;
-      a.download = `misvis-study-${session.participant_id}.json`;
+      a.download = 'misvis-study-' + session.participant_id + '.json';
       a.click();
       URL.revokeObjectURL(url);
     };
 
-    const feedbackArea = $('#pilot-feedback-area');
-    feedbackArea.hidden = false;
+    $('#pilot-feedback-area').hidden = false;
     $('#btn-feedback').onclick = () => {
       const txt = $('#pilot-feedback').value.trim();
       if (txt) {
@@ -252,12 +408,10 @@
   function saveProgress() {
     if (!session) return;
     session.state = state;
-    session.trialIndex = trialIndex;
     MisVisVerifyStorage.saveSession(session);
   }
 
   function bindGlobal() {
-    // Prevent accidental back button
     history.pushState(null, '', location.href);
     window.onpopstate = () => {
       history.pushState(null, '', location.href);
@@ -265,13 +419,5 @@
     };
   }
 
-  function $(sel) { return document.querySelector(sel); }
-  function $$(sel) { return [...document.querySelectorAll(sel)]; }
-
-  // Expose state names for app.js
-  window.MisVisVerifyExperiment = {
-    STATES,
-    init,
-    enterState
-  };
+  window.MisVisVerifyExperiment = { STATES, init, enterState };
 })();
