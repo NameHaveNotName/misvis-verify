@@ -1,0 +1,11 @@
+﻿participant_id,session_id,condition,counterbalance_list,started_at,completed_at,completed,mode,viewport_width,viewport_height,questionnaire_checks,ai_influence,egvv_help,egvv_burden,strategy,pilot_feedback
+MV-00000000,S-1600000000000,control,A,2026-08-15T09:00:00.000Z,2026-08-15T09:18:00.000Z,True,pilot,1280,900,data-source;values;axis,47,,,synthetic strategy note,synthetic feedback
+MV-00000001,S-1600000000001,egvv,B,2026-08-15T09:00:00.000Z,2026-08-15T09:18:00.000Z,True,pilot,1440,1080,values;title;data-source,20,56,69,synthetic strategy note,synthetic feedback
+MV-00000002,S-1600000000002,control,C,2026-08-15T09:00:00.000Z,2026-08-15T09:18:00.000Z,True,pilot,1440,720,color;values;title,72,,,synthetic strategy note,synthetic feedback
+MV-00000003,S-1600000000003,egvv,D,2026-08-15T09:00:00.000Z,2026-08-15T09:18:00.000Z,True,pilot,1440,1080,data-source;axis;color,39,13,74,synthetic strategy note,synthetic feedback
+MV-00000004,S-1600000000004,control,A,2026-08-15T09:00:00.000Z,2026-08-15T09:18:00.000Z,True,pilot,1920,900,color;axis;title,80,,,synthetic strategy note,synthetic feedback
+MV-00000005,S-1600000000005,egvv,B,2026-08-15T09:00:00.000Z,2026-08-15T09:18:00.000Z,True,pilot,1920,900,title;color;axis,57,68,61,synthetic strategy note,synthetic feedback
+MV-00000006,S-1600000000006,control,C,2026-08-15T09:00:00.000Z,2026-08-15T09:18:00.000Z,True,pilot,1280,1080,axis;title;values,95,,,synthetic strategy note,synthetic feedback
+MV-00000007,S-1600000000007,egvv,D,2026-08-15T09:00:00.000Z,,False,pilot,1280,720,title;color;data-source,67,37,58,synthetic strategy note,synthetic feedback
+MV-00000008,S-1600000000008,control,A,2026-08-15T09:00:00.000Z,2026-08-15T09:18:00.000Z,True,pilot,1440,1080,title;color;data-source,51,,,synthetic strategy note,synthetic feedback
+MV-00000009,S-1600000000009,egvv,B,2026-08-15T09:00:00.000Z,2026-08-15T09:18:00.000Z,True,pilot,1280,1080,color;axis;values,46,86,92,synthetic strategy note,synthetic feedback

@@ -1,0 +1,15 @@
+MisVis Verify — Data Validation Report
+========================================
+Participants: 10
+Trials: 220
+Expected trials (complete sessions only): 198
+Incomplete sessions: 1
+Duplicate trials: 0
+Missing trials: 0
+Warnings: 2
+
+Details:
+[WARN] MV-00000003 trial 5: trust_pre=150 out of range
+[WARN] MV-00000007: incomplete session
+
+NOTE: no data rows were dropped. Review warnings and decide exclusions manually.
