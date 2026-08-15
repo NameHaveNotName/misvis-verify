@@ -124,6 +124,12 @@
 
   function setupSetup() {
     $('#participant-id').textContent = session.participant_id;
+    const debug = $('#debug-info');
+    if (debug) {
+      debug.textContent = '调试信息（仅 Pilot）：干预条件 = ' +
+        (session.condition === 'egvv' ? 'EGVV 验证组' : 'Control 对照组') +
+        '，列表 = ' + session.counterbalance_list;
+    }
     $('#btn-setup').onclick = () => {
       session.phase = 'baseline';
       session.phaseIndex = 0;
@@ -358,7 +364,6 @@
     MisVisVerifyStorage.saveTrial(trial);
 
     session.mainStage = 'post';
-    currentTrialTotalStart = performance.now();
     enterState(STATES.MAIN_POST);
   }
 

@@ -98,6 +98,7 @@ img { max-width: 100%; display: block; }
   background: #f0f2f2; border-radius: 14px; padding: 16px;
   text-align: center; margin: 16px 0;
 }
+.debug-info { color: var(--accent); font-size: 13px; margin: 0 0 8px; }
 .setup-list { color: var(--muted); padding-left: 20px; }
 .setup-list li { margin: 8px 0; }
 
