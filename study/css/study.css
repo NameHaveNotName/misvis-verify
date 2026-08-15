@@ -79,7 +79,8 @@ img { max-width: 100%; display: block; }
 .button.primary:disabled { opacity: .45; cursor: not-allowed; }
 .button.secondary { background: #fff; border-color: var(--line); color: var(--ink); }
 .button.secondary:hover { border-color: #9fa9b0; }
-.actions { margin-top: 28px; display: flex; gap: 12px; flex-wrap: wrap; }
+.actions { margin-top: 28px; display: flex; gap: 12px; flex-wrap: wrap; align-items: center; }
+.trial-hint { color: var(--muted); font-size: 13px; }
 
 /* Consent */
 .consent-body p { margin: 10px 0; color: var(--muted); }

@@ -69,6 +69,8 @@
       } else {
         MisVisVerifyStorage.clearSession();
       }
+    } else if (saved && saved.completed) {
+      MisVisVerifyStorage.clearSession();
     }
 
     enterState(STATES.CONSENT);
@@ -98,11 +100,14 @@
     check.onchange = () => { btn.disabled = !check.checked; };
     btn.onclick = () => {
       const participantId = MisVisVerifyRandom.generateParticipantId();
+      const cond = MisVisVerifyRandom.assignCondition(participantId);
+      const lst = MisVisVerifyRandom.assignList(participantId);
+      MisVisVerifyStorage.clearSession();
       session = {
         participant_id: participantId,
         session_id: 'S-' + Date.now(),
-        condition: MisVisVerifyRandom.assignCondition(participantId),
-        counterbalance_list: MisVisVerifyRandom.assignList(participantId),
+        condition: cond,
+        counterbalance_list: lst,
         started_at: new Date().toISOString(),
         completed: false,
         version: 'study-v0.1',
@@ -116,7 +121,7 @@
         phase: 'baseline',
         phaseIndex: 0,
         mainStage: 'pre',
-        trialPlan: MisVisVerifyTrials.build(participantId, session.counterbalance_list)
+        trialPlan: MisVisVerifyTrials.build(participantId, lst)
       };
       enterState(STATES.SETUP);
     };
@@ -222,6 +227,12 @@
 
     if (phase === 'main' && isPost) {
       const trial = MisVisVerifyStorage.getTrialByGlobalIndex(globalIndexOf('main'));
+      if (!trial) {
+        alert('数据状态异常，请重新开始实验。');
+        MisVisVerifyStorage.clearSession();
+        location.reload();
+        return;
+      }
       trial.trust_post = resp.trust;
       trial.misleading_post = resp.misleading;
       trial.confidence_post = resp.confidence;
@@ -354,6 +365,12 @@
 
   function finishIntervention() {
     const trial = MisVisVerifyStorage.getTrialByGlobalIndex(globalIndexOf('main'));
+    if (!trial) {
+      alert('数据状态异常，请重新开始实验。');
+      MisVisVerifyStorage.clearSession();
+      location.reload();
+      return;
+    }
     trial.intervention_time_ms = Math.round(performance.now() - interventionStart);
     if (session.condition === 'egvv') {
       trial.locate_time_ms = egvvStepTimes.locate;
@@ -417,11 +434,15 @@
   }
 
   function bindGlobal() {
-    history.pushState(null, '', location.href);
-    window.onpopstate = () => {
+    try {
       history.pushState(null, '', location.href);
-      alert('实验过程中请使用页面内的按钮，不要使用浏览器返回键。');
-    };
+      window.onpopstate = () => {
+        try {
+          history.pushState(null, '', location.href);
+        } catch (e) {}
+        alert('实验过程中请使用页面内的按钮，不要使用浏览器返回键。');
+      };
+    } catch (e) {}
   }
 
   window.MisVisVerifyExperiment = { STATES, init, enterState };
