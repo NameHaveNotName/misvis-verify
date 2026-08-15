@@ -1,9 +1,13 @@
 #!/usr/bin/env python3
 """Build controlled SVG stimuli for MisVis Verify.
 
-Pure standard library. Generates 24 SVGs (12 matched pairs) from
-study/data/stimuli.json into study/assets/stimuli/ with neutral IDs
-S001.svg .. S024.svg, and writes study/data/stimulus_map.json.
+Pure standard library. Generates:
+  - 24 main SVGs (12 matched pairs) from study/data/stimuli.json
+  - 4 baseline SVGs from study/data/baseline.json
+  - 6 transfer SVGs from study/data/transfer.json
+
+Neutral IDs: main S001..S024, baseline S101..S104, transfer S201..S206.
+Writes study/data/stimulus_map.json and study/data/stimuli-data.js.
 """
 
 import json
@@ -14,6 +18,8 @@ import sys
 HERE = os.path.dirname(os.path.abspath(__file__))
 ROOT = os.path.dirname(HERE)
 DATA_PATH = os.path.join(ROOT, "study", "data", "stimuli.json")
+BASE_PATH = os.path.join(ROOT, "study", "data", "baseline.json")
+TRANS_PATH = os.path.join(ROOT, "study", "data", "transfer.json")
 OUT_DIR = os.path.join(ROOT, "study", "assets", "stimuli")
 MAP_PATH = os.path.join(ROOT, "study", "data", "stimulus_map.json")
 JS_DATA_PATH = os.path.join(ROOT, "study", "data", "stimuli-data.js")
@@ -27,23 +33,24 @@ MUTED = "#63717d"
 ACCENT = "#ef6a55"
 BLUE = "#4f7899"
 GREEN = "#71977b"
+GOLD = "#efc46b"
 LINE = "#d9ddd8"
 GRID = "#eef0ef"
 BAND = "#dbe4ec"
 
 FONT = "Inter, PingFang SC, Microsoft YaHei, Arial, sans-serif"
 
-ML = 90    # left margin (y-axis labels)
-MR = 50    # right margin
-MT = 140   # top margin (title)
-MB = 90    # bottom margin (x-axis labels)
+ML = 90
+MR = 50
+MT = 140
+MB = 90
 
-CW = W - ML - MR   # chart width
-CH = H - MT - MB   # chart height
-CX0 = ML           # chart left
-CX1 = W - MR       # chart right
-CY0 = MT           # chart top
-CY1 = H - MB       # chart bottom
+CW = W - ML - MR
+CH = H - MT - MB
+CX0 = ML
+CX1 = W - MR
+CY0 = MT
+CY1 = H - MB
 
 
 def esc(s):
@@ -52,7 +59,7 @@ def esc(s):
 
 
 def text(x, y, content, size=24, fill=INK, anchor="start", weight="normal"):
-    return (f'<text x="{x}" y="{y}" font-family="{FONT}" font-size="{size}" '
+    return (f'<text x="{x:.1f}" y="{y:.1f}" font-family="{FONT}" font-size="{size}" '
             f'fill="{fill}" text-anchor="{anchor}" font-weight="{weight}">{esc(content)}</text>')
 
 
@@ -80,6 +87,11 @@ def polygon(points, fill, stroke=None, sw=1):
     pts = " ".join(f"{x:.1f},{y:.1f}" for x, y in points)
     s = f' stroke="{stroke}" stroke-width="{sw}"' if stroke else ""
     return f'<polygon points="{pts}" fill="{fill}"{s}/>'
+
+
+def path(d, fill, stroke=None, sw=1):
+    s = f' stroke="{stroke}" stroke-width="{sw}"' if stroke else ""
+    return f'<path d="{d}" fill="{fill}"{s}/>'
 
 
 def nice_ticks(lo, hi, n=5):
@@ -126,21 +138,16 @@ class Chart:
 
 
 def draw_axis_frame(c, y_min, y_max, x_labels, x_positions):
-    """Draw y-axis, x-axis, ticks, and gridlines."""
     yscale = lambda v: CY1 - (v - y_min) / (y_max - y_min) * CH
-
     for tick in nice_ticks(y_min, y_max):
         y = yscale(tick)
         c.add(line(CX0, y, CX1, y, GRID, 1))
         c.add(line(CX0, y, CX0 - 6, y, LINE, 2))
         c.add(text(CX0 - 12, y + 8, fmt(tick), size=20, fill=MUTED, anchor="end"))
-
     c.add(line(CX0, CY1, CX1, CY1, INK, 2))
     c.add(line(CX0, CY0, CX0, CY1, INK, 2))
-
     for x, label in zip(x_positions, x_labels):
         c.add(text(x, CY1 + 44, label, size=22, fill=INK, anchor="middle"))
-
     return yscale
 
 
@@ -162,7 +169,6 @@ def draw_bar_chart(c, categories, values, y_min, y_max, y_label,
 
 
 def draw_line_chart(c, x_labels, series_list, y_min, y_max, y_label, legend=True):
-    """series_list: list of dicts {label, values, color, dashed}"""
     n = len(x_labels)
     xpos = [CX0 + CW * i / (n - 1) for i in range(n)]
     yscale = draw_axis_frame(c, y_min, y_max, x_labels, xpos)
@@ -190,10 +196,8 @@ def draw_uncertainty_chart(c, x_labels, hist_values, forecast_values,
     c.add(text(CX0 - 20, CY0 - 20, y_label, size=20, fill=MUTED, anchor="start"))
 
     nh = len(hist_values)
-    all_values = hist_values + forecast_values
 
     if show_band:
-        # uncertainty band only over forecast portion
         band_points = []
         for i in range(nh, n):
             band_points.append((xpos[i], yscale(forecast_values[i - nh] + halfwidth[i - nh])))
@@ -201,162 +205,272 @@ def draw_uncertainty_chart(c, x_labels, hist_values, forecast_values,
             band_points.append((xpos[i], yscale(forecast_values[i - nh] - halfwidth[i - nh])))
         c.add(polygon(band_points, BAND))
 
-    # historical line (solid blue)
     hist_pts = [(xpos[i], yscale(hist_values[i])) for i in range(nh)]
     c.add(polyline(hist_pts, BLUE, 3))
     for x, y in hist_pts:
         c.add(circle(x, y, 5, BLUE))
 
-    # forecast line (dashed accent)
     fore_pts = [(xpos[i], yscale(forecast_values[i - nh])) for i in range(nh, n)]
     c.add(polyline(fore_pts, ACCENT, 3))
     for x, y in fore_pts:
         c.add(circle(x, y, 5, ACCENT))
 
-    # legend
     c.add(text(CX1, CY0 + 6, "历史数据", size=20, fill=BLUE, anchor="end"))
     c.add(text(CX1, CY0 + 36, "预测值", size=20, fill=ACCENT, anchor="end"))
 
 
-def draw_bubble_chart(c, categories, values, unit, radius_proportional_to_value):
-    """radius_proportional_to_value=True -> misleading (radius ~ value).
-    False -> accurate (radius ~ sqrt(value))."""
+def draw_bubble_chart(c, categories, values, unit, radius_by_value):
     max_v = max(values)
     n = len(categories)
     slot = CW / n
     centers = [CX0 + slot * (i + 0.5) for i in range(n)]
     cy = (CY0 + CY1) / 2 + 30
-
-    # label baseline
     c.add(line(CX0, CY1, CX1, CY1, INK, 2))
-
     max_r = min(slot * 0.42, CH * 0.42)
     for i, v in enumerate(values):
-        if radius_proportional_to_value:
-            r = max_r * (v / max_v)
-        else:
-            r = max_r * math.sqrt(v / max_v)
+        r = max_r * (v / max_v) if radius_by_value else max_r * math.sqrt(v / max_v)
         c.add(circle(centers[i], cy, r, BLUE, None))
         c.add(text(centers[i], cy + r + 40, categories[i], size=22, fill=INK, anchor="middle"))
         if r >= 30:
             c.add(text(centers[i], cy + 8, fmt(v), size=24, fill="#ffffff", anchor="middle", weight="bold"))
         else:
             c.add(text(centers[i], cy - r - 16, fmt(v), size=22, fill=INK, anchor="middle", weight="bold"))
-
     c.add(text(W / 2, CY1 - 8, f"单位：{unit}", size=18, fill=MUTED, anchor="middle"))
 
 
-def build_pair(pair, idx):
-    """Render one pair into two SVGs. Returns list of (filename, svg_str)."""
-    mech = pair["mechanism"]
-    d = pair["data"]
-    out = []
+def draw_dual_axis(c, x_labels, left_values, right_values,
+                   left_min, left_max, right_min, right_max,
+                   left_label, right_label):
+    n = len(x_labels)
+    xpos = [CX0 + CW * i / (n - 1) for i in range(n)]
 
-    # ---------- truncated axis ----------
-    if mech == "truncated-axis":
-        acc = Chart(pair["accurate"]["title"])
-        draw_bar_chart(acc, d["categories"], d["values"],
-                       0, d["yMaxAccurate"], d["yLabel"])
-        out.append((pair["accurate"]["image"], acc.render()))
+    left_scale = lambda v: CY1 - (v - left_min) / (left_max - left_min) * CH
+    right_scale = lambda v: CY1 - (v - right_min) / (right_max - right_min) * CH
 
-        mis = Chart(pair["misleading"]["title"])
-        draw_bar_chart(mis, d["categories"], d["values"],
-                       d["yMinMisleading"], d["yMaxMisleading"], d["yLabel"])
-        out.append((pair["misleading"]["image"], mis.render()))
+    # left axis
+    c.add(line(CX0, CY0, CX0, CY1, INK, 2))
+    for tick in nice_ticks(left_min, left_max):
+        y = left_scale(tick)
+        c.add(line(CX0, y, CX0 - 6, y, LINE, 2))
+        c.add(text(CX0 - 12, y + 8, fmt(tick), size=20, fill=MUTED, anchor="end"))
+    c.add(text(CX0 - 24, CY0 - 24, left_label, size=20, fill=BLUE, anchor="start"))
 
-    # ---------- cherry-picked time ----------
-    elif mech == "cherry-picked-time":
-        acc = Chart(pair["accurate"]["title"])
-        acc_series = [{"label": d["yLabel"], "values": d["fullValues"], "color": BLUE}]
-        y_min = min(d["fullValues"]) * 0.8
-        y_max = max(d["fullValues"]) * 1.1
-        draw_line_chart(acc, [str(y) for y in d["fullYears"]], acc_series,
-                        y_min, y_max, d["yLabel"], legend=False)
-        out.append((pair["accurate"]["image"], acc.render()))
+    # right axis
+    c.add(line(CX1, CY0, CX1, CY1, INK, 2))
+    for tick in nice_ticks(right_min, right_max):
+        y = right_scale(tick)
+        c.add(line(CX1, y, CX1 + 6, y, LINE, 2))
+        c.add(text(CX1 + 12, y + 8, fmt(tick), size=20, fill=MUTED, anchor="start"))
+    c.add(text(CX1 + 12, CY0 - 24, right_label, size=20, fill=ACCENT, anchor="end"))
 
-        mis = Chart(pair["misleading"]["title"])
-        mis_series = [{"label": d["yLabel"], "values": d["cherryValues"], "color": BLUE}]
-        y_min = min(d["cherryValues"]) * 0.8
-        y_max = max(d["cherryValues"]) * 1.1
-        draw_line_chart(mis, [str(y) for y in d["cherryYears"]], mis_series,
-                        y_min, y_max, d["yLabel"], legend=False)
-        out.append((pair["misleading"]["image"], mis.render()))
+    # bottom axis + x labels
+    c.add(line(CX0, CY1, CX1, CY1, INK, 2))
+    for x, label in zip(xpos, x_labels):
+        c.add(text(x, CY1 + 44, label, size=22, fill=INK, anchor="middle"))
 
-    # ---------- hidden uncertainty ----------
-    elif mech == "hidden-uncertainty":
-        all_years = d["histYears"] + d["forecastYears"]
-        all_vals = d["histValues"] + d["forecastValues"]
+    # left series line (blue)
+    lp = [(xpos[i], left_scale(left_values[i])) for i in range(n)]
+    c.add(polyline(lp, BLUE, 3))
+    for x, y in lp:
+        c.add(circle(x, y, 5, BLUE))
+
+    # right series line (accent)
+    rp = [(xpos[i], right_scale(right_values[i])) for i in range(n)]
+    c.add(polyline(rp, ACCENT, 3))
+    for x, y in rp:
+        c.add(circle(x, y, 5, ACCENT))
+
+    # legend
+    c.add(text(CX1, CY0 + 6, left_label, size=20, fill=BLUE, anchor="end"))
+    c.add(text(CX1, CY0 + 36, right_label, size=20, fill=ACCENT, anchor="end"))
+
+
+def pie_slice_path(cx, cy, r, a1, a2):
+    x1 = cx + r * math.sin(a1)
+    y1 = cy - r * math.cos(a1)
+    x2 = cx + r * math.sin(a2)
+    y2 = cy - r * math.cos(a2)
+    large = 1 if (a2 - a1) > math.pi else 0
+    return (f"M {cx:.1f} {cy:.1f} L {x1:.1f} {y1:.1f} "
+            f"A {r:.1f} {r:.1f} 0 {large} 1 {x2:.1f} {y2:.1f} Z")
+
+
+def draw_pie(c, slices):
+    PALETTE = [BLUE, GREEN, GOLD, "#b9c2c8"]
+    total = sum(s["value"] for s in slices)
+    cx = CX0 + CW / 2
+    cy = CY0 + CH / 2
+    r = min(CW, CH) * 0.38
+
+    a = -math.pi / 2  # start at top
+    for i, s in enumerate(slices):
+        frac = s["value"] / total
+        a1 = a
+        a2 = a + frac * 2 * math.pi
+        c.add(path(pie_slice_path(cx, cy, r, a1, a2), PALETTE[i % len(PALETTE)],
+                   stroke=PAPER, sw=2))
+        mid = (a1 + a2) / 2
+        lx = cx + (r * 0.62) * math.sin(mid)
+        ly = cy - (r * 0.62) * math.cos(mid)
+        c.add(text(lx, ly, f"{s['value']}%", size=26, fill="#ffffff",
+                   anchor="middle", weight="bold"))
+        a = a2
+
+    # legend
+    lx = cx + r + 70
+    ly = cy - (len(slices) - 1) * 22
+    for i, s in enumerate(slices):
+        c.add(rect(lx, ly - 16, 22, 22, PALETTE[i % len(PALETTE)], rx=4))
+        c.add(text(lx + 34, ly + 4, f"{s['label']} {s['value']}%", size=22, fill=INK, anchor="start"))
+        ly += 44
+
+
+# ---------------------------------------------------------------
+# Trial rendering (for baseline/transfer)
+# ---------------------------------------------------------------
+def render_trial(mechanism, data, title):
+    c = Chart(title)
+
+    if mechanism == "truncated-axis":
+        draw_bar_chart(c, data["categories"], data["values"],
+                       data["yMin"], data["yMax"], data["yLabel"])
+
+    elif mechanism == "cherry-picked-time":
+        series = [{"label": data["yLabel"], "values": data["values"], "color": BLUE}]
+        y_min = min(data["values"]) * 0.8
+        y_max = max(data["values"]) * 1.1
+        draw_line_chart(c, [str(y) for y in data["years"]], series,
+                        y_min, y_max, data["yLabel"], legend=False)
+
+    elif mechanism == "hidden-uncertainty":
+        all_years = data["histYears"] + data["forecastYears"]
         y_min = 0
-        y_max = max(v + h for v, h in zip(d["forecastValues"], d["uncertaintyHalfwidth"])) * 1.1
+        y_max = max(v + h for v, h in zip(data["forecastValues"], data["uncertaintyHalfwidth"])) * 1.1
+        draw_uncertainty_chart(c, [str(y) for y in all_years],
+                               data["histValues"], data["forecastValues"],
+                               data["uncertaintyHalfwidth"], y_min, y_max,
+                               data["yLabel"], show_band=data.get("showBand", True))
 
-        acc = Chart(pair["accurate"]["title"])
-        draw_uncertainty_chart(acc, [str(y) for y in all_years],
-                               d["histValues"], d["forecastValues"],
-                               d["uncertaintyHalfwidth"], y_min, y_max,
-                               d["yLabel"], show_band=True)
-        out.append((pair["accurate"]["image"], acc.render()))
+    elif mechanism == "area-distortion":
+        draw_bubble_chart(c, data["categories"], data["values"], data["unit"],
+                          radius_by_value=data.get("radiusByValue", False))
 
-        mis = Chart(pair["misleading"]["title"])
-        draw_uncertainty_chart(mis, [str(y) for y in all_years],
-                               d["histValues"], d["forecastValues"],
-                               d["uncertaintyHalfwidth"], y_min, y_max,
-                               d["yLabel"], show_band=False)
-        out.append((pair["misleading"]["image"], mis.render()))
+    elif mechanism == "color-emphasis":
+        y_min = min(data["values"]) * 0.85
+        y_max = max(data["values"]) * 1.05
+        draw_bar_chart(c, data["categories"], data["values"],
+                       y_min, y_max, data["yLabel"],
+                       highlight_index=data.get("highlightIndex"))
 
-    # ---------- area distortion ----------
-    elif mech == "area-distortion":
-        acc = Chart(pair["accurate"]["title"])
-        draw_bubble_chart(acc, d["categories"], d["values"], d["unit"], radius_proportional_to_value=False)
-        out.append((pair["accurate"]["image"], acc.render()))
-
-        mis = Chart(pair["misleading"]["title"])
-        draw_bubble_chart(mis, d["categories"], d["values"], d["unit"], radius_proportional_to_value=True)
-        out.append((pair["misleading"]["image"], mis.render()))
-
-    # ---------- color emphasis ----------
-    elif mech == "color-emphasis":
-        y_min = min(d["values"]) * 0.85
-        y_max = max(d["values"]) * 1.05
-
-        acc = Chart(pair["accurate"]["title"])
-        draw_bar_chart(acc, d["categories"], d["values"],
-                       y_min, y_max, d["yLabel"], highlight_index=None)
-        out.append((pair["accurate"]["image"], acc.render()))
-
-        mis = Chart(pair["misleading"]["title"])
-        draw_bar_chart(mis, d["categories"], d["values"],
-                       y_min, y_max, d["yLabel"], highlight_index=d["highlightIndex"])
-        out.append((pair["misleading"]["image"], mis.render()))
-
-    # ---------- misleading title ----------
-    elif mech == "misleading-title":
-        series1 = {"label": d["series1Label"], "values": d["series1"], "color": BLUE}
-        series2 = {"label": d["series2Label"], "values": d["series2"], "color": ACCENT}
+    elif mechanism == "misleading-title":
+        series1 = {"label": data["series1Label"], "values": data["series1"], "color": BLUE}
+        series2 = {"label": data["series2Label"], "values": data["series2"], "color": ACCENT}
         y_min = 0
-        y_max = max(max(d["series1"]), max(d["series2"])) * 1.2
+        y_max = max(max(data["series1"]), max(data["series2"])) * 1.2
+        draw_line_chart(c, data["x"], [series1, series2], y_min, y_max, "数值", legend=True)
 
-        acc = Chart(pair["accurate"]["title"])
-        draw_line_chart(acc, d["x"], [series1, series2], y_min, y_max,
-                        "数值", legend=True)
-        out.append((pair["accurate"]["image"], acc.render()))
+    elif mechanism == "dual-axis":
+        draw_dual_axis(c, [str(x) for x in data["x"]],
+                       data["leftValues"], data["rightValues"],
+                       data["leftMin"], data["leftMax"],
+                       data["rightMin"], data["rightMax"],
+                       data["leftLabel"], data["rightLabel"])
 
-        mis = Chart(pair["misleading"]["title"])
-        draw_line_chart(mis, d["x"], [series1, series2], y_min, y_max,
-                        "数值", legend=True)
-        out.append((pair["misleading"]["image"], mis.render()))
+    elif mechanism == "pie-3d":
+        draw_pie(c, data["slices"])
 
-    return out
+    else:
+        c.add(text(W / 2, H / 2, f"Unknown mechanism: {mechanism}", size=24,
+                   fill=ACCENT, anchor="middle"))
+
+    return c.render()
+
+
+# ---------------------------------------------------------------
+# Main pair rendering (from stimuli.json)
+# ---------------------------------------------------------------
+def render_pair(mechanism, data, accurate_title, misleading_title):
+    acc = None
+    mis = None
+
+    if mechanism == "truncated-axis":
+        acc = Chart(accurate_title)
+        draw_bar_chart(acc, data["categories"], data["values"], 0,
+                       data["yMaxAccurate"], data["yLabel"])
+        mis = Chart(misleading_title)
+        draw_bar_chart(mis, data["categories"], data["values"],
+                       data["yMinMisleading"], data["yMaxMisleading"], data["yLabel"])
+
+    elif mechanism == "cherry-picked-time":
+        acc = Chart(accurate_title)
+        acc_series = [{"label": data["yLabel"], "values": data["fullValues"], "color": BLUE}]
+        draw_line_chart(acc, [str(y) for y in data["fullYears"]], acc_series,
+                        min(data["fullValues"]) * 0.8, max(data["fullValues"]) * 1.1,
+                        data["yLabel"], legend=False)
+        mis = Chart(misleading_title)
+        mis_series = [{"label": data["yLabel"], "values": data["cherryValues"], "color": BLUE}]
+        draw_line_chart(mis, [str(y) for y in data["cherryYears"]], mis_series,
+                        min(data["cherryValues"]) * 0.8, max(data["cherryValues"]) * 1.1,
+                        data["yLabel"], legend=False)
+
+    elif mechanism == "hidden-uncertainty":
+        all_years = data["histYears"] + data["forecastYears"]
+        y_min = 0
+        y_max = max(v + h for v, h in zip(data["forecastValues"], data["uncertaintyHalfwidth"])) * 1.1
+        acc = Chart(accurate_title)
+        draw_uncertainty_chart(acc, [str(y) for y in all_years], data["histValues"],
+                               data["forecastValues"], data["uncertaintyHalfwidth"],
+                               y_min, y_max, data["yLabel"], show_band=True)
+        mis = Chart(misleading_title)
+        draw_uncertainty_chart(mis, [str(y) for y in all_years], data["histValues"],
+                               data["forecastValues"], data["uncertaintyHalfwidth"],
+                               y_min, y_max, data["yLabel"], show_band=False)
+
+    elif mechanism == "area-distortion":
+        acc = Chart(accurate_title)
+        draw_bubble_chart(acc, data["categories"], data["values"], data["unit"],
+                          radius_by_value=False)
+        mis = Chart(misleading_title)
+        draw_bubble_chart(mis, data["categories"], data["values"], data["unit"],
+                          radius_by_value=True)
+
+    elif mechanism == "color-emphasis":
+        y_min = min(data["values"]) * 0.85
+        y_max = max(data["values"]) * 1.05
+        acc = Chart(accurate_title)
+        draw_bar_chart(acc, data["categories"], data["values"], y_min, y_max,
+                       data["yLabel"], highlight_index=None)
+        mis = Chart(misleading_title)
+        draw_bar_chart(mis, data["categories"], data["values"], y_min, y_max,
+                       data["yLabel"], highlight_index=data["highlightIndex"])
+
+    elif mechanism == "misleading-title":
+        series1 = {"label": data["series1Label"], "values": data["series1"], "color": BLUE}
+        series2 = {"label": data["series2Label"], "values": data["series2"], "color": ACCENT}
+        y_min = 0
+        y_max = max(max(data["series1"]), max(data["series2"])) * 1.2
+        acc = Chart(accurate_title)
+        draw_line_chart(acc, data["x"], [series1, series2], y_min, y_max, "数值", legend=True)
+        mis = Chart(misleading_title)
+        draw_line_chart(mis, data["x"], [series1, series2], y_min, y_max, "数值", legend=True)
+
+    return acc.render(), mis.render()
 
 
 def main():
     with open(DATA_PATH, encoding="utf-8") as f:
         spec = json.load(f)
+    with open(BASE_PATH, encoding="utf-8") as f:
+        baseline = json.load(f)
+    with open(TRANS_PATH, encoding="utf-8") as f:
+        transfer = json.load(f)
 
     os.makedirs(OUT_DIR, exist_ok=True)
 
-    # Assign neutral IDs in deterministic order
     mapping = {}
     counter = 1
+
+    # main pairs
     for pair in spec["pairs"]:
         for key in ("accurate", "misleading"):
             sid = f"S{counter:03d}.svg"
@@ -364,16 +478,36 @@ def main():
             counter += 1
 
     for pair in spec["pairs"]:
-        rendered = build_pair(pair, 0)
-        for fname, svg in rendered:
-            path = os.path.join(OUT_DIR, fname)
-            with open(path, "w", encoding="utf-8") as f:
-                f.write(svg)
-            mapping[fname] = {
-                "pair_id": pair["pairId"],
-                "mechanism": pair["mechanism"],
-                "integrity": "accurate" if fname == pair["accurate"]["image"] else "misleading",
-            }
+        acc_svg, mis_svg = render_pair(pair["mechanism"], pair["data"],
+                                       pair["accurate"]["title"],
+                                       pair["misleading"]["title"])
+        with open(os.path.join(OUT_DIR, pair["accurate"]["image"]), "w", encoding="utf-8") as f:
+            f.write(acc_svg)
+        mapping[pair["accurate"]["image"]] = {
+            "pair_id": pair["pairId"], "mechanism": pair["mechanism"], "integrity": "accurate"}
+        with open(os.path.join(OUT_DIR, pair["misleading"]["image"]), "w", encoding="utf-8") as f:
+            f.write(mis_svg)
+        mapping[pair["misleading"]["image"]] = {
+            "pair_id": pair["pairId"], "mechanism": pair["mechanism"], "integrity": "misleading"}
+
+    # baseline trials
+    for trial in baseline["trials"]:
+        svg = render_trial(trial["mechanism"], trial["data"], trial["title"])
+        with open(os.path.join(OUT_DIR, trial["image"]), "w", encoding="utf-8") as f:
+            f.write(svg)
+        mapping[trial["image"]] = {
+            "trial_id": trial["trialId"], "phase": "baseline",
+            "mechanism": trial["mechanism"], "integrity": trial["integrity"]}
+
+    # transfer trials
+    for trial in transfer["trials"]:
+        svg = render_trial(trial["mechanism"], trial["data"], trial["title"])
+        with open(os.path.join(OUT_DIR, trial["image"]), "w", encoding="utf-8") as f:
+            f.write(svg)
+        mapping[trial["image"]] = {
+            "trial_id": trial["trialId"], "phase": "transfer",
+            "transfer_type": trial["transferType"],
+            "mechanism": trial["mechanism"], "integrity": trial["integrity"]}
 
     with open(DATA_PATH, "w", encoding="utf-8") as f:
         json.dump(spec, f, ensure_ascii=False, indent=2)
@@ -384,11 +518,16 @@ def main():
     with open(JS_DATA_PATH, "w", encoding="utf-8") as f:
         f.write("window.MISVIS_VERIFY_STIMULI = ")
         f.write(json.dumps(spec, ensure_ascii=False, indent=2))
+        f.write(";\n\nwindow.MISVIS_VERIFY_BASELINE = ")
+        f.write(json.dumps(baseline, ensure_ascii=False, indent=2))
+        f.write(";\n\nwindow.MISVIS_VERIFY_TRANSFER = ")
+        f.write(json.dumps(transfer, ensure_ascii=False, indent=2))
         f.write(";\n\nwindow.MISVIS_VERIFY_STIMULUS_MAP = ")
         f.write(json.dumps(mapping, ensure_ascii=False, indent=2))
         f.write(";\n")
 
-    print(f"Generated {counter - 1} SVGs into {OUT_DIR}")
+    print(f"Generated {counter - 1} main + {len(baseline['trials'])} baseline "
+          f"+ {len(transfer['trials'])} transfer SVGs into {OUT_DIR}")
     print(f"Wrote mapping to {MAP_PATH}")
     print(f"Wrote JS data to {JS_DATA_PATH}")
 

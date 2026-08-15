@@ -1,0 +1,106 @@
+{
+  "version": "transfer-v0.1",
+  "trials": [
+    {
+      "trialId": "T-01",
+      "mechanism": "color-emphasis",
+      "integrity": "accurate",
+      "context": "product-satisfaction",
+      "transferType": "near",
+      "image": "S201.svg",
+      "title": "五款产品用户满意度",
+      "data": {
+        "categories": ["产品A", "产品B", "产品C", "产品D", "产品E"],
+        "values": [88, 90, 89, 91, 87],
+        "yLabel": "满意度（%）",
+        "highlightIndex": null
+      }
+    },
+    {
+      "trialId": "T-02",
+      "mechanism": "misleading-title",
+      "integrity": "misleading",
+      "context": "phone-grades",
+      "transferType": "near",
+      "image": "S202.svg",
+      "title": "玩手机导致成绩下降",
+      "data": {
+        "xLabel": "月份",
+        "series1Label": "手机使用时长（小时/日）",
+        "series2Label": "平均成绩（分）",
+        "x": ["1月", "2月", "3月", "4月", "5月", "6月", "7月", "8月"],
+        "series1": [2, 2.5, 3, 3.5, 4, 4.5, 5, 5.5],
+        "series2": [90, 88, 86, 84, 82, 80, 78, 76]
+      }
+    },
+    {
+      "trialId": "T-03",
+      "mechanism": "truncated-axis",
+      "integrity": "misleading",
+      "context": "hospital-success",
+      "transferType": "near",
+      "image": "S203.svg",
+      "title": "两所医院手术成功率",
+      "data": {
+        "categories": ["甲医院", "乙医院"],
+        "values": [98, 96],
+        "yLabel": "成功率（%）",
+        "yMin": 94,
+        "yMax": 99
+      }
+    },
+    {
+      "trialId": "T-04",
+      "mechanism": "cherry-picked-time",
+      "integrity": "accurate",
+      "context": "company-revenue",
+      "transferType": "near",
+      "image": "S204.svg",
+      "title": "某公司年度营收（2014–2023）",
+      "data": {
+        "xLabel": "年份",
+        "yLabel": "营收（百万元）",
+        "years": [2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023],
+        "values": [50, 48, 46, 44, 42, 40, 42, 46, 52, 60]
+      }
+    },
+    {
+      "trialId": "T-05",
+      "mechanism": "dual-axis",
+      "integrity": "misleading",
+      "context": "ice-cream-drowning",
+      "transferType": "far",
+      "image": "S205.svg",
+      "title": "某市冰淇淋销量与溺水事件",
+      "data": {
+        "xLabel": "年份",
+        "leftLabel": "冰淇淋销量（万支）",
+        "rightLabel": "溺水事件（起）",
+        "x": [2019, 2020, 2021, 2022, 2023],
+        "leftValues": [20, 30, 40, 50, 60],
+        "rightValues": [5, 10, 15, 20, 25],
+        "leftMin": 0,
+        "leftMax": 60,
+        "rightMin": 0,
+        "rightMax": 30
+      }
+    },
+    {
+      "trialId": "T-06",
+      "mechanism": "pie-3d",
+      "integrity": "accurate",
+      "context": "energy-mix",
+      "transferType": "far",
+      "image": "S206.svg",
+      "title": "某市能源消费构成",
+      "data": {
+        "slices": [
+          { "label": "煤炭", "value": 55 },
+          { "label": "石油", "value": 25 },
+          { "label": "天然气", "value": 12 },
+          { "label": "其他", "value": 8 }
+        ]
+      }
+    }
+  ]
+}

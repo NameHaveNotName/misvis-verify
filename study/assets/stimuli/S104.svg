@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="720" viewBox="0 0 1200 720">
+<rect x="0.0" y="0.0" width="1200.0" height="720.0" fill="#ffffff" rx="0"/>
+<text x="600.0" y="58.0" font-family="Inter, PingFang SC, Microsoft YaHei, Arial, sans-serif" font-size="30" fill="#10202b" text-anchor="middle" font-weight="bold">三所高校科研经费</text>
+<line x1="90.0" y1="630.0" x2="1150.0" y2="630.0" stroke="#10202b" stroke-width="2"/>
+<circle cx="266.7" cy="415.0" r="16.5" fill="#4f7899"/>
+<text x="266.7" y="471.5" font-family="Inter, PingFang SC, Microsoft YaHei, Arial, sans-serif" font-size="22" fill="#10202b" text-anchor="middle" font-weight="normal">甲校</text>
+<text x="266.7" y="382.5" font-family="Inter, PingFang SC, Microsoft YaHei, Arial, sans-serif" font-size="22" fill="#10202b" text-anchor="middle" font-weight="bold">1</text>
+<circle cx="620.0" cy="415.0" r="66.0" fill="#4f7899"/>
+<text x="620.0" y="521.0" font-family="Inter, PingFang SC, Microsoft YaHei, Arial, sans-serif" font-size="22" fill="#10202b" text-anchor="middle" font-weight="normal">乙校</text>
+<text x="620.0" y="423.0" font-family="Inter, PingFang SC, Microsoft YaHei, Arial, sans-serif" font-size="24" fill="#ffffff" text-anchor="middle" font-weight="bold">4</text>
+<circle cx="973.3" cy="415.0" r="148.4" fill="#4f7899"/>
+<text x="973.3" y="603.4" font-family="Inter, PingFang SC, Microsoft YaHei, Arial, sans-serif" font-size="22" fill="#10202b" text-anchor="middle" font-weight="normal">丙校</text>
+<text x="973.3" y="423.0" font-family="Inter, PingFang SC, Microsoft YaHei, Arial, sans-serif" font-size="24" fill="#ffffff" text-anchor="middle" font-weight="bold">9</text>
+<text x="600.0" y="622.0" font-family="Inter, PingFang SC, Microsoft YaHei, Arial, sans-serif" font-size="18" fill="#63717d" text-anchor="middle" font-weight="normal">单位：亿元</text>
+</svg>

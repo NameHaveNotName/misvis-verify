@@ -1,0 +1,66 @@
+{
+  "version": "baseline-v0.1",
+  "trials": [
+    {
+      "trialId": "B-01",
+      "mechanism": "truncated-axis",
+      "integrity": "accurate",
+      "context": "library-lending",
+      "image": "S101.svg",
+      "title": "两座城市图书馆年借阅量",
+      "data": {
+        "categories": ["甲城", "乙城"],
+        "values": [86, 79],
+        "yLabel": "万册/年",
+        "yMin": 0,
+        "yMax": 90
+      }
+    },
+    {
+      "trialId": "B-02",
+      "mechanism": "cherry-picked-time",
+      "integrity": "misleading",
+      "context": "air-quality",
+      "image": "S102.svg",
+      "title": "某市空气质量优良天数（2014–2019）",
+      "data": {
+        "xLabel": "年份",
+        "yLabel": "优良天数",
+        "years": [2014, 2015, 2016, 2017, 2018, 2019],
+        "values": [180, 175, 170, 165, 160, 155]
+      }
+    },
+    {
+      "trialId": "B-03",
+      "mechanism": "hidden-uncertainty",
+      "integrity": "accurate",
+      "context": "quarterly-profit",
+      "image": "S103.svg",
+      "title": "某公司季度利润预测（含置信区间）",
+      "data": {
+        "xLabel": "季度",
+        "yLabel": "利润（百万元）",
+        "histYears": ["Q1", "Q2", "Q3", "Q4"],
+        "histValues": [30, 32, 31, 34],
+        "forecastYears": ["Q5", "Q6", "Q7", "Q8"],
+        "forecastValues": [35, 37, 40, 44],
+        "uncertaintyHalfwidth": [2, 4, 7, 11],
+        "showBand": true
+      }
+    },
+    {
+      "trialId": "B-04",
+      "mechanism": "area-distortion",
+      "integrity": "misleading",
+      "context": "research-funding",
+      "image": "S104.svg",
+      "title": "三所高校科研经费",
+      "data": {
+        "categories": ["甲校", "乙校", "丙校"],
+        "values": [1, 4, 9],
+        "unit": "亿元",
+        "radiusByValue": true
+      }
+    }
+  ]
+}

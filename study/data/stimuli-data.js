@@ -662,6 +662,330 @@ window.MISVIS_VERIFY_STIMULI = {
   ]
 };
 
+window.MISVIS_VERIFY_BASELINE = {
+  "version": "baseline-v0.1",
+  "trials": [
+    {
+      "trialId": "B-01",
+      "mechanism": "truncated-axis",
+      "integrity": "accurate",
+      "context": "library-lending",
+      "image": "S101.svg",
+      "title": "两座城市图书馆年借阅量",
+      "data": {
+        "categories": [
+          "甲城",
+          "乙城"
+        ],
+        "values": [
+          86,
+          79
+        ],
+        "yLabel": "万册/年",
+        "yMin": 0,
+        "yMax": 90
+      }
+    },
+    {
+      "trialId": "B-02",
+      "mechanism": "cherry-picked-time",
+      "integrity": "misleading",
+      "context": "air-quality",
+      "image": "S102.svg",
+      "title": "某市空气质量优良天数（2014–2019）",
+      "data": {
+        "xLabel": "年份",
+        "yLabel": "优良天数",
+        "years": [
+          2014,
+          2015,
+          2016,
+          2017,
+          2018,
+          2019
+        ],
+        "values": [
+          180,
+          175,
+          170,
+          165,
+          160,
+          155
+        ]
+      }
+    },
+    {
+      "trialId": "B-03",
+      "mechanism": "hidden-uncertainty",
+      "integrity": "accurate",
+      "context": "quarterly-profit",
+      "image": "S103.svg",
+      "title": "某公司季度利润预测（含置信区间）",
+      "data": {
+        "xLabel": "季度",
+        "yLabel": "利润（百万元）",
+        "histYears": [
+          "Q1",
+          "Q2",
+          "Q3",
+          "Q4"
+        ],
+        "histValues": [
+          30,
+          32,
+          31,
+          34
+        ],
+        "forecastYears": [
+          "Q5",
+          "Q6",
+          "Q7",
+          "Q8"
+        ],
+        "forecastValues": [
+          35,
+          37,
+          40,
+          44
+        ],
+        "uncertaintyHalfwidth": [
+          2,
+          4,
+          7,
+          11
+        ],
+        "showBand": true
+      }
+    },
+    {
+      "trialId": "B-04",
+      "mechanism": "area-distortion",
+      "integrity": "misleading",
+      "context": "research-funding",
+      "image": "S104.svg",
+      "title": "三所高校科研经费",
+      "data": {
+        "categories": [
+          "甲校",
+          "乙校",
+          "丙校"
+        ],
+        "values": [
+          1,
+          4,
+          9
+        ],
+        "unit": "亿元",
+        "radiusByValue": true
+      }
+    }
+  ]
+};
+
+window.MISVIS_VERIFY_TRANSFER = {
+  "version": "transfer-v0.1",
+  "trials": [
+    {
+      "trialId": "T-01",
+      "mechanism": "color-emphasis",
+      "integrity": "accurate",
+      "context": "product-satisfaction",
+      "transferType": "near",
+      "image": "S201.svg",
+      "title": "五款产品用户满意度",
+      "data": {
+        "categories": [
+          "产品A",
+          "产品B",
+          "产品C",
+          "产品D",
+          "产品E"
+        ],
+        "values": [
+          88,
+          90,
+          89,
+          91,
+          87
+        ],
+        "yLabel": "满意度（%）",
+        "highlightIndex": null
+      }
+    },
+    {
+      "trialId": "T-02",
+      "mechanism": "misleading-title",
+      "integrity": "misleading",
+      "context": "phone-grades",
+      "transferType": "near",
+      "image": "S202.svg",
+      "title": "玩手机导致成绩下降",
+      "data": {
+        "xLabel": "月份",
+        "series1Label": "手机使用时长（小时/日）",
+        "series2Label": "平均成绩（分）",
+        "x": [
+          "1月",
+          "2月",
+          "3月",
+          "4月",
+          "5月",
+          "6月",
+          "7月",
+          "8月"
+        ],
+        "series1": [
+          2,
+          2.5,
+          3,
+          3.5,
+          4,
+          4.5,
+          5,
+          5.5
+        ],
+        "series2": [
+          90,
+          88,
+          86,
+          84,
+          82,
+          80,
+          78,
+          76
+        ]
+      }
+    },
+    {
+      "trialId": "T-03",
+      "mechanism": "truncated-axis",
+      "integrity": "misleading",
+      "context": "hospital-success",
+      "transferType": "near",
+      "image": "S203.svg",
+      "title": "两所医院手术成功率",
+      "data": {
+        "categories": [
+          "甲医院",
+          "乙医院"
+        ],
+        "values": [
+          98,
+          96
+        ],
+        "yLabel": "成功率（%）",
+        "yMin": 94,
+        "yMax": 99
+      }
+    },
+    {
+      "trialId": "T-04",
+      "mechanism": "cherry-picked-time",
+      "integrity": "accurate",
+      "context": "company-revenue",
+      "transferType": "near",
+      "image": "S204.svg",
+      "title": "某公司年度营收（2014–2023）",
+      "data": {
+        "xLabel": "年份",
+        "yLabel": "营收（百万元）",
+        "years": [
+          2014,
+          2015,
+          2016,
+          2017,
+          2018,
+          2019,
+          2020,
+          2021,
+          2022,
+          2023
+        ],
+        "values": [
+          50,
+          48,
+          46,
+          44,
+          42,
+          40,
+          42,
+          46,
+          52,
+          60
+        ]
+      }
+    },
+    {
+      "trialId": "T-05",
+      "mechanism": "dual-axis",
+      "integrity": "misleading",
+      "context": "ice-cream-drowning",
+      "transferType": "far",
+      "image": "S205.svg",
+      "title": "某市冰淇淋销量与溺水事件",
+      "data": {
+        "xLabel": "年份",
+        "leftLabel": "冰淇淋销量（万支）",
+        "rightLabel": "溺水事件（起）",
+        "x": [
+          2019,
+          2020,
+          2021,
+          2022,
+          2023
+        ],
+        "leftValues": [
+          20,
+          30,
+          40,
+          50,
+          60
+        ],
+        "rightValues": [
+          5,
+          10,
+          15,
+          20,
+          25
+        ],
+        "leftMin": 0,
+        "leftMax": 60,
+        "rightMin": 0,
+        "rightMax": 30
+      }
+    },
+    {
+      "trialId": "T-06",
+      "mechanism": "pie-3d",
+      "integrity": "accurate",
+      "context": "energy-mix",
+      "transferType": "far",
+      "image": "S206.svg",
+      "title": "某市能源消费构成",
+      "data": {
+        "slices": [
+          {
+            "label": "煤炭",
+            "value": 55
+          },
+          {
+            "label": "石油",
+            "value": 25
+          },
+          {
+            "label": "天然气",
+            "value": 12
+          },
+          {
+            "label": "其他",
+            "value": 8
+          }
+        ]
+      }
+    }
+  ]
+};
+
 window.MISVIS_VERIFY_STIMULUS_MAP = {
   "S001.svg": {
     "pair_id": "TA-01",
@@ -782,5 +1106,71 @@ window.MISVIS_VERIFY_STIMULUS_MAP = {
     "pair_id": "MT-02",
     "mechanism": "misleading-title",
     "integrity": "misleading"
+  },
+  "S101.svg": {
+    "trial_id": "B-01",
+    "phase": "baseline",
+    "mechanism": "truncated-axis",
+    "integrity": "accurate"
+  },
+  "S102.svg": {
+    "trial_id": "B-02",
+    "phase": "baseline",
+    "mechanism": "cherry-picked-time",
+    "integrity": "misleading"
+  },
+  "S103.svg": {
+    "trial_id": "B-03",
+    "phase": "baseline",
+    "mechanism": "hidden-uncertainty",
+    "integrity": "accurate"
+  },
+  "S104.svg": {
+    "trial_id": "B-04",
+    "phase": "baseline",
+    "mechanism": "area-distortion",
+    "integrity": "misleading"
+  },
+  "S201.svg": {
+    "trial_id": "T-01",
+    "phase": "transfer",
+    "transfer_type": "near",
+    "mechanism": "color-emphasis",
+    "integrity": "accurate"
+  },
+  "S202.svg": {
+    "trial_id": "T-02",
+    "phase": "transfer",
+    "transfer_type": "near",
+    "mechanism": "misleading-title",
+    "integrity": "misleading"
+  },
+  "S203.svg": {
+    "trial_id": "T-03",
+    "phase": "transfer",
+    "transfer_type": "near",
+    "mechanism": "truncated-axis",
+    "integrity": "misleading"
+  },
+  "S204.svg": {
+    "trial_id": "T-04",
+    "phase": "transfer",
+    "transfer_type": "near",
+    "mechanism": "cherry-picked-time",
+    "integrity": "accurate"
+  },
+  "S205.svg": {
+    "trial_id": "T-05",
+    "phase": "transfer",
+    "transfer_type": "far",
+    "mechanism": "dual-axis",
+    "integrity": "misleading"
+  },
+  "S206.svg": {
+    "trial_id": "T-06",
+    "phase": "transfer",
+    "transfer_type": "far",
+    "mechanism": "pie-3d",
+    "integrity": "accurate"
   }
 };

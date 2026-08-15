@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="720" viewBox="0 0 1200 720">
+<rect x="0.0" y="0.0" width="1200.0" height="720.0" fill="#ffffff" rx="0"/>
+<text x="600.0" y="58.0" font-family="Inter, PingFang SC, Microsoft YaHei, Arial, sans-serif" font-size="30" fill="#10202b" text-anchor="middle" font-weight="bold">五款产品用户满意度</text>
+<line x1="90.0" y1="606.2" x2="1150.0" y2="606.2" stroke="#eef0ef" stroke-width="1"/>
+<line x1="90.0" y1="606.2" x2="84.0" y2="606.2" stroke="#d9ddd8" stroke-width="2"/>
+<text x="78.0" y="614.2" font-family="Inter, PingFang SC, Microsoft YaHei, Arial, sans-serif" font-size="20" fill="#63717d" text-anchor="end" font-weight="normal">75</text>
+<line x1="90.0" y1="492.8" x2="1150.0" y2="492.8" stroke="#eef0ef" stroke-width="1"/>
+<line x1="90.0" y1="492.8" x2="84.0" y2="492.8" stroke="#d9ddd8" stroke-width="2"/>
+<text x="78.0" y="500.8" font-family="Inter, PingFang SC, Microsoft YaHei, Arial, sans-serif" font-size="20" fill="#63717d" text-anchor="end" font-weight="normal">80</text>
+<line x1="90.0" y1="379.3" x2="1150.0" y2="379.3" stroke="#eef0ef" stroke-width="1"/>
+<line x1="90.0" y1="379.3" x2="84.0" y2="379.3" stroke="#d9ddd8" stroke-width="2"/>
+<text x="78.0" y="387.3" font-family="Inter, PingFang SC, Microsoft YaHei, Arial, sans-serif" font-size="20" fill="#63717d" text-anchor="end" font-weight="normal">85</text>
+<line x1="90.0" y1="265.9" x2="1150.0" y2="265.9" stroke="#eef0ef" stroke-width="1"/>
+<line x1="90.0" y1="265.9" x2="84.0" y2="265.9" stroke="#d9ddd8" stroke-width="2"/>
+<text x="78.0" y="273.9" font-family="Inter, PingFang SC, Microsoft YaHei, Arial, sans-serif" font-size="20" fill="#63717d" text-anchor="end" font-weight="normal">90</text>
+<line x1="90.0" y1="152.5" x2="1150.0" y2="152.5" stroke="#eef0ef" stroke-width="1"/>
+<line x1="90.0" y1="152.5" x2="84.0" y2="152.5" stroke="#d9ddd8" stroke-width="2"/>
+<text x="78.0" y="160.5" font-family="Inter, PingFang SC, Microsoft YaHei, Arial, sans-serif" font-size="20" fill="#63717d" text-anchor="end" font-weight="normal">95</text>
+<line x1="90.0" y1="630.0" x2="1150.0" y2="630.0" stroke="#10202b" stroke-width="2"/>
+<line x1="90.0" y1="140.0" x2="90.0" y2="630.0" stroke="#10202b" stroke-width="2"/>
+<text x="196.0" y="674.0" font-family="Inter, PingFang SC, Microsoft YaHei, Arial, sans-serif" font-size="22" fill="#10202b" text-anchor="middle" font-weight="normal">产品A</text>
+<text x="408.0" y="674.0" font-family="Inter, PingFang SC, Microsoft YaHei, Arial, sans-serif" font-size="22" fill="#10202b" text-anchor="middle" font-weight="normal">产品B</text>
+<text x="620.0" y="674.0" font-family="Inter, PingFang SC, Microsoft YaHei, Arial, sans-serif" font-size="22" fill="#10202b" text-anchor="middle" font-weight="normal">产品C</text>
+<text x="832.0" y="674.0" font-family="Inter, PingFang SC, Microsoft YaHei, Arial, sans-serif" font-size="22" fill="#10202b" text-anchor="middle" font-weight="normal">产品D</text>
+<text x="1044.0" y="674.0" font-family="Inter, PingFang SC, Microsoft YaHei, Arial, sans-serif" font-size="22" fill="#10202b" text-anchor="middle" font-weight="normal">产品E</text>
+<text x="70.0" y="120.0" font-family="Inter, PingFang SC, Microsoft YaHei, Arial, sans-serif" font-size="20" fill="#63717d" text-anchor="start" font-weight="normal">满意度（%）</text>
+<rect x="143.0" y="311.3" width="106.0" height="318.7" fill="#4f7899" rx="8"/>
+<text x="196.0" y="297.3" font-family="Inter, PingFang SC, Microsoft YaHei, Arial, sans-serif" font-size="24" fill="#10202b" text-anchor="middle" font-weight="bold">88</text>
+<rect x="355.0" y="265.9" width="106.0" height="364.1" fill="#4f7899" rx="8"/>
+<text x="408.0" y="251.9" font-family="Inter, PingFang SC, Microsoft YaHei, Arial, sans-serif" font-size="24" fill="#10202b" text-anchor="middle" font-weight="bold">90</text>
+<rect x="567.0" y="288.6" width="106.0" height="341.4" fill="#4f7899" rx="8"/>
+<text x="620.0" y="274.6" font-family="Inter, PingFang SC, Microsoft YaHei, Arial, sans-serif" font-size="24" fill="#10202b" text-anchor="middle" font-weight="bold">89</text>
+<rect x="779.0" y="243.2" width="106.0" height="386.8" fill="#4f7899" rx="8"/>
+<text x="832.0" y="229.2" font-family="Inter, PingFang SC, Microsoft YaHei, Arial, sans-serif" font-size="24" fill="#10202b" text-anchor="middle" font-weight="bold">91</text>
+<rect x="991.0" y="334.0" width="106.0" height="296.0" fill="#4f7899" rx="8"/>
+<text x="1044.0" y="320.0" font-family="Inter, PingFang SC, Microsoft YaHei, Arial, sans-serif" font-size="24" fill="#10202b" text-anchor="middle" font-weight="bold">87</text>
+</svg>

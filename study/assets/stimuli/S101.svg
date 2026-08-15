@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="720" viewBox="0 0 1200 720">
+<rect x="0.0" y="0.0" width="1200.0" height="720.0" fill="#ffffff" rx="0"/>
+<text x="600.0" y="58.0" font-family="Inter, PingFang SC, Microsoft YaHei, Arial, sans-serif" font-size="30" fill="#10202b" text-anchor="middle" font-weight="bold">两座城市图书馆年借阅量</text>
+<line x1="90.0" y1="630.0" x2="1150.0" y2="630.0" stroke="#eef0ef" stroke-width="1"/>
+<line x1="90.0" y1="630.0" x2="84.0" y2="630.0" stroke="#d9ddd8" stroke-width="2"/>
+<text x="78.0" y="638.0" font-family="Inter, PingFang SC, Microsoft YaHei, Arial, sans-serif" font-size="20" fill="#63717d" text-anchor="end" font-weight="normal">0</text>
+<line x1="90.0" y1="521.1" x2="1150.0" y2="521.1" stroke="#eef0ef" stroke-width="1"/>
+<line x1="90.0" y1="521.1" x2="84.0" y2="521.1" stroke="#d9ddd8" stroke-width="2"/>
+<text x="78.0" y="529.1" font-family="Inter, PingFang SC, Microsoft YaHei, Arial, sans-serif" font-size="20" fill="#63717d" text-anchor="end" font-weight="normal">20</text>
+<line x1="90.0" y1="412.2" x2="1150.0" y2="412.2" stroke="#eef0ef" stroke-width="1"/>
+<line x1="90.0" y1="412.2" x2="84.0" y2="412.2" stroke="#d9ddd8" stroke-width="2"/>
+<text x="78.0" y="420.2" font-family="Inter, PingFang SC, Microsoft YaHei, Arial, sans-serif" font-size="20" fill="#63717d" text-anchor="end" font-weight="normal">40</text>
+<line x1="90.0" y1="303.3" x2="1150.0" y2="303.3" stroke="#eef0ef" stroke-width="1"/>
+<line x1="90.0" y1="303.3" x2="84.0" y2="303.3" stroke="#d9ddd8" stroke-width="2"/>
+<text x="78.0" y="311.3" font-family="Inter, PingFang SC, Microsoft YaHei, Arial, sans-serif" font-size="20" fill="#63717d" text-anchor="end" font-weight="normal">60</text>
+<line x1="90.0" y1="194.4" x2="1150.0" y2="194.4" stroke="#eef0ef" stroke-width="1"/>
+<line x1="90.0" y1="194.4" x2="84.0" y2="194.4" stroke="#d9ddd8" stroke-width="2"/>
+<text x="78.0" y="202.4" font-family="Inter, PingFang SC, Microsoft YaHei, Arial, sans-serif" font-size="20" fill="#63717d" text-anchor="end" font-weight="normal">80</text>
+<line x1="90.0" y1="630.0" x2="1150.0" y2="630.0" stroke="#10202b" stroke-width="2"/>
+<line x1="90.0" y1="140.0" x2="90.0" y2="630.0" stroke="#10202b" stroke-width="2"/>
+<text x="355.0" y="674.0" font-family="Inter, PingFang SC, Microsoft YaHei, Arial, sans-serif" font-size="22" fill="#10202b" text-anchor="middle" font-weight="normal">甲城</text>
+<text x="885.0" y="674.0" font-family="Inter, PingFang SC, Microsoft YaHei, Arial, sans-serif" font-size="22" fill="#10202b" text-anchor="middle" font-weight="normal">乙城</text>
+<text x="70.0" y="120.0" font-family="Inter, PingFang SC, Microsoft YaHei, Arial, sans-serif" font-size="20" fill="#63717d" text-anchor="start" font-weight="normal">万册/年</text>
+<rect x="222.5" y="161.8" width="265.0" height="468.2" fill="#4f7899" rx="8"/>
+<text x="355.0" y="147.8" font-family="Inter, PingFang SC, Microsoft YaHei, Arial, sans-serif" font-size="24" fill="#10202b" text-anchor="middle" font-weight="bold">86</text>
+<rect x="752.5" y="199.9" width="265.0" height="430.1" fill="#4f7899" rx="8"/>
+<text x="885.0" y="185.9" font-family="Inter, PingFang SC, Microsoft YaHei, Arial, sans-serif" font-size="24" fill="#10202b" text-anchor="middle" font-weight="bold">79</text>
+</svg>

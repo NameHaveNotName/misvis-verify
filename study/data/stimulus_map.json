@@ -118,5 +118,71 @@
     "pair_id": "MT-02",
     "mechanism": "misleading-title",
     "integrity": "misleading"
+  },
+  "S101.svg": {
+    "trial_id": "B-01",
+    "phase": "baseline",
+    "mechanism": "truncated-axis",
+    "integrity": "accurate"
+  },
+  "S102.svg": {
+    "trial_id": "B-02",
+    "phase": "baseline",
+    "mechanism": "cherry-picked-time",
+    "integrity": "misleading"
+  },
+  "S103.svg": {
+    "trial_id": "B-03",
+    "phase": "baseline",
+    "mechanism": "hidden-uncertainty",
+    "integrity": "accurate"
+  },
+  "S104.svg": {
+    "trial_id": "B-04",
+    "phase": "baseline",
+    "mechanism": "area-distortion",
+    "integrity": "misleading"
+  },
+  "S201.svg": {
+    "trial_id": "T-01",
+    "phase": "transfer",
+    "transfer_type": "near",
+    "mechanism": "color-emphasis",
+    "integrity": "accurate"
+  },
+  "S202.svg": {
+    "trial_id": "T-02",
+    "phase": "transfer",
+    "transfer_type": "near",
+    "mechanism": "misleading-title",
+    "integrity": "misleading"
+  },
+  "S203.svg": {
+    "trial_id": "T-03",
+    "phase": "transfer",
+    "transfer_type": "near",
+    "mechanism": "truncated-axis",
+    "integrity": "misleading"
+  },
+  "S204.svg": {
+    "trial_id": "T-04",
+    "phase": "transfer",
+    "transfer_type": "near",
+    "mechanism": "cherry-picked-time",
+    "integrity": "accurate"
+  },
+  "S205.svg": {
+    "trial_id": "T-05",
+    "phase": "transfer",
+    "transfer_type": "far",
+    "mechanism": "dual-axis",
+    "integrity": "misleading"
+  },
+  "S206.svg": {
+    "trial_id": "T-06",
+    "phase": "transfer",
+    "transfer_type": "far",
+    "mechanism": "pie-3d",
+    "integrity": "accurate"
   }
 }

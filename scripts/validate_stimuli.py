@@ -22,6 +22,8 @@ import sys
 HERE = os.path.dirname(os.path.abspath(__file__))
 ROOT = os.path.dirname(HERE)
 DATA_PATH = os.path.join(ROOT, "study", "data", "stimuli.json")
+BASE_PATH = os.path.join(ROOT, "study", "data", "baseline.json")
+TRANS_PATH = os.path.join(ROOT, "study", "data", "transfer.json")
 MAP_PATH = os.path.join(ROOT, "study", "data", "stimulus_map.json")
 OUT_DIR = os.path.join(ROOT, "study", "assets", "stimuli")
 
@@ -32,6 +34,8 @@ ALLOWED_MECHANISMS = {
     "area-distortion",
     "color-emphasis",
     "misleading-title",
+    "dual-axis",
+    "pie-3d",
 }
 ALLOWED_INTEGRITY = {"accurate", "misleading"}
 
@@ -100,7 +104,7 @@ for sid in stimulus_ids:
 if os.path.exists(MAP_PATH):
     with open(MAP_PATH, encoding="utf-8") as f:
         mapping = json.load(f)
-    check(len(mapping) == 24, f"mapping has {len(mapping)} entries, expected 24")
+    check(len(mapping) == 34, f"mapping has {len(mapping)} entries, expected 34")
     for sid, meta in mapping.items():
         check(meta.get("integrity") in ALLOWED_INTEGRITY,
               f"mapping {sid}: invalid integrity {meta.get('integrity')}")
@@ -109,8 +113,44 @@ if os.path.exists(MAP_PATH):
 else:
     warnings.append("stimulus_map.json not found")
 
+# Validate baseline and transfer files
+for path, expected, name in ((BASE_PATH, 4, "baseline"),
+                             (TRANS_PATH, 6, "transfer")):
+    with open(path, encoding="utf-8") as f:
+        spec = json.load(f)
+    trials = spec.get("trials", [])
+    check(len(trials) == expected, f"{name}: expected {expected} trials, got {len(trials)}")
+    for t in trials:
+        check(t.get("mechanism") in ALLOWED_MECHANISMS,
+              f"{name} {t.get('trialId')}: invalid mechanism {t.get('mechanism')}")
+        check(t.get("integrity") in ALLOWED_INTEGRITY,
+              f"{name} {t.get('trialId')}: invalid integrity {t.get('integrity')}")
+        sid = t.get("image")
+        check(sid and os.path.exists(os.path.join(OUT_DIR, sid)),
+              f"{name} {t.get('trialId')}: missing image {sid}")
+        if name == "transfer":
+            check(t.get("transferType") in {"near", "far"},
+                  f"transfer {t.get('trialId')}: invalid transferType")
+
+# Balance checks
+with open(BASE_PATH, encoding="utf-8") as f:
+    b_trials = json.load(f)["trials"]
+b_acc = sum(1 for t in b_trials if t["integrity"] == "accurate")
+b_mis = sum(1 for t in b_trials if t["integrity"] == "misleading")
+check(b_acc == 2 and b_mis == 2, f"baseline balance: {b_acc} accurate / {b_mis} misleading (expected 2/2)")
+
+with open(TRANS_PATH, encoding="utf-8") as f:
+    t_trials = json.load(f)["trials"]
+t_acc = sum(1 for t in t_trials if t["integrity"] == "accurate")
+t_mis = sum(1 for t in t_trials if t["integrity"] == "misleading")
+t_far = sum(1 for t in t_trials if t["transferType"] == "far")
+check(t_acc == 3 and t_mis == 3, f"transfer balance: {t_acc} accurate / {t_mis} misleading (expected 3/3)")
+check(t_far == 2, f"transfer far trials: {t_far} (expected 2)")
+
 print(f"Pairs: {len(pairs)}")
 print(f"Stimuli: {len(stimulus_ids)}")
+print(f"Baseline trials: {len(b_trials)} ({b_acc} acc / {b_mis} mis)")
+print(f"Transfer trials: {len(t_trials)} ({t_acc} acc / {t_mis} mis, {t_far} far)")
 print(f"Errors: {len(errors)}")
 print(f"Warnings: {len(warnings)}")
 

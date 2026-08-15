@@ -1,32 +1,32 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1200" height="720" viewBox="0 0 1200 720">
 <rect x="0.0" y="0.0" width="1200.0" height="720.0" fill="#ffffff" rx="0"/>
-<text x="600.0" y="58" font-family="Inter, PingFang SC, Microsoft YaHei, Arial, sans-serif" font-size="30" fill="#10202b" text-anchor="middle" font-weight="bold">某地未来日均温预测（含置信区间）</text>
+<text x="600.0" y="58.0" font-family="Inter, PingFang SC, Microsoft YaHei, Arial, sans-serif" font-size="30" fill="#10202b" text-anchor="middle" font-weight="bold">某地未来日均温预测（含置信区间）</text>
 <line x1="90.0" y1="630.0" x2="1150.0" y2="630.0" stroke="#eef0ef" stroke-width="1"/>
 <line x1="90.0" y1="630.0" x2="84.0" y2="630.0" stroke="#d9ddd8" stroke-width="2"/>
-<text x="78" y="638.0" font-family="Inter, PingFang SC, Microsoft YaHei, Arial, sans-serif" font-size="20" fill="#63717d" text-anchor="end" font-weight="normal">0</text>
+<text x="78.0" y="638.0" font-family="Inter, PingFang SC, Microsoft YaHei, Arial, sans-serif" font-size="20" fill="#63717d" text-anchor="end" font-weight="normal">0</text>
 <line x1="90.0" y1="499.0" x2="1150.0" y2="499.0" stroke="#eef0ef" stroke-width="1"/>
 <line x1="90.0" y1="499.0" x2="84.0" y2="499.0" stroke="#d9ddd8" stroke-width="2"/>
-<text x="78" y="506.98395721925135" font-family="Inter, PingFang SC, Microsoft YaHei, Arial, sans-serif" font-size="20" fill="#63717d" text-anchor="end" font-weight="normal">10</text>
+<text x="78.0" y="507.0" font-family="Inter, PingFang SC, Microsoft YaHei, Arial, sans-serif" font-size="20" fill="#63717d" text-anchor="end" font-weight="normal">10</text>
 <line x1="90.0" y1="368.0" x2="1150.0" y2="368.0" stroke="#eef0ef" stroke-width="1"/>
 <line x1="90.0" y1="368.0" x2="84.0" y2="368.0" stroke="#d9ddd8" stroke-width="2"/>
-<text x="78" y="375.9679144385027" font-family="Inter, PingFang SC, Microsoft YaHei, Arial, sans-serif" font-size="20" fill="#63717d" text-anchor="end" font-weight="normal">20</text>
+<text x="78.0" y="376.0" font-family="Inter, PingFang SC, Microsoft YaHei, Arial, sans-serif" font-size="20" fill="#63717d" text-anchor="end" font-weight="normal">20</text>
 <line x1="90.0" y1="237.0" x2="1150.0" y2="237.0" stroke="#eef0ef" stroke-width="1"/>
 <line x1="90.0" y1="237.0" x2="84.0" y2="237.0" stroke="#d9ddd8" stroke-width="2"/>
-<text x="78" y="244.95187165775405" font-family="Inter, PingFang SC, Microsoft YaHei, Arial, sans-serif" font-size="20" fill="#63717d" text-anchor="end" font-weight="normal">30</text>
+<text x="78.0" y="245.0" font-family="Inter, PingFang SC, Microsoft YaHei, Arial, sans-serif" font-size="20" fill="#63717d" text-anchor="end" font-weight="normal">30</text>
 <line x1="90.0" y1="630.0" x2="1150.0" y2="630.0" stroke="#10202b" stroke-width="2"/>
 <line x1="90.0" y1="140.0" x2="90.0" y2="630.0" stroke="#10202b" stroke-width="2"/>
-<text x="90.0" y="674" font-family="Inter, PingFang SC, Microsoft YaHei, Arial, sans-serif" font-size="22" fill="#10202b" text-anchor="middle" font-weight="normal">6-01</text>
-<text x="196.0" y="674" font-family="Inter, PingFang SC, Microsoft YaHei, Arial, sans-serif" font-size="22" fill="#10202b" text-anchor="middle" font-weight="normal">6-02</text>
-<text x="302.0" y="674" font-family="Inter, PingFang SC, Microsoft YaHei, Arial, sans-serif" font-size="22" fill="#10202b" text-anchor="middle" font-weight="normal">6-03</text>
-<text x="408.0" y="674" font-family="Inter, PingFang SC, Microsoft YaHei, Arial, sans-serif" font-size="22" fill="#10202b" text-anchor="middle" font-weight="normal">6-04</text>
-<text x="514.0" y="674" font-family="Inter, PingFang SC, Microsoft YaHei, Arial, sans-serif" font-size="22" fill="#10202b" text-anchor="middle" font-weight="normal">6-05</text>
-<text x="620.0" y="674" font-family="Inter, PingFang SC, Microsoft YaHei, Arial, sans-serif" font-size="22" fill="#10202b" text-anchor="middle" font-weight="normal">6-06</text>
-<text x="726.0" y="674" font-family="Inter, PingFang SC, Microsoft YaHei, Arial, sans-serif" font-size="22" fill="#10202b" text-anchor="middle" font-weight="normal">6-07</text>
-<text x="832.0" y="674" font-family="Inter, PingFang SC, Microsoft YaHei, Arial, sans-serif" font-size="22" fill="#10202b" text-anchor="middle" font-weight="normal">6-08</text>
-<text x="938.0" y="674" font-family="Inter, PingFang SC, Microsoft YaHei, Arial, sans-serif" font-size="22" fill="#10202b" text-anchor="middle" font-weight="normal">6-09</text>
-<text x="1044.0" y="674" font-family="Inter, PingFang SC, Microsoft YaHei, Arial, sans-serif" font-size="22" fill="#10202b" text-anchor="middle" font-weight="normal">6-10</text>
-<text x="1150.0" y="674" font-family="Inter, PingFang SC, Microsoft YaHei, Arial, sans-serif" font-size="22" fill="#10202b" text-anchor="middle" font-weight="normal">6-11</text>
-<text x="70" y="120" font-family="Inter, PingFang SC, Microsoft YaHei, Arial, sans-serif" font-size="20" fill="#63717d" text-anchor="start" font-weight="normal">日均温（℃）</text>
+<text x="90.0" y="674.0" font-family="Inter, PingFang SC, Microsoft YaHei, Arial, sans-serif" font-size="22" fill="#10202b" text-anchor="middle" font-weight="normal">6-01</text>
+<text x="196.0" y="674.0" font-family="Inter, PingFang SC, Microsoft YaHei, Arial, sans-serif" font-size="22" fill="#10202b" text-anchor="middle" font-weight="normal">6-02</text>
+<text x="302.0" y="674.0" font-family="Inter, PingFang SC, Microsoft YaHei, Arial, sans-serif" font-size="22" fill="#10202b" text-anchor="middle" font-weight="normal">6-03</text>
+<text x="408.0" y="674.0" font-family="Inter, PingFang SC, Microsoft YaHei, Arial, sans-serif" font-size="22" fill="#10202b" text-anchor="middle" font-weight="normal">6-04</text>
+<text x="514.0" y="674.0" font-family="Inter, PingFang SC, Microsoft YaHei, Arial, sans-serif" font-size="22" fill="#10202b" text-anchor="middle" font-weight="normal">6-05</text>
+<text x="620.0" y="674.0" font-family="Inter, PingFang SC, Microsoft YaHei, Arial, sans-serif" font-size="22" fill="#10202b" text-anchor="middle" font-weight="normal">6-06</text>
+<text x="726.0" y="674.0" font-family="Inter, PingFang SC, Microsoft YaHei, Arial, sans-serif" font-size="22" fill="#10202b" text-anchor="middle" font-weight="normal">6-07</text>
+<text x="832.0" y="674.0" font-family="Inter, PingFang SC, Microsoft YaHei, Arial, sans-serif" font-size="22" fill="#10202b" text-anchor="middle" font-weight="normal">6-08</text>
+<text x="938.0" y="674.0" font-family="Inter, PingFang SC, Microsoft YaHei, Arial, sans-serif" font-size="22" fill="#10202b" text-anchor="middle" font-weight="normal">6-09</text>
+<text x="1044.0" y="674.0" font-family="Inter, PingFang SC, Microsoft YaHei, Arial, sans-serif" font-size="22" fill="#10202b" text-anchor="middle" font-weight="normal">6-10</text>
+<text x="1150.0" y="674.0" font-family="Inter, PingFang SC, Microsoft YaHei, Arial, sans-serif" font-size="22" fill="#10202b" text-anchor="middle" font-weight="normal">6-11</text>
+<text x="70.0" y="120.0" font-family="Inter, PingFang SC, Microsoft YaHei, Arial, sans-serif" font-size="20" fill="#63717d" text-anchor="start" font-weight="normal">日均温（℃）</text>
 <polygon points="726.0,322.1 832.0,295.9 938.0,263.2 1044.0,223.9 1150.0,184.5 1150.0,394.2 1044.0,381.1 938.0,368.0 832.0,361.4 726.0,361.4" fill="#dbe4ec"/>
 <polyline points="90.0,394.2 196.0,381.1 302.0,368.0 408.0,354.9 514.0,341.8 620.0,354.9" fill="none" stroke="#4f7899" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/>
 <circle cx="90.0" cy="394.2" r="5.0" fill="#4f7899"/>
@@ -41,6 +41,6 @@
 <circle cx="938.0" cy="315.6" r="5.0" fill="#ef6a55"/>
 <circle cx="1044.0" cy="302.5" r="5.0" fill="#ef6a55"/>
 <circle cx="1150.0" cy="289.4" r="5.0" fill="#ef6a55"/>
-<text x="1150" y="146" font-family="Inter, PingFang SC, Microsoft YaHei, Arial, sans-serif" font-size="20" fill="#4f7899" text-anchor="end" font-weight="normal">历史数据</text>
-<text x="1150" y="176" font-family="Inter, PingFang SC, Microsoft YaHei, Arial, sans-serif" font-size="20" fill="#ef6a55" text-anchor="end" font-weight="normal">预测值</text>
+<text x="1150.0" y="146.0" font-family="Inter, PingFang SC, Microsoft YaHei, Arial, sans-serif" font-size="20" fill="#4f7899" text-anchor="end" font-weight="normal">历史数据</text>
+<text x="1150.0" y="176.0" font-family="Inter, PingFang SC, Microsoft YaHei, Arial, sans-serif" font-size="20" fill="#ef6a55" text-anchor="end" font-weight="normal">预测值</text>
 </svg>

@@ -1,15 +1,15 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1200" height="720" viewBox="0 0 1200 720">
 <rect x="0.0" y="0.0" width="1200.0" height="720.0" fill="#ffffff" rx="0"/>
-<text x="600.0" y="58" font-family="Inter, PingFang SC, Microsoft YaHei, Arial, sans-serif" font-size="30" fill="#10202b" text-anchor="middle" font-weight="bold">三座城市常住人口</text>
+<text x="600.0" y="58.0" font-family="Inter, PingFang SC, Microsoft YaHei, Arial, sans-serif" font-size="30" fill="#10202b" text-anchor="middle" font-weight="bold">三座城市常住人口</text>
 <line x1="90.0" y1="630.0" x2="1150.0" y2="630.0" stroke="#10202b" stroke-width="2"/>
 <circle cx="266.7" cy="415.0" r="16.5" fill="#4f7899"/>
-<text x="266.66666666666663" y="471.4888888888889" font-family="Inter, PingFang SC, Microsoft YaHei, Arial, sans-serif" font-size="22" fill="#10202b" text-anchor="middle" font-weight="normal">城市A</text>
-<text x="266.66666666666663" y="382.5111111111111" font-family="Inter, PingFang SC, Microsoft YaHei, Arial, sans-serif" font-size="22" fill="#10202b" text-anchor="middle" font-weight="bold">100</text>
+<text x="266.7" y="471.5" font-family="Inter, PingFang SC, Microsoft YaHei, Arial, sans-serif" font-size="22" fill="#10202b" text-anchor="middle" font-weight="normal">城市A</text>
+<text x="266.7" y="382.5" font-family="Inter, PingFang SC, Microsoft YaHei, Arial, sans-serif" font-size="22" fill="#10202b" text-anchor="middle" font-weight="bold">100</text>
 <circle cx="620.0" cy="415.0" r="66.0" fill="#4f7899"/>
-<text x="620.0" y="520.9555555555555" font-family="Inter, PingFang SC, Microsoft YaHei, Arial, sans-serif" font-size="22" fill="#10202b" text-anchor="middle" font-weight="normal">城市B</text>
+<text x="620.0" y="521.0" font-family="Inter, PingFang SC, Microsoft YaHei, Arial, sans-serif" font-size="22" fill="#10202b" text-anchor="middle" font-weight="normal">城市B</text>
 <text x="620.0" y="423.0" font-family="Inter, PingFang SC, Microsoft YaHei, Arial, sans-serif" font-size="24" fill="#ffffff" text-anchor="middle" font-weight="bold">400</text>
 <circle cx="973.3" cy="415.0" r="148.4" fill="#4f7899"/>
-<text x="973.3333333333333" y="603.4" font-family="Inter, PingFang SC, Microsoft YaHei, Arial, sans-serif" font-size="22" fill="#10202b" text-anchor="middle" font-weight="normal">城市C</text>
-<text x="973.3333333333333" y="423.0" font-family="Inter, PingFang SC, Microsoft YaHei, Arial, sans-serif" font-size="24" fill="#ffffff" text-anchor="middle" font-weight="bold">900</text>
-<text x="600.0" y="622" font-family="Inter, PingFang SC, Microsoft YaHei, Arial, sans-serif" font-size="18" fill="#63717d" text-anchor="middle" font-weight="normal">单位：万人</text>
+<text x="973.3" y="603.4" font-family="Inter, PingFang SC, Microsoft YaHei, Arial, sans-serif" font-size="22" fill="#10202b" text-anchor="middle" font-weight="normal">城市C</text>
+<text x="973.3" y="423.0" font-family="Inter, PingFang SC, Microsoft YaHei, Arial, sans-serif" font-size="24" fill="#ffffff" text-anchor="middle" font-weight="bold">900</text>
+<text x="600.0" y="622.0" font-family="Inter, PingFang SC, Microsoft YaHei, Arial, sans-serif" font-size="18" fill="#63717d" text-anchor="middle" font-weight="normal">单位：万人</text>
 </svg>

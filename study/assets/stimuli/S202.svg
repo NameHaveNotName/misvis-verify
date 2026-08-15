@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="720" viewBox="0 0 1200 720">
+<rect x="0.0" y="0.0" width="1200.0" height="720.0" fill="#ffffff" rx="0"/>
+<text x="600.0" y="58.0" font-family="Inter, PingFang SC, Microsoft YaHei, Arial, sans-serif" font-size="30" fill="#10202b" text-anchor="middle" font-weight="bold">玩手机导致成绩下降</text>
+<line x1="90.0" y1="630.0" x2="1150.0" y2="630.0" stroke="#eef0ef" stroke-width="1"/>
+<line x1="90.0" y1="630.0" x2="84.0" y2="630.0" stroke="#d9ddd8" stroke-width="2"/>
+<text x="78.0" y="638.0" font-family="Inter, PingFang SC, Microsoft YaHei, Arial, sans-serif" font-size="20" fill="#63717d" text-anchor="end" font-weight="normal">0</text>
+<line x1="90.0" y1="516.6" x2="1150.0" y2="516.6" stroke="#eef0ef" stroke-width="1"/>
+<line x1="90.0" y1="516.6" x2="84.0" y2="516.6" stroke="#d9ddd8" stroke-width="2"/>
+<text x="78.0" y="524.6" font-family="Inter, PingFang SC, Microsoft YaHei, Arial, sans-serif" font-size="20" fill="#63717d" text-anchor="end" font-weight="normal">25</text>
+<line x1="90.0" y1="403.1" x2="1150.0" y2="403.1" stroke="#eef0ef" stroke-width="1"/>
+<line x1="90.0" y1="403.1" x2="84.0" y2="403.1" stroke="#d9ddd8" stroke-width="2"/>
+<text x="78.0" y="411.1" font-family="Inter, PingFang SC, Microsoft YaHei, Arial, sans-serif" font-size="20" fill="#63717d" text-anchor="end" font-weight="normal">50</text>
+<line x1="90.0" y1="289.7" x2="1150.0" y2="289.7" stroke="#eef0ef" stroke-width="1"/>
+<line x1="90.0" y1="289.7" x2="84.0" y2="289.7" stroke="#d9ddd8" stroke-width="2"/>
+<text x="78.0" y="297.7" font-family="Inter, PingFang SC, Microsoft YaHei, Arial, sans-serif" font-size="20" fill="#63717d" text-anchor="end" font-weight="normal">75</text>
+<line x1="90.0" y1="176.3" x2="1150.0" y2="176.3" stroke="#eef0ef" stroke-width="1"/>
+<line x1="90.0" y1="176.3" x2="84.0" y2="176.3" stroke="#d9ddd8" stroke-width="2"/>
+<text x="78.0" y="184.3" font-family="Inter, PingFang SC, Microsoft YaHei, Arial, sans-serif" font-size="20" fill="#63717d" text-anchor="end" font-weight="normal">100</text>
+<line x1="90.0" y1="630.0" x2="1150.0" y2="630.0" stroke="#10202b" stroke-width="2"/>
+<line x1="90.0" y1="140.0" x2="90.0" y2="630.0" stroke="#10202b" stroke-width="2"/>
+<text x="90.0" y="674.0" font-family="Inter, PingFang SC, Microsoft YaHei, Arial, sans-serif" font-size="22" fill="#10202b" text-anchor="middle" font-weight="normal">1月</text>
+<text x="241.4" y="674.0" font-family="Inter, PingFang SC, Microsoft YaHei, Arial, sans-serif" font-size="22" fill="#10202b" text-anchor="middle" font-weight="normal">2月</text>
+<text x="392.9" y="674.0" font-family="Inter, PingFang SC, Microsoft YaHei, Arial, sans-serif" font-size="22" fill="#10202b" text-anchor="middle" font-weight="normal">3月</text>
+<text x="544.3" y="674.0" font-family="Inter, PingFang SC, Microsoft YaHei, Arial, sans-serif" font-size="22" fill="#10202b" text-anchor="middle" font-weight="normal">4月</text>
+<text x="695.7" y="674.0" font-family="Inter, PingFang SC, Microsoft YaHei, Arial, sans-serif" font-size="22" fill="#10202b" text-anchor="middle" font-weight="normal">5月</text>
+<text x="847.1" y="674.0" font-family="Inter, PingFang SC, Microsoft YaHei, Arial, sans-serif" font-size="22" fill="#10202b" text-anchor="middle" font-weight="normal">6月</text>
+<text x="998.6" y="674.0" font-family="Inter, PingFang SC, Microsoft YaHei, Arial, sans-serif" font-size="22" fill="#10202b" text-anchor="middle" font-weight="normal">7月</text>
+<text x="1150.0" y="674.0" font-family="Inter, PingFang SC, Microsoft YaHei, Arial, sans-serif" font-size="22" fill="#10202b" text-anchor="middle" font-weight="normal">8月</text>
+<text x="70.0" y="120.0" font-family="Inter, PingFang SC, Microsoft YaHei, Arial, sans-serif" font-size="20" fill="#63717d" text-anchor="start" font-weight="normal">数值</text>
+<text x="1150.0" y="146.0" font-family="Inter, PingFang SC, Microsoft YaHei, Arial, sans-serif" font-size="20" fill="#4f7899" text-anchor="end" font-weight="normal">手机使用时长（小时/日）</text>
+<text x="1150.0" y="176.0" font-family="Inter, PingFang SC, Microsoft YaHei, Arial, sans-serif" font-size="20" fill="#ef6a55" text-anchor="end" font-weight="normal">平均成绩（分）</text>
+<polyline points="90.0,620.9 241.4,618.7 392.9,616.4 544.3,614.1 695.7,611.9 847.1,609.6 998.6,607.3 1150.0,605.0" fill="none" stroke="#4f7899" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/>
+<circle cx="90.0" cy="620.9" r="5.0" fill="#4f7899"/>
+<circle cx="241.4" cy="618.7" r="5.0" fill="#4f7899"/>
+<circle cx="392.9" cy="616.4" r="5.0" fill="#4f7899"/>
+<circle cx="544.3" cy="614.1" r="5.0" fill="#4f7899"/>
+<circle cx="695.7" cy="611.9" r="5.0" fill="#4f7899"/>
+<circle cx="847.1" cy="609.6" r="5.0" fill="#4f7899"/>
+<circle cx="998.6" cy="607.3" r="5.0" fill="#4f7899"/>
+<circle cx="1150.0" cy="605.0" r="5.0" fill="#4f7899"/>
+<polyline points="90.0,221.7 241.4,230.7 392.9,239.8 544.3,248.9 695.7,258.0 847.1,267.0 998.6,276.1 1150.0,285.2" fill="none" stroke="#ef6a55" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/>
+<circle cx="90.0" cy="221.7" r="5.0" fill="#ef6a55"/>
+<circle cx="241.4" cy="230.7" r="5.0" fill="#ef6a55"/>
+<circle cx="392.9" cy="239.8" r="5.0" fill="#ef6a55"/>
+<circle cx="544.3" cy="248.9" r="5.0" fill="#ef6a55"/>
+<circle cx="695.7" cy="258.0" r="5.0" fill="#ef6a55"/>
+<circle cx="847.1" cy="267.0" r="5.0" fill="#ef6a55"/>
+<circle cx="998.6" cy="276.1" r="5.0" fill="#ef6a55"/>
+<circle cx="1150.0" cy="285.2" r="5.0" fill="#ef6a55"/>
+</svg>

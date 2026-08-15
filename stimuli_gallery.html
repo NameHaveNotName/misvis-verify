@@ -49,6 +49,8 @@
   <script>
     (function() {
       const pairs = window.MISVIS_VERIFY_STIMULI.pairs;
+      const baseline = window.MISVIS_VERIFY_BASELINE.trials;
+      const transfer = window.MISVIS_VERIFY_TRANSFER.trials;
       const gallery = document.getElementById('gallery');
 
       function esc(s) {
@@ -57,16 +59,19 @@
         }[c]));
       }
 
+      const mechNames = {
+        'truncated-axis': '截断纵轴',
+        'cherry-picked-time': '截取时间区间',
+        'hidden-uncertainty': '隐藏不确定性',
+        'area-distortion': '面积编码失真',
+        'color-emphasis': '任意颜色强调',
+        'misleading-title': '误导性标题',
+        'dual-axis': '双轴误导',
+        'pie-3d': '饼图失真'
+      };
+
       pairs.forEach(p => {
         const egvv = p.egvv || {};
-        const mechNames = {
-          'truncated-axis': '截断纵轴',
-          'cherry-picked-time': '截取时间区间',
-          'hidden-uncertainty': '隐藏不确定性',
-          'area-distortion': '面积编码失真',
-          'color-emphasis': '任意颜色强调',
-          'misleading-title': '误导性标题'
-        };
         const el = document.createElement('section');
         el.className = 'pair';
         el.innerHTML = `
@@ -97,6 +102,34 @@
         `;
         gallery.appendChild(el);
       });
+
+      function renderTrialSection(title, trials, phaseKey) {
+        const h = document.createElement('h2');
+        h.style.cssText = 'margin:48px 0 16px;font-size:24px;';
+        h.textContent = title;
+        gallery.appendChild(h);
+
+        trials.forEach(t => {
+          const cls = t.integrity === 'accurate' ? 'accurate' : 'misleading';
+          const label = t.integrity.toUpperCase() + (t.transferType ? ` · ${t.transferType}` : '');
+          const el = document.createElement('section');
+          el.className = 'pair';
+          el.innerHTML = `
+            <div class="pair-head">
+              <h2>${esc(t.trialId)} — ${esc(mechNames[t.mechanism] || t.mechanism)}</h2>
+              <span class="mech">${esc(t.context)}</span>
+            </div>
+            <div class="side">
+              <div class="side-head ${cls}"><span>${label}</span><span>${esc(t.image)}</span></div>
+              <img src="study/assets/stimuli/${esc(t.image)}" alt="${esc(t.title)}" style="max-width:640px;">
+            </div>
+          `;
+          gallery.appendChild(el);
+        });
+      }
+
+      renderTrialSection('Baseline（4 试次）', baseline, 'baseline');
+      renderTrialSection('Transfer（6 试次）', transfer, 'transfer');
     })();
   </script>
 </body>

@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="720" viewBox="0 0 1200 720">
+<rect x="0.0" y="0.0" width="1200.0" height="720.0" fill="#ffffff" rx="0"/>
+<text x="600.0" y="58.0" font-family="Inter, PingFang SC, Microsoft YaHei, Arial, sans-serif" font-size="30" fill="#10202b" text-anchor="middle" font-weight="bold">某市能源消费构成</text>
+<path d="M 620.0 385.0 L 433.8 385.0 A 186.2 186.2 0 1 1 797.1 442.5 Z" fill="#4f7899" stroke="#ffffff" stroke-width="2"/>
+<text x="638.1" y="271.0" font-family="Inter, PingFang SC, Microsoft YaHei, Arial, sans-serif" font-size="26" fill="#ffffff" text-anchor="middle" font-weight="bold">55%</text>
+<path d="M 620.0 385.0 L 797.1 442.5 A 186.2 186.2 0 0 1 562.5 562.1 Z" fill="#71977b" stroke="#ffffff" stroke-width="2"/>
+<text x="672.4" y="487.9" font-family="Inter, PingFang SC, Microsoft YaHei, Arial, sans-serif" font-size="26" fill="#ffffff" text-anchor="middle" font-weight="bold">25%</text>
+<path d="M 620.0 385.0 L 562.5 562.1 A 186.2 186.2 0 0 1 456.8 474.7 Z" fill="#efc46b" stroke="#ffffff" stroke-width="2"/>
+<text x="546.4" y="474.0" font-family="Inter, PingFang SC, Microsoft YaHei, Arial, sans-serif" font-size="26" fill="#ffffff" text-anchor="middle" font-weight="bold">12%</text>
+<path d="M 620.0 385.0 L 456.8 474.7 A 186.2 186.2 0 0 1 433.8 385.0 Z" fill="#b9c2c8" stroke="#ffffff" stroke-width="2"/>
+<text x="508.2" y="413.7" font-family="Inter, PingFang SC, Microsoft YaHei, Arial, sans-serif" font-size="26" fill="#ffffff" text-anchor="middle" font-weight="bold">8%</text>
+<rect x="876.2" y="303.0" width="22.0" height="22.0" fill="#4f7899" rx="4"/>
+<text x="910.2" y="323.0" font-family="Inter, PingFang SC, Microsoft YaHei, Arial, sans-serif" font-size="22" fill="#10202b" text-anchor="start" font-weight="normal">煤炭 55%</text>
+<rect x="876.2" y="347.0" width="22.0" height="22.0" fill="#71977b" rx="4"/>
+<text x="910.2" y="367.0" font-family="Inter, PingFang SC, Microsoft YaHei, Arial, sans-serif" font-size="22" fill="#10202b" text-anchor="start" font-weight="normal">石油 25%</text>
+<rect x="876.2" y="391.0" width="22.0" height="22.0" fill="#efc46b" rx="4"/>
+<text x="910.2" y="411.0" font-family="Inter, PingFang SC, Microsoft YaHei, Arial, sans-serif" font-size="22" fill="#10202b" text-anchor="start" font-weight="normal">天然气 12%</text>
+<rect x="876.2" y="435.0" width="22.0" height="22.0" fill="#b9c2c8" rx="4"/>
+<text x="910.2" y="455.0" font-family="Inter, PingFang SC, Microsoft YaHei, Arial, sans-serif" font-size="22" fill="#10202b" text-anchor="start" font-weight="normal">其他 8%</text>
+</svg>

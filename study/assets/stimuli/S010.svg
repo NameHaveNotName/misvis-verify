@@ -1,28 +1,28 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1200" height="720" viewBox="0 0 1200 720">
 <rect x="0.0" y="0.0" width="1200.0" height="720.0" fill="#ffffff" rx="0"/>
-<text x="600.0" y="58" font-family="Inter, PingFang SC, Microsoft YaHei, Arial, sans-serif" font-size="30" fill="#10202b" text-anchor="middle" font-weight="bold">某公司营收预测</text>
+<text x="600.0" y="58.0" font-family="Inter, PingFang SC, Microsoft YaHei, Arial, sans-serif" font-size="30" fill="#10202b" text-anchor="middle" font-weight="bold">某公司营收预测</text>
 <line x1="90.0" y1="630.0" x2="1150.0" y2="630.0" stroke="#eef0ef" stroke-width="1"/>
 <line x1="90.0" y1="630.0" x2="84.0" y2="630.0" stroke="#d9ddd8" stroke-width="2"/>
-<text x="78" y="638.0" font-family="Inter, PingFang SC, Microsoft YaHei, Arial, sans-serif" font-size="20" fill="#63717d" text-anchor="end" font-weight="normal">0</text>
+<text x="78.0" y="638.0" font-family="Inter, PingFang SC, Microsoft YaHei, Arial, sans-serif" font-size="20" fill="#63717d" text-anchor="end" font-weight="normal">0</text>
 <line x1="90.0" y1="466.2" x2="1150.0" y2="466.2" stroke="#eef0ef" stroke-width="1"/>
 <line x1="90.0" y1="466.2" x2="84.0" y2="466.2" stroke="#d9ddd8" stroke-width="2"/>
-<text x="78" y="474.2299465240642" font-family="Inter, PingFang SC, Microsoft YaHei, Arial, sans-serif" font-size="20" fill="#63717d" text-anchor="end" font-weight="normal">50</text>
+<text x="78.0" y="474.2" font-family="Inter, PingFang SC, Microsoft YaHei, Arial, sans-serif" font-size="20" fill="#63717d" text-anchor="end" font-weight="normal">50</text>
 <line x1="90.0" y1="302.5" x2="1150.0" y2="302.5" stroke="#eef0ef" stroke-width="1"/>
 <line x1="90.0" y1="302.5" x2="84.0" y2="302.5" stroke="#d9ddd8" stroke-width="2"/>
-<text x="78" y="310.4598930481284" font-family="Inter, PingFang SC, Microsoft YaHei, Arial, sans-serif" font-size="20" fill="#63717d" text-anchor="end" font-weight="normal">100</text>
+<text x="78.0" y="310.5" font-family="Inter, PingFang SC, Microsoft YaHei, Arial, sans-serif" font-size="20" fill="#63717d" text-anchor="end" font-weight="normal">100</text>
 <line x1="90.0" y1="630.0" x2="1150.0" y2="630.0" stroke="#10202b" stroke-width="2"/>
 <line x1="90.0" y1="140.0" x2="90.0" y2="630.0" stroke="#10202b" stroke-width="2"/>
-<text x="90.0" y="674" font-family="Inter, PingFang SC, Microsoft YaHei, Arial, sans-serif" font-size="22" fill="#10202b" text-anchor="middle" font-weight="normal">2020</text>
-<text x="207.77777777777777" y="674" font-family="Inter, PingFang SC, Microsoft YaHei, Arial, sans-serif" font-size="22" fill="#10202b" text-anchor="middle" font-weight="normal">2021</text>
-<text x="325.55555555555554" y="674" font-family="Inter, PingFang SC, Microsoft YaHei, Arial, sans-serif" font-size="22" fill="#10202b" text-anchor="middle" font-weight="normal">2022</text>
-<text x="443.3333333333333" y="674" font-family="Inter, PingFang SC, Microsoft YaHei, Arial, sans-serif" font-size="22" fill="#10202b" text-anchor="middle" font-weight="normal">2023</text>
-<text x="561.1111111111111" y="674" font-family="Inter, PingFang SC, Microsoft YaHei, Arial, sans-serif" font-size="22" fill="#10202b" text-anchor="middle" font-weight="normal">2024</text>
-<text x="678.8888888888889" y="674" font-family="Inter, PingFang SC, Microsoft YaHei, Arial, sans-serif" font-size="22" fill="#10202b" text-anchor="middle" font-weight="normal">2025</text>
-<text x="796.6666666666666" y="674" font-family="Inter, PingFang SC, Microsoft YaHei, Arial, sans-serif" font-size="22" fill="#10202b" text-anchor="middle" font-weight="normal">2026</text>
-<text x="914.4444444444445" y="674" font-family="Inter, PingFang SC, Microsoft YaHei, Arial, sans-serif" font-size="22" fill="#10202b" text-anchor="middle" font-weight="normal">2027</text>
-<text x="1032.2222222222222" y="674" font-family="Inter, PingFang SC, Microsoft YaHei, Arial, sans-serif" font-size="22" fill="#10202b" text-anchor="middle" font-weight="normal">2028</text>
-<text x="1150.0" y="674" font-family="Inter, PingFang SC, Microsoft YaHei, Arial, sans-serif" font-size="22" fill="#10202b" text-anchor="middle" font-weight="normal">2029</text>
-<text x="70" y="120" font-family="Inter, PingFang SC, Microsoft YaHei, Arial, sans-serif" font-size="20" fill="#63717d" text-anchor="start" font-weight="normal">营收（百万元）</text>
+<text x="90.0" y="674.0" font-family="Inter, PingFang SC, Microsoft YaHei, Arial, sans-serif" font-size="22" fill="#10202b" text-anchor="middle" font-weight="normal">2020</text>
+<text x="207.8" y="674.0" font-family="Inter, PingFang SC, Microsoft YaHei, Arial, sans-serif" font-size="22" fill="#10202b" text-anchor="middle" font-weight="normal">2021</text>
+<text x="325.6" y="674.0" font-family="Inter, PingFang SC, Microsoft YaHei, Arial, sans-serif" font-size="22" fill="#10202b" text-anchor="middle" font-weight="normal">2022</text>
+<text x="443.3" y="674.0" font-family="Inter, PingFang SC, Microsoft YaHei, Arial, sans-serif" font-size="22" fill="#10202b" text-anchor="middle" font-weight="normal">2023</text>
+<text x="561.1" y="674.0" font-family="Inter, PingFang SC, Microsoft YaHei, Arial, sans-serif" font-size="22" fill="#10202b" text-anchor="middle" font-weight="normal">2024</text>
+<text x="678.9" y="674.0" font-family="Inter, PingFang SC, Microsoft YaHei, Arial, sans-serif" font-size="22" fill="#10202b" text-anchor="middle" font-weight="normal">2025</text>
+<text x="796.7" y="674.0" font-family="Inter, PingFang SC, Microsoft YaHei, Arial, sans-serif" font-size="22" fill="#10202b" text-anchor="middle" font-weight="normal">2026</text>
+<text x="914.4" y="674.0" font-family="Inter, PingFang SC, Microsoft YaHei, Arial, sans-serif" font-size="22" fill="#10202b" text-anchor="middle" font-weight="normal">2027</text>
+<text x="1032.2" y="674.0" font-family="Inter, PingFang SC, Microsoft YaHei, Arial, sans-serif" font-size="22" fill="#10202b" text-anchor="middle" font-weight="normal">2028</text>
+<text x="1150.0" y="674.0" font-family="Inter, PingFang SC, Microsoft YaHei, Arial, sans-serif" font-size="22" fill="#10202b" text-anchor="middle" font-weight="normal">2029</text>
+<text x="70.0" y="120.0" font-family="Inter, PingFang SC, Microsoft YaHei, Arial, sans-serif" font-size="20" fill="#63717d" text-anchor="start" font-weight="normal">营收（百万元）</text>
 <polyline points="90.0,466.2 207.8,449.9 325.6,433.5 443.3,426.9 561.1,407.3" fill="none" stroke="#4f7899" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/>
 <circle cx="90.0" cy="466.2" r="5.0" fill="#4f7899"/>
 <circle cx="207.8" cy="449.9" r="5.0" fill="#4f7899"/>
@@ -35,6 +35,6 @@
 <circle cx="914.4" cy="351.6" r="5.0" fill="#ef6a55"/>
 <circle cx="1032.2" cy="325.4" r="5.0" fill="#ef6a55"/>
 <circle cx="1150.0" cy="295.9" r="5.0" fill="#ef6a55"/>
-<text x="1150" y="146" font-family="Inter, PingFang SC, Microsoft YaHei, Arial, sans-serif" font-size="20" fill="#4f7899" text-anchor="end" font-weight="normal">历史数据</text>
-<text x="1150" y="176" font-family="Inter, PingFang SC, Microsoft YaHei, Arial, sans-serif" font-size="20" fill="#ef6a55" text-anchor="end" font-weight="normal">预测值</text>
+<text x="1150.0" y="146.0" font-family="Inter, PingFang SC, Microsoft YaHei, Arial, sans-serif" font-size="20" fill="#4f7899" text-anchor="end" font-weight="normal">历史数据</text>
+<text x="1150.0" y="176.0" font-family="Inter, PingFang SC, Microsoft YaHei, Arial, sans-serif" font-size="20" fill="#ef6a55" text-anchor="end" font-weight="normal">预测值</text>
 </svg>
