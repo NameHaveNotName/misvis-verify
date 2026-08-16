@@ -60,13 +60,13 @@ def _put_object(key, body):
     end = now + 3600
     sign_time = "{};{}".format(start, end)
 
-    # SignKey = HMAC-SHA1(SecretKey, KeyTime)，返回原始字节
-    sign_key = hmac.new(secret_key.encode("utf-8"), sign_time.encode("utf-8"), hashlib.sha1).digest()
+    # SignKey = HMAC-SHA1(SecretKey, KeyTime)，返回十六进制字符串
+    sign_key = hmac.new(secret_key.encode("utf-8"), sign_time.encode("utf-8"), hashlib.sha1).hexdigest()
 
     http_string = "put\n{}\n\nhost={}\n".format(path, host)
     string_to_sign = "sha1\n{}\n{}\n".format(sign_time, _sha1_hex(http_string.encode("utf-8")))
 
-    signature = hmac.new(sign_key, string_to_sign.encode("utf-8"), hashlib.sha1).hexdigest()
+    signature = hmac.new(sign_key.encode("utf-8"), string_to_sign.encode("utf-8"), hashlib.sha1).hexdigest()
 
     authorization = (
         "q-sign-algorithm=sha1&q-ak={ak}&q-sign-time={st}&q-key-time={st}"
@@ -82,8 +82,12 @@ def _put_object(key, body):
         headers["x-cos-security-token"] = token
 
     req = urllib_request.Request(url, data=body, headers=headers, method="PUT")
-    with urllib_request.urlopen(req, timeout=10) as resp:
-        return resp.status
+    try:
+        with urllib_request.urlopen(req, timeout=10) as resp:
+            return resp.status
+    except urllib_request.HTTPError as e:
+        detail = e.read().decode("utf-8", errors="replace")
+        raise RuntimeError("COS HTTP {}: {}".format(e.code, detail[:500]))
 
 
 def main_handler(event, context):
