@@ -14,12 +14,13 @@
   };
 
   const PHASE_ORDER = ['baseline', 'main', 'transfer'];
-  const MAIN_TOTAL = 12;
-  const BASE_TOTAL = 4;
-  const TRANS_TOTAL = 6;
+  const MAIN_TOTAL = 20;
+  const BASE_TOTAL = 8;
+  const TRANS_TOTAL = 16;
 
   let session = null;
   let state = STATES.CONSENT;
+  let studyMode = 'pilot';
   let currentTrial = null;      // the trial object currently displayed
   let judgmentStart = 0;        // performance.now() at judgment display
   let currentTrialTotalStart = 0; // performance.now() at trial start
@@ -49,14 +50,9 @@
 
   function init() {
     const params = new URLSearchParams(location.search);
-    const mode = params.get('mode') === 'study' ? 'study' : 'pilot';
+    studyMode = params.get('mode') === 'study' ? 'study' : 'pilot';
 
-    if (mode === 'study') {
-      document.body.innerHTML = '<div style="padding:40px;text-align:center;"><h1>Formal study mode is not yet enabled.</h1><p>Please use <code>study.html?mode=pilot</code> for internal piloting.</p></div>';
-      return;
-    }
-
-    $('#mode-badge').textContent = 'Pilot 模式';
+    $('#mode-badge').textContent = studyMode === 'study' ? '正式模式' : 'Pilot 模式';
     bindGlobal();
 
     const saved = MisVisVerifyStorage.getSession();
@@ -110,11 +106,11 @@
         counterbalance_list: lst,
         started_at: new Date().toISOString(),
         completed: false,
-        version: 'study-v0.1',
-        stimulus_version: 'stimuli-v0.1',
+        version: 'study-v0.2',
+        stimulus_version: 'stimuli-v0.3',
         schema_version: 'schema-v1',
         consent: true,
-        mode: 'pilot',
+        mode: studyMode,
         viewport_width: window.innerWidth,
         viewport_height: window.innerHeight,
         user_agent: navigator.userAgent,
@@ -156,7 +152,10 @@
     $('#trial-progress').textContent = phaseProgress();
 
     const hasProvenance = phase === 'main' && t.provenance_condition === 'ai-assisted';
-    MisVisVerifyUI.setProvenance(hasProvenance);
+    MisVisVerifyUI.setProvenance(hasProvenance ? {
+      hasLabel: true,
+      aiInterpretation: t.ai_interpretation || null
+    } : { hasLabel: false });
 
     $('#stimulus-image').src = 'study/assets/stimuli/' + t.stimulus_id;
 
@@ -299,6 +298,11 @@
 
     if (session.condition === 'control') {
       $('#control-stimulus-image').src = 'study/assets/stimuli/' + t.stimulus_id;
+      const hasProv = t.provenance_condition === 'ai-assisted';
+      MisVisVerifyUI.setProvenance(hasProv ? {
+        hasLabel: true,
+        aiInterpretation: t.ai_interpretation || null
+      } : { hasLabel: false }, '#control-provenance-bar');
       MisVisVerifyUI.showState('control');
       const btn = $('#btn-control');
       btn.disabled = true;
@@ -334,7 +338,7 @@
     $('#egvv-stimulus-image').src = 'study/assets/stimuli/' + img;
     $('#egvv-compare-note').style.display = step.showCompare ? 'block' : 'none';
     $('#egvv-compare-note').textContent = step.showCompare
-      ? '这是忠实还原的对照版本，请自行比较。' : '';
+      ? '请结合当前图表回顾上述验证要点。' : '';
 
     $('#egvv-step').textContent = 'Step ' + (egvvStepIndex + 1) + ' / ' + steps.length;
     $('#egvv-title').textContent = step.title;
@@ -416,15 +420,26 @@
       URL.revokeObjectURL(url);
     };
 
-    $('#pilot-feedback-area').hidden = false;
-    $('#btn-feedback').onclick = () => {
-      const txt = $('#pilot-feedback').value.trim();
-      if (txt) {
-        session.pilot_feedback = txt;
-        saveProgress();
-        alert('反馈已保存到本地数据。');
-      }
-    };
+    const resultContainer = $('#result-container');
+    if (resultContainer && window.MisVisVerifyResults) {
+      window.MisVisVerifyResults.renderFromSession(resultContainer);
+    }
+
+    if (window.MisVisVerifySubmit) {
+      window.MisVisVerifySubmit.autoSubmit();
+    }
+
+    if (studyMode === 'pilot') {
+      $('#pilot-feedback-area').hidden = false;
+      $('#btn-feedback').onclick = () => {
+        const txt = $('#pilot-feedback').value.trim();
+        if (txt) {
+          session.pilot_feedback = txt;
+          saveProgress();
+          alert('反馈已保存到本地数据。');
+        }
+      };
+    }
   }
 
   function saveProgress() {

@@ -126,7 +126,7 @@ def main():
             incomplete_sessions += 1
             report.append(f"[WARN] {pid}: incomplete session")
         else:
-            total_expected_trials += 22
+            total_expected_trials += 44
 
         q = session.get("questionnaire") or {}
         participants_rows.append({

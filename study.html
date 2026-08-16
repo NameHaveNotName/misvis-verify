@@ -127,6 +127,7 @@
     <!-- State: CONTROL re-inspection -->
     <section id="state-control" class="study-state hidden" aria-labelledby="control-title">
       <div class="trial-layout">
+        <div class="provenance-bar" id="control-provenance-bar" aria-live="polite"></div>
         <div class="stimulus-area">
           <img id="control-stimulus-image" src="" alt="实验图表">
         </div>
@@ -198,9 +199,14 @@
         <div class="pilot-note">
           <strong>当前为内部 Pilot，不是正式研究数据收集。</strong>
         </div>
-        <div class="actions">
-          <button class="button primary" id="btn-download">下载实验数据 (JSON)</button>
+        <p class="submit-note">如果研究者已开启远程收集，结果将在下方自动发送；失败时请使用 JSON 下载作为备份。</p>
+        <div class="actions" id="submit-area">
+          <div class="submit-status" id="submit-status"></div>
         </div>
+        <div class="actions">
+          <button class="button secondary" id="btn-download">下载实验数据 (JSON)</button>
+        </div>
+        <div id="result-container"></div>
         <div class="actions" id="pilot-feedback-area" hidden>
           <label for="pilot-feedback">如有操作困惑或问题，请填写反馈（选填）：</label>
           <textarea id="pilot-feedback" rows="4" maxlength="1000"></textarea>
@@ -215,11 +221,14 @@
   </footer>
 
   <script src="study/data/stimuli-data.js"></script>
+  <script src="study/data/config.js"></script>
   <script src="study/js/storage.js"></script>
   <script src="study/js/randomization.js"></script>
   <script src="study/js/trials.js"></script>
   <script src="study/js/ui.js"></script>
   <script src="study/js/experiment.js"></script>
+  <script src="study/js/results.js"></script>
+  <script src="study/js/submit.js"></script>
   <script src="study/js/app.js"></script>
 </body>
 </html>

@@ -28,6 +28,10 @@
     return a;
   }
 
+  function choice(array, rng) {
+    return array[Math.floor(rng() * array.length)];
+  }
+
   function generateParticipantId() {
     const arr = new Uint32Array(2);
     if (window.crypto && window.crypto.getRandomValues) {
@@ -52,6 +56,7 @@
     mulberry32,
     hashString,
     shuffle,
+    choice,
     generateParticipantId,
     assignCondition,
     assignList,

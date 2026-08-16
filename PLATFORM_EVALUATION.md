@@ -30,9 +30,9 @@
 ### 3.1 复杂的被试内/被试间设计
 
 本实验需要：
-- 每个被试看 12 个 main trials + 4 baseline + 6 transfer
-- Main trials 中 6 个 accurate、6 个 misleading
-- Main trials 中 6 个 AI provenance、6 个 no provenance
+- 每个被试看 20 个 main trials + 8 baseline + 16 transfer
+- Main trials 中 10 个 accurate、10 个 misleading
+- Main trials 中 10 个 AI provenance、10 个 no provenance
 - 同一被试**绝不能**看到同一 matched pair 的两个版本
 - 被试间随机分配到 Control / EGVV
 
@@ -102,7 +102,7 @@ misvis-study-MVXXXXXXXX.json
 
 本实验需要：
 - `?mode=pilot` 允许填写 bug 反馈
-- `?mode=study` 在伦理审批前默认关闭
+- `?mode=study` 隐藏 pilot 反馈入口（伦理审批已通过，正式模式已启用）
 
 腾讯问卷无法区分 pilot 与正式模式，也无法在界面上明确标注"当前为内部 Pilot"。
 

@@ -1,7 +1,7 @@
 # MisVis Verify — Study System README
 
-**Version:** study-v0.1  
-**Status:** Pilot skeleton; stimuli are placeholders.
+**Version:** study-v0.2  
+**Status:** Ready for formal data collection; 40 main + 8 baseline + 16 transfer controlled SVG stimuli.
 
 ---
 
@@ -15,9 +15,8 @@ MisVis Verify is an HCI research module built on top of the MisVis public websit
 
 1. Open `preview.html` in a browser to see the questionnaire and interface preview.
 2. Open `study.html?mode=pilot` to run the pilot experiment locally.
-3. Data is saved in browser `localStorage` and exported as JSON at the end.
-
-Do **not** use `?mode=study`; formal study mode is disabled until ethics approval is confirmed.
+3. Open `study.html?mode=study` to run formal data collection (ethics approval granted).
+4. Data is saved in browser `localStorage`, exported as JSON at the end, and optionally auto-submitted to the configured backend (see `SUBMISSION_SETUP.md`).
 
 ---
 
@@ -33,7 +32,12 @@ study/js/
   ui.js                     # Rendering helpers
   randomization.js          # Participant ID, condition, list assignment
   storage.js                # localStorage adapter
-study/assets/stimuli/       # SVG stimuli (placeholder only)
+study/assets/stimuli/       # Controlled SVG stimuli
+scripts/
+  build_stimuli.py          # SVG generator
+  validate_stimuli.py       # Stimulus validation
+  test_randomization.js     # Counterbalancing test
+  test_flow.js              # End-to-end smoke test
 ```
 
 ---
@@ -75,19 +79,17 @@ See `study/data/schema.md` for the full data schema and `analysis/DATA_ANALYSIS_
 
 ## 7. What is intentionally not implemented in V1?
 
-- Remote data collection (Supabase, Firebase, etc.).
-- Real controlled SVG stimuli (currently placeholders).
-- Stimulus generator and validation scripts.
-- Analysis pipeline (R / Python).
-- Formal study mode (`?mode=study` is blocked).
+- Remote data collection adapter is optional (see `SUBMISSION_SETUP.md`; Formspree recommended).
 
 ---
 
-## 8. Planned next phases
+## 8. Completed / next phases
 
-1. Stimulus generator (`scripts/build_stimuli.py`).
-2. 24 main SVGs + baseline/transfer stimuli.
-3. EGVV content for all six mechanisms.
-4. Data validation and CSV export.
-5. Counterbalancing test script.
-6. Pilot data collection.
+- [x] Stimulus generator (`scripts/build_stimuli.py`).
+- [x] 40 main SVGs + 8 baseline + 16 transfer stimuli.
+- [x] EGVV content for all mechanisms.
+- [x] AI interpretation variants per pair × integrity.
+- [x] Data validation, CSV export, counterbalancing, and smoke tests.
+- [x] Ethics approval; formal study mode (`?mode=study`) enabled.
+- [ ] Configure Formspree endpoint in `study/data/config.js`.
+- [ ] Pilot data collection.

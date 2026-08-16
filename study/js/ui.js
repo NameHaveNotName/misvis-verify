@@ -13,16 +13,34 @@
     }
   }
 
-  function setProvenance(hasLabel) {
-    const bar = $('#provenance-bar');
+  function esc(s) {
+    return String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;')
+      .replace(/>/g, '&gt;').replace(/"/g, '&quot;');
+  }
+
+  function setProvenance(info, barSel) {
+    const bar = $(barSel || '#provenance-bar');
     if (!bar) return;
-    if (hasLabel) {
-      bar.classList.add('has-label');
-      bar.innerHTML = '<span>AI-assisted visualization</span>';
-    } else {
+    const hasLabel = !!(info && info.hasLabel);
+    if (!hasLabel) {
       bar.classList.remove('has-label');
-      bar.textContent = '';
+      bar.innerHTML = '';
+      return;
     }
+    bar.classList.add('has-label');
+    let html = '<span class="prov-label">AI-assisted visualization</span>';
+    const ai = info && info.aiInterpretation;
+    if (ai) {
+      html += '<div class="ai-interpretation">' +
+        '<div class="ai-interp-meta">' +
+        '<span class="ai-interp-badge">AI 解读</span>' +
+        '<span class="ai-interp-status">' + esc(ai.status || '分析完成') + '</span>' +
+        (ai.confidence != null ? '<span class="ai-interp-confidence">置信度 ' + esc(ai.confidence) + '%</span>' : '') +
+        '</div>' +
+        '<div class="ai-interp-text">' + esc(ai.text || '') + '</div>' +
+        '</div>';
+    }
+    bar.innerHTML = html;
   }
 
   function resetSliders() {

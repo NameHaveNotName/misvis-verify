@@ -1,7 +1,7 @@
 :# MisVis Verify — Data Schema
 
 **Version:** schema-v1  
-**Date:** 2026-08-15
+**Date:** 2026-08-16
 
 All exported data is a single JSON object with two top-level keys: `session` and `trials`.
 
@@ -19,7 +19,7 @@ All exported data is a single JSON object with two top-level keys: `session` and
   "completed_at": "2026-08-15T09:18:32.000Z",
   "completed": true,
   "version": "study-v0.1",
-  "stimulus_version": "stimuli-v0.1",
+  "stimulus_version": "stimuli-v0.3",
   "schema_version": "schema-v1",
   "consent": true,
   "mode": "pilot",
@@ -137,6 +137,17 @@ Allowed values for `mechanism`:
 | `area-distortion` | Area Encoding Distortion |
 | `color-emphasis` | Arbitrary Color Emphasis |
 | `misleading-title` | Misleading Title |
+| `missing-normalization` | Missing Normalization |
+| `missing-normalization-map` | Missing Normalization on Map |
+| `overusing-colors` | Overusing Colors |
+| `inappropriate-scale` | Inappropriate Scale |
+| `3d-bar-distortion` | 3D Bar Distortion |
+| `inconsistent-tick-labels` | Inconsistent Tick Labels |
+| `inverted-axis` | Inverted Axis |
+| `misordered-axis` | Misordered Axis |
+| `premature-conclusion` | Premature Conclusion |
+| `histogram-reading` | Histogram Reading |
+| `pie-proportion` | Pie Proportion |
 
 ---
 

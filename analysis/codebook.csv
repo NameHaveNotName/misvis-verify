@@ -7,9 +7,9 @@ counterbalance_list,A,Counterbalance list A,string,session,
 counterbalance_list,B,Counterbalance list B,string,session,
 counterbalance_list,C,Counterbalance list C,string,session,
 counterbalance_list,D,Counterbalance list D,string,session,
-phase,baseline,Initial measurement phase,string,trial,4 trials no provenance/intervention
-phase,main,Core experimental phase,string,trial,12 trials with provenance and intervention
-phase,transfer,Transfer test phase,string,trial,6 trials no provenance/intervention
+phase,baseline,Initial measurement phase,string,trial,6 trials no provenance/intervention
+phase,main,Core experimental phase,string,trial,20 trials with provenance and intervention
+phase,transfer,Transfer test phase,string,trial,10 trials no provenance/intervention
 trial_index,,0-based index within phase,integer,trial,
 trial_index_global,,0-based index across entire experiment,integer,trial,
 pair_id,,Matched pair identifier e.g. TA-01,string,trial,
@@ -20,6 +20,11 @@ mechanism,hidden-uncertainty,Hidden prediction uncertainty,string,trial,
 mechanism,area-distortion,Area encoding distortion (radius vs area),string,trial,
 mechanism,color-emphasis,Arbitrary color emphasis,string,trial,
 mechanism,misleading-title,Misleading chart title,string,trial,
+mechanism,missing-normalization,Raw counts without base-rate normalization,string,trial,
+mechanism,overusing-colors,Qualitative rainbow palette on similar magnitudes,string,trial,
+mechanism,inappropriate-scale,Linear scale on exponential data,string,trial,
+mechanism,3d-bar-distortion,3D perspective bars distorting perceived height,string,trial,
+mechanism,inconsistent-tick-labels,Non-uniform tick spacing distorting slope,string,trial,
 integrity,accurate,Faithful visualization,string,trial,
 integrity,misleading,Deceptive visualization,string,trial,
 provenance_condition,ai-assisted,AI-assisted visualization label shown,string,trial,Null in baseline/transfer

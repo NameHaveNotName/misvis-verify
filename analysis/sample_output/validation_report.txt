@@ -1,8 +1,8 @@
 MisVis Verify — Data Validation Report
 ========================================
 Participants: 10
-Trials: 220
-Expected trials (complete sessions only): 198
+Trials: 440
+Expected trials (complete sessions only): 396
 Incomplete sessions: 1
 Duplicate trials: 0
 Missing trials: 0

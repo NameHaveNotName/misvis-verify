@@ -10,11 +10,16 @@
     { integrity: 'misleading', provenance: 'none' }
   ];
 
-  function buildMain(pairs, listIndex) {
+  function buildMain(pairs, listIndex, rng) {
     return pairs.map((pair, i) => {
       const cell = CELLS[(i + listIndex) % CELLS.length];
       const shown = pair[cell.integrity];
-      const alternative = pair.accurate;
+      const alternative = pair[cell.integrity];
+      let aiInterpretation = null;
+      if (cell.provenance === 'ai-assisted' && pair.aiInterpretations) {
+        const variants = pair.aiInterpretations[cell.integrity] || [];
+        if (variants.length) aiInterpretation = R.choice(variants, rng);
+      }
       return {
         phase: 'main',
         pair_id: pair.pairId,
@@ -24,7 +29,8 @@
         provenance_condition: cell.provenance,
         title: shown.title,
         compare_image: alternative.image,
-        egvv: pair.egvv || null
+        egvv: pair.egvv || null,
+        ai_interpretation: aiInterpretation
       };
     });
   }
@@ -53,7 +59,7 @@
 
     return {
       baseline: buildPhase(baselineSrc, 'baseline', rng),
-      main: R.shuffle(buildMain(pairs, listIndex), rng),
+      main: R.shuffle(buildMain(pairs, listIndex, rng), rng),
       transfer: buildPhase(transferSrc, 'transfer', rng)
     };
   }

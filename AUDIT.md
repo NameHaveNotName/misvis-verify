@@ -190,9 +190,9 @@ If deployed to GitHub Pages at `https://user.github.io/repo-name/`, all resource
 │   │   ├── metrics.js            # RT + scoring helpers
 │   │   └── ui.js                 # DOM rendering helpers
 │   ├── data/
-│   │   ├── stimuli.json          # 12 main pairs
-│   │   ├── baseline.json         # 4 baseline trials
-│   │   ├── transfer.json         # 6 transfer trials
+│   │   ├── stimuli.json          # 20 main pairs
+│   │   ├── baseline.json         # 8 baseline trials
+│   │   ├── transfer.json         # 16 transfer trials
 │   │   ├── corpus-grounding.json # Literature grounding mapping
 │   │   └── schema.md             # Data schema documentation
 │   └── assets/

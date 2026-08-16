@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>MisVis Verify｜结果分析</title>
+  <link rel="stylesheet" href="study/css/study.css">
+</head>
+<body>
+  <header class="study-header">
+    <div class="brand">
+      <span><strong>MisVis</strong><small>Verify 结果分析</small></span>
+    </div>
+  </header>
+
+  <main id="main" class="study-main">
+    <section class="study-state" style="display:block;">
+      <div class="card">
+        <p class="eyebrow">RESULTS ANALYZER</p>
+        <h1>实验结果分析</h1>
+        <p>上传 <code>misvis-study-MV-xxxxxxxx.json</code> 文件，即可查看个人结果摘要。</p>
+
+        <label class="json-upload" for="json-file">
+          <div>点击或拖拽上传 JSON 文件</div>
+          <input type="file" id="json-file" accept="application/json">
+        </label>
+
+        <div id="result-container"></div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="study-footer">
+    <span>MisVis Verify｜内部研究原型</span>
+  </footer>
+
+  <script src="study/data/stimuli-data.js"></script>
+  <script src="study/js/results.js"></script>
+  <script>
+    (function() {
+      const input = document.getElementById('json-file');
+      const container = document.getElementById('result-container');
+
+      function handleFile(file) {
+        if (!file) return;
+        const reader = new FileReader();
+        reader.onload = function(e) {
+          try {
+            const json = JSON.parse(e.target.result);
+            MisVisVerifyResults.renderFromJSON(container, json);
+          } catch (err) {
+            container.innerHTML = '<p class="result-empty">无法解析该文件，请确认是有效的 MisVis Verify JSON 导出文件。</p>';
+          }
+        };
+        reader.readAsText(file);
+      }
+
+      input.addEventListener('change', function() { handleFile(this.files[0]); });
+
+      document.querySelector('.json-upload').addEventListener('dragover', function(e) {
+        e.preventDefault();
+        this.style.borderColor = 'var(--blue)';
+      });
+      document.querySelector('.json-upload').addEventListener('dragleave', function(e) {
+        e.preventDefault();
+        this.style.borderColor = '';
+      });
+      document.querySelector('.json-upload').addEventListener('drop', function(e) {
+        e.preventDefault();
+        this.style.borderColor = '';
+        handleFile(e.dataTransfer.files[0]);
+      });
+    })();
+  </script>
+</body>
+</html>

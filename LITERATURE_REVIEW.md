@@ -204,7 +204,7 @@ For each theme I summarize the most relevant papers, note their relationship to 
 
 2. **Demand characteristics.** If EGVV always follows misleading charts, participants may learn to expect problems. Counterbalancing and transfer trials help, but we must also include accurate charts in EGVV.
 
-3. **Repeated exposure.** Showing 12 main + 6 transfer + 4 baseline charts may produce fatigue. Response-time and attention-check items should be built in.
+3. **Repeated exposure.** Showing 20 main + 16 transfer + 8 baseline charts may produce fatigue. Response-time and attention-check items should be built in.
 
 4. **Population.** Most cited studies use online convenience samples (MTurk, Prolific, student pools). External validity claims should be modest.
 

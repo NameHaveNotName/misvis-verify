@@ -166,7 +166,7 @@ Analyze whether longer time on Verify/Compare predicts better post judgment.
 
 ### 5.4 Far-transfer exploratory analysis
 
-Label 2 transfer trials as `exploratory`. Analyze separately and report as exploratory, not confirmatory.
+Label 4 transfer trials as `exploratory` (far-transfer). Analyze separately and report as exploratory, not confirmatory.
 
 ### 5.5 Self-reported strategy
 

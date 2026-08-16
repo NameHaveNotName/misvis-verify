@@ -141,3 +141,27 @@
 - Allowing download mid-study could encourage participants to inspect or edit their data.
 - The completion page offers a single JSON download; researchers collect these files manually in the pilot phase.
 - Remote storage remains a future adapter, not implemented in V1.
+
+---
+
+## D11. AI interpretation panel (operationalizing provenance cue content)
+
+**Decision:** For `ai-assisted` trials, show an "AI 解读" card below the provenance label containing an AI-styled interpretive statement, with 2 pre-written variants per pair × integrity (neutral / authoritative / enthusiastic / confident tones; status wording; confidence percentage). A variant is randomly selected per trial via the seeded RNG.
+
+**Rationale:**
+- A bare "AI-assisted visualization" label is a weak cue. Adding interpretive content turns the provenance manipulation into a substantive inducement: for accurate charts the AI confirms the chart, for misleading charts the AI reinforces the misleading reading.
+- Pre-written variants keep full experimental control (no live LLM variability or API cost) while tone/status variation increases ecological validity.
+- Variant assignment is seeded, so analyses can recover which variant each participant saw from `session.trialPlan[].ai_interpretation`.
+- Debriefing must disclose that AI interpretations were scripted study materials.
+
+---
+
+## D12. Expanded stimulus set
+
+**Decision:** Main phase expanded from 12 to 20 matched pairs by adding four mechanisms: `missing-normalization` (raw counts vs. base-rate metrics, MN-01/MN-02), `overusing-colors` (sequential vs. rainbow palettes, OC-01/OC-02), `inappropriate-scale` (linear scale on exponential data, IS-01/IS-02), `3d-bar-distortion` (3D perspective bars distorting height perception, TD-01), and `inconsistent-tick-labels` (non-uniform tick spacing distorting slope, IT-01). Baseline expanded from 6 to 8 by adding `histogram-reading` (B-07) and `pie-proportion` (B-08). Transfer expanded from 8 to 16 by adding `inverted-axis` (T-11), `misordered-axis` (T-12), `premature-conclusion` (T-13, T-15), and `missing-normalization-map` (T-14, T-16), balancing the set at 8 accurate / 8 misleading with 4 far-transfer items.
+
+**Rationale:**
+- Broader mechanism coverage reduces item-specific effects and matches the taxonomy breadth of Lo et al. (2022) and the flawviz corpus.
+- 20 main pairs preserve the 4-cell Latin-square rotation (5 trials per cell per list) and keep list balance at 10 accurate / 10 misleading.
+- The final study has 8 baseline + 20 main + 16 transfer = 44 participant-facing trials.
+- Added participant time is acceptable for pilot; watch completion time and fatigue markers.
