@@ -2,3 +2,6 @@ __pycache__/
 *.pyc
 .DS_Store
 Thumbs.db
+
+# 论文草稿与支持材料——不公开上传
+paper/
