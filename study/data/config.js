@@ -1,17 +1,16 @@
 // MisVis Verify runtime configuration.
 //
-// Formspree (recommended, no Google account needed):
-//   1. Register at https://formspree.io with any email address.
-//   2. Create a new form and complete the activation email step.
-//   3. Copy the form endpoint (https://formspree.io/f/xxxxxxxx) below.
-// See SUBMISSION_SETUP.md for details.
+// 腾讯云函数（SCF 函数URL）后端：参与者浏览器把完整导出 JSON POST 到下面地址，
+// 函数存入 COS，参与者在大陆无需 VPN。
+// 详细步骤见 SUBMISSION_SETUP.md。
 //
-// Leave SUBMIT_ENDPOINT null to disable automatic submission and rely on JSON download only.
+// 可选：
+//   SUBMIT_FORMAT: 'raw'       -> 完整导出 JSON 原样发送（自定义后端/SCF 用）
+//   SUBMIT_FORMAT: 'formspree' -> 包装为 { participant_id, payload }（Formspree 用）
+//
+// SUBMIT_ENDPOINT 为 null 时禁用远程提交，仅保留本地 JSON 下载。
 window.MISVIS_VERIFY_CONFIG = {
-  SUBMIT_ENDPOINT: 'https://formspree.io/f/mrpzayag',
+  SUBMIT_ENDPOINT: 'https://1410269681-jidfh6rb4r.ap-guangzhou.tencentscf.com',
   SUBMIT_METHOD: 'POST',
-  // 'formspree' wraps the export as { participant_id, payload } and sends the
-  // Accept header Formspree's AJAX API requires. 'raw' sends the JSON as-is
-  // (for custom backends).
-  SUBMIT_FORMAT: 'formspree'
+  SUBMIT_FORMAT: 'raw'
 };

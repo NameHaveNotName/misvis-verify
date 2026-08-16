@@ -91,5 +91,6 @@ See `study/data/schema.md` for the full data schema and `analysis/DATA_ANALYSIS_
 - [x] AI interpretation variants per pair × integrity.
 - [x] Data validation, CSV export, counterbalancing, and smoke tests.
 - [x] Ethics approval; formal study mode (`?mode=study`) enabled.
-- [x] Configure Formspree endpoint in `study/data/config.js`.
+- [x] Remote submission backend (Tencent SCF + COS) deployed and configured.
+- [ ] Host the study page for participants.
 - [ ] Pilot data collection.
