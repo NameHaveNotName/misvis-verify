@@ -109,6 +109,7 @@ All exported data is a single JSON object with two top-level keys: `session` and
 | `integrity` | string | `"accurate"` or `"misleading"` |
 | `provenance_condition` | string | `"ai-assisted"`, `"none"`, or `null` for baseline/transfer |
 | `ai_attitude` | string | `"trust"` or `"distrust"` for `ai-assisted` main trials; `null` otherwise |
+| `transfer_type` | string | `"near"`/`"far"` for transfer trials and transfer-derived main trials; `null` for baseline and pair-derived main trials |
 | `trust_pre` | number | 0–100 trust rating before intervention |
 | `misleading_pre` | string | `"yes"`, `"no"`, or `"unsure"` before intervention |
 | `confidence_pre` | number | 0–100 confidence rating before intervention |

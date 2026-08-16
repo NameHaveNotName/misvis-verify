@@ -7,9 +7,9 @@ counterbalance_list,A,Counterbalance list A,string,session,
 counterbalance_list,B,Counterbalance list B,string,session,
 counterbalance_list,C,Counterbalance list C,string,session,
 counterbalance_list,D,Counterbalance list D,string,session,
-phase,baseline,Initial measurement phase,string,trial,6 trials no provenance/intervention
-phase,main,Core experimental phase,string,trial,20 trials with provenance and intervention
-phase,transfer,Transfer test phase,string,trial,10 trials no provenance/intervention
+phase,baseline,Initial measurement phase,string,trial,8 trials no provenance/intervention
+phase,main,Core experimental phase,string,trial,20 trials drawn from main pairs + transfer pool; with provenance and intervention
+phase,transfer,Transfer test phase,string,trial,16 trials no provenance/intervention
 trial_index,,0-based index within phase,integer,trial,
 trial_index_global,,0-based index across entire experiment,integer,trial,
 pair_id,,Matched pair identifier e.g. TA-01,string,trial,
@@ -31,6 +31,8 @@ provenance_condition,ai-assisted,AI-assisted visualization label shown,string,tr
 provenance_condition,none,No provenance label shown,string,trial,Null in baseline/transfer
 ai_attitude,trust,AI interpretation expresses trust in the chart,string,trial,AI-assisted main trials only
 ai_attitude,distrust,AI interpretation expresses distrust in the chart,string,trial,AI-assisted main trials only
+transfer_type,near,Near-transfer trial,string,trial,Transfer or transfer-derived main trials
+transfer_type,far,Far-transfer trial,string,trial,Transfer or transfer-derived main trials
 trust_pre,,Trust rating before intervention,integer,trial,0-100 scale
 misleading_pre,yes,Chart judged misleading before intervention,string,trial,
 misleading_pre,no,Chart judged accurate before intervention,string,trial,

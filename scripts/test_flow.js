@@ -228,9 +228,12 @@ function runFlow() {
   if (b.length !== 8 || tr.length !== 16) throw new Error('baseline/transfer counts wrong');
 
   const aiAssisted = mainTrials.filter(t => t.provenance_condition === 'ai-assisted');
-  if (aiAssisted.length !== 10) throw new Error('expected 10 ai-assisted main trials');
   if (!aiAssisted.every(t => t.ai_attitude === 'trust' || t.ai_attitude === 'distrust')) {
     throw new Error('ai-assisted trials missing ai_attitude');
+  }
+  const transferDerived = mainTrials.filter(t => t.transfer_type !== null);
+  if (!transferDerived.every(t => t.provenance_condition === null && t.ai_attitude === null)) {
+    throw new Error('transfer-derived main trials should have null provenance/ai_attitude');
   }
 
   return cond;
