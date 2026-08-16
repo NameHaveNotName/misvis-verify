@@ -29,6 +29,8 @@ integrity,accurate,Faithful visualization,string,trial,
 integrity,misleading,Deceptive visualization,string,trial,
 provenance_condition,ai-assisted,AI-assisted visualization label shown,string,trial,Null in baseline/transfer
 provenance_condition,none,No provenance label shown,string,trial,Null in baseline/transfer
+ai_attitude,trust,AI interpretation expresses trust in the chart,string,trial,AI-assisted main trials only
+ai_attitude,distrust,AI interpretation expresses distrust in the chart,string,trial,AI-assisted main trials only
 trust_pre,,Trust rating before intervention,integer,trial,0-100 scale
 misleading_pre,yes,Chart judged misleading before intervention,string,trial,
 misleading_pre,no,Chart judged accurate before intervention,string,trial,

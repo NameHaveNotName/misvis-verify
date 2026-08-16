@@ -93,13 +93,16 @@ for p in pairs:
 
     ai = p.get("aiInterpretations", {})
     for key in ("accurate", "misleading"):
-        variants = ai.get(key, [])
-        check(isinstance(variants, list) and len(variants) >= 2,
-              f"{p.get('pairId')}: aiInterpretations.{key} needs >= 2 variants")
-        for v in variants:
-            check(v.get("text"), f"{p.get('pairId')}: AI interpretation missing text")
-            check(v.get("tone"), f"{p.get('pairId')}: AI interpretation missing tone")
-            check(v.get("status"), f"{p.get('pairId')}: AI interpretation missing status")
+        by_attitude = ai.get(key, {})
+        check(isinstance(by_attitude, dict), f"{p.get('pairId')}: aiInterpretations.{key} must be {{trust: [...], distrust: [...]}}")
+        for attitude in ("trust", "distrust"):
+            variants = by_attitude.get(attitude, [])
+            check(isinstance(variants, list) and len(variants) >= 2,
+                  f"{p.get('pairId')}: aiInterpretations.{key}.{attitude} needs >= 2 variants")
+            for v in variants:
+                check(v.get("text"), f"{p.get('pairId')}: AI interpretation missing text")
+                check(v.get("tone"), f"{p.get('pairId')}: AI interpretation missing tone")
+                check(v.get("status"), f"{p.get('pairId')}: AI interpretation missing status")
 
 check(len(stimulus_ids) == 40, f"expected 40 stimulus IDs, got {len(stimulus_ids)}")
 check(len(stimulus_ids) == len(set(stimulus_ids)), "duplicate stimulus IDs")

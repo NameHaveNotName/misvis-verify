@@ -227,6 +227,12 @@ function runFlow() {
   const tr = exported.trials.filter(t => t.phase === 'transfer');
   if (b.length !== 8 || tr.length !== 16) throw new Error('baseline/transfer counts wrong');
 
+  const aiAssisted = mainTrials.filter(t => t.provenance_condition === 'ai-assisted');
+  if (aiAssisted.length !== 10) throw new Error('expected 10 ai-assisted main trials');
+  if (!aiAssisted.every(t => t.ai_attitude === 'trust' || t.ai_attitude === 'distrust')) {
+    throw new Error('ai-assisted trials missing ai_attitude');
+  }
+
   return cond;
 }
 

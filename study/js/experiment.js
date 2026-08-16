@@ -206,6 +206,7 @@
         mechanism: t.mechanism,
         integrity: t.integrity,
         provenance_condition: t.provenance_condition,
+        ai_attitude: t.ai_attitude || null,
         trust_pre: resp.trust,
         misleading_pre: resp.misleading,
         confidence_pre: resp.confidence,

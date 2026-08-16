@@ -69,9 +69,15 @@
         setStatus(status, 'error', '没有可发送的实验数据。');
         return;
       }
+      btn.disabled = true;
       setStatus(status, 'pending', '正在发送…');
       const result = await submit(json);
-      setStatus(status, result.ok ? 'success' : 'error', result.message);
+      if (result.ok) {
+        setStatus(status, 'success', result.message);
+      } else {
+        btn.disabled = false;
+        setStatus(status, 'error', result.message);
+      }
     };
   }
 
@@ -86,6 +92,8 @@
     if (status) setStatus(status, 'pending', '正在发送结果…');
     const result = await submit(json);
     if (status) setStatus(status, result.ok ? 'success' : 'error', result.message);
+    const btn = document.getElementById('btn-submit');
+    if (result.ok && btn) btn.disabled = true;
   }
 
   window.MisVisVerifySubmit = { submit, init, autoSubmit };

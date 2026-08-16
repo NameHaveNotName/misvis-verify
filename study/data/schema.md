@@ -75,6 +75,7 @@ All exported data is a single JSON object with two top-level keys: `session` and
   "mechanism": "truncated-axis",
   "integrity": "misleading",
   "provenance_condition": "ai-assisted",
+  "ai_attitude": "trust",
   "trust_pre": 70,
   "misleading_pre": "no",
   "confidence_pre": 65,
@@ -107,6 +108,7 @@ All exported data is a single JSON object with two top-level keys: `session` and
 | `mechanism` | string | Mechanism taxonomy key |
 | `integrity` | string | `"accurate"` or `"misleading"` |
 | `provenance_condition` | string | `"ai-assisted"`, `"none"`, or `null` for baseline/transfer |
+| `ai_attitude` | string | `"trust"` or `"distrust"` for `ai-assisted` main trials; `null` otherwise |
 | `trust_pre` | number | 0–100 trust rating before intervention |
 | `misleading_pre` | string | `"yes"`, `"no"`, or `"unsure"` before intervention |
 | `confidence_pre` | number | 0–100 confidence rating before intervention |

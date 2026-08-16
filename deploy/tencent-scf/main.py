@@ -15,6 +15,7 @@ import hashlib
 import hmac
 import json
 import os
+import re
 import time
 import uuid
 from urllib import request as urllib_request
@@ -99,7 +100,15 @@ def main_handler(event, context):
     except Exception:
         return _response(400, {"ok": False, "error": "invalid json"})
 
-    pid = (data.get("session") or {}).get("participant_id") or "unknown"
+    session = data.get("session") or {}
+    trials = data.get("trials") or []
+    pid = session.get("participant_id") or "unknown"
+
+    if not re.match(r"^MV-[0-9a-fA-F]{8}$", pid or ""):
+        return _response(400, {"ok": False, "error": "invalid participant_id"})
+    if not trials:
+        return _response(400, {"ok": False, "error": "empty trials"})
+
     key = "misvis/{}/{}.json".format(pid, uuid.uuid4().hex)
 
     try:

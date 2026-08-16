@@ -81,9 +81,15 @@ window.MISVIS_VERIFY_CONFIG = {
 
 ### 第 7 步：测试
 
-1. 用浏览器完成一次实验，点完成页「将结果发送给研究者」。
+1. 用浏览器完成一次实验，完成页会自动发送结果；若自动发送失败，点击「将结果发送给研究者」按钮重试。
 2. 应显示绿色成功提示。
 3. 到 COS 控制台 → 存储桶 `mis-vis-verify-1410269681` → 应出现 `misvis/<participant_id>/<uuid>.json` 文件。
+
+若前端提示成功但 COS 没有文件：
+- 打开浏览器开发者工具 → Network，确认 POST 请求地址是函数 URL，且响应状态为 200。
+- 到 SCF 函数 → 日志查询，查看请求是否到达、是否有 `storage error` 或权限错误。
+- 检查函数环境变量 `BUCKET` 是否等于实际查看的桶全名（含 `-appid` 后缀）。
+- 检查函数执行角色是否附加了 `QcloudCOSFullAccess`（或至少对目标桶有 `PutObject` 权限）。
 
 ### 数据下载
 

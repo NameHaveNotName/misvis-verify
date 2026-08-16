@@ -1,9 +1,8 @@
 #!/usr/bin/env python3
 """Add AI interpretation variants to study/data/stimuli.json.
 
-Each main pair gets 2 variants for the accurate version and 2 variants for the
-misleading version. Variants differ in tone and AI-status wording so the
-"AI-assisted" provenance cue carries actual interpretive content.
+Each main pair gets trust/distrust variants for both accurate and misleading
+versions. The ai_attitude is randomized at runtime and recorded in trial data.
 """
 
 import json
@@ -14,174 +13,1246 @@ PATH = os.path.join(ROOT, "study", "data", "stimuli.json")
 
 INTERPRETATIONS = {
     "TA-01": {
-        "accurate": [
-            {"tone": "neutral", "status": "分析完成", "confidence": 87,
-             "text": "纵轴从 0 开始，两线柱状高度与真实数值成比例。1号线 92 万人次，2号线 83 万人次，实际差距约 9 万，视觉差异未夸大。"},
-            {"tone": "authoritative", "status": "高置信度", "confidence": 94,
-             "text": "该图坐标轴设置规范，两条线路载客量差距约为 10%，柱状长度真实反映了这一比例，可视为准确的表达。"}
-        ],
-        "misleading": [
-            {"tone": "enthusiastic", "status": "分析完成", "confidence": 89,
-             "text": "1号线柱状明显长于2号线，说明两条线路的日均载客量存在显著差距，1号线客流规模优势突出。"},
-            {"tone": "confident", "status": "高置信度", "confidence": 92,
-             "text": "模型判断：1号线与2号线载客量差异 visually striking，1号线在客流竞争中处于明显领先地位。"}
-        ]
+        "accurate": {
+            "trust": [
+                {
+                    "tone": "neutral",
+                    "status": "分析完成",
+                    "confidence": 87,
+                    "text": "纵轴从 0 开始，两线柱状高度与真实数值成比例。1号线 92 万人次，2号线 83 万人次，实际差距约 9 万，视觉差异未夸大。"
+                },
+                {
+                    "tone": "authoritative",
+                    "status": "高置信度",
+                    "confidence": 94,
+                    "text": "该图坐标轴设置规范，两条线路载客量差距约为 10%，柱状长度真实反映了这一比例，可视为准确的表达。"
+                }
+            ],
+            "distrust": [
+                {
+                    "tone": "skeptical",
+                    "status": "数据代表性有限",
+                    "confidence": 62,
+                    "text": "纵轴虽从 0 开始，但仅比较两条线路，未给出时间范围和样本量，数据代表性有限。"
+                },
+                {
+                    "tone": "cautious",
+                    "status": "需警惕过度解读",
+                    "confidence": 58,
+                    "text": "模型提示：未展示数据的置信区间或日常波动，92 万与 83 万的差距可能不稳定，不宜过度解读。"
+                }
+            ]
+        },
+        "misleading": {
+            "trust": [
+                {
+                    "tone": "enthusiastic",
+                    "status": "分析完成",
+                    "confidence": 89,
+                    "text": "1号线柱状明显长于2号线，说明两条线路的日均载客量存在显著差距，1号线客流规模优势突出。"
+                },
+                {
+                    "tone": "confident",
+                    "status": "高置信度",
+                    "confidence": 92,
+                    "text": "模型判断：1号线与2号线载客量差异 visually striking，1号线在客流竞争中处于明显领先地位。"
+                }
+            ],
+            "distrust": [
+                {
+                    "tone": "skeptical",
+                    "status": "发现纵轴异常",
+                    "confidence": 52,
+                    "text": "纵轴起始值并非从 0 开始，1号线与2号线的柱状高度差异被放大，实际载客量差距可能没有视觉上那么大。"
+                },
+                {
+                    "tone": "cautious",
+                    "status": "需谨慎",
+                    "confidence": 48,
+                    "text": "模型检测到纵轴截断：两线路实际差距约 9 万人次，但截断纵轴让1号线看起来遥遥领先，建议核对原始数值。"
+                }
+            ]
+        }
     },
     "TA-02": {
-        "accurate": [
-            {"tone": "neutral", "status": "分析完成", "confidence": 86,
-             "text": "纵轴从 0 开始，甲校 96% 与乙校 91% 的差距为 5 个百分点，柱长比例与数值一致，未产生视觉夸大。"},
-            {"tone": "authoritative", "status": "高置信度", "confidence": 93,
-             "text": "该图完整呈现了高考一本率数据，两校差距较小，坐标轴处理符合规范，信息表达准确。"}
-        ],
-        "misleading": [
-            {"tone": "enthusiastic", "status": "分析完成", "confidence": 88,
-             "text": "甲校一本率大幅领先乙校，两校柱状高度差距悬殊，直观反映出教学质量的显著差异。"},
-            {"tone": "confident", "status": "高置信度", "confidence": 91,
-             "text": "模型识别出甲校表现明显优于乙校，柱状图清晰展示了这一领先优势，可信度较高。"}
-        ]
+        "accurate": {
+            "trust": [
+                {
+                    "tone": "neutral",
+                    "status": "分析完成",
+                    "confidence": 86,
+                    "text": "纵轴从 0 开始，甲校 96% 与乙校 91% 的差距为 5 个百分点，柱长比例与数值一致，未产生视觉夸大。"
+                },
+                {
+                    "tone": "authoritative",
+                    "status": "高置信度",
+                    "confidence": 93,
+                    "text": "该图完整呈现了高考一本率数据，两校差距较小，坐标轴处理符合规范，信息表达准确。"
+                }
+            ],
+            "distrust": [
+                {
+                    "tone": "skeptical",
+                    "status": "统计口径存疑",
+                    "confidence": 61,
+                    "text": "两校一本率差距仅 5 个百分点，但未给出考生基数和年份，统计口径存疑。"
+                },
+                {
+                    "tone": "cautious",
+                    "status": "可比性需谨慎",
+                    "confidence": 57,
+                    "text": "模型提示：柱状图未说明是否为同一年份、同一地区，样本差异可能影响可比性。"
+                }
+            ]
+        },
+        "misleading": {
+            "trust": [
+                {
+                    "tone": "enthusiastic",
+                    "status": "分析完成",
+                    "confidence": 89,
+                    "text": "甲校一本率大幅领先乙校，两校柱状高度差距悬殊，直观反映出教学质量的显著差异。"
+                },
+                {
+                    "tone": "confident",
+                    "status": "高置信度",
+                    "confidence": 92,
+                    "text": "模型识别出甲校表现明显优于乙校，柱状图清晰展示了这一领先优势，可信度较高。"
+                }
+            ],
+            "distrust": [
+                {
+                    "tone": "skeptical",
+                    "status": "发现纵轴异常",
+                    "confidence": 54,
+                    "text": "纵轴起点被截断，甲校与乙校的柱高差异被夸大。两校一本率实际仅相差 5 个百分点，视觉差距不忠实于真实比例。"
+                },
+                {
+                    "tone": "cautious",
+                    "status": "需谨慎",
+                    "confidence": 49,
+                    "text": "模型提示：截断纵轴会放大两校差异，仅凭此图不宜得出甲校大幅领先的结论。"
+                }
+            ]
+        }
     },
     "CP-01": {
-        "accurate": [
-            {"tone": "neutral", "status": "分析完成", "confidence": 85,
-             "text": "横轴覆盖 2014–2024 完整时间范围，销量先降后升，2018 年后的上升只是完整趋势的一部分。"},
-            {"tone": "authoritative", "status": "高置信度", "confidence": 92,
-             "text": "该图呈现了完整的历史销量轨迹，整体呈 U 型回升，时间窗口选择合理，趋势判断可靠。"}
-        ],
-        "misleading": [
-            {"tone": "enthusiastic", "status": "分析完成", "confidence": 90,
-             "text": "2018 年以来销量持续攀升，增长势头强劲，图表清晰展示了该品牌手机销量的稳步上升趋势。"},
-            {"tone": "confident", "status": "高置信度", "confidence": 93,
-             "text": "模型判断：该品牌销量自 2018 年起呈现持续上升态势，未来增长预期积极，数据支持这一结论。"}
-        ]
+        "accurate": {
+            "trust": [
+                {
+                    "tone": "neutral",
+                    "status": "分析完成",
+                    "confidence": 85,
+                    "text": "横轴覆盖 2014–2024 完整时间范围，销量先降后升，2018 年后的上升只是完整趋势的一部分。"
+                },
+                {
+                    "tone": "authoritative",
+                    "status": "高置信度",
+                    "confidence": 92,
+                    "text": "该图呈现了完整的历史销量轨迹，整体呈 U 型回升，时间窗口选择合理，趋势判断可靠。"
+                }
+            ],
+            "distrust": [
+                {
+                    "tone": "skeptical",
+                    "status": "解释力有限",
+                    "confidence": 60,
+                    "text": "虽然时间范围完整，但未区分不同产品型号和市场环境变化，销量趋势解释力有限。"
+                },
+                {
+                    "tone": "cautious",
+                    "status": "不宜过度泛化",
+                    "confidence": 56,
+                    "text": "模型提示：总体销量回升不等于所有产品线都增长，细分数据缺失，结论需谨慎。"
+                }
+            ]
+        },
+        "misleading": {
+            "trust": [
+                {
+                    "tone": "enthusiastic",
+                    "status": "分析完成",
+                    "confidence": 89,
+                    "text": "2018 年以来销量持续攀升，增长势头强劲，图表清晰展示了该品牌手机销量的稳步上升趋势。"
+                },
+                {
+                    "tone": "confident",
+                    "status": "高置信度",
+                    "confidence": 92,
+                    "text": "模型判断：该品牌销量自 2018 年起呈现持续上升态势，未来增长预期积极，数据支持这一结论。"
+                }
+            ],
+            "distrust": [
+                {
+                    "tone": "skeptical",
+                    "status": "时间窗口可疑",
+                    "confidence": 55,
+                    "text": "图表只展示了 2018 年之后的销量，可能遗漏了之前的下降段，整体趋势可能被美化。"
+                },
+                {
+                    "tone": "cautious",
+                    "status": "数据不完整",
+                    "confidence": 50,
+                    "text": "模型注意到时间范围被人为截短。2014–2018 年的销量变化缺失，无法判断「稳步上升」是否成立。"
+                }
+            ]
+        }
     },
     "CP-02": {
-        "accurate": [
-            {"tone": "neutral", "status": "分析完成", "confidence": 84,
-             "text": "横轴覆盖 2013–2023 完整区间，犯罪率先降后升呈 U 型，2019 年后出现反弹，不能仅看下降段。"},
-            {"tone": "authoritative", "status": "高置信度", "confidence": 91,
-             "text": "该图展示了完整的犯罪率变化，近期已回升至 2013 年水平，时间范围完整，结论较为全面。"}
-        ],
-        "misleading": [
-            {"tone": "enthusiastic", "status": "分析完成", "confidence": 88,
-             "text": "2013–2019 年间犯罪率持续下降，治理成效显著，图表清楚显示了社会治安的不断改善。"},
-            {"tone": "confident", "status": "高置信度", "confidence": 92,
-             "text": "模型判断：犯罪率呈稳定下降趋势，相关治理措施效果明显，这一趋势具有较高的可信度。"}
-        ]
+        "accurate": {
+            "trust": [
+                {
+                    "tone": "neutral",
+                    "status": "分析完成",
+                    "confidence": 84,
+                    "text": "横轴覆盖 2013–2023 完整区间，犯罪率先降后升呈 U 型，2019 年后出现反弹，不能仅看下降段。"
+                },
+                {
+                    "tone": "authoritative",
+                    "status": "高置信度",
+                    "confidence": 91,
+                    "text": "该图展示了完整的犯罪率变化，近期已回升至 2013 年水平，时间范围完整，结论较为全面。"
+                }
+            ],
+            "distrust": [
+                {
+                    "tone": "skeptical",
+                    "status": "犯罪类型未区分",
+                    "confidence": 61,
+                    "text": "时间范围完整，但未说明犯罪类型构成变化，不同罪类的趋势可能不同。"
+                },
+                {
+                    "tone": "cautious",
+                    "status": "单一指标不足",
+                    "confidence": 57,
+                    "text": "模型提示：犯罪率回升可能与统计口径或报案率变化有关，单一曲线难以支撑治理评价。"
+                }
+            ]
+        },
+        "misleading": {
+            "trust": [
+                {
+                    "tone": "enthusiastic",
+                    "status": "分析完成",
+                    "confidence": 89,
+                    "text": "2013–2019 年间犯罪率持续下降，治理成效显著，图表清楚显示了社会治安的不断改善。"
+                },
+                {
+                    "tone": "confident",
+                    "status": "高置信度",
+                    "confidence": 92,
+                    "text": "模型判断：犯罪率呈稳定下降趋势，相关治理措施效果明显，这一趋势具有较高的可信度。"
+                }
+            ],
+            "distrust": [
+                {
+                    "tone": "skeptical",
+                    "status": "时间窗口可疑",
+                    "confidence": 56,
+                    "text": "图表只截取到 2019 年，但完整数据显示犯罪率之后已回升，仅看下降段会得出错误结论。"
+                },
+                {
+                    "tone": "cautious",
+                    "status": "数据不完整",
+                    "confidence": 51,
+                    "text": "模型提示：2019 年后的反弹被隐藏，该图呈现的是被选择后的局部趋势。"
+                }
+            ]
+        }
     },
     "HU-01": {
-        "accurate": [
-            {"tone": "neutral", "status": "分析完成", "confidence": 86,
-             "text": "预测曲线附带置信区间，远期预测的不确定性明显大于近期，提醒读者不要过度相信单一点估计。"},
-            {"tone": "authoritative", "status": "高置信度", "confidence": 93,
-             "text": "该图合理呈现了预测的不确定性范围，2029 年区间较宽，符合预测越远误差越大的统计规律。"}
-        ],
-        "misleading": [
-            {"tone": "enthusiastic", "status": "分析完成", "confidence": 89,
-             "text": "营收预测曲线稳步上升，2029 年预计突破 100 百万元，增长前景清晰，趋势向好。"},
-            {"tone": "confident", "status": "高置信度", "confidence": 91,
-             "text": "模型判断：公司营收将持续增长，预测路径明确，未来几年的增长预期较为乐观。"}
-        ]
+        "accurate": {
+            "trust": [
+                {
+                    "tone": "neutral",
+                    "status": "分析完成",
+                    "confidence": 86,
+                    "text": "预测曲线附带置信区间，远期预测的不确定性明显大于近期，提醒读者不要过度相信单一点估计。"
+                },
+                {
+                    "tone": "authoritative",
+                    "status": "高置信度",
+                    "confidence": 93,
+                    "text": "该图合理呈现了预测的不确定性范围，2029 年区间较宽，符合预测越远误差越大的统计规律。"
+                }
+            ],
+            "distrust": [
+                {
+                    "tone": "skeptical",
+                    "status": "模型假设未披露",
+                    "confidence": 59,
+                    "text": "虽显示置信区间，但模型假设和历史拟合优度未披露，远期预测仍有较大主观性。"
+                },
+                {
+                    "tone": "cautious",
+                    "status": "区间可能偏窄",
+                    "confidence": 55,
+                    "text": "模型提示：预测基于历史数据，外部冲击和模型选择可能使区间偏窄，不宜完全采信。"
+                }
+            ]
+        },
+        "misleading": {
+            "trust": [
+                {
+                    "tone": "enthusiastic",
+                    "status": "分析完成",
+                    "confidence": 89,
+                    "text": "营收预测曲线稳步上升，2029 年预计突破 100 百万元，增长前景清晰，趋势向好。"
+                },
+                {
+                    "tone": "confident",
+                    "status": "高置信度",
+                    "confidence": 92,
+                    "text": "模型判断：公司营收将持续增长，预测路径明确，未来几年的增长预期较为乐观。"
+                }
+            ],
+            "distrust": [
+                {
+                    "tone": "skeptical",
+                    "status": "不确定性被隐藏",
+                    "confidence": 53,
+                    "text": "预测曲线未显示置信区间，远期营收的不确定性被忽略，单一点估计可能被过度信任。"
+                },
+                {
+                    "tone": "cautious",
+                    "status": "预测需谨慎",
+                    "confidence": 47,
+                    "text": "模型提示：营收预测应附带误差范围，隐藏不确定性会夸大增长路径的可靠性。"
+                }
+            ]
+        }
     },
     "HU-02": {
-        "accurate": [
-            {"tone": "neutral", "status": "分析完成", "confidence": 85,
-             "text": "预测温度附带置信区间，远期区间较宽，说明 6-11 日的温度预测存在较大不确定性，不宜视为精确值。"},
-            {"tone": "authoritative", "status": "高置信度", "confidence": 92,
-             "text": "该图正确展示了天气预报的不确定性，预测天数越远，温度区间越宽，信息表达符合气象预测规范。"}
-        ],
-        "misleading": [
-            {"tone": "enthusiastic", "status": "分析完成", "confidence": 88,
-             "text": "未来几天气温持续上升，6-11 日预计达到 26℃，升温趋势明显，适合安排户外活动。"},
-            {"tone": "confident", "status": "高置信度", "confidence": 90,
-             "text": "模型判断：气温将稳定上升，中心预测值可信，未来一周整体呈回暖态势。"}
-        ]
+        "accurate": {
+            "trust": [
+                {
+                    "tone": "neutral",
+                    "status": "分析完成",
+                    "confidence": 85,
+                    "text": "预测温度附带置信区间，远期区间较宽，说明 6-11 日的温度预测存在较大不确定性，不宜视为精确值。"
+                },
+                {
+                    "tone": "authoritative",
+                    "status": "高置信度",
+                    "confidence": 92,
+                    "text": "该图正确展示了天气预报的不确定性，预测天数越远，温度区间越宽，信息表达符合气象预测规范。"
+                }
+            ],
+            "distrust": [
+                {
+                    "tone": "skeptical",
+                    "status": "模型依赖性强",
+                    "confidence": 60,
+                    "text": "虽有置信区间，但区间宽度依赖于特定气象模型，不同模型可能给出不同范围。"
+                },
+                {
+                    "tone": "cautious",
+                    "status": "远期预测不稳",
+                    "confidence": 56,
+                    "text": "模型提示：6–11 日预测天数较远，即使给出区间，局地天气扰动仍可能超出预期。"
+                }
+            ]
+        },
+        "misleading": {
+            "trust": [
+                {
+                    "tone": "enthusiastic",
+                    "status": "分析完成",
+                    "confidence": 89,
+                    "text": "未来几天气温持续上升，6-11 日预计达到 26℃，升温趋势明显，适合安排户外活动。"
+                },
+                {
+                    "tone": "confident",
+                    "status": "高置信度",
+                    "confidence": 92,
+                    "text": "模型判断：气温将稳定上升，中心预测值可信，未来一周整体呈回暖态势。"
+                }
+            ],
+            "distrust": [
+                {
+                    "tone": "skeptical",
+                    "status": "不确定性被隐藏",
+                    "confidence": 54,
+                    "text": "远期温度预测未给出置信区间，6–11 日的具体数值存在较大误差，不宜视为精确预报。"
+                },
+                {
+                    "tone": "cautious",
+                    "status": "预测需谨慎",
+                    "confidence": 49,
+                    "text": "模型提示：天气预报天数越远不确定性越大，该图隐藏了误差范围，可能过度自信。"
+                }
+            ]
+        }
     },
     "AD-01": {
-        "accurate": [
-            {"tone": "neutral", "status": "分析完成", "confidence": 87,
-             "text": "三个圆形的面积与人口数值成正比，半径按平方根缩放，100:400:900 的人口对应 1:4:9 的面积，视觉比例正确。"},
-            {"tone": "authoritative", "status": "高置信度", "confidence": 93,
-             "text": "该图采用面积编码且缩放方式规范，城市C虽然视觉最大，但其面积与人口 900 万严格对应，表达准确。"}
-        ],
-        "misleading": [
-            {"tone": "enthusiastic", "status": "分析完成", "confidence": 88,
-             "text": "城市C的圆形远大于城市A和城市B，直观显示了三座城市在人口规模上的巨大差距，城市C优势明显。"},
-            {"tone": "confident", "status": "高置信度", "confidence": 91,
-             "text": "模型判断：城市C常住人口遥遥领先，圆形大小差异清晰反映了城市间的人口层级，结论可靠。"}
-        ]
+        "accurate": {
+            "trust": [
+                {
+                    "tone": "neutral",
+                    "status": "分析完成",
+                    "confidence": 87,
+                    "text": "三个圆形的面积与人口数值成正比，半径按平方根缩放，100:400:900 的人口对应 1:4:9 的面积，视觉比例正确。"
+                },
+                {
+                    "tone": "authoritative",
+                    "status": "高置信度",
+                    "confidence": 93,
+                    "text": "该图采用面积编码且缩放方式规范，城市C虽然视觉最大，但其面积与人口 900 万严格对应，表达准确。"
+                }
+            ],
+            "distrust": [
+                {
+                    "tone": "skeptical",
+                    "status": "读取存在误差",
+                    "confidence": 61,
+                    "text": "面积缩放方式正确，但圆形图本身不如条形图精确，人口差距的读取仍有视觉误差。"
+                },
+                {
+                    "tone": "cautious",
+                    "status": "编码不直观",
+                    "confidence": 57,
+                    "text": "模型提示：面积编码对读者不直观，且未给出具体数值，直接比较仍存在误读风险。"
+                }
+            ]
+        },
+        "misleading": {
+            "trust": [
+                {
+                    "tone": "enthusiastic",
+                    "status": "分析完成",
+                    "confidence": 89,
+                    "text": "城市C的圆形远大于城市A和城市B，直观显示了三座城市在人口规模上的巨大差距，城市C优势明显。"
+                },
+                {
+                    "tone": "confident",
+                    "status": "高置信度",
+                    "confidence": 92,
+                    "text": "模型判断：城市C常住人口遥遥领先，圆形大小差异清晰反映了城市间的人口层级，结论可靠。"
+                }
+            ],
+            "distrust": [
+                {
+                    "tone": "skeptical",
+                    "status": "面积比例异常",
+                    "confidence": 55,
+                    "text": "圆形面积未按半径平方根缩放，城市C的视觉面积被不成比例放大，人口差距被夸大。"
+                },
+                {
+                    "tone": "cautious",
+                    "status": "视觉编码有误",
+                    "confidence": 50,
+                    "text": "模型检测到面积编码不规范：100:400:900 的人口若正确缩放，视觉差异不应如此悬殊。"
+                }
+            ]
+        }
     },
     "AD-02": {
-        "accurate": [
-            {"tone": "neutral", "status": "分析完成", "confidence": 86,
-             "text": "三个圆形面积与市场份额成正比，品牌A、B、C 的份额为 10%、20%、40%，面积比为 1:2:4，视觉呈现准确。"},
-            {"tone": "authoritative", "status": "高置信度", "confidence": 92,
-             "text": "该图正确运用面积编码，品牌C 的 40% 份额在面积上恰好是品牌A 的 4 倍，比例关系忠实于数据。"}
-        ],
-        "misleading": [
-            {"tone": "enthusiastic", "status": "分析完成", "confidence": 89,
-             "text": "品牌C 的市场份额在图中占据绝对主导地位，视觉面积远超其他品牌，显示出强劲的市场控制力。"},
-            {"tone": "confident", "status": "高置信度", "confidence": 90,
-             "text": "模型判断：品牌C 在市场中遥遥领先，圆形大小差异显著，品牌优势一目了然。"}
-        ]
+        "accurate": {
+            "trust": [
+                {
+                    "tone": "neutral",
+                    "status": "分析完成",
+                    "confidence": 86,
+                    "text": "三个圆形面积与市场份额成正比，品牌A、B、C 的份额为 10%、20%、40%，面积比为 1:2:4，视觉呈现准确。"
+                },
+                {
+                    "tone": "authoritative",
+                    "status": "高置信度",
+                    "confidence": 92,
+                    "text": "该图正确运用面积编码，品牌C 的 40% 份额在面积上恰好是品牌A 的 4 倍，比例关系忠实于数据。"
+                }
+            ],
+            "distrust": [
+                {
+                    "tone": "skeptical",
+                    "status": "市场范围存疑",
+                    "confidence": 60,
+                    "text": "份额比例在面积上正确，但市场份额数据是否包含所有竞争对手未说明，范围存疑。"
+                },
+                {
+                    "tone": "cautious",
+                    "status": "结构差异未明",
+                    "confidence": 56,
+                    "text": "模型提示：三个品牌之外的市场被忽略，40% 份额在不同市场结构下含义不同。"
+                }
+            ]
+        },
+        "misleading": {
+            "trust": [
+                {
+                    "tone": "enthusiastic",
+                    "status": "分析完成",
+                    "confidence": 89,
+                    "text": "品牌C 的市场份额在图中占据绝对主导地位，视觉面积远超其他品牌，显示出强劲的市场控制力。"
+                },
+                {
+                    "tone": "confident",
+                    "status": "高置信度",
+                    "confidence": 92,
+                    "text": "模型判断：品牌C 在市场中遥遥领先，圆形大小差异显著，品牌优势一目了然。"
+                }
+            ],
+            "distrust": [
+                {
+                    "tone": "skeptical",
+                    "status": "面积比例异常",
+                    "confidence": 56,
+                    "text": "品牌C 的视觉面积远大于其 40% 份额应有的比例，面积缩放方式可能误导读者。"
+                },
+                {
+                    "tone": "cautious",
+                    "status": "视觉编码有误",
+                    "confidence": 51,
+                    "text": "模型提示：份额 10%:20%:40% 若按面积正确编码，不应呈现如此悬殊的视觉效果。"
+                }
+            ]
+        }
     },
     "CE-01": {
-        "accurate": [
-            {"tone": "neutral", "status": "分析完成", "confidence": 85,
-             "text": "四个区域采用统一配色，空气质量指数分别为 82、85、84、88，数值接近，颜色未对任何区域做特殊强调。"},
-            {"tone": "authoritative", "status": "高置信度", "confidence": 92,
-             "text": "该图配色一致，各区指数差异很小，没有通过颜色单独突出某个区域，信息表达较为客观。"}
-        ],
-        "misleading": [
-            {"tone": "enthusiastic", "status": "分析完成", "confidence": 88,
-             "text": "南区被单独标红，空气质量指数最高，需要重点关注，图表有效突出了这一风险区域。"},
-            {"tone": "confident", "status": "高置信度", "confidence": 90,
-             "text": "模型判断：南区空气质量明显劣于其他区域，红色高亮合理强调了这一异常，建议优先关注。"}
-        ]
+        "accurate": {
+            "trust": [
+                {
+                    "tone": "neutral",
+                    "status": "分析完成",
+                    "confidence": 85,
+                    "text": "四个区域采用统一配色，空气质量指数分别为 82、85、84、88，数值接近，颜色未对任何区域做特殊强调。"
+                },
+                {
+                    "tone": "authoritative",
+                    "status": "高置信度",
+                    "confidence": 92,
+                    "text": "该图配色一致，各区指数差异很小，没有通过颜色单独突出某个区域，信息表达较为客观。"
+                }
+            ],
+            "distrust": [
+                {
+                    "tone": "skeptical",
+                    "status": "细微差异难辨",
+                    "confidence": 62,
+                    "text": "配色统一，但四区数值接近，颜色本身无法体现细微差异，需要配合具体数值判断。"
+                },
+                {
+                    "tone": "cautious",
+                    "status": "局地因素未控",
+                    "confidence": 58,
+                    "text": "模型提示：未给出采样时间和监测点分布，指数差异可能受局地因素影响，不宜一概而论。"
+                }
+            ]
+        },
+        "misleading": {
+            "trust": [
+                {
+                    "tone": "enthusiastic",
+                    "status": "分析完成",
+                    "confidence": 89,
+                    "text": "南区被单独标红，空气质量指数最高，需要重点关注，图表有效突出了这一风险区域。"
+                },
+                {
+                    "tone": "confident",
+                    "status": "高置信度",
+                    "confidence": 92,
+                    "text": "模型判断：南区空气质量明显劣于其他区域，红色高亮合理强调了这一异常，建议优先关注。"
+                }
+            ],
+            "distrust": [
+                {
+                    "tone": "skeptical",
+                    "status": "颜色强调可疑",
+                    "confidence": 58,
+                    "text": "南区被单独标红，但四区空气质量指数数值接近，颜色突出可能制造不存在的显著差异。"
+                },
+                {
+                    "tone": "cautious",
+                    "status": "需警惕选择性高亮",
+                    "confidence": 52,
+                    "text": "模型提示：南区 88 与其他区 82–85 差距很小，红色高亮可能夸大了其「异常」程度。"
+                }
+            ]
+        }
     },
     "CE-02": {
-        "accurate": [
-            {"tone": "neutral", "status": "分析完成", "confidence": 86,
-             "text": "四个部门采用统一配色，预算执行率分别为 87%、89%、86%、91%，差异很小，颜色未对部门D做特殊处理。"},
-            {"tone": "authoritative", "status": "高置信度", "confidence": 93,
-             "text": "该图配色统一，各部门执行率均处于相近水平，没有通过颜色制造人为的异常感，表达准确。"}
-        ],
-        "misleading": [
-            {"tone": "enthusiastic", "status": "分析完成", "confidence": 88,
-             "text": "部门D被单独标红，执行率最高，表现突出，图表有效强调了部门D在预算执行上的领先地位。"},
-            {"tone": "confident", "status": "高置信度", "confidence": 91,
-             "text": "模型判断：部门D执行率显著高于其他部门，红色高亮有助于快速识别优秀表现，信息清晰。"}
-        ]
+        "accurate": {
+            "trust": [
+                {
+                    "tone": "neutral",
+                    "status": "分析完成",
+                    "confidence": 86,
+                    "text": "四个部门采用统一配色，预算执行率分别为 87%、89%、86%、91%，差异很小，颜色未对部门D做特殊处理。"
+                },
+                {
+                    "tone": "authoritative",
+                    "status": "高置信度",
+                    "confidence": 93,
+                    "text": "该图配色统一，各部门执行率均处于相近水平，没有通过颜色制造人为的异常感，表达准确。"
+                }
+            ],
+            "distrust": [
+                {
+                    "tone": "skeptical",
+                    "status": "差异被掩盖",
+                    "confidence": 61,
+                    "text": "各部门执行率均在 86%–91%，差异很小，统一配色虽客观但也掩盖了小幅波动。"
+                },
+                {
+                    "tone": "cautious",
+                    "status": "规模信息缺失",
+                    "confidence": 57,
+                    "text": "模型提示：未说明预算总额和项目构成，执行率相同可能对应完全不同的资金规模。"
+                }
+            ]
+        },
+        "misleading": {
+            "trust": [
+                {
+                    "tone": "enthusiastic",
+                    "status": "分析完成",
+                    "confidence": 89,
+                    "text": "部门D被单独标红，执行率最高，表现突出，图表有效强调了部门D在预算执行上的领先地位。"
+                },
+                {
+                    "tone": "confident",
+                    "status": "高置信度",
+                    "confidence": 92,
+                    "text": "模型判断：部门D执行率显著高于其他部门，红色高亮有助于快速识别优秀表现，信息清晰。"
+                }
+            ],
+            "distrust": [
+                {
+                    "tone": "skeptical",
+                    "status": "颜色强调可疑",
+                    "confidence": 57,
+                    "text": "部门D 被单独标红，但各部门执行率都在 86%–91% 之间，颜色强调可能制造虚假领先。"
+                },
+                {
+                    "tone": "cautious",
+                    "status": "需警惕选择性高亮",
+                    "confidence": 51,
+                    "text": "模型提示：部门D 91% 与部门A 87% 差距不大，单独标红会误导读者认为差距显著。"
+                }
+            ]
+        }
     },
     "MT-01": {
-        "accurate": [
-            {"tone": "neutral", "status": "分析完成", "confidence": 85,
-             "text": "标题仅表述运动次数与幸福感的相关性，未断言因果关系，图表本身只展示了两条同步上升的曲线。"},
-            {"tone": "authoritative", "status": "高置信度", "confidence": 92,
-             "text": "该图标题措辞谨慎，仅说明相关关系，没有因果推断，符合数据可视化的规范表达。"}
-        ],
-        "misleading": [
-            {"tone": "enthusiastic", "status": "分析完成", "confidence": 89,
-             "text": "每周运动次数增加显著提升主观幸福感，两条曲线同步上升，说明运动对幸福感有积极推动作用。"},
-            {"tone": "confident", "status": "高置信度", "confidence": 90,
-             "text": "模型判断：运动与幸福感之间存在正向影响关系，标题准确概括了图表传达的核心发现。"}
-        ]
+        "accurate": {
+            "trust": [
+                {
+                    "tone": "neutral",
+                    "status": "分析完成",
+                    "confidence": 85,
+                    "text": "标题仅表述运动次数与幸福感的相关性，未断言因果关系，图表本身只展示了两条同步上升的曲线。"
+                },
+                {
+                    "tone": "authoritative",
+                    "status": "高置信度",
+                    "confidence": 92,
+                    "text": "该图标题措辞谨慎，仅说明相关关系，没有因果推断，符合数据可视化的规范表达。"
+                }
+            ],
+            "distrust": [
+                {
+                    "tone": "skeptical",
+                    "status": "因果未排除",
+                    "confidence": 63,
+                    "text": "标题仅说相关，但两条曲线同向变化可能受第三方变量影响，因果关系未被排除。"
+                },
+                {
+                    "tone": "cautious",
+                    "status": "混杂因素存疑",
+                    "confidence": 59,
+                    "text": "模型提示：样本来源和 controls 未披露，相关可能是混杂因素导致，不应过度推断。"
+                }
+            ]
+        },
+        "misleading": {
+            "trust": [
+                {
+                    "tone": "enthusiastic",
+                    "status": "分析完成",
+                    "confidence": 89,
+                    "text": "每周运动次数增加显著提升主观幸福感，两条曲线同步上升，说明运动对幸福感有积极推动作用。"
+                },
+                {
+                    "tone": "confident",
+                    "status": "高置信度",
+                    "confidence": 92,
+                    "text": "模型判断：运动与幸福感之间存在正向影响关系，标题准确概括了图表传达的核心发现。"
+                }
+            ],
+            "distrust": [
+                {
+                    "tone": "skeptical",
+                    "status": "标题推断过度",
+                    "confidence": 59,
+                    "text": "标题将「相关」表述为「越多……越高」，暗示因果关系，但图表只展示同步变化，不能证明因果。"
+                },
+                {
+                    "tone": "cautious",
+                    "status": "因果证据不足",
+                    "confidence": 53,
+                    "text": "模型提示：两条曲线同向变化不等于运动导致幸福感提升，标题存在因果推断过度。"
+                }
+            ]
+        }
     },
     "MT-02": {
-        "accurate": [
-            {"tone": "neutral", "status": "分析完成", "confidence": 86,
-             "text": "标题仅说明咖啡摄入与工作效率评分的相关性，未断言因果，图表展示的是两条同向变化曲线。"},
-            {"tone": "authoritative", "status": "高置信度", "confidence": 92,
-             "text": "该图标题使用相关性表述，避免了因果推断，数据仅支持同向变化，不能证明咖啡提升效率。"}
-        ],
-        "misleading": [
-            {"tone": "enthusiastic", "status": "分析完成", "confidence": 88,
-             "text": "喝咖啡显著提升工作效率，两条曲线同步上升，数据表明咖啡摄入与工作效率之间存在积极关系。"},
-            {"tone": "confident", "status": "高置信度", "confidence": 91,
-             "text": "模型判断：咖啡摄入对工作效率有正向促进作用，标题清晰表达了这一因果发现，信息明确。"}
-        ]
+        "accurate": {
+            "trust": [
+                {
+                    "tone": "neutral",
+                    "status": "分析完成",
+                    "confidence": 86,
+                    "text": "标题仅说明咖啡摄入与工作效率评分的相关性，未断言因果，图表展示的是两条同向变化曲线。"
+                },
+                {
+                    "tone": "authoritative",
+                    "status": "高置信度",
+                    "confidence": 92,
+                    "text": "该图标题使用相关性表述，避免了因果推断，数据仅支持同向变化，不能证明咖啡提升效率。"
+                }
+            ],
+            "distrust": [
+                {
+                    "tone": "skeptical",
+                    "status": "变量控制不足",
+                    "confidence": 62,
+                    "text": "标题避免因果推断，但图表未控制睡眠、个体差异等变量，相关性解释力有限。"
+                },
+                {
+                    "tone": "cautious",
+                    "status": "生活方式干扰",
+                    "confidence": 58,
+                    "text": "模型提示：咖啡摄入与工作效率的同步变化可能由其他生活方式因素驱动，结论保守。"
+                }
+            ]
+        },
+        "misleading": {
+            "trust": [
+                {
+                    "tone": "enthusiastic",
+                    "status": "分析完成",
+                    "confidence": 89,
+                    "text": "喝咖啡显著提升工作效率，两条曲线同步上升，数据表明咖啡摄入与工作效率之间存在积极关系。"
+                },
+                {
+                    "tone": "confident",
+                    "status": "高置信度",
+                    "confidence": 92,
+                    "text": "模型判断：咖啡摄入对工作效率有正向促进作用，标题清晰表达了这一因果发现，信息明确。"
+                }
+            ],
+            "distrust": [
+                {
+                    "tone": "skeptical",
+                    "status": "标题推断过度",
+                    "confidence": 58,
+                    "text": "标题声称咖啡「显著提升」工作效率，但数据仅显示相关性，缺乏因果证据。"
+                },
+                {
+                    "tone": "cautious",
+                    "status": "因果证据不足",
+                    "confidence": 52,
+                    "text": "模型提示：相关性不等于因果性，「喝咖啡提升效率」的结论不能从该图直接得出。"
+                }
+            ]
+        }
+    },
+    "MN-01": {
+        "accurate": {
+            "trust": [
+                {
+                    "tone": "neutral",
+                    "status": "分析完成",
+                    "confidence": 87,
+                    "text": "图表按每百名学生折算获奖数，甲校 2.0 项、乙校 4.0 项，已考虑两校在校生规模差异，对比口径合理。"
+                },
+                {
+                    "tone": "authoritative",
+                    "status": "高置信度",
+                    "confidence": 93,
+                    "text": "该图采用人均口径比较，乙校人均获奖数高于甲校，数据口径统一，信息表达准确。"
+                }
+            ],
+            "distrust": [
+                {
+                    "tone": "skeptical",
+                    "status": "奖项级别未明",
+                    "confidence": 61,
+                    "text": "虽已归一化到每百名学生，但未说明奖项级别和参赛范围，仍可能不完全可比。"
+                },
+                {
+                    "tone": "cautious",
+                    "status": "单一指标有限",
+                    "confidence": 57,
+                    "text": "模型提示：获奖数量受学校规模、学科设置影响，单一指标难以全面衡量办学质量。"
+                }
+            ]
+        },
+        "misleading": {
+            "trust": [
+                {
+                    "tone": "enthusiastic",
+                    "status": "分析完成",
+                    "confidence": 89,
+                    "text": "甲校获奖总数高达 50 项，是乙校的 2.5 倍，办学成果显著领先，两校差距一目了然。"
+                },
+                {
+                    "tone": "confident",
+                    "status": "高置信度",
+                    "confidence": 92,
+                    "text": "模型判断：甲校获奖数量遥遥领先，图表清晰反映了甲校的突出表现，可信度较高。"
+                }
+            ],
+            "distrust": [
+                {
+                    "tone": "skeptical",
+                    "status": "缺少归一化",
+                    "confidence": 60,
+                    "text": "甲校获奖总数更高，但两校学生规模未知，直接用绝对数量比较可能不公平。"
+                },
+                {
+                    "tone": "cautious",
+                    "status": "基数信息缺失",
+                    "confidence": 55,
+                    "text": "模型提示：每百名学生获奖率才是可比指标，仅凭获奖总数无法判断办学质量。"
+                }
+            ]
+        }
+    },
+    "MN-02": {
+        "accurate": {
+            "trust": [
+                {
+                    "tone": "neutral",
+                    "status": "分析完成",
+                    "confidence": 86,
+                    "text": "图表按治愈率比较，甲医院 20%、乙医院 50%，已考虑收治患者数量差异，口径合理。"
+                },
+                {
+                    "tone": "authoritative",
+                    "status": "高置信度",
+                    "confidence": 92,
+                    "text": "该图采用治愈率指标，乙医院治愈率更高，比较口径统一，结论可靠。"
+                }
+            ],
+            "distrust": [
+                {
+                    "tone": "skeptical",
+                    "status": "病例构成未知",
+                    "confidence": 62,
+                    "text": "治愈率已归一化，但未考虑病情严重程度和科室构成差异，直接比较仍存疑。"
+                },
+                {
+                    "tone": "cautious",
+                    "status": "患者群体不同",
+                    "confidence": 58,
+                    "text": "模型提示：不同医院收治患者群体不同，治愈率差异可能反映病例构成而非医疗水平。"
+                }
+            ]
+        },
+        "misleading": {
+            "trust": [
+                {
+                    "tone": "enthusiastic",
+                    "status": "分析完成",
+                    "confidence": 89,
+                    "text": "甲医院治愈人数 400 人，是乙医院的 4 倍，医疗实力显著更强，领先优势明显。"
+                },
+                {
+                    "tone": "confident",
+                    "status": "高置信度",
+                    "confidence": 92,
+                    "text": "模型判断：甲医院治愈人数大幅领先，治疗效果突出，图表信息清晰明确。"
+                }
+            ],
+            "distrust": [
+                {
+                    "tone": "skeptical",
+                    "status": "缺少归一化",
+                    "confidence": 61,
+                    "text": "甲医院治愈人数 400 人高于乙医院，但收治患者总数未知，治愈率可能并无差异。"
+                },
+                {
+                    "tone": "cautious",
+                    "status": "基数信息缺失",
+                    "confidence": 56,
+                    "text": "模型提示：直接比较治愈人数忽略了医院规模，应使用治愈率进行比较。"
+                }
+            ]
+        }
+    },
+    "OC-01": {
+        "accurate": {
+            "trust": [
+                {
+                    "tone": "neutral",
+                    "status": "分析完成",
+                    "confidence": 86,
+                    "text": "各曲线使用同色系渐变编码，五家工厂能耗数值接近，颜色未制造额外差异。"
+                },
+                {
+                    "tone": "authoritative",
+                    "status": "高置信度",
+                    "confidence": 92,
+                    "text": "该图采用顺序色编码，颜色深浅与数值大小一致，未夸大工厂间的能耗差异，表达规范。"
+                }
+            ],
+            "distrust": [
+                {
+                    "tone": "skeptical",
+                    "status": "能效背景缺失",
+                    "confidence": 60,
+                    "text": "虽然配色统一，但未展示产量或产值数据，能耗高低不能直接等同于效率高低。"
+                },
+                {
+                    "tone": "cautious",
+                    "status": "规模差异未明",
+                    "confidence": 56,
+                    "text": "模型提示：不同工厂产品类型和生产规模未知，单纯能耗曲线难以判断能效水平。"
+                }
+            ]
+        },
+        "misleading": {
+            "trust": [
+                {
+                    "tone": "enthusiastic",
+                    "status": "分析完成",
+                    "confidence": 89,
+                    "text": "五家工厂能耗曲线颜色各异，差异明显，图表直观展示出各厂能耗水平的不同层级。"
+                },
+                {
+                    "tone": "confident",
+                    "status": "高置信度",
+                    "confidence": 92,
+                    "text": "模型判断：各工厂能耗水平差异显著，彩虹配色帮助快速区分，信息呈现高效直观。"
+                }
+            ],
+            "distrust": [
+                {
+                    "tone": "skeptical",
+                    "status": "配色造成干扰",
+                    "confidence": 54,
+                    "text": "彩虹配色让各厂能耗看起来差异巨大，但实际数值可能相近，颜色本身制造了不必要的区分感。"
+                },
+                {
+                    "tone": "cautious",
+                    "status": "颜色非数据",
+                    "confidence": 49,
+                    "text": "模型提示：每条曲线颜色不同并不对应数值类别，彩虹配色可能放大读者对差异的感知。"
+                }
+            ]
+        }
+    },
+    "OC-02": {
+        "accurate": {
+            "trust": [
+                {
+                    "tone": "neutral",
+                    "status": "分析完成",
+                    "confidence": 87,
+                    "text": "各曲线同色系编码，五家门店营业额相近，颜色只反映数值高低，未放大差异。"
+                },
+                {
+                    "tone": "authoritative",
+                    "status": "高置信度",
+                    "confidence": 92,
+                    "text": "该图颜色编码规范，未人为强调门店差异，数据呈现客观。"
+                }
+            ],
+            "distrust": [
+                {
+                    "tone": "skeptical",
+                    "status": "背景变量缺失",
+                    "confidence": 61,
+                    "text": "营业额随时间变化，但未给出门店面积、客单价等背景，增长解读需谨慎。"
+                },
+                {
+                    "tone": "cautious",
+                    "status": "季节性未去除",
+                    "confidence": 57,
+                    "text": "模型提示：营业额波动可能受季节和促销活动影响，未去除这些因素前不宜定论。"
+                }
+            ]
+        },
+        "misleading": {
+            "trust": [
+                {
+                    "tone": "enthusiastic",
+                    "status": "分析完成",
+                    "confidence": 89,
+                    "text": "五家门店营业额差异鲜明，颜色区分清晰，经营表现高下立判。"
+                },
+                {
+                    "tone": "confident",
+                    "status": "高置信度",
+                    "confidence": 92,
+                    "text": "模型判断：门店间营业额差异显著，彩虹配色强化了对比效果，结论直观可信。"
+                }
+            ],
+            "distrust": [
+                {
+                    "tone": "skeptical",
+                    "status": "配色造成干扰",
+                    "confidence": 55,
+                    "text": "五颜六色的折线让门店间营业额差异显得比实际更悬殊，颜色本身成为干扰。"
+                },
+                {
+                    "tone": "cautious",
+                    "status": "颜色非数据",
+                    "confidence": 50,
+                    "text": "模型提示：彩虹配色无信息意义，可能让读者误以为颜色代表不同类别或等级。"
+                }
+            ]
+        }
+    },
+    "IS-01": {
+        "accurate": {
+            "trust": [
+                {
+                    "tone": "neutral",
+                    "status": "分析完成",
+                    "confidence": 86,
+                    "text": "该图采用对数尺度，新增病例从 50 增至 950 呈稳定指数趋势，每周环比增速大致相同，末段并未出现异常跳升。"
+                },
+                {
+                    "tone": "authoritative",
+                    "status": "高置信度",
+                    "confidence": 92,
+                    "text": "对数尺度下病例增长接近直线，说明增速稳定，线性尺度会夸大后期的视觉冲击，此图表达更符合指数数据特征。"
+                }
+            ],
+            "distrust": [
+                {
+                    "tone": "skeptical",
+                    "status": "早期差异被压缩",
+                    "confidence": 60,
+                    "text": "对数尺度适合展示指数增长，但会压缩早期差异，低数值阶段的波动被忽略。"
+                },
+                {
+                    "tone": "cautious",
+                    "status": "斜率易误读",
+                    "confidence": 56,
+                    "text": "模型提示：对数尺度下视觉斜率不等于实际增长率，读者容易误读为线性增速。"
+                }
+            ]
+        },
+        "misleading": {
+            "trust": [
+                {
+                    "tone": "enthusiastic",
+                    "status": "分析完成",
+                    "confidence": 89,
+                    "text": "新增确诊病例在第8周接近 1000 例，曲线末端陡峭上扬，显示疫情正在加速扩散，形势不容乐观。"
+                },
+                {
+                    "tone": "confident",
+                    "status": "高置信度",
+                    "confidence": 92,
+                    "text": "模型判断：病例增长曲线尾部斜率显著增大，说明传播速度加快，需要高度警惕后续走势。"
+                }
+            ],
+            "distrust": [
+                {
+                    "tone": "skeptical",
+                    "status": "尺度选择不当",
+                    "confidence": 56,
+                    "text": "指数增长数据使用线性尺度，会让曲线末端显得急剧上扬，传播速度可能被夸大。"
+                },
+                {
+                    "tone": "cautious",
+                    "status": "增长趋势被扭曲",
+                    "confidence": 51,
+                    "text": "模型提示：新增病例若为指数增长，对数尺度更能反映真实增长率，线性尺度会放大后期视觉冲击。"
+                }
+            ]
+        }
+    },
+    "IS-02": {
+        "accurate": {
+            "trust": [
+                {
+                    "tone": "neutral",
+                    "status": "分析完成",
+                    "confidence": 85,
+                    "text": "对数尺度下基金累计收益呈稳定上升趋势，年化复合增速大致恒定，后期并未出现异常的收益跳升。"
+                },
+                {
+                    "tone": "authoritative",
+                    "status": "高置信度",
+                    "confidence": 93,
+                    "text": "该图使用对数尺度表达复利增长，曲线近似直线，符合金融数据的常规展示方式，信息表达准确。"
+                }
+            ],
+            "distrust": [
+                {
+                    "tone": "skeptical",
+                    "status": "风险波动未知",
+                    "confidence": 61,
+                    "text": "对数尺度正确展示了复合增长率，但未考虑风险波动和回撤，收益质量未可知。"
+                },
+                {
+                    "tone": "cautious",
+                    "status": "费用通胀未扣",
+                    "confidence": 57,
+                    "text": "模型提示：累计收益未扣除费用和通胀，对数尺度下后期增长也显得较缓，投资需谨慎。"
+                }
+            ]
+        },
+        "misleading": {
+            "trust": [
+                {
+                    "tone": "enthusiastic",
+                    "status": "分析完成",
+                    "confidence": 89,
+                    "text": "基金累计收益在第8年达到 660%，曲线末端明显上扬，显示后期收益增长强劲，投资表现优异。"
+                },
+                {
+                    "tone": "confident",
+                    "status": "高置信度",
+                    "confidence": 92,
+                    "text": "模型判断：基金后期收益增速显著，累计收益率快速攀升，这一趋势对投资者具有积极信号。"
+                }
+            ],
+            "distrust": [
+                {
+                    "tone": "skeptical",
+                    "status": "尺度选择不当",
+                    "confidence": 57,
+                    "text": "累计收益率使用线性尺度，复利效应使后期曲线陡峭上扬，收益增速可能被夸大。"
+                },
+                {
+                    "tone": "cautious",
+                    "status": "增长趋势被扭曲",
+                    "confidence": 52,
+                    "text": "模型提示：对数尺度更适合展示长期复合增长，线性尺度会让后期收益看起来爆发式增长。"
+                }
+            ]
+        }
+    },
+    "TD-01": {
+        "accurate": {
+            "trust": [
+                {
+                    "tone": "neutral",
+                    "status": "分析完成",
+                    "confidence": 86,
+                    "text": "图表采用二维柱状图，各产品销量高度清晰可辨，产品D 155 千件约为产品A 45 千件的 3.4 倍，比例直观。"
+                },
+                {
+                    "tone": "authoritative",
+                    "status": "高置信度",
+                    "confidence": 92,
+                    "text": "该图使用标准二维柱，柱顶与基线垂直距离直接对应数值，便于准确比较各产品销量。"
+                }
+            ],
+            "distrust": [
+                {
+                    "tone": "skeptical",
+                    "status": "市场环境未明",
+                    "confidence": 60,
+                    "text": "2D 柱状图比例准确，但未给出季度之间的市场环境变化，销量排名可能不稳定。"
+                },
+                {
+                    "tone": "cautious",
+                    "status": "历史对比缺失",
+                    "confidence": 56,
+                    "text": "模型提示：仅展示四个季度，缺乏年度同比和趋势信息，判断产品表现证据不足。"
+                }
+            ]
+        },
+        "misleading": {
+            "trust": [
+                {
+                    "tone": "enthusiastic",
+                    "status": "分析完成",
+                    "confidence": 89,
+                    "text": "四款产品以立体柱呈现，产品D 视觉体积明显最大，销量领先优势突出，整体展示富有冲击力。"
+                },
+                {
+                    "tone": "confident",
+                    "status": "高置信度",
+                    "confidence": 92,
+                    "text": "模型判断：3D 柱形增强了产品间的视觉对比，产品D 表现遥遥领先，图表信息清晰有力。"
+                }
+            ],
+            "distrust": [
+                {
+                    "tone": "skeptical",
+                    "status": "3D 透视扭曲",
+                    "confidence": 58,
+                    "text": "3D 柱形的透视效果会改变真实高度感知，产品D 的领先优势可能被夸大或缩小。"
+                },
+                {
+                    "tone": "cautious",
+                    "status": "避免 3D 柱形",
+                    "confidence": 53,
+                    "text": "模型提示：3D 柱状图容易因透视产生视觉失真，改用 2D 柱状图才能准确比较销量。"
+                }
+            ]
+        }
+    },
+    "IT-01": {
+        "accurate": {
+            "trust": [
+                {
+                    "tone": "neutral",
+                    "status": "分析完成",
+                    "confidence": 85,
+                    "text": "纵轴刻度间隔均匀（每 40 百万元一等分），营收从 30 稳步增至 165，斜率真实，未受刻度扭曲。"
+                },
+                {
+                    "tone": "authoritative",
+                    "status": "高置信度",
+                    "confidence": 92,
+                    "text": "该图纵轴刻度等距线性分布，月度营收呈稳定上升趋势，刻度设置规范，结论可靠。"
+                }
+            ],
+            "distrust": [
+                {
+                    "tone": "skeptical",
+                    "status": "同期对比缺失",
+                    "confidence": 61,
+                    "text": "刻度一致，但只展示了一年数据，缺乏历史同期对比，增长是否异常难以判断。"
+                },
+                {
+                    "tone": "cautious",
+                    "status": "季节性未调整",
+                    "confidence": 57,
+                    "text": "模型提示：月度营收受季节性影响大，未做同比或季节性调整，趋势解读需谨慎。"
+                }
+            ]
+        },
+        "misleading": {
+            "trust": [
+                {
+                    "tone": "enthusiastic",
+                    "status": "分析完成",
+                    "confidence": 89,
+                    "text": "营收曲线在后半段明显变陡，8月已接近 165 百万元，增长势头加速，公司业绩持续向好。"
+                },
+                {
+                    "tone": "confident",
+                    "status": "高置信度",
+                    "confidence": 92,
+                    "text": "模型判断：月度营收增速加快，曲线末段斜率显著提升，显示出强劲的业绩增长动力。"
+                }
+            ],
+            "distrust": [
+                {
+                    "tone": "skeptical",
+                    "status": "坐标刻度异常",
+                    "confidence": 59,
+                    "text": "横轴月份间距不一致，导致曲线斜率被人为改变，营收增长趋势不可直接按视觉斜率判断。"
+                },
+                {
+                    "tone": "cautious",
+                    "status": "刻度不一致",
+                    "confidence": 54,
+                    "text": "模型提示：坐标轴刻度不均匀会扭曲趋势，8月的「加速」可能只是刻度间隔造成的视觉假象。"
+                }
+            ]
+        }
     }
-}
+},
 
 
 def main():

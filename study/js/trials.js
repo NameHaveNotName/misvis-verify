@@ -10,14 +10,18 @@
     { integrity: 'misleading', provenance: 'none' }
   ];
 
+  const ATTITUDES = ['trust', 'distrust'];
+
   function buildMain(pairs, listIndex, rng) {
     return pairs.map((pair, i) => {
       const cell = CELLS[(i + listIndex) % CELLS.length];
       const shown = pair[cell.integrity];
       const alternative = pair[cell.integrity];
+      const aiAttitude = (cell.provenance === 'ai-assisted') ? R.choice(ATTITUDES, rng) : null;
       let aiInterpretation = null;
       if (cell.provenance === 'ai-assisted' && pair.aiInterpretations) {
-        const variants = pair.aiInterpretations[cell.integrity] || [];
+        const byIntegrity = pair.aiInterpretations[cell.integrity] || {};
+        const variants = byIntegrity[aiAttitude] || [];
         if (variants.length) aiInterpretation = R.choice(variants, rng);
       }
       return {
@@ -27,6 +31,7 @@
         mechanism: pair.mechanism,
         integrity: cell.integrity,
         provenance_condition: cell.provenance,
+        ai_attitude: aiAttitude,
         title: shown.title,
         compare_image: alternative.image,
         egvv: pair.egvv || null,

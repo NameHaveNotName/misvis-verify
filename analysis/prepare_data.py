@@ -29,7 +29,7 @@ VALID_PHASES = {"baseline", "main", "transfer"}
 TRIAL_FIELDS = [
     "participant_id", "condition", "counterbalance_list", "phase",
     "trial_index", "trial_index_global", "pair_id", "stimulus_id",
-    "mechanism", "integrity", "provenance_condition", "transfer_type",
+    "mechanism", "integrity", "provenance_condition", "ai_attitude", "transfer_type",
     "trust_pre", "misleading_pre", "confidence_pre",
     "trust_post", "misleading_post", "confidence_post",
     "initial_response_time_ms", "intervention_time_ms",
