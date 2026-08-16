@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="720" viewBox="0 0 1200 720">
+<rect x="0.0" y="0.0" width="1200.0" height="720.0" fill="#ffffff" rx="0"/>
+<text x="600.0" y="58.0" font-family="Inter, PingFang SC, Microsoft YaHei, Arial, sans-serif" font-size="30" fill="#10202b" text-anchor="middle" font-weight="bold">2025年山东省各市新能源汽车每万人保有量</text>
+<polygon points="480.0,200.0 620.0,200.0 650.0,320.0 560.0,380.0 460.0,320.0" fill="#193778" stroke="#ffffff" stroke-width="2"/>
+<text x="554.0" y="284.0" font-family="Inter, PingFang SC, Microsoft YaHei, Arial, sans-serif" font-size="22" fill="#ffffff" text-anchor="middle" font-weight="bold">青岛</text>
+<polygon points="280.0,180.0 420.0,180.0 440.0,300.0 360.0,360.0 260.0,280.0" fill="#24457f" stroke="#ffffff" stroke-width="2"/>
+<text x="352.0" y="260.0" font-family="Inter, PingFang SC, Microsoft YaHei, Arial, sans-serif" font-size="22" fill="#ffffff" text-anchor="middle" font-weight="bold">济南</text>
+<polygon points="520.0,80.0 640.0,80.0 660.0,180.0 580.0,200.0 500.0,160.0" fill="#23447e" stroke="#ffffff" stroke-width="2"/>
+<text x="580.0" y="140.0" font-family="Inter, PingFang SC, Microsoft YaHei, Arial, sans-serif" font-size="22" fill="#ffffff" text-anchor="middle" font-weight="bold">烟台</text>
+<polygon points="360.0,340.0 480.0,340.0 500.0,460.0 400.0,480.0 320.0,420.0" fill="#416790" stroke="#ffffff" stroke-width="2"/>
+<text x="412.0" y="408.0" font-family="Inter, PingFang SC, Microsoft YaHei, Arial, sans-serif" font-size="22" fill="#ffffff" text-anchor="middle" font-weight="bold">潍坊</text>
+<polygon points="420.0,480.0 560.0,480.0 580.0,600.0 480.0,620.0 380.0,560.0" fill="#4f7899" stroke="#ffffff" stroke-width="2"/>
+<text x="484.0" y="548.0" font-family="Inter, PingFang SC, Microsoft YaHei, Arial, sans-serif" font-size="22" fill="#ffffff" text-anchor="middle" font-weight="bold">临沂</text>
+<text x="110.0" y="160.0" font-family="Inter, PingFang SC, Microsoft YaHei, Arial, sans-serif" font-size="20" fill="#10202b" text-anchor="start" font-weight="bold">新能源汽车保有量（辆/万人）</text>
+<rect x="110.0" y="180.0" width="24.0" height="20.0" fill="#4f7899" rx="0"/>
+<text x="144.0" y="196.0" font-family="Inter, PingFang SC, Microsoft YaHei, Arial, sans-serif" font-size="16" fill="#63717d" text-anchor="start" font-weight="normal">高</text>
+<rect x="110.0" y="208.0" width="24.0" height="20.0" fill="#416790" rx="0"/>
+<text x="144.0" y="224.0" font-family="Inter, PingFang SC, Microsoft YaHei, Arial, sans-serif" font-size="16" fill="#63717d" text-anchor="start" font-weight="normal"></text>
+<rect x="110.0" y="236.0" width="24.0" height="20.0" fill="#345788" rx="0"/>
+<text x="144.0" y="252.0" font-family="Inter, PingFang SC, Microsoft YaHei, Arial, sans-serif" font-size="16" fill="#63717d" text-anchor="start" font-weight="normal"></text>
+<rect x="110.0" y="264.0" width="24.0" height="20.0" fill="#264780" rx="0"/>
+<text x="144.0" y="280.0" font-family="Inter, PingFang SC, Microsoft YaHei, Arial, sans-serif" font-size="16" fill="#63717d" text-anchor="start" font-weight="normal"></text>
+<rect x="110.0" y="292.0" width="24.0" height="20.0" fill="#193778" rx="0"/>
+<text x="144.0" y="308.0" font-family="Inter, PingFang SC, Microsoft YaHei, Arial, sans-serif" font-size="16" fill="#63717d" text-anchor="start" font-weight="normal">低</text>
+</svg>

@@ -119,6 +119,86 @@
     "mechanism": "misleading-title",
     "integrity": "misleading"
   },
+  "S025.svg": {
+    "pair_id": "MN-01",
+    "mechanism": "missing-normalization",
+    "integrity": "accurate"
+  },
+  "S026.svg": {
+    "pair_id": "MN-01",
+    "mechanism": "missing-normalization",
+    "integrity": "misleading"
+  },
+  "S027.svg": {
+    "pair_id": "MN-02",
+    "mechanism": "missing-normalization",
+    "integrity": "accurate"
+  },
+  "S028.svg": {
+    "pair_id": "MN-02",
+    "mechanism": "missing-normalization",
+    "integrity": "misleading"
+  },
+  "S029.svg": {
+    "pair_id": "OC-01",
+    "mechanism": "overusing-colors",
+    "integrity": "accurate"
+  },
+  "S030.svg": {
+    "pair_id": "OC-01",
+    "mechanism": "overusing-colors",
+    "integrity": "misleading"
+  },
+  "S031.svg": {
+    "pair_id": "OC-02",
+    "mechanism": "overusing-colors",
+    "integrity": "accurate"
+  },
+  "S032.svg": {
+    "pair_id": "OC-02",
+    "mechanism": "overusing-colors",
+    "integrity": "misleading"
+  },
+  "S033.svg": {
+    "pair_id": "IS-01",
+    "mechanism": "inappropriate-scale",
+    "integrity": "accurate"
+  },
+  "S034.svg": {
+    "pair_id": "IS-01",
+    "mechanism": "inappropriate-scale",
+    "integrity": "misleading"
+  },
+  "S035.svg": {
+    "pair_id": "IS-02",
+    "mechanism": "inappropriate-scale",
+    "integrity": "accurate"
+  },
+  "S036.svg": {
+    "pair_id": "IS-02",
+    "mechanism": "inappropriate-scale",
+    "integrity": "misleading"
+  },
+  "S037.svg": {
+    "pair_id": "TD-01",
+    "mechanism": "3d-bar-distortion",
+    "integrity": "accurate"
+  },
+  "S038.svg": {
+    "pair_id": "TD-01",
+    "mechanism": "3d-bar-distortion",
+    "integrity": "misleading"
+  },
+  "S039.svg": {
+    "pair_id": "IT-01",
+    "mechanism": "inconsistent-tick-labels",
+    "integrity": "accurate"
+  },
+  "S040.svg": {
+    "pair_id": "IT-01",
+    "mechanism": "inconsistent-tick-labels",
+    "integrity": "misleading"
+  },
   "S101.svg": {
     "trial_id": "B-01",
     "phase": "baseline",
@@ -141,6 +221,30 @@
     "trial_id": "B-04",
     "phase": "baseline",
     "mechanism": "area-distortion",
+    "integrity": "misleading"
+  },
+  "S105.svg": {
+    "trial_id": "B-05",
+    "phase": "baseline",
+    "mechanism": "missing-normalization",
+    "integrity": "accurate"
+  },
+  "S106.svg": {
+    "trial_id": "B-06",
+    "phase": "baseline",
+    "mechanism": "overusing-colors",
+    "integrity": "misleading"
+  },
+  "S107.svg": {
+    "trial_id": "B-07",
+    "phase": "baseline",
+    "mechanism": "histogram-reading",
+    "integrity": "accurate"
+  },
+  "S108.svg": {
+    "trial_id": "B-08",
+    "phase": "baseline",
+    "mechanism": "pie-proportion",
     "integrity": "misleading"
   },
   "S201.svg": {
@@ -183,6 +287,76 @@
     "phase": "transfer",
     "transfer_type": "far",
     "mechanism": "pie-3d",
+    "integrity": "accurate"
+  },
+  "S207.svg": {
+    "trial_id": "T-07",
+    "phase": "transfer",
+    "transfer_type": "near",
+    "mechanism": "missing-normalization",
+    "integrity": "accurate"
+  },
+  "S208.svg": {
+    "trial_id": "T-08",
+    "phase": "transfer",
+    "transfer_type": "near",
+    "mechanism": "overusing-colors",
+    "integrity": "misleading"
+  },
+  "S209.svg": {
+    "trial_id": "T-09",
+    "phase": "transfer",
+    "transfer_type": "near",
+    "mechanism": "inappropriate-scale",
+    "integrity": "accurate"
+  },
+  "S210.svg": {
+    "trial_id": "T-10",
+    "phase": "transfer",
+    "transfer_type": "near",
+    "mechanism": "3d-bar-distortion",
+    "integrity": "misleading"
+  },
+  "S211.svg": {
+    "trial_id": "T-11",
+    "phase": "transfer",
+    "transfer_type": "far",
+    "mechanism": "inverted-axis",
+    "integrity": "misleading"
+  },
+  "S212.svg": {
+    "trial_id": "T-12",
+    "phase": "transfer",
+    "transfer_type": "far",
+    "mechanism": "misordered-axis",
+    "integrity": "misleading"
+  },
+  "S213.svg": {
+    "trial_id": "T-13",
+    "phase": "transfer",
+    "transfer_type": "near",
+    "mechanism": "premature-conclusion",
+    "integrity": "misleading"
+  },
+  "S214.svg": {
+    "trial_id": "T-14",
+    "phase": "transfer",
+    "transfer_type": "near",
+    "mechanism": "missing-normalization-map",
+    "integrity": "accurate"
+  },
+  "S215.svg": {
+    "trial_id": "T-15",
+    "phase": "transfer",
+    "transfer_type": "near",
+    "mechanism": "premature-conclusion",
+    "integrity": "accurate"
+  },
+  "S216.svg": {
+    "trial_id": "T-16",
+    "phase": "transfer",
+    "transfer_type": "near",
+    "mechanism": "missing-normalization-map",
     "integrity": "accurate"
   }
 }

@@ -4,8 +4,8 @@
  * Simulates N participants and checks:
  *   - intervention assignment ~50/50 (control/egvv)
  *   - counterbalance list distribution ~25% each (A/B/C/D)
- *   - per list: 6 accurate / 6 misleading, 6 AI / 6 no-provenance
- *   - per list: 2x2 cells balanced (3 each)
+ *   - per list: 10 accurate / 10 misleading, 10 AI / 10 no-provenance
+ *   - per list: 2x2 cells balanced (5 each)
  *   - no participant ever sees both versions of the same pair
  *
  * Usage: node scripts/test_randomization.js [N]
@@ -50,7 +50,10 @@ function shuffle(arr, rng) {
   }
   return a;
 }
-global.window.MisVisVerifyRandom = { makeRng: pid => mulberry32(hashString(pid)), shuffle, hashString };
+function choice(arr, rng) {
+  return arr[Math.floor(rng() * arr.length)];
+}
+global.window.MisVisVerifyRandom = { makeRng: pid => mulberry32(hashString(pid)), shuffle, choice, hashString };
 
 // load trials.js
 eval(fs.readFileSync(path.join(ROOT, 'study/js/trials.js'), 'utf8'));
@@ -95,11 +98,21 @@ for (let i = 0; i < N; i++) {
 
   // violation: participant sees both versions of same pair?
   const seen = new Set(m.map(t => t.pair_id));
-  if (seen.size !== 12) violations.push(`${pid}: main has ${seen.size} unique pairs (expected 12)`);
+  if (seen.size !== 20) violations.push(`${pid}: main has ${seen.size} unique pairs (expected 20)`);
 
   // violation: baseline/transfer counts
-  if (plan.baseline.length !== 4) violations.push(`${pid}: baseline ${plan.baseline.length}`);
-  if (plan.transfer.length !== 6) violations.push(`${pid}: transfer ${plan.transfer.length}`);
+  if (plan.baseline.length !== 8) violations.push(`${pid}: baseline ${plan.baseline.length}`);
+  if (plan.transfer.length !== 16) violations.push(`${pid}: transfer ${plan.transfer.length}`);
+
+  // violation: ai_interpretation present iff ai-assisted, and matches integrity
+  m.forEach(t => {
+    if (t.provenance_condition === 'ai-assisted' && !t.ai_interpretation) {
+      violations.push(`${pid}: ${t.pair_id} ai-assisted but no ai_interpretation`);
+    }
+    if (t.provenance_condition === 'none' && t.ai_interpretation) {
+      violations.push(`${pid}: ${t.pair_id} no provenance but has ai_interpretation`);
+    }
+  });
 }
 
 // --- report ---

@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="720" viewBox="0 0 1200 720">
+<rect x="0.0" y="0.0" width="1200.0" height="720.0" fill="#ffffff" rx="0"/>
+<text x="600.0" y="58.0" font-family="Inter, PingFang SC, Microsoft YaHei, Arial, sans-serif" font-size="30" fill="#10202b" text-anchor="middle" font-weight="bold">五个班级月考平均分</text>
+<line x1="90.0" y1="630.0" x2="1150.0" y2="630.0" stroke="#eef0ef" stroke-width="1"/>
+<line x1="90.0" y1="630.0" x2="84.0" y2="630.0" stroke="#d9ddd8" stroke-width="2"/>
+<text x="78.0" y="638.0" font-family="Inter, PingFang SC, Microsoft YaHei, Arial, sans-serif" font-size="20" fill="#63717d" text-anchor="end" font-weight="normal">0</text>
+<line x1="90.0" y1="529.7" x2="1150.0" y2="529.7" stroke="#eef0ef" stroke-width="1"/>
+<line x1="90.0" y1="529.7" x2="84.0" y2="529.7" stroke="#d9ddd8" stroke-width="2"/>
+<text x="78.0" y="537.7" font-family="Inter, PingFang SC, Microsoft YaHei, Arial, sans-serif" font-size="20" fill="#63717d" text-anchor="end" font-weight="normal">20</text>
+<line x1="90.0" y1="429.5" x2="1150.0" y2="429.5" stroke="#eef0ef" stroke-width="1"/>
+<line x1="90.0" y1="429.5" x2="84.0" y2="429.5" stroke="#d9ddd8" stroke-width="2"/>
+<text x="78.0" y="437.5" font-family="Inter, PingFang SC, Microsoft YaHei, Arial, sans-serif" font-size="20" fill="#63717d" text-anchor="end" font-weight="normal">40</text>
+<line x1="90.0" y1="329.2" x2="1150.0" y2="329.2" stroke="#eef0ef" stroke-width="1"/>
+<line x1="90.0" y1="329.2" x2="84.0" y2="329.2" stroke="#d9ddd8" stroke-width="2"/>
+<text x="78.0" y="337.2" font-family="Inter, PingFang SC, Microsoft YaHei, Arial, sans-serif" font-size="20" fill="#63717d" text-anchor="end" font-weight="normal">60</text>
+<line x1="90.0" y1="229.0" x2="1150.0" y2="229.0" stroke="#eef0ef" stroke-width="1"/>
+<line x1="90.0" y1="229.0" x2="84.0" y2="229.0" stroke="#d9ddd8" stroke-width="2"/>
+<text x="78.0" y="237.0" font-family="Inter, PingFang SC, Microsoft YaHei, Arial, sans-serif" font-size="20" fill="#63717d" text-anchor="end" font-weight="normal">80</text>
+<line x1="90.0" y1="630.0" x2="1150.0" y2="630.0" stroke="#10202b" stroke-width="2"/>
+<line x1="90.0" y1="140.0" x2="90.0" y2="630.0" stroke="#10202b" stroke-width="2"/>
+<text x="90.0" y="674.0" font-family="Inter, PingFang SC, Microsoft YaHei, Arial, sans-serif" font-size="22" fill="#10202b" text-anchor="middle" font-weight="normal">3月</text>
+<text x="355.0" y="674.0" font-family="Inter, PingFang SC, Microsoft YaHei, Arial, sans-serif" font-size="22" fill="#10202b" text-anchor="middle" font-weight="normal">4月</text>
+<text x="620.0" y="674.0" font-family="Inter, PingFang SC, Microsoft YaHei, Arial, sans-serif" font-size="22" fill="#10202b" text-anchor="middle" font-weight="normal">5月</text>
+<text x="885.0" y="674.0" font-family="Inter, PingFang SC, Microsoft YaHei, Arial, sans-serif" font-size="22" fill="#10202b" text-anchor="middle" font-weight="normal">6月</text>
+<text x="1150.0" y="674.0" font-family="Inter, PingFang SC, Microsoft YaHei, Arial, sans-serif" font-size="22" fill="#10202b" text-anchor="middle" font-weight="normal">7月</text>
+<text x="70.0" y="120.0" font-family="Inter, PingFang SC, Microsoft YaHei, Arial, sans-serif" font-size="20" fill="#63717d" text-anchor="start" font-weight="normal">平均分</text>
+<text x="1150.0" y="146.0" font-family="Inter, PingFang SC, Microsoft YaHei, Arial, sans-serif" font-size="20" fill="#e6194b" text-anchor="end" font-weight="normal">1班</text>
+<text x="1150.0" y="176.0" font-family="Inter, PingFang SC, Microsoft YaHei, Arial, sans-serif" font-size="20" fill="#f58231" text-anchor="end" font-weight="normal">2班</text>
+<text x="1150.0" y="206.0" font-family="Inter, PingFang SC, Microsoft YaHei, Arial, sans-serif" font-size="20" fill="#ffe119" text-anchor="end" font-weight="normal">3班</text>
+<text x="1150.0" y="236.0" font-family="Inter, PingFang SC, Microsoft YaHei, Arial, sans-serif" font-size="20" fill="#3cb44b" text-anchor="end" font-weight="normal">4班</text>
+<text x="1150.0" y="266.0" font-family="Inter, PingFang SC, Microsoft YaHei, Arial, sans-serif" font-size="20" fill="#4363d8" text-anchor="end" font-weight="normal">5班</text>
+<polyline points="90.0,229.0 355.0,224.0 620.0,219.0 885.0,224.0 1150.0,213.9" fill="none" stroke="#e6194b" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/>
+<circle cx="90.0" cy="229.0" r="5.0" fill="#e6194b"/>
+<circle cx="355.0" cy="224.0" r="5.0" fill="#e6194b"/>
+<circle cx="620.0" cy="219.0" r="5.0" fill="#e6194b"/>
+<circle cx="885.0" cy="224.0" r="5.0" fill="#e6194b"/>
+<circle cx="1150.0" cy="213.9" r="5.0" fill="#e6194b"/>
+<polyline points="90.0,239.0 355.0,234.0 620.0,229.0 885.0,224.0 1150.0,229.0" fill="none" stroke="#f58231" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/>
+<circle cx="90.0" cy="239.0" r="5.0" fill="#f58231"/>
+<circle cx="355.0" cy="234.0" r="5.0" fill="#f58231"/>
+<circle cx="620.0" cy="229.0" r="5.0" fill="#f58231"/>
+<circle cx="885.0" cy="224.0" r="5.0" fill="#f58231"/>
+<circle cx="1150.0" cy="229.0" r="5.0" fill="#f58231"/>
+<polyline points="90.0,219.0 355.0,213.9 620.0,224.0 885.0,208.9 1150.0,203.9" fill="none" stroke="#ffe119" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/>
+<circle cx="90.0" cy="219.0" r="5.0" fill="#ffe119"/>
+<circle cx="355.0" cy="213.9" r="5.0" fill="#ffe119"/>
+<circle cx="620.0" cy="224.0" r="5.0" fill="#ffe119"/>
+<circle cx="885.0" cy="208.9" r="5.0" fill="#ffe119"/>
+<circle cx="1150.0" cy="203.9" r="5.0" fill="#ffe119"/>
+<polyline points="90.0,234.0 355.0,229.0 620.0,224.0 885.0,229.0 1150.0,219.0" fill="none" stroke="#3cb44b" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/>
+<circle cx="90.0" cy="234.0" r="5.0" fill="#3cb44b"/>
+<circle cx="355.0" cy="229.0" r="5.0" fill="#3cb44b"/>
+<circle cx="620.0" cy="224.0" r="5.0" fill="#3cb44b"/>
+<circle cx="885.0" cy="229.0" r="5.0" fill="#3cb44b"/>
+<circle cx="1150.0" cy="219.0" r="5.0" fill="#3cb44b"/>
+<polyline points="90.0,224.0 355.0,219.0 620.0,229.0 885.0,213.9 1150.0,208.9" fill="none" stroke="#4363d8" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/>
+<circle cx="90.0" cy="224.0" r="5.0" fill="#4363d8"/>
+<circle cx="355.0" cy="219.0" r="5.0" fill="#4363d8"/>
+<circle cx="620.0" cy="229.0" r="5.0" fill="#4363d8"/>
+<circle cx="885.0" cy="213.9" r="5.0" fill="#4363d8"/>
+<circle cx="1150.0" cy="208.9" r="5.0" fill="#4363d8"/>
+</svg>

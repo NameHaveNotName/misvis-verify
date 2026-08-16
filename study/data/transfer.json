@@ -10,8 +10,20 @@
       "image": "S201.svg",
       "title": "五款产品用户满意度",
       "data": {
-        "categories": ["产品A", "产品B", "产品C", "产品D", "产品E"],
-        "values": [88, 90, 89, 91, 87],
+        "categories": [
+          "产品A",
+          "产品B",
+          "产品C",
+          "产品D",
+          "产品E"
+        ],
+        "values": [
+          88,
+          90,
+          89,
+          91,
+          87
+        ],
         "yLabel": "满意度（%）",
         "highlightIndex": null
       }
@@ -28,9 +40,36 @@
         "xLabel": "月份",
         "series1Label": "手机使用时长（小时/日）",
         "series2Label": "平均成绩（分）",
-        "x": ["1月", "2月", "3月", "4月", "5月", "6月", "7月", "8月"],
-        "series1": [2, 2.5, 3, 3.5, 4, 4.5, 5, 5.5],
-        "series2": [90, 88, 86, 84, 82, 80, 78, 76]
+        "x": [
+          "1月",
+          "2月",
+          "3月",
+          "4月",
+          "5月",
+          "6月",
+          "7月",
+          "8月"
+        ],
+        "series1": [
+          2,
+          2.5,
+          3,
+          3.5,
+          4,
+          4.5,
+          5,
+          5.5
+        ],
+        "series2": [
+          90,
+          88,
+          86,
+          84,
+          82,
+          80,
+          78,
+          76
+        ]
       }
     },
     {
@@ -42,8 +81,14 @@
       "image": "S203.svg",
       "title": "两所医院手术成功率",
       "data": {
-        "categories": ["甲医院", "乙医院"],
-        "values": [98, 96],
+        "categories": [
+          "甲医院",
+          "乙医院"
+        ],
+        "values": [
+          98,
+          96
+        ],
         "yLabel": "成功率（%）",
         "yMin": 94,
         "yMax": 99
@@ -60,8 +105,30 @@
       "data": {
         "xLabel": "年份",
         "yLabel": "营收（百万元）",
-        "years": [2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023],
-        "values": [50, 48, 46, 44, 42, 40, 42, 46, 52, 60]
+        "years": [
+          2014,
+          2015,
+          2016,
+          2017,
+          2018,
+          2019,
+          2020,
+          2021,
+          2022,
+          2023
+        ],
+        "values": [
+          50,
+          48,
+          46,
+          44,
+          42,
+          40,
+          42,
+          46,
+          52,
+          60
+        ]
       }
     },
     {
@@ -76,9 +143,27 @@
         "xLabel": "年份",
         "leftLabel": "冰淇淋销量（万支）",
         "rightLabel": "溺水事件（起）",
-        "x": [2019, 2020, 2021, 2022, 2023],
-        "leftValues": [20, 30, 40, 50, 60],
-        "rightValues": [5, 10, 15, 20, 25],
+        "x": [
+          2019,
+          2020,
+          2021,
+          2022,
+          2023
+        ],
+        "leftValues": [
+          20,
+          30,
+          40,
+          50,
+          60
+        ],
+        "rightValues": [
+          5,
+          10,
+          15,
+          20,
+          25
+        ],
         "leftMin": 0,
         "leftMax": 60,
         "rightMin": 0,
@@ -95,11 +180,390 @@
       "title": "某市能源消费构成",
       "data": {
         "slices": [
-          { "label": "煤炭", "value": 55 },
-          { "label": "石油", "value": 25 },
-          { "label": "天然气", "value": 12 },
-          { "label": "其他", "value": 8 }
+          {
+            "label": "煤炭",
+            "value": 55
+          },
+          {
+            "label": "石油",
+            "value": 25
+          },
+          {
+            "label": "天然气",
+            "value": 12
+          },
+          {
+            "label": "其他",
+            "value": 8
+          }
         ]
+      }
+    },
+    {
+      "trialId": "T-07",
+      "mechanism": "missing-normalization",
+      "integrity": "accurate",
+      "context": "highschool-admission",
+      "transferType": "near",
+      "image": "S207.svg",
+      "title": "两所高中每百名学生升学人数",
+      "data": {
+        "categories": [
+          "甲高中",
+          "乙高中"
+        ],
+        "values": [
+          18,
+          24
+        ],
+        "yLabel": "升学人数（人/百名）",
+        "subtitle": "甲高中在校生 2000 人，乙高中在校生 800 人"
+      }
+    },
+    {
+      "trialId": "T-08",
+      "mechanism": "overusing-colors",
+      "integrity": "misleading",
+      "context": "hospital-departments",
+      "transferType": "near",
+      "image": "S208.svg",
+      "title": "五个科室月度门诊量",
+      "data": {
+        "xLabel": "月份",
+        "yLabel": "门诊量（千人次）",
+        "x": [
+          "1月",
+          "2月",
+          "3月",
+          "4月",
+          "5月",
+          "6月"
+        ],
+        "palette": "rainbow",
+        "series": [
+          {
+            "label": "内科",
+            "values": [
+              30,
+              32,
+              31,
+              33,
+              34,
+              35
+            ]
+          },
+          {
+            "label": "外科",
+            "values": [
+              28,
+              29,
+              30,
+              31,
+              30,
+              32
+            ]
+          },
+          {
+            "label": "儿科",
+            "values": [
+              33,
+              35,
+              34,
+              36,
+              37,
+              38
+            ]
+          },
+          {
+            "label": "骨科",
+            "values": [
+              29,
+              30,
+              31,
+              30,
+              32,
+              33
+            ]
+          },
+          {
+            "label": "皮肤科",
+            "values": [
+              31,
+              32,
+              30,
+              33,
+              34,
+              35
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "trialId": "T-09",
+      "mechanism": "inappropriate-scale",
+      "integrity": "accurate",
+      "context": "app-downloads",
+      "transferType": "near",
+      "image": "S209.svg",
+      "title": "某应用日新增下载量（对数尺度）",
+      "data": {
+        "xLabel": "日期",
+        "yLabel": "新增下载（次）",
+        "x": [
+          "第1天",
+          "第2天",
+          "第3天",
+          "第4天",
+          "第5天",
+          "第6天"
+        ],
+        "values": [
+          80,
+          120,
+          180,
+          270,
+          410,
+          620
+        ],
+        "scaleType": "log",
+        "logMin": 50,
+        "logMax": 1000
+      }
+    },
+    {
+      "trialId": "T-10",
+      "mechanism": "3d-bar-distortion",
+      "integrity": "misleading",
+      "context": "store-sales",
+      "transferType": "near",
+      "image": "S210.svg",
+      "title": "五家门店季度销售额",
+      "data": {
+        "categories": [
+          "门店A",
+          "门店B",
+          "门店C",
+          "门店D",
+          "门店E"
+        ],
+        "values": [
+          35,
+          55,
+          80,
+          110,
+          150
+        ],
+        "yLabel": "销售额（万元）",
+        "yMax": 180
+      }
+    },
+    {
+      "trialId": "T-11",
+      "mechanism": "inverted-axis",
+      "integrity": "misleading",
+      "context": "cultural-activities",
+      "transferType": "far",
+      "image": "S211.svg",
+      "title": "大连市近十年新增公共文化活动数量",
+      "data": {
+        "x": [
+          "2016",
+          "2017",
+          "2018",
+          "2019",
+          "2020",
+          "2021",
+          "2022",
+          "2023",
+          "2024",
+          "2025"
+        ],
+        "values": [
+          12,
+          5,
+          17,
+          7,
+          15,
+          4,
+          10,
+          16,
+          6,
+          19
+        ],
+        "yLabel": "活动数量（场）",
+        "yMin": 0,
+        "yMax": 20
+      }
+    },
+    {
+      "trialId": "T-12",
+      "mechanism": "misordered-axis",
+      "integrity": "misleading",
+      "context": "short-video-preference",
+      "transferType": "far",
+      "image": "S212.svg",
+      "title": "2021-2025年我国居民短视频内容观看偏好占比",
+      "data": {
+        "categories": [
+          "2023",
+          "2021",
+          "2025",
+          "2022",
+          "2024"
+        ],
+        "series": [
+          {
+            "label": "娱乐",
+            "values": [
+              53,
+              45,
+              40,
+              38,
+              33
+            ]
+          },
+          {
+            "label": "知识科普",
+            "values": [
+              27,
+              37,
+              38,
+              37,
+              47
+            ]
+          },
+          {
+            "label": "生活记录",
+            "values": [
+              20,
+              18,
+              22,
+              25,
+              20
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "trialId": "T-13",
+      "mechanism": "premature-conclusion",
+      "integrity": "misleading",
+      "context": "xhs-aigc",
+      "transferType": "near",
+      "image": "S213.svg",
+      "title": "2025年小红书平台AIGC图文发布数量变化",
+      "data": {
+        "x": [
+          "11-15",
+          "11-20",
+          "11-25",
+          "11-30",
+          "12-05",
+          "12-10",
+          "12-15",
+          "12-20"
+        ],
+        "values": [
+          800,
+          950,
+          1450,
+          1600,
+          1850,
+          2450,
+          2700,
+          3000
+        ],
+        "yLabel": "发布数量（篇）",
+        "subtitle": ""
+      }
+    },
+    {
+      "trialId": "T-14",
+      "mechanism": "missing-normalization-map",
+      "integrity": "accurate",
+      "context": "nev-ownership",
+      "transferType": "near",
+      "image": "S214.svg",
+      "title": "2025年山东省各市新能源汽车每万人保有量",
+      "data": {
+        "regions": [
+          "青岛",
+          "济南",
+          "烟台",
+          "潍坊",
+          "临沂"
+        ],
+        "values": [
+          660,
+          585,
+          591,
+          404,
+          318
+        ],
+        "unit": "辆/万人",
+        "subtitle": "各市常住人口：青岛 1030 万，济南 940 万，烟台 710 万，潍坊 940 万，临沂 1100 万"
+      }
+    },
+    {
+      "trialId": "T-15",
+      "mechanism": "premature-conclusion",
+      "integrity": "accurate",
+      "context": "xhs-aigc-accurate",
+      "transferType": "near",
+      "image": "S215.svg",
+      "title": "2025年小红书平台AIGC图文发布数量变化（截至12月20日）",
+      "data": {
+        "x": [
+          "11-15",
+          "11-20",
+          "11-25",
+          "11-30",
+          "12-05",
+          "12-10",
+          "12-15",
+          "12-20"
+        ],
+        "values": [
+          800,
+          950,
+          1450,
+          1600,
+          1850,
+          2450,
+          2700,
+          3000
+        ],
+        "yLabel": "发布数量（篇）",
+        "subtitle": "数据截至2025年12月20日，全年统计尚未完成"
+      }
+    },
+    {
+      "trialId": "T-16",
+      "mechanism": "missing-normalization-map",
+      "integrity": "accurate",
+      "context": "nev-ownership-percapita",
+      "transferType": "near",
+      "image": "S216.svg",
+      "title": "2025年山东省各市新能源汽车每万人保有量",
+      "data": {
+        "regions": [
+          "青岛",
+          "济南",
+          "烟台",
+          "潍坊",
+          "临沂"
+        ],
+        "values": [
+          660,
+          585,
+          591,
+          404,
+          318
+        ],
+        "unit": "辆/万人",
+        "subtitle": ""
       }
     }
   ]

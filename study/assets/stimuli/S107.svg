@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="720" viewBox="0 0 1200 720">
+<rect x="0.0" y="0.0" width="1200.0" height="720.0" fill="#ffffff" rx="0"/>
+<text x="600.0" y="58.0" font-family="Inter, PingFang SC, Microsoft YaHei, Arial, sans-serif" font-size="30" fill="#10202b" text-anchor="middle" font-weight="bold">菜鸟驿站快递订单配送距离分布</text>
+<line x1="90.0" y1="630.0" x2="1150.0" y2="630.0" stroke="#eef0ef" stroke-width="1"/>
+<line x1="90.0" y1="630.0" x2="84.0" y2="630.0" stroke="#d9ddd8" stroke-width="2"/>
+<text x="78.0" y="638.0" font-family="Inter, PingFang SC, Microsoft YaHei, Arial, sans-serif" font-size="20" fill="#63717d" text-anchor="end" font-weight="normal">0</text>
+<line x1="90.0" y1="386.2" x2="1150.0" y2="386.2" stroke="#eef0ef" stroke-width="1"/>
+<line x1="90.0" y1="386.2" x2="84.0" y2="386.2" stroke="#d9ddd8" stroke-width="2"/>
+<text x="78.0" y="394.2" font-family="Inter, PingFang SC, Microsoft YaHei, Arial, sans-serif" font-size="20" fill="#63717d" text-anchor="end" font-weight="normal">123</text>
+<line x1="90.0" y1="140.5" x2="1150.0" y2="140.5" stroke="#eef0ef" stroke-width="1"/>
+<line x1="90.0" y1="140.5" x2="84.0" y2="140.5" stroke="#d9ddd8" stroke-width="2"/>
+<text x="78.0" y="148.5" font-family="Inter, PingFang SC, Microsoft YaHei, Arial, sans-serif" font-size="20" fill="#63717d" text-anchor="end" font-weight="normal">247</text>
+<line x1="90.0" y1="630.0" x2="1150.0" y2="630.0" stroke="#10202b" stroke-width="2"/>
+<line x1="90.0" y1="140.0" x2="90.0" y2="630.0" stroke="#10202b" stroke-width="2"/>
+<rect x="104.5" y="372.4" width="67.5" height="257.6" fill="#efc46b" rx="4"/>
+<text x="138.2" y="666.0" font-family="Inter, PingFang SC, Microsoft YaHei, Arial, sans-serif" font-size="16" fill="#10202b" text-anchor="middle" font-weight="normal">0-10</text>
+<text x="138.2" y="362.4" font-family="Inter, PingFang SC, Microsoft YaHei, Arial, sans-serif" font-size="18" fill="#10202b" text-anchor="middle" font-weight="bold">130</text>
+<rect x="200.8" y="303.0" width="67.5" height="327.0" fill="#efc46b" rx="4"/>
+<text x="234.5" y="666.0" font-family="Inter, PingFang SC, Microsoft YaHei, Arial, sans-serif" font-size="16" fill="#10202b" text-anchor="middle" font-weight="normal">10-20</text>
+<text x="234.5" y="293.0" font-family="Inter, PingFang SC, Microsoft YaHei, Arial, sans-serif" font-size="18" fill="#10202b" text-anchor="middle" font-weight="bold">165</text>
+<rect x="297.2" y="342.6" width="67.5" height="287.4" fill="#efc46b" rx="4"/>
+<text x="330.9" y="666.0" font-family="Inter, PingFang SC, Microsoft YaHei, Arial, sans-serif" font-size="16" fill="#10202b" text-anchor="middle" font-weight="normal">20-30</text>
+<text x="330.9" y="332.6" font-family="Inter, PingFang SC, Microsoft YaHei, Arial, sans-serif" font-size="18" fill="#10202b" text-anchor="middle" font-weight="bold">145</text>
+<rect x="393.5" y="253.5" width="67.5" height="376.5" fill="#efc46b" rx="4"/>
+<text x="427.3" y="666.0" font-family="Inter, PingFang SC, Microsoft YaHei, Arial, sans-serif" font-size="16" fill="#10202b" text-anchor="middle" font-weight="normal">30-40</text>
+<text x="427.3" y="243.5" font-family="Inter, PingFang SC, Microsoft YaHei, Arial, sans-serif" font-size="18" fill="#10202b" text-anchor="middle" font-weight="bold">190</text>
+<rect x="489.9" y="203.9" width="67.5" height="426.1" fill="#efc46b" rx="4"/>
+<text x="523.6" y="666.0" font-family="Inter, PingFang SC, Microsoft YaHei, Arial, sans-serif" font-size="16" fill="#10202b" text-anchor="middle" font-weight="normal">40-50</text>
+<text x="523.6" y="193.9" font-family="Inter, PingFang SC, Microsoft YaHei, Arial, sans-serif" font-size="18" fill="#10202b" text-anchor="middle" font-weight="bold">215</text>
+<rect x="586.3" y="392.2" width="67.5" height="237.8" fill="#efc46b" rx="4"/>
+<text x="620.0" y="666.0" font-family="Inter, PingFang SC, Microsoft YaHei, Arial, sans-serif" font-size="16" fill="#10202b" text-anchor="middle" font-weight="normal">50-60</text>
+<text x="620.0" y="382.2" font-family="Inter, PingFang SC, Microsoft YaHei, Arial, sans-serif" font-size="18" fill="#10202b" text-anchor="middle" font-weight="bold">120</text>
+<rect x="682.6" y="451.6" width="67.5" height="178.4" fill="#efc46b" rx="4"/>
+<text x="716.4" y="666.0" font-family="Inter, PingFang SC, Microsoft YaHei, Arial, sans-serif" font-size="16" fill="#10202b" text-anchor="middle" font-weight="normal">60-70</text>
+<text x="716.4" y="441.6" font-family="Inter, PingFang SC, Microsoft YaHei, Arial, sans-serif" font-size="18" fill="#10202b" text-anchor="middle" font-weight="bold">90</text>
+<rect x="779.0" y="362.5" width="67.5" height="267.5" fill="#efc46b" rx="4"/>
+<text x="812.7" y="666.0" font-family="Inter, PingFang SC, Microsoft YaHei, Arial, sans-serif" font-size="16" fill="#10202b" text-anchor="middle" font-weight="normal">70-80</text>
+<text x="812.7" y="352.5" font-family="Inter, PingFang SC, Microsoft YaHei, Arial, sans-serif" font-size="18" fill="#10202b" text-anchor="middle" font-weight="bold">135</text>
+<rect x="875.4" y="530.9" width="67.5" height="99.1" fill="#efc46b" rx="4"/>
+<text x="909.1" y="666.0" font-family="Inter, PingFang SC, Microsoft YaHei, Arial, sans-serif" font-size="16" fill="#10202b" text-anchor="middle" font-weight="normal">80-90</text>
+<text x="909.1" y="520.9" font-family="Inter, PingFang SC, Microsoft YaHei, Arial, sans-serif" font-size="18" fill="#10202b" text-anchor="middle" font-weight="bold">50</text>
+<rect x="971.7" y="481.4" width="67.5" height="148.6" fill="#efc46b" rx="4"/>
+<text x="1005.5" y="666.0" font-family="Inter, PingFang SC, Microsoft YaHei, Arial, sans-serif" font-size="16" fill="#10202b" text-anchor="middle" font-weight="normal">90-100</text>
+<text x="1005.5" y="471.4" font-family="Inter, PingFang SC, Microsoft YaHei, Arial, sans-serif" font-size="18" fill="#10202b" text-anchor="middle" font-weight="bold">75</text>
+<rect x="1068.1" y="412.0" width="67.5" height="218.0" fill="#efc46b" rx="4"/>
+<text x="1101.8" y="666.0" font-family="Inter, PingFang SC, Microsoft YaHei, Arial, sans-serif" font-size="16" fill="#10202b" text-anchor="middle" font-weight="normal">100-110</text>
+<text x="1101.8" y="402.0" font-family="Inter, PingFang SC, Microsoft YaHei, Arial, sans-serif" font-size="18" fill="#10202b" text-anchor="middle" font-weight="bold">110</text>
+<text x="70.0" y="120.0" font-family="Inter, PingFang SC, Microsoft YaHei, Arial, sans-serif" font-size="20" fill="#63717d" text-anchor="start" font-weight="normal">订单数量（个）</text>
+<text x="600.0" y="702.0" font-family="Inter, PingFang SC, Microsoft YaHei, Arial, sans-serif" font-size="18" fill="#63717d" text-anchor="middle" font-weight="normal">距离区间（km）</text>
+</svg>

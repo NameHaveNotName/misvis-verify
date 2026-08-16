@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="720" viewBox="0 0 1200 720">
+<rect x="0.0" y="0.0" width="1200.0" height="720.0" fill="#ffffff" rx="0"/>
+<text x="600.0" y="58.0" font-family="Inter, PingFang SC, Microsoft YaHei, Arial, sans-serif" font-size="30" fill="#10202b" text-anchor="middle" font-weight="bold">某基金累计收益率（对数尺度）</text>
+<line x1="90.0" y1="630.0" x2="1150.0" y2="630.0" stroke="#eef0ef" stroke-width="1"/>
+<line x1="90.0" y1="630.0" x2="84.0" y2="630.0" stroke="#d9ddd8" stroke-width="2"/>
+<text x="78.0" y="638.0" font-family="Inter, PingFang SC, Microsoft YaHei, Arial, sans-serif" font-size="20" fill="#63717d" text-anchor="end" font-weight="normal">100</text>
+<line x1="90.0" y1="385.0" x2="1150.0" y2="385.0" stroke="#eef0ef" stroke-width="1"/>
+<line x1="90.0" y1="385.0" x2="84.0" y2="385.0" stroke="#d9ddd8" stroke-width="2"/>
+<text x="78.0" y="393.0" font-family="Inter, PingFang SC, Microsoft YaHei, Arial, sans-serif" font-size="20" fill="#63717d" text-anchor="end" font-weight="normal">316.2</text>
+<line x1="90.0" y1="140.0" x2="1150.0" y2="140.0" stroke="#eef0ef" stroke-width="1"/>
+<line x1="90.0" y1="140.0" x2="84.0" y2="140.0" stroke="#d9ddd8" stroke-width="2"/>
+<text x="78.0" y="148.0" font-family="Inter, PingFang SC, Microsoft YaHei, Arial, sans-serif" font-size="20" fill="#63717d" text-anchor="end" font-weight="normal">1000</text>
+<line x1="90.0" y1="630.0" x2="1150.0" y2="630.0" stroke="#10202b" stroke-width="2"/>
+<line x1="90.0" y1="140.0" x2="90.0" y2="630.0" stroke="#10202b" stroke-width="2"/>
+<text x="90.0" y="674.0" font-family="Inter, PingFang SC, Microsoft YaHei, Arial, sans-serif" font-size="22" fill="#10202b" text-anchor="middle" font-weight="normal">第1年</text>
+<text x="241.4" y="674.0" font-family="Inter, PingFang SC, Microsoft YaHei, Arial, sans-serif" font-size="22" fill="#10202b" text-anchor="middle" font-weight="normal">第2年</text>
+<text x="392.9" y="674.0" font-family="Inter, PingFang SC, Microsoft YaHei, Arial, sans-serif" font-size="22" fill="#10202b" text-anchor="middle" font-weight="normal">第3年</text>
+<text x="544.3" y="674.0" font-family="Inter, PingFang SC, Microsoft YaHei, Arial, sans-serif" font-size="22" fill="#10202b" text-anchor="middle" font-weight="normal">第4年</text>
+<text x="695.7" y="674.0" font-family="Inter, PingFang SC, Microsoft YaHei, Arial, sans-serif" font-size="22" fill="#10202b" text-anchor="middle" font-weight="normal">第5年</text>
+<text x="847.1" y="674.0" font-family="Inter, PingFang SC, Microsoft YaHei, Arial, sans-serif" font-size="22" fill="#10202b" text-anchor="middle" font-weight="normal">第6年</text>
+<text x="998.6" y="674.0" font-family="Inter, PingFang SC, Microsoft YaHei, Arial, sans-serif" font-size="22" fill="#10202b" text-anchor="middle" font-weight="normal">第7年</text>
+<text x="1150.0" y="674.0" font-family="Inter, PingFang SC, Microsoft YaHei, Arial, sans-serif" font-size="22" fill="#10202b" text-anchor="middle" font-weight="normal">第8年</text>
+<text x="70.0" y="120.0" font-family="Inter, PingFang SC, Microsoft YaHei, Arial, sans-serif" font-size="20" fill="#63717d" text-anchor="start" font-weight="normal">累计收益率（%）</text>
+<polyline points="90.0,630.0 241.4,596.0 392.9,550.7 544.3,494.0 695.7,414.7 847.1,362.1 998.6,319.2 1150.0,261.8" fill="none" stroke="#4f7899" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/>
+<circle cx="90.0" cy="630.0" r="5.0" fill="#4f7899"/>
+<circle cx="241.4" cy="596.0" r="5.0" fill="#4f7899"/>
+<circle cx="392.9" cy="550.7" r="5.0" fill="#4f7899"/>
+<circle cx="544.3" cy="494.0" r="5.0" fill="#4f7899"/>
+<circle cx="695.7" cy="414.7" r="5.0" fill="#4f7899"/>
+<circle cx="847.1" cy="362.1" r="5.0" fill="#4f7899"/>
+<circle cx="998.6" cy="319.2" r="5.0" fill="#4f7899"/>
+<circle cx="1150.0" cy="261.8" r="5.0" fill="#4f7899"/>
+</svg>

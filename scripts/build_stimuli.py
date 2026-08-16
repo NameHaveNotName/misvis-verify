@@ -2,11 +2,11 @@
 """Build controlled SVG stimuli for MisVis Verify.
 
 Pure standard library. Generates:
-  - 24 main SVGs (12 matched pairs) from study/data/stimuli.json
-  - 4 baseline SVGs from study/data/baseline.json
-  - 6 transfer SVGs from study/data/transfer.json
+  - 40 main SVGs (20 matched pairs) from study/data/stimuli.json
+  - 8 baseline SVGs from study/data/baseline.json
+  - 16 transfer SVGs from study/data/transfer.json
 
-Neutral IDs: main S001..S024, baseline S101..S104, transfer S201..S206.
+Neutral IDs: main S001..S040, baseline S101..S108, transfer S201..S216.
 Writes study/data/stimulus_map.json and study/data/stimuli-data.js.
 """
 
@@ -37,6 +37,10 @@ GOLD = "#efc46b"
 LINE = "#d9ddd8"
 GRID = "#eef0ef"
 BAND = "#dbe4ec"
+
+# overusing-colors palettes
+SEQUENTIAL_COLORS = ["#16324f", "#2c5f8a", "#4578ac", "#6a9cc9", "#95c0e4"]
+RAINBOW_COLORS = ["#e6194b", "#f58231", "#ffe119", "#3cb44b", "#4363d8"]
 
 FONT = "Inter, PingFang SC, Microsoft YaHei, Arial, sans-serif"
 
@@ -121,13 +125,35 @@ def fmt(v):
     return f"{v:.1f}"
 
 
+def make_custom_scale(ticks, positions):
+    """Return a scale function that linearly interpolates between tick-value pairs."""
+    pairs = sorted(zip(ticks, positions), key=lambda x: x[0])
+    ticks = [p[0] for p in pairs]
+    positions = [p[1] for p in pairs]
+
+    def scale(v):
+        if v <= ticks[0]:
+            return positions[0]
+        if v >= ticks[-1]:
+            return positions[-1]
+        for i in range(len(ticks) - 1):
+            if ticks[i] <= v <= ticks[i + 1]:
+                t = (v - ticks[i]) / (ticks[i + 1] - ticks[i])
+                return positions[i] + t * (positions[i + 1] - positions[i])
+        return positions[-1]
+
+    return scale
+
+
 class Chart:
-    def __init__(self, title):
+    def __init__(self, title, subtitle=None):
         self.parts = []
         self.title = title
         self.parts.append(f'<svg xmlns="http://www.w3.org/2000/svg" width="{W}" height="{H}" viewBox="0 0 {W} {H}">')
         self.parts.append(rect(0, 0, W, H, PAPER))
         self.parts.append(text(W / 2, 58, title, size=30, anchor="middle", weight="bold"))
+        if subtitle:
+            self.parts.append(text(W / 2, 96, subtitle, size=20, fill=MUTED, anchor="middle"))
 
     def add(self, s):
         self.parts.append(s)
@@ -137,10 +163,15 @@ class Chart:
         return "\n".join(self.parts)
 
 
-def draw_axis_frame(c, y_min, y_max, x_labels, x_positions):
-    yscale = lambda v: CY1 - (v - y_min) / (y_max - y_min) * CH
-    for tick in nice_ticks(y_min, y_max):
-        y = yscale(tick)
+def draw_axis_frame(c, y_min, y_max, x_labels, x_positions, ticks=None, positions=None):
+    if ticks is None:
+        ticks = nice_ticks(y_min, y_max)
+    if positions is None:
+        yscale = lambda v: CY1 - (v - y_min) / (y_max - y_min) * CH
+        positions = [yscale(t) for t in ticks]
+    else:
+        yscale = make_custom_scale(ticks, positions)
+    for tick, y in zip(ticks, positions):
         c.add(line(CX0, y, CX1, y, GRID, 1))
         c.add(line(CX0, y, CX0 - 6, y, LINE, 2))
         c.add(text(CX0 - 12, y + 8, fmt(tick), size=20, fill=MUTED, anchor="end"))
@@ -166,6 +197,148 @@ def draw_bar_chart(c, categories, values, y_min, y_max, y_label,
         c.add(rect(x, y, bar_w, CY1 - y, color, rx=8))
         if value_labels:
             c.add(text(x + bar_w / 2, y - 14, fmt(v), size=24, fill=INK, anchor="middle", weight="bold"))
+
+
+def draw_3d_bar_chart(c, categories, values, y_min, y_max, y_label, value_labels=True):
+    n = len(categories)
+    slot = CW / n
+    bar_w = slot * 0.45
+    depth = bar_w * 0.35
+    skew_x = depth
+    skew_y = depth * 0.35
+
+    yscale = draw_axis_frame(c, y_min, y_max, categories,
+                             [CX0 + slot * (i + 0.5) for i in range(n)])
+    c.add(text(CX0 - 20, CY0 - 20, y_label, size=20, fill=MUTED, anchor="start"))
+
+    # Draw right-to-left so left bars occlude right bars' extrusions
+    for i in range(n - 1, -1, -1):
+        v = values[i]
+        x = CX0 + slot * i + (slot - bar_w) / 2
+        y = yscale(v)
+        h = CY1 - y
+
+        # Front face
+        c.add(rect(x, y, bar_w, h, BLUE, rx=6))
+
+        # Top face (lighter)
+        top_pts = [
+            (x, y),
+            (x + bar_w, y),
+            (x + bar_w + skew_x, y + skew_y),
+            (x + skew_x, y + skew_y)
+        ]
+        c.add(polygon(top_pts, "#6a9cc9"))
+
+        # Right face (darker); keep back bottom on the same floor line
+        right_pts = [
+            (x + bar_w, y),
+            (x + bar_w, CY1),
+            (x + bar_w + skew_x, CY1),
+            (x + bar_w + skew_x, y + skew_y)
+        ]
+        c.add(polygon(right_pts, "#365c7a"))
+
+        if value_labels:
+            c.add(text(x + bar_w / 2, y - 14, fmt(v), size=24, fill=INK,
+                       anchor="middle", weight="bold"))
+
+
+def draw_histogram(c, bins, frequencies, y_label):
+    n = len(bins)
+    slot = CW / n
+    y_max = max(frequencies) * 1.15
+    yscale = lambda v: CY1 - v / y_max * CH
+
+    # axis frame without nice_ticks
+    ticks = [0, int(y_max * 0.5), int(y_max)]
+    positions = [yscale(t) for t in ticks]
+    for tick, y in zip(ticks, positions):
+        c.add(line(CX0, y, CX1, y, GRID, 1))
+        c.add(line(CX0, y, CX0 - 6, y, LINE, 2))
+        c.add(text(CX0 - 12, y + 8, fmt(tick), size=20, fill=MUTED, anchor="end"))
+    c.add(line(CX0, CY1, CX1, CY1, INK, 2))
+    c.add(line(CX0, CY0, CX0, CY1, INK, 2))
+
+    bar_w = slot * 0.7
+    for i, (lo, hi), freq in zip(range(n), bins, frequencies):
+        x = CX0 + slot * i + (slot - bar_w) / 2
+        y = yscale(freq)
+        c.add(rect(x, y, bar_w, CY1 - y, GOLD, rx=4))
+        label = f"{lo}-{hi}"
+        c.add(text(x + bar_w / 2, CY1 + 36, label, size=16, fill=INK, anchor="middle"))
+        if freq >= y_max * 0.15:
+            c.add(text(x + bar_w / 2, y - 10, fmt(freq), size=18, fill=INK,
+                       anchor="middle", weight="bold"))
+
+    c.add(text(CX0 - 20, CY0 - 20, y_label, size=20, fill=MUTED, anchor="start"))
+    c.add(text(W / 2, CY1 + 72, "距离区间（km）", size=18, fill=MUTED, anchor="middle"))
+
+
+def draw_line_chart_inverted(c, x_labels, values, y_min, y_max, y_label):
+    n = len(x_labels)
+    xpos = [CX0 + CW * i / (n - 1) for i in range(n)]
+
+    # Inverted y-axis: larger values at top visually correspond to smaller numbers
+    def yscale(v):
+        return CY0 + (v - y_min) / (y_max - y_min) * CH
+
+    ticks = nice_ticks(y_min, y_max)
+    positions = [yscale(t) for t in ticks]
+    for tick, y in zip(ticks, positions):
+        c.add(line(CX0, y, CX1, y, GRID, 1))
+        c.add(line(CX0, y, CX0 - 6, y, LINE, 2))
+        c.add(text(CX0 - 12, y + 8, fmt(tick), size=20, fill=MUTED, anchor="end"))
+    c.add(line(CX0, CY1, CX1, CY1, INK, 2))
+    c.add(line(CX0, CY0, CX0, CY1, INK, 2))
+    for x, label in zip(xpos, x_labels):
+        c.add(text(x, CY1 + 44, label, size=22, fill=INK, anchor="middle"))
+
+    c.add(text(CX0 - 20, CY0 - 20, y_label, size=20, fill=MUTED, anchor="start"))
+
+    pts = [(xpos[i], yscale(values[i])) for i in range(n)]
+    c.add(polyline(pts, BLUE, 3))
+    for x, y in pts:
+        c.add(circle(x, y, 5, BLUE))
+
+
+def draw_abstract_map(c, regions, values, unit):
+    # 5 abstract regions arranged roughly like a map
+    region_shapes = {
+        "青岛": [(480, 200), (620, 200), (650, 320), (560, 380), (460, 320)],
+        "济南": [(280, 180), (420, 180), (440, 300), (360, 360), (260, 280)],
+        "烟台": [(520, 80), (640, 80), (660, 180), (580, 200), (500, 160)],
+        "潍坊": [(360, 340), (480, 340), (500, 460), (400, 480), (320, 420)],
+        "临沂": [(420, 480), (560, 480), (580, 600), (480, 620), (380, 560)],
+    }
+    max_v = max(values)
+    min_v = min(values)
+    for r, v in zip(regions, values):
+        t = (v - min_v) / (max_v - min_v) if max_v > min_v else 0.5
+        # blue scale: light to dark
+        r_col = int(79 + (25 - 79) * t)
+        g_col = int(120 + (55 - 120) * t)
+        b_col = int(153 + (120 - 153) * t)
+        color = f"#{r_col:02x}{g_col:02x}{b_col:02x}"
+        pts = region_shapes.get(r, [(0, 0)])
+        c.add(polygon(pts, color, stroke=PAPER, sw=2))
+        # centroid label
+        cx = sum(p[0] for p in pts) / len(pts)
+        cy = sum(p[1] for p in pts) / len(pts)
+        c.add(text(cx, cy, r, size=22, fill="#ffffff", anchor="middle", weight="bold"))
+
+    # legend
+    lx = CX0 + 20
+    ly = CY0 + 20
+    c.add(text(lx, ly, f"新能源汽车保有量（{unit}）", size=20, fill=INK, anchor="start", weight="bold"))
+    for i, r in enumerate(["高", "", "", "", "低"]):
+        t = i / 4
+        rc = int(79 + (25 - 79) * t)
+        gc = int(120 + (55 - 120) * t)
+        bc = int(153 + (120 - 153) * t)
+        color = f"#{rc:02x}{gc:02x}{bc:02x}"
+        c.add(rect(lx, ly + 20 + i * 28, 24, 20, color))
+        c.add(text(lx + 34, ly + 36 + i * 28, r, size=16, fill=MUTED, anchor="start"))
 
 
 def draw_line_chart(c, x_labels, series_list, y_min, y_max, y_label, legend=True):
@@ -379,6 +552,135 @@ def render_trial(mechanism, data, title):
     elif mechanism == "pie-3d":
         draw_pie(c, data["slices"])
 
+    elif mechanism == "missing-normalization":
+        y_min = 0
+        y_max = max(data["values"]) * 1.15
+        draw_bar_chart(c, data["categories"], data["values"],
+                       y_min, y_max, data["yLabel"])
+        if data.get("subtitle"):
+            c.add(text(W / 2, 96, data["subtitle"], size=20, fill=MUTED, anchor="middle"))
+
+    elif mechanism == "overusing-colors":
+        palette = RAINBOW_COLORS if data.get("palette") == "rainbow" else SEQUENTIAL_COLORS
+        series = [{"label": s["label"], "values": s["values"],
+                   "color": palette[i % len(palette)]} for i, s in enumerate(data["series"])]
+        all_values = [v for s in data["series"] for v in s["values"]]
+        y_min = 0
+        y_max = max(all_values) * 1.15
+        draw_line_chart(c, data["x"], series, y_min, y_max, data["yLabel"], legend=True)
+
+    elif mechanism == "inappropriate-scale":
+        series = [{"label": data["yLabel"], "values": data["values"], "color": BLUE}]
+        scale_type = data.get("scaleType")
+        if scale_type is None:
+            scale_type = "log" if title.endswith("（对数尺度）") else "linear"
+        if scale_type == "log":
+            lo = data.get("logMin", max(data["values"]) * 0.1)
+            hi = data.get("logMax", max(data["values"]) * 1.5)
+            ticks = data.get("logTicks", [lo, hi])
+            if len(ticks) == 2:
+                # insert a middle tick if possible
+                mid = 10 ** ((math.log10(lo) + math.log10(hi)) / 2)
+                if lo < mid < hi:
+                    ticks = [lo, mid, hi]
+            def log_scale(v):
+                return CY1 - (math.log10(v) - math.log10(lo)) / (math.log10(hi) - math.log10(lo)) * CH
+            positions = [log_scale(t) for t in ticks]
+            xpos = [CX0 + CW * i / (len(data["x"]) - 1) for i in range(len(data["x"]))]
+            yscale = draw_axis_frame(c, lo, hi, data["x"], xpos, ticks=ticks, positions=positions)
+            c.add(text(CX0 - 20, CY0 - 20, data["yLabel"], size=20, fill=MUTED, anchor="start"))
+            pts = [(xpos[i], yscale(data["values"][i])) for i in range(len(data["x"]))]
+            c.add(polyline(pts, BLUE, 3))
+            for x, y in pts:
+                c.add(circle(x, y, 5, BLUE))
+        else:
+            y_min = 0
+            y_max = data.get("linearMax", max(data["values"]) * 1.1)
+            draw_line_chart(c, data["x"], series, y_min, y_max, data["yLabel"], legend=False)
+
+    elif mechanism == "3d-bar-distortion":
+        draw_3d_bar_chart(c, data["categories"], data["values"], 0,
+                          data["yMax"], data["yLabel"])
+
+    elif mechanism == "inconsistent-tick-labels":
+        series = [{"label": data["yLabel"], "values": data["values"], "color": BLUE}]
+        y_min = 0
+        y_max = data["yMax"]
+        xpos = [CX0 + CW * i / (len(data["x"]) - 1) for i in range(len(data["x"]))]
+        if data.get("scaleType") == "nonlinear":
+            ticks = data["misleadingTicks"]
+            positions = [CY1 - i * CH / (len(ticks) - 1) for i in range(len(ticks))]
+            yscale = draw_axis_frame(c, y_min, y_max, data["x"], xpos,
+                                     ticks=ticks, positions=positions)
+            c.add(text(CX0 - 20, CY0 - 20, data["yLabel"], size=20, fill=MUTED, anchor="start"))
+            pts = [(xpos[i], yscale(data["values"][i])) for i in range(len(data["x"]))]
+            c.add(polyline(pts, BLUE, 3))
+            for x, y in pts:
+                c.add(circle(x, y, 5, BLUE))
+        else:
+            yscale = draw_axis_frame(c, y_min, y_max, data["x"], xpos,
+                                     ticks=data["accurateTicks"])
+            c.add(text(CX0 - 20, CY0 - 20, data["yLabel"], size=20, fill=MUTED, anchor="start"))
+            pts = [(xpos[i], yscale(data["values"][i])) for i in range(len(data["x"]))]
+            c.add(polyline(pts, BLUE, 3))
+            for x, y in pts:
+                c.add(circle(x, y, 5, BLUE))
+
+    elif mechanism == "histogram-reading":
+        draw_histogram(c, data["bins"], data["frequencies"], data["yLabel"])
+
+    elif mechanism == "pie-proportion":
+        draw_pie(c, data["slices"])
+
+    elif mechanism == "inverted-axis":
+        draw_line_chart_inverted(c, data["x"], data["values"],
+                                 data["yMin"], data["yMax"], data["yLabel"])
+
+    elif mechanism == "misordered-axis":
+        palette = RAINBOW_COLORS
+        series = [{"label": s["label"], "values": s["values"],
+                   "color": palette[i % len(palette)]} for i, s in enumerate(data["series"])]
+        all_values = [v for s in data["series"] for v in s["values"]]
+        y_min = 0
+        y_max = 100
+        draw_bar_chart(c, data["categories"],
+                       [sum(s["values"][i] for s in data["series"]) for i in range(len(data["categories"]))],
+                       y_min, y_max, "占比（%）", value_labels=False)
+        # overlay stacked segments on top of the total bars
+        n = len(data["categories"])
+        slot = CW / n
+        bar_w = slot * 0.5
+        for i in range(n):
+            x = CX0 + slot * i + (slot - bar_w) / 2
+            bottom = CY1
+            for s in data["series"]:
+                v = s["values"][i]
+                h = (v / 100) * CH
+                y = bottom - h
+                # find color by label
+                color = next(se["color"] for se in series if se["label"] == s["label"])
+                c.add(rect(x, y, bar_w, h, color))
+                bottom = y
+        # legend
+        lx = CX1
+        ly = CY0 + 6
+        for s in series:
+            c.add(text(lx, ly, s["label"], size=20, fill=s["color"], anchor="end"))
+            ly += 30
+
+    elif mechanism == "premature-conclusion":
+        series = [{"label": data["yLabel"], "values": data["values"], "color": BLUE}]
+        y_min = 0
+        y_max = max(data["values"]) * 1.15
+        draw_line_chart(c, data["x"], series, y_min, y_max, data["yLabel"], legend=False)
+        if data.get("subtitle"):
+            c.add(text(W / 2, 96, data["subtitle"], size=20, fill=ACCENT, anchor="middle"))
+
+    elif mechanism == "missing-normalization-map":
+        draw_abstract_map(c, data["regions"], data["values"], data["unit"])
+        if data.get("subtitle"):
+            c.add(text(W / 2, 96, data["subtitle"], size=20, fill=MUTED, anchor="middle"))
+
     else:
         c.add(text(W / 2, H / 2, f"Unknown mechanism: {mechanism}", size=24,
                    fill=ACCENT, anchor="middle"))
@@ -453,6 +755,97 @@ def render_pair(mechanism, data, accurate_title, misleading_title):
         draw_line_chart(acc, data["x"], [series1, series2], y_min, y_max, "数值", legend=True)
         mis = Chart(misleading_title)
         draw_line_chart(mis, data["x"], [series1, series2], y_min, y_max, "数值", legend=True)
+
+    elif mechanism == "missing-normalization":
+        acc = Chart(accurate_title, subtitle=data.get("subtitle"))
+        draw_bar_chart(acc, data["categories"], data["rateValues"], 0,
+                       data["rateYMax"], data["rateLabel"])
+        mis = Chart(misleading_title)
+        draw_bar_chart(mis, data["categories"], data["rawValues"], 0,
+                       data["rawYMax"], data["rawLabel"])
+
+    elif mechanism == "overusing-colors":
+        acc_series = [{"label": s["label"], "values": s["values"],
+                       "color": SEQUENTIAL_COLORS[i % len(SEQUENTIAL_COLORS)]}
+                      for i, s in enumerate(data["series"])]
+        mis_series = [{"label": s["label"], "values": s["values"],
+                       "color": RAINBOW_COLORS[i % len(RAINBOW_COLORS)]}
+                      for i, s in enumerate(data["series"])]
+        all_values = [v for s in data["series"] for v in s["values"]]
+        y_min = 0
+        y_max = max(all_values) * 1.15
+        acc = Chart(accurate_title)
+        draw_line_chart(acc, data["x"], acc_series, y_min, y_max, data["yLabel"], legend=True)
+        mis = Chart(misleading_title)
+        draw_line_chart(mis, data["x"], mis_series, y_min, y_max, data["yLabel"], legend=True)
+
+    elif mechanism == "inappropriate-scale":
+        n = len(data["x"])
+        xpos = [CX0 + CW * i / (n - 1) for i in range(n)]
+        series = [{"label": data["yLabel"], "values": data["values"], "color": BLUE}]
+
+        # Accurate: log scale
+        lo = data.get("logMin", max(data["values"]) * 0.1)
+        hi = data.get("logMax", max(data["values"]) * 1.5)
+        log_ticks = data.get("logTicks", [lo, hi])
+        if len(log_ticks) == 2:
+            mid = 10 ** ((math.log10(lo) + math.log10(hi)) / 2)
+            if lo < mid < hi:
+                log_ticks = [lo, mid, hi]
+
+        def log_scale(v):
+            return CY1 - (math.log10(v) - math.log10(lo)) / (math.log10(hi) - math.log10(lo)) * CH
+
+        acc = Chart(accurate_title)
+        yscale = draw_axis_frame(acc, lo, hi, data["x"], xpos,
+                                 ticks=log_ticks, positions=[log_scale(t) for t in log_ticks])
+        acc.add(text(CX0 - 20, CY0 - 20, data["yLabel"], size=20, fill=MUTED, anchor="start"))
+        pts = [(xpos[i], yscale(data["values"][i])) for i in range(n)]
+        acc.add(polyline(pts, BLUE, 3))
+        for x, y in pts:
+            acc.add(circle(x, y, 5, BLUE))
+
+        # Misleading: linear scale from zero
+        y_min = 0
+        y_max = data.get("linearMax", max(data["values"]) * 1.1)
+        mis = Chart(misleading_title)
+        draw_line_chart(mis, data["x"], series, y_min, y_max, data["yLabel"], legend=False)
+
+    elif mechanism == "3d-bar-distortion":
+        acc = Chart(accurate_title)
+        draw_bar_chart(acc, data["categories"], data["values"], 0,
+                       data["yMax"], data["yLabel"])
+        mis = Chart(misleading_title)
+        draw_3d_bar_chart(mis, data["categories"], data["values"], 0,
+                          data["yMax"], data["yLabel"])
+
+    elif mechanism == "inconsistent-tick-labels":
+        n = len(data["x"])
+        xpos = [CX0 + CW * i / (n - 1) for i in range(n)]
+        y_min = 0
+        y_max = data["yMax"]
+
+        # Accurate: linear ticks with equal numerical spacing
+        acc = Chart(accurate_title)
+        yscale = draw_axis_frame(acc, y_min, y_max, data["x"], xpos,
+                                 ticks=data["accurateTicks"])
+        acc.add(text(CX0 - 20, CY0 - 20, data["yLabel"], size=20, fill=MUTED, anchor="start"))
+        pts = [(xpos[i], yscale(data["values"][i])) for i in range(n)]
+        acc.add(polyline(pts, BLUE, 3))
+        for x, y in pts:
+            acc.add(circle(x, y, 5, BLUE))
+
+        # Misleading: non-uniform tick labels placed at equal physical spacing
+        mis_ticks = data["misleadingTicks"]
+        mis_positions = [CY1 - i * CH / (len(mis_ticks) - 1) for i in range(len(mis_ticks))]
+        mis = Chart(misleading_title)
+        yscale_mis = draw_axis_frame(mis, y_min, y_max, data["x"], xpos,
+                                     ticks=mis_ticks, positions=mis_positions)
+        mis.add(text(CX0 - 20, CY0 - 20, data["yLabel"], size=20, fill=MUTED, anchor="start"))
+        pts = [(xpos[i], yscale_mis(data["values"][i])) for i in range(n)]
+        mis.add(polyline(pts, BLUE, 3))
+        for x, y in pts:
+            mis.add(circle(x, y, 5, BLUE))
 
     return acc.render(), mis.render()
 

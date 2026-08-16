@@ -1,9 +1,9 @@
 #!/usr/bin/env node
 /* End-to-end smoke test for study.html flow using a minimal DOM mock.
  *
- * Exercises: init → consent → setup → 4 baseline → 12 main (pre/intervention/post)
- * → 6 transfer → questionnaire → complete → download, for BOTH conditions
- * (control and egvv), and asserts 22 trials are saved and exportable.
+ * Exercises: init → consent → setup → 8 baseline → 20 main (pre/intervention/post)
+ * → 16 transfer → questionnaire → complete → download, for BOTH conditions
+ * (control and egvv), and asserts 44 trials are saved and exportable.
  *
  * Usage: node scripts/test_flow.js
  */
@@ -177,11 +177,11 @@ function runFlow() {
 
   S.byId['btn-setup'].onclick();
 
-  for (let i = 0; i < 4; i++) answer(50 + i, 60, 'no');
+  for (let i = 0; i < 8; i++) answer(50 + i, 60, 'no');
 
   const cond = JSON.parse(localStorage.getItem('misvis_verify_session')).condition;
 
-  for (let i = 0; i < 12; i++) {
+  for (let i = 0; i < 20; i++) {
     answer(60, 60, 'no');
     if (cond === 'egvv') {
       for (let s = 0; s < 4; s++) S.byId['btn-egvv-next'].onclick();
@@ -191,7 +191,7 @@ function runFlow() {
     answer(40, 70, 'yes');
   }
 
-  for (let i = 0; i < 6; i++) answer(55, 65, 'unsure');
+  for (let i = 0; i < 16; i++) answer(55, 65, 'unsure');
 
   S.formData = {
     'checks': ['axis', 'title'],
@@ -210,10 +210,10 @@ function runFlow() {
 
   const exported = JSON.parse(localStorage.getItem('__last_export'));
   if (!exported.session || !Array.isArray(exported.trials)) throw new Error('export structure wrong');
-  if (exported.trials.length !== 22) throw new Error('expected 22 trials, got ' + exported.trials.length);
+  if (exported.trials.length !== 44) throw new Error('expected 44 trials, got ' + exported.trials.length);
 
   const mainTrials = exported.trials.filter(t => t.phase === 'main');
-  if (mainTrials.length !== 12) throw new Error('expected 12 main trials');
+  if (mainTrials.length !== 20) throw new Error('expected 20 main trials');
   if (!mainTrials.every(t => t.trust_post !== null && t.misleading_post !== null)) {
     throw new Error('main trials missing post responses');
   }
@@ -225,7 +225,7 @@ function runFlow() {
   }
   const b = exported.trials.filter(t => t.phase === 'baseline');
   const tr = exported.trials.filter(t => t.phase === 'transfer');
-  if (b.length !== 4 || tr.length !== 6) throw new Error('baseline/transfer counts wrong');
+  if (b.length !== 8 || tr.length !== 16) throw new Error('baseline/transfer counts wrong');
 
   return cond;
 }
@@ -246,7 +246,7 @@ for (let pass = 0; pass < 40; pass++) {
   loadScripts();
   const cond = runFlow();
   conditions.add(cond);
-  console.log(`Pass ${pass}: condition=${cond}, 22 trials exported OK`);
+  console.log(`Pass ${pass}: condition=${cond}, 44 trials exported OK`);
   if (conditions.size === 2) break;
 }
 

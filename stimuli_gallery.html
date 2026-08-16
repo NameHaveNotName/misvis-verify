@@ -41,7 +41,7 @@
   <div class="banner">刺激画廊 — 内部审查用，不用于实验呈现</div>
   <main>
     <h1>MisVis Verify 刺激画廊</h1>
-    <p class="lede">12 个 matched pairs × 2 版本 = 24 张 SVG。请审查 accurate / misleading 之间除目标操纵外是否一致。</p>
+    <p class="lede">20 个 matched pairs × 2 版本 = 40 张主试 SVG；8 个 baseline；16 个 transfer。请审查 accurate / misleading 之间除目标操纵外是否一致。</p>
     <div id="gallery"></div>
   </main>
 
@@ -67,7 +67,18 @@
         'color-emphasis': '任意颜色强调',
         'misleading-title': '误导性标题',
         'dual-axis': '双轴误导',
-        'pie-3d': '饼图失真'
+        'pie-3d': '饼图失真',
+        'missing-normalization': '缺失归一化',
+        'missing-normalization-map': '地图缺失归一化',
+        'overusing-colors': '过度使用颜色',
+        'inappropriate-scale': '不当尺度',
+        '3d-bar-distortion': '3D 柱形失真',
+        'inconsistent-tick-labels': '非均匀刻度标签',
+        'inverted-axis': '反转纵轴',
+        'misordered-axis': '乱序横轴',
+        'premature-conclusion': '过早结论',
+        'histogram-reading': '直方图读取',
+        'pie-proportion': '饼图比例'
       };
 
       pairs.forEach(p => {
@@ -128,8 +139,8 @@
         });
       }
 
-      renderTrialSection('Baseline（4 试次）', baseline, 'baseline');
-      renderTrialSection('Transfer（6 试次）', transfer, 'transfer');
+      renderTrialSection('Baseline（8 试次）', baseline, 'baseline');
+      renderTrialSection('Transfer（16 试次）', transfer, 'transfer');
     })();
   </script>
 </body>

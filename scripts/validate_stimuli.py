@@ -2,12 +2,13 @@
 """Validate MisVis Verify stimulus set.
 
 Checks:
-  - 24 main SVGs exist
-  - 12 matched pairs (accurate + misleading each)
+  - 40 main SVGs exist
+  - 20 matched pairs (accurate + misleading each)
   - SVG size 1200x720 consistent
   - unique pair IDs and stimulus IDs
   - annotation coordinates in 0-100
   - all EGVV fields non-empty
+  - AI interpretation variants exist for both integrity versions
   - valid integrity values
   - mechanism in allowed list
 
@@ -36,6 +37,17 @@ ALLOWED_MECHANISMS = {
     "misleading-title",
     "dual-axis",
     "pie-3d",
+    "missing-normalization",
+    "overusing-colors",
+    "inappropriate-scale",
+    "3d-bar-distortion",
+    "inconsistent-tick-labels",
+    "histogram-reading",
+    "pie-proportion",
+    "inverted-axis",
+    "misordered-axis",
+    "premature-conclusion",
+    "missing-normalization-map",
 }
 ALLOWED_INTEGRITY = {"accurate", "misleading"}
 
@@ -52,7 +64,7 @@ with open(DATA_PATH, encoding="utf-8") as f:
     spec = json.load(f)
 
 pairs = spec.get("pairs", [])
-check(len(pairs) == 12, f"expected 12 pairs, got {len(pairs)}")
+check(len(pairs) == 20, f"expected 20 pairs, got {len(pairs)}")
 
 pair_ids = [p.get("pairId") for p in pairs]
 check(len(pair_ids) == len(set(pair_ids)), "duplicate pair IDs")
@@ -79,7 +91,17 @@ for p in pairs:
         check(isinstance(val, (int, float)) and 0 <= val <= 100,
               f"{p.get('pairId')}: annotation.{coord} out of range")
 
-check(len(stimulus_ids) == 24, f"expected 24 stimulus IDs, got {len(stimulus_ids)}")
+    ai = p.get("aiInterpretations", {})
+    for key in ("accurate", "misleading"):
+        variants = ai.get(key, [])
+        check(isinstance(variants, list) and len(variants) >= 2,
+              f"{p.get('pairId')}: aiInterpretations.{key} needs >= 2 variants")
+        for v in variants:
+            check(v.get("text"), f"{p.get('pairId')}: AI interpretation missing text")
+            check(v.get("tone"), f"{p.get('pairId')}: AI interpretation missing tone")
+            check(v.get("status"), f"{p.get('pairId')}: AI interpretation missing status")
+
+check(len(stimulus_ids) == 40, f"expected 40 stimulus IDs, got {len(stimulus_ids)}")
 check(len(stimulus_ids) == len(set(stimulus_ids)), "duplicate stimulus IDs")
 
 # Check SVGs exist and size
@@ -104,7 +126,7 @@ for sid in stimulus_ids:
 if os.path.exists(MAP_PATH):
     with open(MAP_PATH, encoding="utf-8") as f:
         mapping = json.load(f)
-    check(len(mapping) == 34, f"mapping has {len(mapping)} entries, expected 34")
+    check(len(mapping) == 64, f"mapping has {len(mapping)} entries, expected 64")
     for sid, meta in mapping.items():
         check(meta.get("integrity") in ALLOWED_INTEGRITY,
               f"mapping {sid}: invalid integrity {meta.get('integrity')}")
@@ -114,8 +136,8 @@ else:
     warnings.append("stimulus_map.json not found")
 
 # Validate baseline and transfer files
-for path, expected, name in ((BASE_PATH, 4, "baseline"),
-                             (TRANS_PATH, 6, "transfer")):
+for path, expected, name in ((BASE_PATH, 8, "baseline"),
+                             (TRANS_PATH, 16, "transfer")):
     with open(path, encoding="utf-8") as f:
         spec = json.load(f)
     trials = spec.get("trials", [])
@@ -137,15 +159,15 @@ with open(BASE_PATH, encoding="utf-8") as f:
     b_trials = json.load(f)["trials"]
 b_acc = sum(1 for t in b_trials if t["integrity"] == "accurate")
 b_mis = sum(1 for t in b_trials if t["integrity"] == "misleading")
-check(b_acc == 2 and b_mis == 2, f"baseline balance: {b_acc} accurate / {b_mis} misleading (expected 2/2)")
+check(b_acc == 4 and b_mis == 4, f"baseline balance: {b_acc} accurate / {b_mis} misleading (expected 4/4)")
 
 with open(TRANS_PATH, encoding="utf-8") as f:
     t_trials = json.load(f)["trials"]
 t_acc = sum(1 for t in t_trials if t["integrity"] == "accurate")
 t_mis = sum(1 for t in t_trials if t["integrity"] == "misleading")
 t_far = sum(1 for t in t_trials if t["transferType"] == "far")
-check(t_acc == 3 and t_mis == 3, f"transfer balance: {t_acc} accurate / {t_mis} misleading (expected 3/3)")
-check(t_far == 2, f"transfer far trials: {t_far} (expected 2)")
+check(t_acc == 8 and t_mis == 8, f"transfer balance: {t_acc} accurate / {t_mis} misleading (expected 8/8)")
+check(t_far == 4, f"transfer far trials: {t_far} (expected 4)")
 
 print(f"Pairs: {len(pairs)}")
 print(f"Stimuli: {len(stimulus_ids)}")
